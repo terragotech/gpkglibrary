@@ -19,4 +19,9 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNGeoPackageLibrary";
   }
+
+  @ReactMethod
+    public void LibrarySampleCall(String testString, Callback completionCallback) {
+    completionCallback.invoke(testString);
+    }
 }
