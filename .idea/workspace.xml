@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="351b0986-7720-4f7b-b4e7-3955e53aefe1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.xcworkspace/xcuserdata/sunilkarthicksivabalan.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.xcworkspace/xcuserdata/sunilkarthicksivabalan.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java" afterPath="$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.m" afterPath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gpkglibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -197,15 +194,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487335770305</updated>
-      <workItem from="1487335771692" duration="402000" />
+      <workItem from="1487335771692" duration="873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="402000" />
+    <option name="totallyTimeSpent" value="873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="40" width="1260" height="692" extended-state="0" />
+    <frame x="9" y="40" width="1260" height="692" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
