@@ -8,6 +8,311 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNGeoPackageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */; };
+		CF8B6AA21E58B3D900D06B39 /* aasincos.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FB1E58B3D800D06B39 /* aasincos.c */; };
+		CF8B6AA31E58B3D900D06B39 /* adjlon.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FC1E58B3D800D06B39 /* adjlon.c */; };
+		CF8B6AA41E58B3D900D06B39 /* bch2bps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FD1E58B3D800D06B39 /* bch2bps.c */; };
+		CF8B6AA51E58B3D900D06B39 /* bchgen.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FE1E58B3D800D06B39 /* bchgen.c */; };
+		CF8B6AA61E58B3D900D06B39 /* biveval.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FF1E58B3D800D06B39 /* biveval.c */; };
+		CF8B6AA71E58B3D900D06B39 /* cs2cs.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A001E58B3D800D06B39 /* cs2cs.c */; };
+		CF8B6AA81E58B3D900D06B39 /* dmstor.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A011E58B3D800D06B39 /* dmstor.c */; };
+		CF8B6AA91E58B3D900D06B39 /* emess.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A021E58B3D800D06B39 /* emess.c */; };
+		CF8B6AAA1E58B3D900D06B39 /* gen_cheb.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A041E58B3D800D06B39 /* gen_cheb.c */; };
+		CF8B6AAB1E58B3D900D06B39 /* geocent.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A051E58B3D800D06B39 /* geocent.c */; };
+		CF8B6AAC1E58B3D900D06B39 /* geod_for.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A071E58B3D800D06B39 /* geod_for.c */; };
+		CF8B6AAD1E58B3D900D06B39 /* geod_inv.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A081E58B3D800D06B39 /* geod_inv.c */; };
+		CF8B6AAE1E58B3D900D06B39 /* geod_set.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A091E58B3D800D06B39 /* geod_set.c */; };
+		CF8B6AAF1E58B3D900D06B39 /* geod.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A0A1E58B3D800D06B39 /* geod.c */; };
+		CF8B6AB01E58B3D900D06B39 /* jniproj.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A0C1E58B3D800D06B39 /* jniproj.c */; };
+		CF8B6AB11E58B3D900D06B39 /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B6A0D1E58B3D800D06B39 /* libProj4.a */; };
+		CF8B6AB21E58B3D900D06B39 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A0E1E58B3D800D06B39 /* Makefile */; };
+		CF8B6AB31E58B3D900D06B39 /* mk_cheby.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A121E58B3D800D06B39 /* mk_cheby.c */; };
+		CF8B6AB41E58B3D900D06B39 /* nad_cvt.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A131E58B3D800D06B39 /* nad_cvt.c */; };
+		CF8B6AB51E58B3D900D06B39 /* nad_init.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A141E58B3D800D06B39 /* nad_init.c */; };
+		CF8B6AB61E58B3D900D06B39 /* nad_intr.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A151E58B3D800D06B39 /* nad_intr.c */; };
+		CF8B6AB71E58B3D900D06B39 /* nad2bin.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A171E58B3D800D06B39 /* nad2bin.c */; };
+		CF8B6AB81E58B3D900D06B39 /* nad2nad.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A181E58B3D800D06B39 /* nad2nad.c */; };
+		CF8B6AB91E58B3D900D06B39 /* p_series.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1A1E58B3D800D06B39 /* p_series.c */; };
+		CF8B6ABA1E58B3D900D06B39 /* PJ_aea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1B1E58B3D800D06B39 /* PJ_aea.c */; };
+		CF8B6ABB1E58B3D900D06B39 /* PJ_aeqd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1C1E58B3D800D06B39 /* PJ_aeqd.c */; };
+		CF8B6ABC1E58B3D900D06B39 /* PJ_airy.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1D1E58B3D800D06B39 /* PJ_airy.c */; };
+		CF8B6ABD1E58B3D900D06B39 /* PJ_aitoff.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1E1E58B3D800D06B39 /* PJ_aitoff.c */; };
+		CF8B6ABE1E58B3D900D06B39 /* pj_apply_gridshift.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1F1E58B3D800D06B39 /* pj_apply_gridshift.c */; };
+		CF8B6ABF1E58B3D900D06B39 /* PJ_august.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A201E58B3D800D06B39 /* PJ_august.c */; };
+		CF8B6AC01E58B3D900D06B39 /* pj_auth.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A211E58B3D800D06B39 /* pj_auth.c */; };
+		CF8B6AC11E58B3D900D06B39 /* PJ_bacon.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A221E58B3D800D06B39 /* PJ_bacon.c */; };
+		CF8B6AC21E58B3D900D06B39 /* PJ_bipc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A231E58B3D800D06B39 /* PJ_bipc.c */; };
+		CF8B6AC31E58B3D900D06B39 /* PJ_boggs.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A241E58B3D800D06B39 /* PJ_boggs.c */; };
+		CF8B6AC41E58B3D900D06B39 /* PJ_bonne.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A251E58B3D800D06B39 /* PJ_bonne.c */; };
+		CF8B6AC51E58B3D900D06B39 /* PJ_cass.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A261E58B3D800D06B39 /* PJ_cass.c */; };
+		CF8B6AC61E58B3D900D06B39 /* PJ_cc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A271E58B3D800D06B39 /* PJ_cc.c */; };
+		CF8B6AC71E58B3D900D06B39 /* PJ_cea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A281E58B3D800D06B39 /* PJ_cea.c */; };
+		CF8B6AC81E58B3D900D06B39 /* PJ_chamb.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A291E58B3D800D06B39 /* PJ_chamb.c */; };
+		CF8B6AC91E58B3D900D06B39 /* PJ_collg.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2A1E58B3D800D06B39 /* PJ_collg.c */; };
+		CF8B6ACA1E58B3D900D06B39 /* PJ_crast.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2B1E58B3D800D06B39 /* PJ_crast.c */; };
+		CF8B6ACB1E58B3D900D06B39 /* pj_datum_set.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2C1E58B3D800D06B39 /* pj_datum_set.c */; };
+		CF8B6ACC1E58B3D900D06B39 /* pj_datums.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2D1E58B3D800D06B39 /* pj_datums.c */; };
+		CF8B6ACD1E58B3D900D06B39 /* PJ_denoy.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2E1E58B3D800D06B39 /* PJ_denoy.c */; };
+		CF8B6ACE1E58B3D900D06B39 /* pj_deriv.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2F1E58B3D800D06B39 /* pj_deriv.c */; };
+		CF8B6ACF1E58B3D900D06B39 /* PJ_eck1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A301E58B3D800D06B39 /* PJ_eck1.c */; };
+		CF8B6AD01E58B3D900D06B39 /* PJ_eck2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A311E58B3D800D06B39 /* PJ_eck2.c */; };
+		CF8B6AD11E58B3D900D06B39 /* PJ_eck3.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A321E58B3D800D06B39 /* PJ_eck3.c */; };
+		CF8B6AD21E58B3D900D06B39 /* PJ_eck4.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A331E58B3D800D06B39 /* PJ_eck4.c */; };
+		CF8B6AD31E58B3D900D06B39 /* PJ_eck5.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A341E58B3D800D06B39 /* PJ_eck5.c */; };
+		CF8B6AD41E58B3D900D06B39 /* pj_ell_set.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A351E58B3D800D06B39 /* pj_ell_set.c */; };
+		CF8B6AD51E58B3D900D06B39 /* pj_ellps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A361E58B3D800D06B39 /* pj_ellps.c */; };
+		CF8B6AD61E58B3D900D06B39 /* PJ_eqc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A371E58B3D800D06B39 /* PJ_eqc.c */; };
+		CF8B6AD71E58B3D900D06B39 /* PJ_eqdc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A381E58B3D800D06B39 /* PJ_eqdc.c */; };
+		CF8B6AD81E58B3D900D06B39 /* pj_errno.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A391E58B3D800D06B39 /* pj_errno.c */; };
+		CF8B6AD91E58B3D900D06B39 /* pj_factors.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3A1E58B3D800D06B39 /* pj_factors.c */; };
+		CF8B6ADA1E58B3D900D06B39 /* PJ_fahey.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3B1E58B3D800D06B39 /* PJ_fahey.c */; };
+		CF8B6ADB1E58B3D900D06B39 /* PJ_fouc_s.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3C1E58B3D800D06B39 /* PJ_fouc_s.c */; };
+		CF8B6ADC1E58B3D900D06B39 /* pj_fwd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3D1E58B3D800D06B39 /* pj_fwd.c */; };
+		CF8B6ADD1E58B3D900D06B39 /* PJ_gall.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3E1E58B3D800D06B39 /* PJ_gall.c */; };
+		CF8B6ADE1E58B3D900D06B39 /* pj_gauss.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3F1E58B3D800D06B39 /* pj_gauss.c */; };
+		CF8B6ADF1E58B3D900D06B39 /* pj_geocent.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A401E58B3D800D06B39 /* pj_geocent.c */; };
+		CF8B6AE01E58B3D900D06B39 /* PJ_geos.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A411E58B3D800D06B39 /* PJ_geos.c */; };
+		CF8B6AE11E58B3D900D06B39 /* PJ_gins8.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A421E58B3D800D06B39 /* PJ_gins8.c */; };
+		CF8B6AE21E58B3D900D06B39 /* PJ_gn_sinu.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A431E58B3D800D06B39 /* PJ_gn_sinu.c */; };
+		CF8B6AE31E58B3D900D06B39 /* PJ_gnom.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A441E58B3D800D06B39 /* PJ_gnom.c */; };
+		CF8B6AE41E58B3D900D06B39 /* PJ_goode.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A451E58B3D800D06B39 /* PJ_goode.c */; };
+		CF8B6AE51E58B3D900D06B39 /* pj_gridinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A461E58B3D800D06B39 /* pj_gridinfo.c */; };
+		CF8B6AE61E58B3D900D06B39 /* pj_gridlist.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A471E58B3D800D06B39 /* pj_gridlist.c */; };
+		CF8B6AE71E58B3D900D06B39 /* PJ_gstmerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A481E58B3D800D06B39 /* PJ_gstmerc.c */; };
+		CF8B6AE81E58B3D900D06B39 /* PJ_hammer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A491E58B3D800D06B39 /* PJ_hammer.c */; };
+		CF8B6AE91E58B3D900D06B39 /* PJ_hatano.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4A1E58B3D800D06B39 /* PJ_hatano.c */; };
+		CF8B6AEA1E58B3D900D06B39 /* PJ_imw_p.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4B1E58B3D800D06B39 /* PJ_imw_p.c */; };
+		CF8B6AEB1E58B3D900D06B39 /* pj_init.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4C1E58B3D800D06B39 /* pj_init.c */; };
+		CF8B6AEC1E58B3D900D06B39 /* pj_initcache.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4D1E58B3D800D06B39 /* pj_initcache.c */; };
+		CF8B6AED1E58B3D900D06B39 /* pj_inv.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4E1E58B3D800D06B39 /* pj_inv.c */; };
+		CF8B6AEE1E58B3D900D06B39 /* PJ_krovak.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4F1E58B3D800D06B39 /* PJ_krovak.c */; };
+		CF8B6AEF1E58B3D900D06B39 /* PJ_labrd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A501E58B3D800D06B39 /* PJ_labrd.c */; };
+		CF8B6AF01E58B3D900D06B39 /* PJ_laea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A511E58B3D800D06B39 /* PJ_laea.c */; };
+		CF8B6AF11E58B3D900D06B39 /* PJ_lagrng.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A521E58B3D800D06B39 /* PJ_lagrng.c */; };
+		CF8B6AF21E58B3D900D06B39 /* PJ_larr.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A531E58B3D800D06B39 /* PJ_larr.c */; };
+		CF8B6AF31E58B3D900D06B39 /* PJ_lask.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A541E58B3D800D06B39 /* PJ_lask.c */; };
+		CF8B6AF41E58B3D900D06B39 /* pj_latlong.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A551E58B3D800D06B39 /* pj_latlong.c */; };
+		CF8B6AF51E58B3D900D06B39 /* PJ_lcc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A561E58B3D800D06B39 /* PJ_lcc.c */; };
+		CF8B6AF61E58B3D900D06B39 /* PJ_lcca.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A571E58B3D800D06B39 /* PJ_lcca.c */; };
+		CF8B6AF71E58B3D900D06B39 /* pj_list.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A581E58B3D800D06B39 /* pj_list.c */; };
+		CF8B6AF81E58B3D900D06B39 /* PJ_loxim.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5A1E58B3D800D06B39 /* PJ_loxim.c */; };
+		CF8B6AF91E58B3D900D06B39 /* PJ_lsat.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5B1E58B3D800D06B39 /* PJ_lsat.c */; };
+		CF8B6AFA1E58B3D900D06B39 /* pj_malloc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5C1E58B3D800D06B39 /* pj_malloc.c */; };
+		CF8B6AFB1E58B3D900D06B39 /* PJ_mbt_fps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5D1E58B3D800D06B39 /* PJ_mbt_fps.c */; };
+		CF8B6AFC1E58B3D900D06B39 /* PJ_mbtfpp.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5E1E58B3D800D06B39 /* PJ_mbtfpp.c */; };
+		CF8B6AFD1E58B3D900D06B39 /* PJ_mbtfpq.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5F1E58B3D800D06B39 /* PJ_mbtfpq.c */; };
+		CF8B6AFE1E58B3D900D06B39 /* PJ_merc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A601E58B3D800D06B39 /* PJ_merc.c */; };
+		CF8B6AFF1E58B3D900D06B39 /* PJ_mill.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A611E58B3D800D06B39 /* PJ_mill.c */; };
+		CF8B6B001E58B3D900D06B39 /* pj_mlfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A621E58B3D800D06B39 /* pj_mlfn.c */; };
+		CF8B6B011E58B3D900D06B39 /* PJ_mod_ster.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A631E58B3D800D06B39 /* PJ_mod_ster.c */; };
+		CF8B6B021E58B3D900D06B39 /* PJ_moll.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A641E58B3D800D06B39 /* PJ_moll.c */; };
+		CF8B6B031E58B3D900D06B39 /* pj_msfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A651E58B3D800D06B39 /* pj_msfn.c */; };
+		CF8B6B041E58B3D900D06B39 /* pj_mutex.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A661E58B3D800D06B39 /* pj_mutex.c */; };
+		CF8B6B051E58B3D900D06B39 /* PJ_nell_h.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A671E58B3D800D06B39 /* PJ_nell_h.c */; };
+		CF8B6B061E58B3D900D06B39 /* PJ_nell.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A681E58B3D800D06B39 /* PJ_nell.c */; };
+		CF8B6B071E58B3D900D06B39 /* PJ_nocol.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A691E58B3D800D06B39 /* PJ_nocol.c */; };
+		CF8B6B081E58B3D900D06B39 /* PJ_nsper.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6A1E58B3D800D06B39 /* PJ_nsper.c */; };
+		CF8B6B091E58B3D900D06B39 /* PJ_nzmg.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6B1E58B3D800D06B39 /* PJ_nzmg.c */; };
+		CF8B6B0A1E58B3D900D06B39 /* PJ_ob_tran.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6C1E58B3D800D06B39 /* PJ_ob_tran.c */; };
+		CF8B6B0B1E58B3D900D06B39 /* PJ_ocea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6D1E58B3D800D06B39 /* PJ_ocea.c */; };
+		CF8B6B0C1E58B3D900D06B39 /* PJ_oea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6E1E58B3D800D06B39 /* PJ_oea.c */; };
+		CF8B6B0D1E58B3D900D06B39 /* PJ_omerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6F1E58B3D800D06B39 /* PJ_omerc.c */; };
+		CF8B6B0E1E58B3D900D06B39 /* pj_open_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A701E58B3D800D06B39 /* pj_open_lib.c */; };
+		CF8B6B0F1E58B3D900D06B39 /* PJ_ortho.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A711E58B3D800D06B39 /* PJ_ortho.c */; };
+		CF8B6B101E58B3D900D06B39 /* pj_param.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A721E58B3D800D06B39 /* pj_param.c */; };
+		CF8B6B111E58B3D900D06B39 /* pj_phi2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A731E58B3D900D06B39 /* pj_phi2.c */; };
+		CF8B6B121E58B3D900D06B39 /* PJ_poly.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A741E58B3D900D06B39 /* PJ_poly.c */; };
+		CF8B6B131E58B3D900D06B39 /* pj_pr_list.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A751E58B3D900D06B39 /* pj_pr_list.c */; };
+		CF8B6B141E58B3D900D06B39 /* PJ_putp2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A761E58B3D900D06B39 /* PJ_putp2.c */; };
+		CF8B6B151E58B3D900D06B39 /* PJ_putp3.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A771E58B3D900D06B39 /* PJ_putp3.c */; };
+		CF8B6B161E58B3D900D06B39 /* PJ_putp4p.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A781E58B3D900D06B39 /* PJ_putp4p.c */; };
+		CF8B6B171E58B3D900D06B39 /* PJ_putp5.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A791E58B3D900D06B39 /* PJ_putp5.c */; };
+		CF8B6B181E58B3D900D06B39 /* PJ_putp6.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7A1E58B3D900D06B39 /* PJ_putp6.c */; };
+		CF8B6B191E58B3D900D06B39 /* pj_qsfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7B1E58B3D900D06B39 /* pj_qsfn.c */; };
+		CF8B6B1A1E58B3D900D06B39 /* pj_release.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7C1E58B3D900D06B39 /* pj_release.c */; };
+		CF8B6B1B1E58B3D900D06B39 /* PJ_robin.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7D1E58B3D900D06B39 /* PJ_robin.c */; };
+		CF8B6B1C1E58B3D900D06B39 /* PJ_rpoly.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7E1E58B3D900D06B39 /* PJ_rpoly.c */; };
+		CF8B6B1D1E58B3D900D06B39 /* PJ_sconics.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7F1E58B3D900D06B39 /* PJ_sconics.c */; };
+		CF8B6B1E1E58B3D900D06B39 /* PJ_somerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A801E58B3D900D06B39 /* PJ_somerc.c */; };
+		CF8B6B1F1E58B3D900D06B39 /* PJ_stere.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A811E58B3D900D06B39 /* PJ_stere.c */; };
+		CF8B6B201E58B3D900D06B39 /* PJ_sterea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A821E58B3D900D06B39 /* PJ_sterea.c */; };
+		CF8B6B211E58B3D900D06B39 /* pj_strerrno.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A831E58B3D900D06B39 /* pj_strerrno.c */; };
+		CF8B6B221E58B3D900D06B39 /* PJ_sts.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A841E58B3D900D06B39 /* PJ_sts.c */; };
+		CF8B6B231E58B3D900D06B39 /* PJ_tcc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A851E58B3D900D06B39 /* PJ_tcc.c */; };
+		CF8B6B241E58B3D900D06B39 /* PJ_tcea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A861E58B3D900D06B39 /* PJ_tcea.c */; };
+		CF8B6B251E58B3D900D06B39 /* PJ_tmerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A871E58B3D900D06B39 /* PJ_tmerc.c */; };
+		CF8B6B261E58B3D900D06B39 /* PJ_tpeqd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A881E58B3D900D06B39 /* PJ_tpeqd.c */; };
+		CF8B6B271E58B3D900D06B39 /* pj_transform.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A891E58B3D900D06B39 /* pj_transform.c */; };
+		CF8B6B281E58B3D900D06B39 /* pj_tsfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8A1E58B3D900D06B39 /* pj_tsfn.c */; };
+		CF8B6B291E58B3D900D06B39 /* pj_units.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8B1E58B3D900D06B39 /* pj_units.c */; };
+		CF8B6B2A1E58B3D900D06B39 /* PJ_urm5.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8C1E58B3D900D06B39 /* PJ_urm5.c */; };
+		CF8B6B2B1E58B3D900D06B39 /* PJ_urmfps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8D1E58B3D900D06B39 /* PJ_urmfps.c */; };
+		CF8B6B2C1E58B3D900D06B39 /* pj_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8E1E58B3D900D06B39 /* pj_utils.c */; };
+		CF8B6B2D1E58B3D900D06B39 /* PJ_vandg.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8F1E58B3D900D06B39 /* PJ_vandg.c */; };
+		CF8B6B2E1E58B3D900D06B39 /* PJ_vandg2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A901E58B3D900D06B39 /* PJ_vandg2.c */; };
+		CF8B6B2F1E58B3D900D06B39 /* PJ_vandg4.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A911E58B3D900D06B39 /* PJ_vandg4.c */; };
+		CF8B6B301E58B3D900D06B39 /* PJ_wag2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A921E58B3D900D06B39 /* PJ_wag2.c */; };
+		CF8B6B311E58B3D900D06B39 /* PJ_wag3.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A931E58B3D900D06B39 /* PJ_wag3.c */; };
+		CF8B6B321E58B3D900D06B39 /* PJ_wag7.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A941E58B3D900D06B39 /* PJ_wag7.c */; };
+		CF8B6B331E58B3D900D06B39 /* PJ_wink1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A951E58B3D900D06B39 /* PJ_wink1.c */; };
+		CF8B6B341E58B3D900D06B39 /* PJ_wink2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A961E58B3D900D06B39 /* PJ_wink2.c */; };
+		CF8B6B351E58B3D900D06B39 /* pj_zpoly1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A971E58B3D900D06B39 /* pj_zpoly1.c */; };
+		CF8B6B361E58B3D900D06B39 /* proj_mdist.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A9B1E58B3D900D06B39 /* proj_mdist.c */; };
+		CF8B6B371E58B3D900D06B39 /* proj_rouss.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A9C1E58B3D900D06B39 /* proj_rouss.c */; };
+		CF8B6B381E58B3D900D06B39 /* proj.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A9D1E58B3D900D06B39 /* proj.c */; };
+		CF8B6B391E58B3D900D06B39 /* rtodms.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6AA01E58B3D900D06B39 /* rtodms.c */; };
+		CF8B6B3A1E58B3D900D06B39 /* vector1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6AA11E58B3D900D06B39 /* vector1.c */; };
+		CF8B6C3F1E58B42000D06B39 /* GPKGBaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B3F1E58B41F00D06B39 /* GPKGBaseDao.m */; };
+		CF8B6C401E58B42000D06B39 /* GPKGBoundedOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B411E58B41F00D06B39 /* GPKGBoundedOverlay.m */; };
+		CF8B6C411E58B42000D06B39 /* GPKGBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B431E58B41F00D06B39 /* GPKGBoundingBox.m */; };
+		CF8B6C421E58B42000D06B39 /* GPKGColumnValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B451E58B41F00D06B39 /* GPKGColumnValue.m */; };
+		CF8B6C431E58B42000D06B39 /* GPKGColumnValues.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B471E58B41F00D06B39 /* GPKGColumnValues.m */; };
+		CF8B6C441E58B42000D06B39 /* GPKGCompressFormats.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B491E58B41F00D06B39 /* GPKGCompressFormats.m */; };
+		CF8B6C451E58B42000D06B39 /* GPKGConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B4B1E58B41F00D06B39 /* GPKGConnection.m */; };
+		CF8B6C461E58B42000D06B39 /* GPKGConnectionPool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B4D1E58B41F00D06B39 /* GPKGConnectionPool.m */; };
+		CF8B6C471E58B42000D06B39 /* GPKGContents.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B4F1E58B41F00D06B39 /* GPKGContents.m */; };
+		CF8B6C481E58B42000D06B39 /* GPKGContentsDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B511E58B41F00D06B39 /* GPKGContentsDao.m */; };
+		CF8B6C491E58B42000D06B39 /* GPKGContentValues.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B531E58B41F00D06B39 /* GPKGContentValues.m */; };
+		CF8B6C4A1E58B42000D06B39 /* GPKGDataColumnConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B561E58B41F00D06B39 /* GPKGDataColumnConstraints.m */; };
+		CF8B6C4B1E58B42000D06B39 /* GPKGDataColumnConstraintsDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B581E58B41F00D06B39 /* GPKGDataColumnConstraintsDao.m */; };
+		CF8B6C4C1E58B42000D06B39 /* GPKGDataColumns.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B5A1E58B41F00D06B39 /* GPKGDataColumns.m */; };
+		CF8B6C4D1E58B42000D06B39 /* GPKGDataColumnsDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B5C1E58B41F00D06B39 /* GPKGDataColumnsDao.m */; };
+		CF8B6C4E1E58B42000D06B39 /* GPKGDataTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B5E1E58B41F00D06B39 /* GPKGDataTypes.m */; };
+		CF8B6C4F1E58B42000D06B39 /* GPKGDateTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B601E58B41F00D06B39 /* GPKGDateTimeUtils.m */; };
+		CF8B6C501E58B42000D06B39 /* GPKGDbConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B621E58B41F00D06B39 /* GPKGDbConnection.m */; };
+		CF8B6C511E58B42000D06B39 /* GPKGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B641E58B41F00D06B39 /* GPKGExtensions.m */; };
+		CF8B6C521E58B42000D06B39 /* GPKGExtensionsDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B661E58B41F00D06B39 /* GPKGExtensionsDao.m */; };
+		CF8B6C531E58B42000D06B39 /* GPKGFeatureColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B681E58B41F00D06B39 /* GPKGFeatureColumn.m */; };
+		CF8B6C541E58B42000D06B39 /* GPKGFeatureDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B6A1E58B41F00D06B39 /* GPKGFeatureDao.m */; };
+		CF8B6C551E58B42000D06B39 /* GPKGFeatureIndexer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B6C1E58B41F00D06B39 /* GPKGFeatureIndexer.m */; };
+		CF8B6C561E58B42000D06B39 /* GPKGFeatureIndexGeoPackageResults.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B6E1E58B41F00D06B39 /* GPKGFeatureIndexGeoPackageResults.m */; };
+		CF8B6C571E58B42000D06B39 /* GPKGFeatureIndexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B701E58B41F00D06B39 /* GPKGFeatureIndexManager.m */; };
+		CF8B6C581E58B42000D06B39 /* GPKGFeatureIndexMetadataResults.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B721E58B41F00D06B39 /* GPKGFeatureIndexMetadataResults.m */; };
+		CF8B6C591E58B42000D06B39 /* GPKGFeatureIndexResults.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B741E58B41F00D06B39 /* GPKGFeatureIndexResults.m */; };
+		CF8B6C5A1E58B42000D06B39 /* GPKGFeatureIndexTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B761E58B41F00D06B39 /* GPKGFeatureIndexTypes.m */; };
+		CF8B6C5B1E58B42000D06B39 /* GPKGFeatureOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B781E58B41F00D06B39 /* GPKGFeatureOverlay.m */; };
+		CF8B6C5C1E58B42000D06B39 /* GPKGFeatureOverlayQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B7A1E58B41F00D06B39 /* GPKGFeatureOverlayQuery.m */; };
+		CF8B6C5D1E58B42000D06B39 /* GPKGFeatureRow.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B7C1E58B41F00D06B39 /* GPKGFeatureRow.m */; };
+		CF8B6C5E1E58B42000D06B39 /* GPKGFeatureTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B7E1E58B41F00D06B39 /* GPKGFeatureTable.m */; };
+		CF8B6C5F1E58B42000D06B39 /* GPKGFeatureTableIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B801E58B41F00D06B39 /* GPKGFeatureTableIndex.m */; };
+		CF8B6C601E58B42000D06B39 /* GPKGFeatureTableReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B821E58B41F00D06B39 /* GPKGFeatureTableReader.m */; };
+		CF8B6C611E58B42000D06B39 /* GPKGFeatureTileGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B841E58B41F00D06B39 /* GPKGFeatureTileGenerator.m */; };
+		CF8B6C621E58B42000D06B39 /* GPKGFeatureTileLink.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B861E58B41F00D06B39 /* GPKGFeatureTileLink.m */; };
+		CF8B6C631E58B42000D06B39 /* GPKGFeatureTileLinkDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B881E58B41F00D06B39 /* GPKGFeatureTileLinkDao.m */; };
+		CF8B6C641E58B42000D06B39 /* GPKGFeatureTilePointIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B8A1E58B41F00D06B39 /* GPKGFeatureTilePointIcon.m */; };
+		CF8B6C651E58B42000D06B39 /* GPKGFeatureTiles.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B8C1E58B41F00D06B39 /* GPKGFeatureTiles.m */; };
+		CF8B6C661E58B42000D06B39 /* GPKGFeatureTileTableLinker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B8E1E58B41F00D06B39 /* GPKGFeatureTileTableLinker.m */; };
+		CF8B6C671E58B42000D06B39 /* GPKGGeometryColumns.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B901E58B41F00D06B39 /* GPKGGeometryColumns.m */; };
+		CF8B6C681E58B42000D06B39 /* GPKGGeometryColumnsDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B921E58B41F00D06B39 /* GPKGGeometryColumnsDao.m */; };
+		CF8B6C691E58B42000D06B39 /* GPKGGeometryData.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B941E58B41F00D06B39 /* GPKGGeometryData.m */; };
+		CF8B6C6A1E58B42000D06B39 /* GPKGGeometryExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B961E58B41F00D06B39 /* GPKGGeometryExtensions.m */; };
+		CF8B6C6B1E58B42000D06B39 /* GPKGGeometryIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B981E58B41F00D06B39 /* GPKGGeometryIndex.m */; };
+		CF8B6C6C1E58B42000D06B39 /* GPKGGeometryIndexDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B9A1E58B41F00D06B39 /* GPKGGeometryIndexDao.m */; };
+		CF8B6C6D1E58B42000D06B39 /* GPKGGeometryMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B9C1E58B41F00D06B39 /* GPKGGeometryMetadata.m */; };
+		CF8B6C6E1E58B42000D06B39 /* GPKGGeometryMetadataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B9E1E58B41F00D06B39 /* GPKGGeometryMetadataDao.m */; };
+		CF8B6C6F1E58B42000D06B39 /* GPKGGeometryProjectionTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BA01E58B41F00D06B39 /* GPKGGeometryProjectionTransform.m */; };
+		CF8B6C701E58B42000D06B39 /* GPKGGeoPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BA21E58B41F00D06B39 /* GPKGGeoPackage.m */; };
+		CF8B6C711E58B42000D06B39 /* GPKGGeoPackageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BA41E58B41F00D06B39 /* GPKGGeoPackageCache.m */; };
+		CF8B6C721E58B42000D06B39 /* GPKGGeoPackageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BA61E58B41F00D06B39 /* GPKGGeoPackageConstants.m */; };
+		CF8B6C731E58B42000D06B39 /* GPKGGeoPackageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BA81E58B41F00D06B39 /* GPKGGeoPackageFactory.m */; };
+		CF8B6C741E58B42000D06B39 /* GPKGGeoPackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BAA1E58B41F00D06B39 /* GPKGGeoPackageManager.m */; };
+		CF8B6C751E58B42000D06B39 /* GPKGGeoPackageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BAC1E58B41F00D06B39 /* GPKGGeoPackageMetadata.m */; };
+		CF8B6C761E58B42000D06B39 /* GPKGGeoPackageMetadataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BAE1E58B41F00D06B39 /* GPKGGeoPackageMetadataDao.m */; };
+		CF8B6C771E58B42000D06B39 /* GPKGGeoPackageMetadataTableCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BB01E58B41F00D06B39 /* GPKGGeoPackageMetadataTableCreator.m */; };
+		CF8B6C781E58B42000D06B39 /* GPKGGeoPackageOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BB21E58B41F00D06B39 /* GPKGGeoPackageOverlay.m */; };
+		CF8B6C791E58B42000D06B39 /* GPKGGeoPackageTableCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BB41E58B41F00D06B39 /* GPKGGeoPackageTableCreator.m */; };
+		CF8B6C7A1E58B42000D06B39 /* GPKGGeoPackageValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BB61E58B41F00D06B39 /* GPKGGeoPackageValidate.m */; };
+		CF8B6C7B1E58B42000D06B39 /* GPKGImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BB81E58B41F00D06B39 /* GPKGImageConverter.m */; };
+		CF8B6C7C1E58B42000D06B39 /* GPKGIOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BBA1E58B41F00D06B39 /* GPKGIOUtils.m */; };
+		CF8B6C7D1E58B42000D06B39 /* GPKGMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BBC1E58B41F00D06B39 /* GPKGMapPoint.m */; };
+		CF8B6C7E1E58B42000D06B39 /* GPKGMapPointOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BBF1E58B41F00D06B39 /* GPKGMapPointOptions.m */; };
+		CF8B6C7F1E58B42000D06B39 /* GPKGMapShape.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BC11E58B41F00D06B39 /* GPKGMapShape.m */; };
+		CF8B6C801E58B42000D06B39 /* GPKGMapShapeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BC31E58B41F00D06B39 /* GPKGMapShapeConverter.m */; };
+		CF8B6C811E58B42000D06B39 /* GPKGMapShapePoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BC51E58B41F00D06B39 /* GPKGMapShapePoints.m */; };
+		CF8B6C821E58B42000D06B39 /* GPKGMapShapeTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BC71E58B41F00D06B39 /* GPKGMapShapeTypes.m */; };
+		CF8B6C831E58B42000D06B39 /* GPKGMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BC91E58B41F00D06B39 /* GPKGMetadata.m */; };
+		CF8B6C841E58B42000D06B39 /* GPKGMetadataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BCB1E58B41F00D06B39 /* GPKGMetadataDao.m */; };
+		CF8B6C851E58B42000D06B39 /* GPKGMetadataDb.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BCD1E58B41F00D06B39 /* GPKGMetadataDb.m */; };
+		CF8B6C861E58B42000D06B39 /* GPKGMetadataReference.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BCF1E58B41F00D06B39 /* GPKGMetadataReference.m */; };
+		CF8B6C871E58B42000D06B39 /* GPKGMetadataReferenceDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BD11E58B41F00D06B39 /* GPKGMetadataReferenceDao.m */; };
+		CF8B6C881E58B42000D06B39 /* GPKGMetadataScope.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BD31E58B41F00D06B39 /* GPKGMetadataScope.m */; };
+		CF8B6C891E58B42000D06B39 /* GPKGMultiPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BD51E58B41F00D06B39 /* GPKGMultiPoint.m */; };
+		CF8B6C8A1E58B42000D06B39 /* GPKGMultiPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BD71E58B42000D06B39 /* GPKGMultiPolygon.m */; };
+		CF8B6C8B1E58B42000D06B39 /* GPKGMultiPolygonPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BD91E58B42000D06B39 /* GPKGMultiPolygonPoints.m */; };
+		CF8B6C8C1E58B42000D06B39 /* GPKGMultiPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BDB1E58B42000D06B39 /* GPKGMultiPolyline.m */; };
+		CF8B6C8D1E58B42000D06B39 /* GPKGMultiPolylinePoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BDD1E58B42000D06B39 /* GPKGMultiPolylinePoints.m */; };
+		CF8B6C8E1E58B42000D06B39 /* GPKGNGAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BDF1E58B42000D06B39 /* GPKGNGAExtensions.m */; };
+		CF8B6C8F1E58B42000D06B39 /* GPKGNumberFeaturesTile.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BE11E58B42000D06B39 /* GPKGNumberFeaturesTile.m */; };
+		CF8B6C901E58B42000D06B39 /* GPKGOverlayFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BE31E58B42000D06B39 /* GPKGOverlayFactory.m */; };
+		CF8B6C911E58B42000D06B39 /* GPKGPolygonHolePoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BE51E58B42000D06B39 /* GPKGPolygonHolePoints.m */; };
+		CF8B6C921E58B42000D06B39 /* GPKGPolygonPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BE71E58B42000D06B39 /* GPKGPolygonPoints.m */; };
+		CF8B6C931E58B42000D06B39 /* GPKGPolylinePoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BE91E58B42000D06B39 /* GPKGPolylinePoints.m */; };
+		CF8B6C941E58B42000D06B39 /* GPKGProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BEC1E58B42000D06B39 /* GPKGProjection.m */; };
+		CF8B6C951E58B42000D06B39 /* GPKGProjectionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BEE1E58B42000D06B39 /* GPKGProjectionConstants.m */; };
+		CF8B6C961E58B42000D06B39 /* GPKGProjectionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BF01E58B42000D06B39 /* GPKGProjectionFactory.m */; };
+		CF8B6C971E58B42000D06B39 /* GPKGProjectionRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BF21E58B42000D06B39 /* GPKGProjectionRetriever.m */; };
+		CF8B6C981E58B42000D06B39 /* GPKGProjectionTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BF41E58B42000D06B39 /* GPKGProjectionTransform.m */; };
+		CF8B6C991E58B42000D06B39 /* GPKGProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BF61E58B42000D06B39 /* GPKGProperties.m */; };
+		CF8B6C9A1E58B42000D06B39 /* GPKGPropertyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BF81E58B42000D06B39 /* GPKGPropertyConstants.m */; };
+		CF8B6C9B1E58B42000D06B39 /* GPKGResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BFA1E58B42000D06B39 /* GPKGResultSet.m */; };
+		CF8B6C9C1E58B42000D06B39 /* GPKGSLocationCoordinate3D.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6BFE1E58B42000D06B39 /* GPKGSLocationCoordinate3D.m */; };
+		CF8B6C9D1E58B42000D06B39 /* GPKGSpatialReferenceSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C001E58B42000D06B39 /* GPKGSpatialReferenceSystem.m */; };
+		CF8B6C9E1E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C021E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m */; };
+		CF8B6C9F1E58B42000D06B39 /* GPKGSqliteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C041E58B42000D06B39 /* GPKGSqliteConnection.m */; };
+		CF8B6CA01E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C061E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.m */; };
+		CF8B6CA11E58B42000D06B39 /* GPKGSqlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C081E58B42000D06B39 /* GPKGSqlUtils.m */; };
+		CF8B6CA21E58B42000D06B39 /* GPKGStandardFormatOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C0A1E58B42000D06B39 /* GPKGStandardFormatOverlay.m */; };
+		CF8B6CA31E58B42000D06B39 /* GPKGTableCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C0C1E58B42000D06B39 /* GPKGTableCreator.m */; };
+		CF8B6CA41E58B42000D06B39 /* GPKGTableIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C0E1E58B42000D06B39 /* GPKGTableIndex.m */; };
+		CF8B6CA51E58B42000D06B39 /* GPKGTableIndexDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C101E58B42000D06B39 /* GPKGTableIndexDao.m */; };
+		CF8B6CA61E58B42000D06B39 /* GPKGTableMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C121E58B42000D06B39 /* GPKGTableMetadata.m */; };
+		CF8B6CA71E58B42000D06B39 /* GPKGTableMetadataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C141E58B42000D06B39 /* GPKGTableMetadataDao.m */; };
+		CF8B6CA81E58B42000D06B39 /* GPKGTileBoundingBoxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C161E58B42000D06B39 /* GPKGTileBoundingBoxUtils.m */; };
+		CF8B6CA91E58B42000D06B39 /* GPKGTileColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C181E58B42000D06B39 /* GPKGTileColumn.m */; };
+		CF8B6CAA1E58B42000D06B39 /* GPKGTileDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C1A1E58B42000D06B39 /* GPKGTileDao.m */; };
+		CF8B6CAB1E58B42000D06B39 /* GPKGTileDaoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C1C1E58B42000D06B39 /* GPKGTileDaoUtils.m */; };
+		CF8B6CAC1E58B42000D06B39 /* GPKGTileGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C1E1E58B42000D06B39 /* GPKGTileGenerator.m */; };
+		CF8B6CAD1E58B42000D06B39 /* GPKGTileGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C201E58B42000D06B39 /* GPKGTileGrid.m */; };
+		CF8B6CAE1E58B42000D06B39 /* GPKGTileMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C221E58B42000D06B39 /* GPKGTileMatrix.m */; };
+		CF8B6CAF1E58B42000D06B39 /* GPKGTileMatrixDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C241E58B42000D06B39 /* GPKGTileMatrixDao.m */; };
+		CF8B6CB01E58B42000D06B39 /* GPKGTileMatrixSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C261E58B42000D06B39 /* GPKGTileMatrixSet.m */; };
+		CF8B6CB11E58B42000D06B39 /* GPKGTileMatrixSetDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C281E58B42000D06B39 /* GPKGTileMatrixSetDao.m */; };
+		CF8B6CB21E58B42000D06B39 /* GPKGTileRow.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C2A1E58B42000D06B39 /* GPKGTileRow.m */; };
+		CF8B6CB31E58B42000D06B39 /* GPKGTileTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C2C1E58B42000D06B39 /* GPKGTileTable.m */; };
+		CF8B6CB41E58B42000D06B39 /* GPKGTileTableReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C2E1E58B42000D06B39 /* GPKGTileTableReader.m */; };
+		CF8B6CB51E58B42000D06B39 /* GPKGUrlTileGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C301E58B42000D06B39 /* GPKGUrlTileGenerator.m */; };
+		CF8B6CB61E58B42000D06B39 /* GPKGUserColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C321E58B42000D06B39 /* GPKGUserColumn.m */; };
+		CF8B6CB71E58B42000D06B39 /* GPKGUserDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C341E58B42000D06B39 /* GPKGUserDao.m */; };
+		CF8B6CB81E58B42000D06B39 /* GPKGUserRow.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C361E58B42000D06B39 /* GPKGUserRow.m */; };
+		CF8B6CB91E58B42000D06B39 /* GPKGUserTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C381E58B42000D06B39 /* GPKGUserTable.m */; };
+		CF8B6CBA1E58B42000D06B39 /* GPKGUserTableReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C3A1E58B42000D06B39 /* GPKGUserTableReader.m */; };
+		CF8B6CBB1E58B42000D06B39 /* GPKGUserUniqueConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C3C1E58B42000D06B39 /* GPKGUserUniqueConstraint.m */; };
+		CF8B6CBC1E58B42000D06B39 /* GPKGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6C3E1E58B42000D06B39 /* GPKGUtils.m */; };
+		CF8B6CF41E58B45B00D06B39 /* WKBByteReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CC11E58B45B00D06B39 /* WKBByteReader.m */; };
+		CF8B6CF51E58B45B00D06B39 /* WKBByteWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CC31E58B45B00D06B39 /* WKBByteWriter.m */; };
+		CF8B6CF61E58B45B00D06B39 /* WKBCircularString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CC51E58B45B00D06B39 /* WKBCircularString.m */; };
+		CF8B6CF71E58B45B00D06B39 /* WKBCompoundCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CC71E58B45B00D06B39 /* WKBCompoundCurve.m */; };
+		CF8B6CF81E58B45B00D06B39 /* WKBCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CC91E58B45B00D06B39 /* WKBCurve.m */; };
+		CF8B6CF91E58B45B00D06B39 /* WKBCurvePolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CCB1E58B45B00D06B39 /* WKBCurvePolygon.m */; };
+		CF8B6CFA1E58B45B00D06B39 /* WKBGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CCD1E58B45B00D06B39 /* WKBGeometry.m */; };
+		CF8B6CFB1E58B45B00D06B39 /* WKBGeometryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CCF1E58B45B00D06B39 /* WKBGeometryCollection.m */; };
+		CF8B6CFC1E58B45B00D06B39 /* WKBGeometryEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CD11E58B45B00D06B39 /* WKBGeometryEnvelope.m */; };
+		CF8B6CFD1E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CD31E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.m */; };
+		CF8B6CFE1E58B45B00D06B39 /* WKBGeometryPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CD51E58B45B00D06B39 /* WKBGeometryPrinter.m */; };
+		CF8B6CFF1E58B45B00D06B39 /* WKBGeometryReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CD71E58B45B00D06B39 /* WKBGeometryReader.m */; };
+		CF8B6D001E58B45B00D06B39 /* WKBGeometryTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CD91E58B45B00D06B39 /* WKBGeometryTypes.m */; };
+		CF8B6D011E58B45B00D06B39 /* WKBGeometryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CDB1E58B45B00D06B39 /* WKBGeometryWriter.m */; };
+		CF8B6D021E58B45B00D06B39 /* WKBLineString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CDD1E58B45B00D06B39 /* WKBLineString.m */; };
+		CF8B6D031E58B45B00D06B39 /* WKBMultiCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CDF1E58B45B00D06B39 /* WKBMultiCurve.m */; };
+		CF8B6D041E58B45B00D06B39 /* WKBMultiLineString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CE11E58B45B00D06B39 /* WKBMultiLineString.m */; };
+		CF8B6D051E58B45B00D06B39 /* WKBMultiPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CE31E58B45B00D06B39 /* WKBMultiPoint.m */; };
+		CF8B6D061E58B45B00D06B39 /* WKBMultiPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CE51E58B45B00D06B39 /* WKBMultiPolygon.m */; };
+		CF8B6D071E58B45B00D06B39 /* WKBMultiSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CE71E58B45B00D06B39 /* WKBMultiSurface.m */; };
+		CF8B6D081E58B45B00D06B39 /* WKBPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CE91E58B45B00D06B39 /* WKBPoint.m */; };
+		CF8B6D091E58B45B00D06B39 /* WKBPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CEB1E58B45B00D06B39 /* WKBPolygon.m */; };
+		CF8B6D0A1E58B45B00D06B39 /* WKBPolyhedralSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CED1E58B45B00D06B39 /* WKBPolyhedralSurface.m */; };
+		CF8B6D0B1E58B45B00D06B39 /* WKBSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CEF1E58B45B00D06B39 /* WKBSurface.m */; };
+		CF8B6D0C1E58B45B00D06B39 /* WKBTIN.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CF11E58B45B00D06B39 /* WKBTIN.m */; };
+		CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +331,486 @@
 		134814201AA4EA6300B7C361 /* libRNGeoPackageLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNGeoPackageLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNGeoPackageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGeoPackageLibrary.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGeoPackageLibrary.m; sourceTree = "<group>"; };
+		CF8B69FB1E58B3D800D06B39 /* aasincos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aasincos.c; sourceTree = "<group>"; };
+		CF8B69FC1E58B3D800D06B39 /* adjlon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adjlon.c; sourceTree = "<group>"; };
+		CF8B69FD1E58B3D800D06B39 /* bch2bps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch2bps.c; sourceTree = "<group>"; };
+		CF8B69FE1E58B3D800D06B39 /* bchgen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bchgen.c; sourceTree = "<group>"; };
+		CF8B69FF1E58B3D800D06B39 /* biveval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = biveval.c; sourceTree = "<group>"; };
+		CF8B6A001E58B3D800D06B39 /* cs2cs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cs2cs.c; sourceTree = "<group>"; };
+		CF8B6A011E58B3D800D06B39 /* dmstor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dmstor.c; sourceTree = "<group>"; };
+		CF8B6A021E58B3D800D06B39 /* emess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = emess.c; sourceTree = "<group>"; };
+		CF8B6A031E58B3D800D06B39 /* emess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emess.h; sourceTree = "<group>"; };
+		CF8B6A041E58B3D800D06B39 /* gen_cheb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gen_cheb.c; sourceTree = "<group>"; };
+		CF8B6A051E58B3D800D06B39 /* geocent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geocent.c; sourceTree = "<group>"; };
+		CF8B6A061E58B3D800D06B39 /* geocent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geocent.h; sourceTree = "<group>"; };
+		CF8B6A071E58B3D800D06B39 /* geod_for.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod_for.c; sourceTree = "<group>"; };
+		CF8B6A081E58B3D800D06B39 /* geod_inv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod_inv.c; sourceTree = "<group>"; };
+		CF8B6A091E58B3D800D06B39 /* geod_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod_set.c; sourceTree = "<group>"; };
+		CF8B6A0A1E58B3D800D06B39 /* geod.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod.c; sourceTree = "<group>"; };
+		CF8B6A0B1E58B3D800D06B39 /* geodesic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geodesic.h; sourceTree = "<group>"; };
+		CF8B6A0C1E58B3D800D06B39 /* jniproj.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jniproj.c; sourceTree = "<group>"; };
+		CF8B6A0D1E58B3D800D06B39 /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libProj4.a; sourceTree = "<group>"; };
+		CF8B6A0E1E58B3D800D06B39 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CF8B6A0F1E58B3D800D06B39 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		CF8B6A101E58B3D800D06B39 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		CF8B6A111E58B3D800D06B39 /* makefile.vc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makefile.vc; sourceTree = "<group>"; };
+		CF8B6A121E58B3D800D06B39 /* mk_cheby.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mk_cheby.c; sourceTree = "<group>"; };
+		CF8B6A131E58B3D800D06B39 /* nad_cvt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad_cvt.c; sourceTree = "<group>"; };
+		CF8B6A141E58B3D800D06B39 /* nad_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad_init.c; sourceTree = "<group>"; };
+		CF8B6A151E58B3D800D06B39 /* nad_intr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad_intr.c; sourceTree = "<group>"; };
+		CF8B6A161E58B3D800D06B39 /* nad_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nad_list.h; sourceTree = "<group>"; };
+		CF8B6A171E58B3D800D06B39 /* nad2bin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad2bin.c; sourceTree = "<group>"; };
+		CF8B6A181E58B3D800D06B39 /* nad2nad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad2nad.c; sourceTree = "<group>"; };
+		CF8B6A191E58B3D800D06B39 /* org_proj4_Projections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = org_proj4_Projections.h; sourceTree = "<group>"; };
+		CF8B6A1A1E58B3D800D06B39 /* p_series.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = p_series.c; sourceTree = "<group>"; };
+		CF8B6A1B1E58B3D800D06B39 /* PJ_aea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_aea.c; sourceTree = "<group>"; };
+		CF8B6A1C1E58B3D800D06B39 /* PJ_aeqd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_aeqd.c; sourceTree = "<group>"; };
+		CF8B6A1D1E58B3D800D06B39 /* PJ_airy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_airy.c; sourceTree = "<group>"; };
+		CF8B6A1E1E58B3D800D06B39 /* PJ_aitoff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_aitoff.c; sourceTree = "<group>"; };
+		CF8B6A1F1E58B3D800D06B39 /* pj_apply_gridshift.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_apply_gridshift.c; sourceTree = "<group>"; };
+		CF8B6A201E58B3D800D06B39 /* PJ_august.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_august.c; sourceTree = "<group>"; };
+		CF8B6A211E58B3D800D06B39 /* pj_auth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_auth.c; sourceTree = "<group>"; };
+		CF8B6A221E58B3D800D06B39 /* PJ_bacon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_bacon.c; sourceTree = "<group>"; };
+		CF8B6A231E58B3D800D06B39 /* PJ_bipc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_bipc.c; sourceTree = "<group>"; };
+		CF8B6A241E58B3D800D06B39 /* PJ_boggs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_boggs.c; sourceTree = "<group>"; };
+		CF8B6A251E58B3D800D06B39 /* PJ_bonne.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_bonne.c; sourceTree = "<group>"; };
+		CF8B6A261E58B3D800D06B39 /* PJ_cass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_cass.c; sourceTree = "<group>"; };
+		CF8B6A271E58B3D800D06B39 /* PJ_cc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_cc.c; sourceTree = "<group>"; };
+		CF8B6A281E58B3D800D06B39 /* PJ_cea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_cea.c; sourceTree = "<group>"; };
+		CF8B6A291E58B3D800D06B39 /* PJ_chamb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_chamb.c; sourceTree = "<group>"; };
+		CF8B6A2A1E58B3D800D06B39 /* PJ_collg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_collg.c; sourceTree = "<group>"; };
+		CF8B6A2B1E58B3D800D06B39 /* PJ_crast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_crast.c; sourceTree = "<group>"; };
+		CF8B6A2C1E58B3D800D06B39 /* pj_datum_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_datum_set.c; sourceTree = "<group>"; };
+		CF8B6A2D1E58B3D800D06B39 /* pj_datums.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_datums.c; sourceTree = "<group>"; };
+		CF8B6A2E1E58B3D800D06B39 /* PJ_denoy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_denoy.c; sourceTree = "<group>"; };
+		CF8B6A2F1E58B3D800D06B39 /* pj_deriv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_deriv.c; sourceTree = "<group>"; };
+		CF8B6A301E58B3D800D06B39 /* PJ_eck1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck1.c; sourceTree = "<group>"; };
+		CF8B6A311E58B3D800D06B39 /* PJ_eck2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck2.c; sourceTree = "<group>"; };
+		CF8B6A321E58B3D800D06B39 /* PJ_eck3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck3.c; sourceTree = "<group>"; };
+		CF8B6A331E58B3D800D06B39 /* PJ_eck4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck4.c; sourceTree = "<group>"; };
+		CF8B6A341E58B3D800D06B39 /* PJ_eck5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck5.c; sourceTree = "<group>"; };
+		CF8B6A351E58B3D800D06B39 /* pj_ell_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_ell_set.c; sourceTree = "<group>"; };
+		CF8B6A361E58B3D800D06B39 /* pj_ellps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_ellps.c; sourceTree = "<group>"; };
+		CF8B6A371E58B3D800D06B39 /* PJ_eqc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eqc.c; sourceTree = "<group>"; };
+		CF8B6A381E58B3D800D06B39 /* PJ_eqdc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eqdc.c; sourceTree = "<group>"; };
+		CF8B6A391E58B3D800D06B39 /* pj_errno.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_errno.c; sourceTree = "<group>"; };
+		CF8B6A3A1E58B3D800D06B39 /* pj_factors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_factors.c; sourceTree = "<group>"; };
+		CF8B6A3B1E58B3D800D06B39 /* PJ_fahey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_fahey.c; sourceTree = "<group>"; };
+		CF8B6A3C1E58B3D800D06B39 /* PJ_fouc_s.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_fouc_s.c; sourceTree = "<group>"; };
+		CF8B6A3D1E58B3D800D06B39 /* pj_fwd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_fwd.c; sourceTree = "<group>"; };
+		CF8B6A3E1E58B3D800D06B39 /* PJ_gall.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gall.c; sourceTree = "<group>"; };
+		CF8B6A3F1E58B3D800D06B39 /* pj_gauss.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_gauss.c; sourceTree = "<group>"; };
+		CF8B6A401E58B3D800D06B39 /* pj_geocent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_geocent.c; sourceTree = "<group>"; };
+		CF8B6A411E58B3D800D06B39 /* PJ_geos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_geos.c; sourceTree = "<group>"; };
+		CF8B6A421E58B3D800D06B39 /* PJ_gins8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gins8.c; sourceTree = "<group>"; };
+		CF8B6A431E58B3D800D06B39 /* PJ_gn_sinu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gn_sinu.c; sourceTree = "<group>"; };
+		CF8B6A441E58B3D800D06B39 /* PJ_gnom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gnom.c; sourceTree = "<group>"; };
+		CF8B6A451E58B3D800D06B39 /* PJ_goode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_goode.c; sourceTree = "<group>"; };
+		CF8B6A461E58B3D800D06B39 /* pj_gridinfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_gridinfo.c; sourceTree = "<group>"; };
+		CF8B6A471E58B3D800D06B39 /* pj_gridlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_gridlist.c; sourceTree = "<group>"; };
+		CF8B6A481E58B3D800D06B39 /* PJ_gstmerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gstmerc.c; sourceTree = "<group>"; };
+		CF8B6A491E58B3D800D06B39 /* PJ_hammer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_hammer.c; sourceTree = "<group>"; };
+		CF8B6A4A1E58B3D800D06B39 /* PJ_hatano.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_hatano.c; sourceTree = "<group>"; };
+		CF8B6A4B1E58B3D800D06B39 /* PJ_imw_p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_imw_p.c; sourceTree = "<group>"; };
+		CF8B6A4C1E58B3D800D06B39 /* pj_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_init.c; sourceTree = "<group>"; };
+		CF8B6A4D1E58B3D800D06B39 /* pj_initcache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_initcache.c; sourceTree = "<group>"; };
+		CF8B6A4E1E58B3D800D06B39 /* pj_inv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_inv.c; sourceTree = "<group>"; };
+		CF8B6A4F1E58B3D800D06B39 /* PJ_krovak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_krovak.c; sourceTree = "<group>"; };
+		CF8B6A501E58B3D800D06B39 /* PJ_labrd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_labrd.c; sourceTree = "<group>"; };
+		CF8B6A511E58B3D800D06B39 /* PJ_laea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_laea.c; sourceTree = "<group>"; };
+		CF8B6A521E58B3D800D06B39 /* PJ_lagrng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lagrng.c; sourceTree = "<group>"; };
+		CF8B6A531E58B3D800D06B39 /* PJ_larr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_larr.c; sourceTree = "<group>"; };
+		CF8B6A541E58B3D800D06B39 /* PJ_lask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lask.c; sourceTree = "<group>"; };
+		CF8B6A551E58B3D800D06B39 /* pj_latlong.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_latlong.c; sourceTree = "<group>"; };
+		CF8B6A561E58B3D800D06B39 /* PJ_lcc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lcc.c; sourceTree = "<group>"; };
+		CF8B6A571E58B3D800D06B39 /* PJ_lcca.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lcca.c; sourceTree = "<group>"; };
+		CF8B6A581E58B3D800D06B39 /* pj_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_list.c; sourceTree = "<group>"; };
+		CF8B6A591E58B3D800D06B39 /* pj_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pj_list.h; sourceTree = "<group>"; };
+		CF8B6A5A1E58B3D800D06B39 /* PJ_loxim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_loxim.c; sourceTree = "<group>"; };
+		CF8B6A5B1E58B3D800D06B39 /* PJ_lsat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lsat.c; sourceTree = "<group>"; };
+		CF8B6A5C1E58B3D800D06B39 /* pj_malloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_malloc.c; sourceTree = "<group>"; };
+		CF8B6A5D1E58B3D800D06B39 /* PJ_mbt_fps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mbt_fps.c; sourceTree = "<group>"; };
+		CF8B6A5E1E58B3D800D06B39 /* PJ_mbtfpp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mbtfpp.c; sourceTree = "<group>"; };
+		CF8B6A5F1E58B3D800D06B39 /* PJ_mbtfpq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mbtfpq.c; sourceTree = "<group>"; };
+		CF8B6A601E58B3D800D06B39 /* PJ_merc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_merc.c; sourceTree = "<group>"; };
+		CF8B6A611E58B3D800D06B39 /* PJ_mill.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mill.c; sourceTree = "<group>"; };
+		CF8B6A621E58B3D800D06B39 /* pj_mlfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_mlfn.c; sourceTree = "<group>"; };
+		CF8B6A631E58B3D800D06B39 /* PJ_mod_ster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mod_ster.c; sourceTree = "<group>"; };
+		CF8B6A641E58B3D800D06B39 /* PJ_moll.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_moll.c; sourceTree = "<group>"; };
+		CF8B6A651E58B3D800D06B39 /* pj_msfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_msfn.c; sourceTree = "<group>"; };
+		CF8B6A661E58B3D800D06B39 /* pj_mutex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_mutex.c; sourceTree = "<group>"; };
+		CF8B6A671E58B3D800D06B39 /* PJ_nell_h.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nell_h.c; sourceTree = "<group>"; };
+		CF8B6A681E58B3D800D06B39 /* PJ_nell.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nell.c; sourceTree = "<group>"; };
+		CF8B6A691E58B3D800D06B39 /* PJ_nocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nocol.c; sourceTree = "<group>"; };
+		CF8B6A6A1E58B3D800D06B39 /* PJ_nsper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nsper.c; sourceTree = "<group>"; };
+		CF8B6A6B1E58B3D800D06B39 /* PJ_nzmg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nzmg.c; sourceTree = "<group>"; };
+		CF8B6A6C1E58B3D800D06B39 /* PJ_ob_tran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_ob_tran.c; sourceTree = "<group>"; };
+		CF8B6A6D1E58B3D800D06B39 /* PJ_ocea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_ocea.c; sourceTree = "<group>"; };
+		CF8B6A6E1E58B3D800D06B39 /* PJ_oea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_oea.c; sourceTree = "<group>"; };
+		CF8B6A6F1E58B3D800D06B39 /* PJ_omerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_omerc.c; sourceTree = "<group>"; };
+		CF8B6A701E58B3D800D06B39 /* pj_open_lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_open_lib.c; sourceTree = "<group>"; };
+		CF8B6A711E58B3D800D06B39 /* PJ_ortho.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_ortho.c; sourceTree = "<group>"; };
+		CF8B6A721E58B3D800D06B39 /* pj_param.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_param.c; sourceTree = "<group>"; };
+		CF8B6A731E58B3D900D06B39 /* pj_phi2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_phi2.c; sourceTree = "<group>"; };
+		CF8B6A741E58B3D900D06B39 /* PJ_poly.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_poly.c; sourceTree = "<group>"; };
+		CF8B6A751E58B3D900D06B39 /* pj_pr_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_pr_list.c; sourceTree = "<group>"; };
+		CF8B6A761E58B3D900D06B39 /* PJ_putp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp2.c; sourceTree = "<group>"; };
+		CF8B6A771E58B3D900D06B39 /* PJ_putp3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp3.c; sourceTree = "<group>"; };
+		CF8B6A781E58B3D900D06B39 /* PJ_putp4p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp4p.c; sourceTree = "<group>"; };
+		CF8B6A791E58B3D900D06B39 /* PJ_putp5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp5.c; sourceTree = "<group>"; };
+		CF8B6A7A1E58B3D900D06B39 /* PJ_putp6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp6.c; sourceTree = "<group>"; };
+		CF8B6A7B1E58B3D900D06B39 /* pj_qsfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_qsfn.c; sourceTree = "<group>"; };
+		CF8B6A7C1E58B3D900D06B39 /* pj_release.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_release.c; sourceTree = "<group>"; };
+		CF8B6A7D1E58B3D900D06B39 /* PJ_robin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_robin.c; sourceTree = "<group>"; };
+		CF8B6A7E1E58B3D900D06B39 /* PJ_rpoly.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_rpoly.c; sourceTree = "<group>"; };
+		CF8B6A7F1E58B3D900D06B39 /* PJ_sconics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_sconics.c; sourceTree = "<group>"; };
+		CF8B6A801E58B3D900D06B39 /* PJ_somerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_somerc.c; sourceTree = "<group>"; };
+		CF8B6A811E58B3D900D06B39 /* PJ_stere.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_stere.c; sourceTree = "<group>"; };
+		CF8B6A821E58B3D900D06B39 /* PJ_sterea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_sterea.c; sourceTree = "<group>"; };
+		CF8B6A831E58B3D900D06B39 /* pj_strerrno.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_strerrno.c; sourceTree = "<group>"; };
+		CF8B6A841E58B3D900D06B39 /* PJ_sts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_sts.c; sourceTree = "<group>"; };
+		CF8B6A851E58B3D900D06B39 /* PJ_tcc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tcc.c; sourceTree = "<group>"; };
+		CF8B6A861E58B3D900D06B39 /* PJ_tcea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tcea.c; sourceTree = "<group>"; };
+		CF8B6A871E58B3D900D06B39 /* PJ_tmerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tmerc.c; sourceTree = "<group>"; };
+		CF8B6A881E58B3D900D06B39 /* PJ_tpeqd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tpeqd.c; sourceTree = "<group>"; };
+		CF8B6A891E58B3D900D06B39 /* pj_transform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_transform.c; sourceTree = "<group>"; };
+		CF8B6A8A1E58B3D900D06B39 /* pj_tsfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_tsfn.c; sourceTree = "<group>"; };
+		CF8B6A8B1E58B3D900D06B39 /* pj_units.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_units.c; sourceTree = "<group>"; };
+		CF8B6A8C1E58B3D900D06B39 /* PJ_urm5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_urm5.c; sourceTree = "<group>"; };
+		CF8B6A8D1E58B3D900D06B39 /* PJ_urmfps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_urmfps.c; sourceTree = "<group>"; };
+		CF8B6A8E1E58B3D900D06B39 /* pj_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_utils.c; sourceTree = "<group>"; };
+		CF8B6A8F1E58B3D900D06B39 /* PJ_vandg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_vandg.c; sourceTree = "<group>"; };
+		CF8B6A901E58B3D900D06B39 /* PJ_vandg2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_vandg2.c; sourceTree = "<group>"; };
+		CF8B6A911E58B3D900D06B39 /* PJ_vandg4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_vandg4.c; sourceTree = "<group>"; };
+		CF8B6A921E58B3D900D06B39 /* PJ_wag2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wag2.c; sourceTree = "<group>"; };
+		CF8B6A931E58B3D900D06B39 /* PJ_wag3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wag3.c; sourceTree = "<group>"; };
+		CF8B6A941E58B3D900D06B39 /* PJ_wag7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wag7.c; sourceTree = "<group>"; };
+		CF8B6A951E58B3D900D06B39 /* PJ_wink1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wink1.c; sourceTree = "<group>"; };
+		CF8B6A961E58B3D900D06B39 /* PJ_wink2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wink2.c; sourceTree = "<group>"; };
+		CF8B6A971E58B3D900D06B39 /* pj_zpoly1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_zpoly1.c; sourceTree = "<group>"; };
+		CF8B6A981E58B3D900D06B39 /* proj_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proj_api.h; sourceTree = "<group>"; };
+		CF8B6A991E58B3D900D06B39 /* proj_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proj_config.h; sourceTree = "<group>"; };
+		CF8B6A9A1E58B3D900D06B39 /* proj_config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proj_config.h.in; sourceTree = "<group>"; };
+		CF8B6A9B1E58B3D900D06B39 /* proj_mdist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proj_mdist.c; sourceTree = "<group>"; };
+		CF8B6A9C1E58B3D900D06B39 /* proj_rouss.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proj_rouss.c; sourceTree = "<group>"; };
+		CF8B6A9D1E58B3D900D06B39 /* proj.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proj.c; sourceTree = "<group>"; };
+		CF8B6A9E1E58B3D900D06B39 /* proj.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proj.def; sourceTree = "<group>"; };
+		CF8B6A9F1E58B3D900D06B39 /* projects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projects.h; sourceTree = "<group>"; };
+		CF8B6AA01E58B3D900D06B39 /* rtodms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtodms.c; sourceTree = "<group>"; };
+		CF8B6AA11E58B3D900D06B39 /* vector1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector1.c; sourceTree = "<group>"; };
+		CF8B6B3C1E58B41F00D06B39 /* geopackage_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geopackage_ios.h; sourceTree = "<group>"; };
+		CF8B6B3D1E58B41F00D06B39 /* geopackage-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "geopackage-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		CF8B6B3E1E58B41F00D06B39 /* GPKGBaseDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGBaseDao.h; sourceTree = "<group>"; };
+		CF8B6B3F1E58B41F00D06B39 /* GPKGBaseDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGBaseDao.m; sourceTree = "<group>"; };
+		CF8B6B401E58B41F00D06B39 /* GPKGBoundedOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGBoundedOverlay.h; sourceTree = "<group>"; };
+		CF8B6B411E58B41F00D06B39 /* GPKGBoundedOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGBoundedOverlay.m; sourceTree = "<group>"; };
+		CF8B6B421E58B41F00D06B39 /* GPKGBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGBoundingBox.h; sourceTree = "<group>"; };
+		CF8B6B431E58B41F00D06B39 /* GPKGBoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGBoundingBox.m; sourceTree = "<group>"; };
+		CF8B6B441E58B41F00D06B39 /* GPKGColumnValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGColumnValue.h; sourceTree = "<group>"; };
+		CF8B6B451E58B41F00D06B39 /* GPKGColumnValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGColumnValue.m; sourceTree = "<group>"; };
+		CF8B6B461E58B41F00D06B39 /* GPKGColumnValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGColumnValues.h; sourceTree = "<group>"; };
+		CF8B6B471E58B41F00D06B39 /* GPKGColumnValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGColumnValues.m; sourceTree = "<group>"; };
+		CF8B6B481E58B41F00D06B39 /* GPKGCompressFormats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGCompressFormats.h; sourceTree = "<group>"; };
+		CF8B6B491E58B41F00D06B39 /* GPKGCompressFormats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGCompressFormats.m; sourceTree = "<group>"; };
+		CF8B6B4A1E58B41F00D06B39 /* GPKGConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGConnection.h; sourceTree = "<group>"; };
+		CF8B6B4B1E58B41F00D06B39 /* GPKGConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGConnection.m; sourceTree = "<group>"; };
+		CF8B6B4C1E58B41F00D06B39 /* GPKGConnectionPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGConnectionPool.h; sourceTree = "<group>"; };
+		CF8B6B4D1E58B41F00D06B39 /* GPKGConnectionPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGConnectionPool.m; sourceTree = "<group>"; };
+		CF8B6B4E1E58B41F00D06B39 /* GPKGContents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGContents.h; sourceTree = "<group>"; };
+		CF8B6B4F1E58B41F00D06B39 /* GPKGContents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGContents.m; sourceTree = "<group>"; };
+		CF8B6B501E58B41F00D06B39 /* GPKGContentsDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGContentsDao.h; sourceTree = "<group>"; };
+		CF8B6B511E58B41F00D06B39 /* GPKGContentsDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGContentsDao.m; sourceTree = "<group>"; };
+		CF8B6B521E58B41F00D06B39 /* GPKGContentValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGContentValues.h; sourceTree = "<group>"; };
+		CF8B6B531E58B41F00D06B39 /* GPKGContentValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGContentValues.m; sourceTree = "<group>"; };
+		CF8B6B541E58B41F00D06B39 /* GPKGCustomFeaturesTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGCustomFeaturesTile.h; sourceTree = "<group>"; };
+		CF8B6B551E58B41F00D06B39 /* GPKGDataColumnConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDataColumnConstraints.h; sourceTree = "<group>"; };
+		CF8B6B561E58B41F00D06B39 /* GPKGDataColumnConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDataColumnConstraints.m; sourceTree = "<group>"; };
+		CF8B6B571E58B41F00D06B39 /* GPKGDataColumnConstraintsDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDataColumnConstraintsDao.h; sourceTree = "<group>"; };
+		CF8B6B581E58B41F00D06B39 /* GPKGDataColumnConstraintsDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDataColumnConstraintsDao.m; sourceTree = "<group>"; };
+		CF8B6B591E58B41F00D06B39 /* GPKGDataColumns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDataColumns.h; sourceTree = "<group>"; };
+		CF8B6B5A1E58B41F00D06B39 /* GPKGDataColumns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDataColumns.m; sourceTree = "<group>"; };
+		CF8B6B5B1E58B41F00D06B39 /* GPKGDataColumnsDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDataColumnsDao.h; sourceTree = "<group>"; };
+		CF8B6B5C1E58B41F00D06B39 /* GPKGDataColumnsDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDataColumnsDao.m; sourceTree = "<group>"; };
+		CF8B6B5D1E58B41F00D06B39 /* GPKGDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDataTypes.h; sourceTree = "<group>"; };
+		CF8B6B5E1E58B41F00D06B39 /* GPKGDataTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDataTypes.m; sourceTree = "<group>"; };
+		CF8B6B5F1E58B41F00D06B39 /* GPKGDateTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDateTimeUtils.h; sourceTree = "<group>"; };
+		CF8B6B601E58B41F00D06B39 /* GPKGDateTimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDateTimeUtils.m; sourceTree = "<group>"; };
+		CF8B6B611E58B41F00D06B39 /* GPKGDbConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGDbConnection.h; sourceTree = "<group>"; };
+		CF8B6B621E58B41F00D06B39 /* GPKGDbConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGDbConnection.m; sourceTree = "<group>"; };
+		CF8B6B631E58B41F00D06B39 /* GPKGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGExtensions.h; sourceTree = "<group>"; };
+		CF8B6B641E58B41F00D06B39 /* GPKGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGExtensions.m; sourceTree = "<group>"; };
+		CF8B6B651E58B41F00D06B39 /* GPKGExtensionsDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGExtensionsDao.h; sourceTree = "<group>"; };
+		CF8B6B661E58B41F00D06B39 /* GPKGExtensionsDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGExtensionsDao.m; sourceTree = "<group>"; };
+		CF8B6B671E58B41F00D06B39 /* GPKGFeatureColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureColumn.h; sourceTree = "<group>"; };
+		CF8B6B681E58B41F00D06B39 /* GPKGFeatureColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureColumn.m; sourceTree = "<group>"; };
+		CF8B6B691E58B41F00D06B39 /* GPKGFeatureDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureDao.h; sourceTree = "<group>"; };
+		CF8B6B6A1E58B41F00D06B39 /* GPKGFeatureDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureDao.m; sourceTree = "<group>"; };
+		CF8B6B6B1E58B41F00D06B39 /* GPKGFeatureIndexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureIndexer.h; sourceTree = "<group>"; };
+		CF8B6B6C1E58B41F00D06B39 /* GPKGFeatureIndexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureIndexer.m; sourceTree = "<group>"; };
+		CF8B6B6D1E58B41F00D06B39 /* GPKGFeatureIndexGeoPackageResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureIndexGeoPackageResults.h; sourceTree = "<group>"; };
+		CF8B6B6E1E58B41F00D06B39 /* GPKGFeatureIndexGeoPackageResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureIndexGeoPackageResults.m; sourceTree = "<group>"; };
+		CF8B6B6F1E58B41F00D06B39 /* GPKGFeatureIndexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureIndexManager.h; sourceTree = "<group>"; };
+		CF8B6B701E58B41F00D06B39 /* GPKGFeatureIndexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureIndexManager.m; sourceTree = "<group>"; };
+		CF8B6B711E58B41F00D06B39 /* GPKGFeatureIndexMetadataResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureIndexMetadataResults.h; sourceTree = "<group>"; };
+		CF8B6B721E58B41F00D06B39 /* GPKGFeatureIndexMetadataResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureIndexMetadataResults.m; sourceTree = "<group>"; };
+		CF8B6B731E58B41F00D06B39 /* GPKGFeatureIndexResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureIndexResults.h; sourceTree = "<group>"; };
+		CF8B6B741E58B41F00D06B39 /* GPKGFeatureIndexResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureIndexResults.m; sourceTree = "<group>"; };
+		CF8B6B751E58B41F00D06B39 /* GPKGFeatureIndexTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureIndexTypes.h; sourceTree = "<group>"; };
+		CF8B6B761E58B41F00D06B39 /* GPKGFeatureIndexTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureIndexTypes.m; sourceTree = "<group>"; };
+		CF8B6B771E58B41F00D06B39 /* GPKGFeatureOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureOverlay.h; sourceTree = "<group>"; };
+		CF8B6B781E58B41F00D06B39 /* GPKGFeatureOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureOverlay.m; sourceTree = "<group>"; };
+		CF8B6B791E58B41F00D06B39 /* GPKGFeatureOverlayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureOverlayQuery.h; sourceTree = "<group>"; };
+		CF8B6B7A1E58B41F00D06B39 /* GPKGFeatureOverlayQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureOverlayQuery.m; sourceTree = "<group>"; };
+		CF8B6B7B1E58B41F00D06B39 /* GPKGFeatureRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureRow.h; sourceTree = "<group>"; };
+		CF8B6B7C1E58B41F00D06B39 /* GPKGFeatureRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureRow.m; sourceTree = "<group>"; };
+		CF8B6B7D1E58B41F00D06B39 /* GPKGFeatureTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTable.h; sourceTree = "<group>"; };
+		CF8B6B7E1E58B41F00D06B39 /* GPKGFeatureTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTable.m; sourceTree = "<group>"; };
+		CF8B6B7F1E58B41F00D06B39 /* GPKGFeatureTableIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTableIndex.h; sourceTree = "<group>"; };
+		CF8B6B801E58B41F00D06B39 /* GPKGFeatureTableIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTableIndex.m; sourceTree = "<group>"; };
+		CF8B6B811E58B41F00D06B39 /* GPKGFeatureTableReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTableReader.h; sourceTree = "<group>"; };
+		CF8B6B821E58B41F00D06B39 /* GPKGFeatureTableReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTableReader.m; sourceTree = "<group>"; };
+		CF8B6B831E58B41F00D06B39 /* GPKGFeatureTileGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTileGenerator.h; sourceTree = "<group>"; };
+		CF8B6B841E58B41F00D06B39 /* GPKGFeatureTileGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTileGenerator.m; sourceTree = "<group>"; };
+		CF8B6B851E58B41F00D06B39 /* GPKGFeatureTileLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTileLink.h; sourceTree = "<group>"; };
+		CF8B6B861E58B41F00D06B39 /* GPKGFeatureTileLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTileLink.m; sourceTree = "<group>"; };
+		CF8B6B871E58B41F00D06B39 /* GPKGFeatureTileLinkDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTileLinkDao.h; sourceTree = "<group>"; };
+		CF8B6B881E58B41F00D06B39 /* GPKGFeatureTileLinkDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTileLinkDao.m; sourceTree = "<group>"; };
+		CF8B6B891E58B41F00D06B39 /* GPKGFeatureTilePointIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTilePointIcon.h; sourceTree = "<group>"; };
+		CF8B6B8A1E58B41F00D06B39 /* GPKGFeatureTilePointIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTilePointIcon.m; sourceTree = "<group>"; };
+		CF8B6B8B1E58B41F00D06B39 /* GPKGFeatureTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTiles.h; sourceTree = "<group>"; };
+		CF8B6B8C1E58B41F00D06B39 /* GPKGFeatureTiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTiles.m; sourceTree = "<group>"; };
+		CF8B6B8D1E58B41F00D06B39 /* GPKGFeatureTileTableLinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGFeatureTileTableLinker.h; sourceTree = "<group>"; };
+		CF8B6B8E1E58B41F00D06B39 /* GPKGFeatureTileTableLinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGFeatureTileTableLinker.m; sourceTree = "<group>"; };
+		CF8B6B8F1E58B41F00D06B39 /* GPKGGeometryColumns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryColumns.h; sourceTree = "<group>"; };
+		CF8B6B901E58B41F00D06B39 /* GPKGGeometryColumns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryColumns.m; sourceTree = "<group>"; };
+		CF8B6B911E58B41F00D06B39 /* GPKGGeometryColumnsDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryColumnsDao.h; sourceTree = "<group>"; };
+		CF8B6B921E58B41F00D06B39 /* GPKGGeometryColumnsDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryColumnsDao.m; sourceTree = "<group>"; };
+		CF8B6B931E58B41F00D06B39 /* GPKGGeometryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryData.h; sourceTree = "<group>"; };
+		CF8B6B941E58B41F00D06B39 /* GPKGGeometryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryData.m; sourceTree = "<group>"; };
+		CF8B6B951E58B41F00D06B39 /* GPKGGeometryExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryExtensions.h; sourceTree = "<group>"; };
+		CF8B6B961E58B41F00D06B39 /* GPKGGeometryExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryExtensions.m; sourceTree = "<group>"; };
+		CF8B6B971E58B41F00D06B39 /* GPKGGeometryIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryIndex.h; sourceTree = "<group>"; };
+		CF8B6B981E58B41F00D06B39 /* GPKGGeometryIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryIndex.m; sourceTree = "<group>"; };
+		CF8B6B991E58B41F00D06B39 /* GPKGGeometryIndexDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryIndexDao.h; sourceTree = "<group>"; };
+		CF8B6B9A1E58B41F00D06B39 /* GPKGGeometryIndexDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryIndexDao.m; sourceTree = "<group>"; };
+		CF8B6B9B1E58B41F00D06B39 /* GPKGGeometryMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryMetadata.h; sourceTree = "<group>"; };
+		CF8B6B9C1E58B41F00D06B39 /* GPKGGeometryMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryMetadata.m; sourceTree = "<group>"; };
+		CF8B6B9D1E58B41F00D06B39 /* GPKGGeometryMetadataDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryMetadataDao.h; sourceTree = "<group>"; };
+		CF8B6B9E1E58B41F00D06B39 /* GPKGGeometryMetadataDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryMetadataDao.m; sourceTree = "<group>"; };
+		CF8B6B9F1E58B41F00D06B39 /* GPKGGeometryProjectionTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeometryProjectionTransform.h; sourceTree = "<group>"; };
+		CF8B6BA01E58B41F00D06B39 /* GPKGGeometryProjectionTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeometryProjectionTransform.m; sourceTree = "<group>"; };
+		CF8B6BA11E58B41F00D06B39 /* GPKGGeoPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackage.h; sourceTree = "<group>"; };
+		CF8B6BA21E58B41F00D06B39 /* GPKGGeoPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackage.m; sourceTree = "<group>"; };
+		CF8B6BA31E58B41F00D06B39 /* GPKGGeoPackageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageCache.h; sourceTree = "<group>"; };
+		CF8B6BA41E58B41F00D06B39 /* GPKGGeoPackageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageCache.m; sourceTree = "<group>"; };
+		CF8B6BA51E58B41F00D06B39 /* GPKGGeoPackageConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageConstants.h; sourceTree = "<group>"; };
+		CF8B6BA61E58B41F00D06B39 /* GPKGGeoPackageConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageConstants.m; sourceTree = "<group>"; };
+		CF8B6BA71E58B41F00D06B39 /* GPKGGeoPackageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageFactory.h; sourceTree = "<group>"; };
+		CF8B6BA81E58B41F00D06B39 /* GPKGGeoPackageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageFactory.m; sourceTree = "<group>"; };
+		CF8B6BA91E58B41F00D06B39 /* GPKGGeoPackageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageManager.h; sourceTree = "<group>"; };
+		CF8B6BAA1E58B41F00D06B39 /* GPKGGeoPackageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageManager.m; sourceTree = "<group>"; };
+		CF8B6BAB1E58B41F00D06B39 /* GPKGGeoPackageMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageMetadata.h; sourceTree = "<group>"; };
+		CF8B6BAC1E58B41F00D06B39 /* GPKGGeoPackageMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageMetadata.m; sourceTree = "<group>"; };
+		CF8B6BAD1E58B41F00D06B39 /* GPKGGeoPackageMetadataDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageMetadataDao.h; sourceTree = "<group>"; };
+		CF8B6BAE1E58B41F00D06B39 /* GPKGGeoPackageMetadataDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageMetadataDao.m; sourceTree = "<group>"; };
+		CF8B6BAF1E58B41F00D06B39 /* GPKGGeoPackageMetadataTableCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageMetadataTableCreator.h; sourceTree = "<group>"; };
+		CF8B6BB01E58B41F00D06B39 /* GPKGGeoPackageMetadataTableCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageMetadataTableCreator.m; sourceTree = "<group>"; };
+		CF8B6BB11E58B41F00D06B39 /* GPKGGeoPackageOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageOverlay.h; sourceTree = "<group>"; };
+		CF8B6BB21E58B41F00D06B39 /* GPKGGeoPackageOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageOverlay.m; sourceTree = "<group>"; };
+		CF8B6BB31E58B41F00D06B39 /* GPKGGeoPackageTableCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageTableCreator.h; sourceTree = "<group>"; };
+		CF8B6BB41E58B41F00D06B39 /* GPKGGeoPackageTableCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageTableCreator.m; sourceTree = "<group>"; };
+		CF8B6BB51E58B41F00D06B39 /* GPKGGeoPackageValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGGeoPackageValidate.h; sourceTree = "<group>"; };
+		CF8B6BB61E58B41F00D06B39 /* GPKGGeoPackageValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGGeoPackageValidate.m; sourceTree = "<group>"; };
+		CF8B6BB71E58B41F00D06B39 /* GPKGImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGImageConverter.h; sourceTree = "<group>"; };
+		CF8B6BB81E58B41F00D06B39 /* GPKGImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGImageConverter.m; sourceTree = "<group>"; };
+		CF8B6BB91E58B41F00D06B39 /* GPKGIOUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGIOUtils.h; sourceTree = "<group>"; };
+		CF8B6BBA1E58B41F00D06B39 /* GPKGIOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGIOUtils.m; sourceTree = "<group>"; };
+		CF8B6BBB1E58B41F00D06B39 /* GPKGMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapPoint.h; sourceTree = "<group>"; };
+		CF8B6BBC1E58B41F00D06B39 /* GPKGMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMapPoint.m; sourceTree = "<group>"; };
+		CF8B6BBD1E58B41F00D06B39 /* GPKGMapPointInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapPointInitializer.h; sourceTree = "<group>"; };
+		CF8B6BBE1E58B41F00D06B39 /* GPKGMapPointOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapPointOptions.h; sourceTree = "<group>"; };
+		CF8B6BBF1E58B41F00D06B39 /* GPKGMapPointOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMapPointOptions.m; sourceTree = "<group>"; };
+		CF8B6BC01E58B41F00D06B39 /* GPKGMapShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapShape.h; sourceTree = "<group>"; };
+		CF8B6BC11E58B41F00D06B39 /* GPKGMapShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMapShape.m; sourceTree = "<group>"; };
+		CF8B6BC21E58B41F00D06B39 /* GPKGMapShapeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapShapeConverter.h; sourceTree = "<group>"; };
+		CF8B6BC31E58B41F00D06B39 /* GPKGMapShapeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMapShapeConverter.m; sourceTree = "<group>"; };
+		CF8B6BC41E58B41F00D06B39 /* GPKGMapShapePoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapShapePoints.h; sourceTree = "<group>"; };
+		CF8B6BC51E58B41F00D06B39 /* GPKGMapShapePoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMapShapePoints.m; sourceTree = "<group>"; };
+		CF8B6BC61E58B41F00D06B39 /* GPKGMapShapeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMapShapeTypes.h; sourceTree = "<group>"; };
+		CF8B6BC71E58B41F00D06B39 /* GPKGMapShapeTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMapShapeTypes.m; sourceTree = "<group>"; };
+		CF8B6BC81E58B41F00D06B39 /* GPKGMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMetadata.h; sourceTree = "<group>"; };
+		CF8B6BC91E58B41F00D06B39 /* GPKGMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMetadata.m; sourceTree = "<group>"; };
+		CF8B6BCA1E58B41F00D06B39 /* GPKGMetadataDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMetadataDao.h; sourceTree = "<group>"; };
+		CF8B6BCB1E58B41F00D06B39 /* GPKGMetadataDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMetadataDao.m; sourceTree = "<group>"; };
+		CF8B6BCC1E58B41F00D06B39 /* GPKGMetadataDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMetadataDb.h; sourceTree = "<group>"; };
+		CF8B6BCD1E58B41F00D06B39 /* GPKGMetadataDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMetadataDb.m; sourceTree = "<group>"; };
+		CF8B6BCE1E58B41F00D06B39 /* GPKGMetadataReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMetadataReference.h; sourceTree = "<group>"; };
+		CF8B6BCF1E58B41F00D06B39 /* GPKGMetadataReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMetadataReference.m; sourceTree = "<group>"; };
+		CF8B6BD01E58B41F00D06B39 /* GPKGMetadataReferenceDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMetadataReferenceDao.h; sourceTree = "<group>"; };
+		CF8B6BD11E58B41F00D06B39 /* GPKGMetadataReferenceDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMetadataReferenceDao.m; sourceTree = "<group>"; };
+		CF8B6BD21E58B41F00D06B39 /* GPKGMetadataScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMetadataScope.h; sourceTree = "<group>"; };
+		CF8B6BD31E58B41F00D06B39 /* GPKGMetadataScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMetadataScope.m; sourceTree = "<group>"; };
+		CF8B6BD41E58B41F00D06B39 /* GPKGMultiPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMultiPoint.h; sourceTree = "<group>"; };
+		CF8B6BD51E58B41F00D06B39 /* GPKGMultiPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMultiPoint.m; sourceTree = "<group>"; };
+		CF8B6BD61E58B41F00D06B39 /* GPKGMultiPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMultiPolygon.h; sourceTree = "<group>"; };
+		CF8B6BD71E58B42000D06B39 /* GPKGMultiPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMultiPolygon.m; sourceTree = "<group>"; };
+		CF8B6BD81E58B42000D06B39 /* GPKGMultiPolygonPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMultiPolygonPoints.h; sourceTree = "<group>"; };
+		CF8B6BD91E58B42000D06B39 /* GPKGMultiPolygonPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMultiPolygonPoints.m; sourceTree = "<group>"; };
+		CF8B6BDA1E58B42000D06B39 /* GPKGMultiPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMultiPolyline.h; sourceTree = "<group>"; };
+		CF8B6BDB1E58B42000D06B39 /* GPKGMultiPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMultiPolyline.m; sourceTree = "<group>"; };
+		CF8B6BDC1E58B42000D06B39 /* GPKGMultiPolylinePoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGMultiPolylinePoints.h; sourceTree = "<group>"; };
+		CF8B6BDD1E58B42000D06B39 /* GPKGMultiPolylinePoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGMultiPolylinePoints.m; sourceTree = "<group>"; };
+		CF8B6BDE1E58B42000D06B39 /* GPKGNGAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGNGAExtensions.h; sourceTree = "<group>"; };
+		CF8B6BDF1E58B42000D06B39 /* GPKGNGAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGNGAExtensions.m; sourceTree = "<group>"; };
+		CF8B6BE01E58B42000D06B39 /* GPKGNumberFeaturesTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGNumberFeaturesTile.h; sourceTree = "<group>"; };
+		CF8B6BE11E58B42000D06B39 /* GPKGNumberFeaturesTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGNumberFeaturesTile.m; sourceTree = "<group>"; };
+		CF8B6BE21E58B42000D06B39 /* GPKGOverlayFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGOverlayFactory.h; sourceTree = "<group>"; };
+		CF8B6BE31E58B42000D06B39 /* GPKGOverlayFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGOverlayFactory.m; sourceTree = "<group>"; };
+		CF8B6BE41E58B42000D06B39 /* GPKGPolygonHolePoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGPolygonHolePoints.h; sourceTree = "<group>"; };
+		CF8B6BE51E58B42000D06B39 /* GPKGPolygonHolePoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGPolygonHolePoints.m; sourceTree = "<group>"; };
+		CF8B6BE61E58B42000D06B39 /* GPKGPolygonPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGPolygonPoints.h; sourceTree = "<group>"; };
+		CF8B6BE71E58B42000D06B39 /* GPKGPolygonPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGPolygonPoints.m; sourceTree = "<group>"; };
+		CF8B6BE81E58B42000D06B39 /* GPKGPolylinePoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGPolylinePoints.h; sourceTree = "<group>"; };
+		CF8B6BE91E58B42000D06B39 /* GPKGPolylinePoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGPolylinePoints.m; sourceTree = "<group>"; };
+		CF8B6BEA1E58B42000D06B39 /* GPKGProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProgress.h; sourceTree = "<group>"; };
+		CF8B6BEB1E58B42000D06B39 /* GPKGProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProjection.h; sourceTree = "<group>"; };
+		CF8B6BEC1E58B42000D06B39 /* GPKGProjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGProjection.m; sourceTree = "<group>"; };
+		CF8B6BED1E58B42000D06B39 /* GPKGProjectionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProjectionConstants.h; sourceTree = "<group>"; };
+		CF8B6BEE1E58B42000D06B39 /* GPKGProjectionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGProjectionConstants.m; sourceTree = "<group>"; };
+		CF8B6BEF1E58B42000D06B39 /* GPKGProjectionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProjectionFactory.h; sourceTree = "<group>"; };
+		CF8B6BF01E58B42000D06B39 /* GPKGProjectionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGProjectionFactory.m; sourceTree = "<group>"; };
+		CF8B6BF11E58B42000D06B39 /* GPKGProjectionRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProjectionRetriever.h; sourceTree = "<group>"; };
+		CF8B6BF21E58B42000D06B39 /* GPKGProjectionRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGProjectionRetriever.m; sourceTree = "<group>"; };
+		CF8B6BF31E58B42000D06B39 /* GPKGProjectionTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProjectionTransform.h; sourceTree = "<group>"; };
+		CF8B6BF41E58B42000D06B39 /* GPKGProjectionTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGProjectionTransform.m; sourceTree = "<group>"; };
+		CF8B6BF51E58B42000D06B39 /* GPKGProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGProperties.h; sourceTree = "<group>"; };
+		CF8B6BF61E58B42000D06B39 /* GPKGProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGProperties.m; sourceTree = "<group>"; };
+		CF8B6BF71E58B42000D06B39 /* GPKGPropertyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGPropertyConstants.h; sourceTree = "<group>"; };
+		CF8B6BF81E58B42000D06B39 /* GPKGPropertyConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGPropertyConstants.m; sourceTree = "<group>"; };
+		CF8B6BF91E58B42000D06B39 /* GPKGResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGResultSet.h; sourceTree = "<group>"; };
+		CF8B6BFA1E58B42000D06B39 /* GPKGResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGResultSet.m; sourceTree = "<group>"; };
+		CF8B6BFB1E58B42000D06B39 /* GPKGShapePoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGShapePoints.h; sourceTree = "<group>"; };
+		CF8B6BFC1E58B42000D06B39 /* GPKGShapeWithChildrenPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGShapeWithChildrenPoints.h; sourceTree = "<group>"; };
+		CF8B6BFD1E58B42000D06B39 /* GPKGSLocationCoordinate3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGSLocationCoordinate3D.h; sourceTree = "<group>"; };
+		CF8B6BFE1E58B42000D06B39 /* GPKGSLocationCoordinate3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGSLocationCoordinate3D.m; sourceTree = "<group>"; };
+		CF8B6BFF1E58B42000D06B39 /* GPKGSpatialReferenceSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGSpatialReferenceSystem.h; sourceTree = "<group>"; };
+		CF8B6C001E58B42000D06B39 /* GPKGSpatialReferenceSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGSpatialReferenceSystem.m; sourceTree = "<group>"; };
+		CF8B6C011E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGSpatialReferenceSystemDao.h; sourceTree = "<group>"; };
+		CF8B6C021E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGSpatialReferenceSystemDao.m; sourceTree = "<group>"; };
+		CF8B6C031E58B42000D06B39 /* GPKGSqliteConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGSqliteConnection.h; sourceTree = "<group>"; };
+		CF8B6C041E58B42000D06B39 /* GPKGSqliteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGSqliteConnection.m; sourceTree = "<group>"; };
+		CF8B6C051E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGSqlLiteQueryBuilder.h; sourceTree = "<group>"; };
+		CF8B6C061E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGSqlLiteQueryBuilder.m; sourceTree = "<group>"; };
+		CF8B6C071E58B42000D06B39 /* GPKGSqlUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGSqlUtils.h; sourceTree = "<group>"; };
+		CF8B6C081E58B42000D06B39 /* GPKGSqlUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGSqlUtils.m; sourceTree = "<group>"; };
+		CF8B6C091E58B42000D06B39 /* GPKGStandardFormatOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGStandardFormatOverlay.h; sourceTree = "<group>"; };
+		CF8B6C0A1E58B42000D06B39 /* GPKGStandardFormatOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGStandardFormatOverlay.m; sourceTree = "<group>"; };
+		CF8B6C0B1E58B42000D06B39 /* GPKGTableCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTableCreator.h; sourceTree = "<group>"; };
+		CF8B6C0C1E58B42000D06B39 /* GPKGTableCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTableCreator.m; sourceTree = "<group>"; };
+		CF8B6C0D1E58B42000D06B39 /* GPKGTableIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTableIndex.h; sourceTree = "<group>"; };
+		CF8B6C0E1E58B42000D06B39 /* GPKGTableIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTableIndex.m; sourceTree = "<group>"; };
+		CF8B6C0F1E58B42000D06B39 /* GPKGTableIndexDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTableIndexDao.h; sourceTree = "<group>"; };
+		CF8B6C101E58B42000D06B39 /* GPKGTableIndexDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTableIndexDao.m; sourceTree = "<group>"; };
+		CF8B6C111E58B42000D06B39 /* GPKGTableMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTableMetadata.h; sourceTree = "<group>"; };
+		CF8B6C121E58B42000D06B39 /* GPKGTableMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTableMetadata.m; sourceTree = "<group>"; };
+		CF8B6C131E58B42000D06B39 /* GPKGTableMetadataDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTableMetadataDao.h; sourceTree = "<group>"; };
+		CF8B6C141E58B42000D06B39 /* GPKGTableMetadataDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTableMetadataDao.m; sourceTree = "<group>"; };
+		CF8B6C151E58B42000D06B39 /* GPKGTileBoundingBoxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileBoundingBoxUtils.h; sourceTree = "<group>"; };
+		CF8B6C161E58B42000D06B39 /* GPKGTileBoundingBoxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileBoundingBoxUtils.m; sourceTree = "<group>"; };
+		CF8B6C171E58B42000D06B39 /* GPKGTileColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileColumn.h; sourceTree = "<group>"; };
+		CF8B6C181E58B42000D06B39 /* GPKGTileColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileColumn.m; sourceTree = "<group>"; };
+		CF8B6C191E58B42000D06B39 /* GPKGTileDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileDao.h; sourceTree = "<group>"; };
+		CF8B6C1A1E58B42000D06B39 /* GPKGTileDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileDao.m; sourceTree = "<group>"; };
+		CF8B6C1B1E58B42000D06B39 /* GPKGTileDaoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileDaoUtils.h; sourceTree = "<group>"; };
+		CF8B6C1C1E58B42000D06B39 /* GPKGTileDaoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileDaoUtils.m; sourceTree = "<group>"; };
+		CF8B6C1D1E58B42000D06B39 /* GPKGTileGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileGenerator.h; sourceTree = "<group>"; };
+		CF8B6C1E1E58B42000D06B39 /* GPKGTileGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileGenerator.m; sourceTree = "<group>"; };
+		CF8B6C1F1E58B42000D06B39 /* GPKGTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileGrid.h; sourceTree = "<group>"; };
+		CF8B6C201E58B42000D06B39 /* GPKGTileGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileGrid.m; sourceTree = "<group>"; };
+		CF8B6C211E58B42000D06B39 /* GPKGTileMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileMatrix.h; sourceTree = "<group>"; };
+		CF8B6C221E58B42000D06B39 /* GPKGTileMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileMatrix.m; sourceTree = "<group>"; };
+		CF8B6C231E58B42000D06B39 /* GPKGTileMatrixDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileMatrixDao.h; sourceTree = "<group>"; };
+		CF8B6C241E58B42000D06B39 /* GPKGTileMatrixDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileMatrixDao.m; sourceTree = "<group>"; };
+		CF8B6C251E58B42000D06B39 /* GPKGTileMatrixSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileMatrixSet.h; sourceTree = "<group>"; };
+		CF8B6C261E58B42000D06B39 /* GPKGTileMatrixSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileMatrixSet.m; sourceTree = "<group>"; };
+		CF8B6C271E58B42000D06B39 /* GPKGTileMatrixSetDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileMatrixSetDao.h; sourceTree = "<group>"; };
+		CF8B6C281E58B42000D06B39 /* GPKGTileMatrixSetDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileMatrixSetDao.m; sourceTree = "<group>"; };
+		CF8B6C291E58B42000D06B39 /* GPKGTileRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileRow.h; sourceTree = "<group>"; };
+		CF8B6C2A1E58B42000D06B39 /* GPKGTileRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileRow.m; sourceTree = "<group>"; };
+		CF8B6C2B1E58B42000D06B39 /* GPKGTileTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileTable.h; sourceTree = "<group>"; };
+		CF8B6C2C1E58B42000D06B39 /* GPKGTileTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileTable.m; sourceTree = "<group>"; };
+		CF8B6C2D1E58B42000D06B39 /* GPKGTileTableReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGTileTableReader.h; sourceTree = "<group>"; };
+		CF8B6C2E1E58B42000D06B39 /* GPKGTileTableReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGTileTableReader.m; sourceTree = "<group>"; };
+		CF8B6C2F1E58B42000D06B39 /* GPKGUrlTileGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUrlTileGenerator.h; sourceTree = "<group>"; };
+		CF8B6C301E58B42000D06B39 /* GPKGUrlTileGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUrlTileGenerator.m; sourceTree = "<group>"; };
+		CF8B6C311E58B42000D06B39 /* GPKGUserColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUserColumn.h; sourceTree = "<group>"; };
+		CF8B6C321E58B42000D06B39 /* GPKGUserColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUserColumn.m; sourceTree = "<group>"; };
+		CF8B6C331E58B42000D06B39 /* GPKGUserDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUserDao.h; sourceTree = "<group>"; };
+		CF8B6C341E58B42000D06B39 /* GPKGUserDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUserDao.m; sourceTree = "<group>"; };
+		CF8B6C351E58B42000D06B39 /* GPKGUserRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUserRow.h; sourceTree = "<group>"; };
+		CF8B6C361E58B42000D06B39 /* GPKGUserRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUserRow.m; sourceTree = "<group>"; };
+		CF8B6C371E58B42000D06B39 /* GPKGUserTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUserTable.h; sourceTree = "<group>"; };
+		CF8B6C381E58B42000D06B39 /* GPKGUserTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUserTable.m; sourceTree = "<group>"; };
+		CF8B6C391E58B42000D06B39 /* GPKGUserTableReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUserTableReader.h; sourceTree = "<group>"; };
+		CF8B6C3A1E58B42000D06B39 /* GPKGUserTableReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUserTableReader.m; sourceTree = "<group>"; };
+		CF8B6C3B1E58B42000D06B39 /* GPKGUserUniqueConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUserUniqueConstraint.h; sourceTree = "<group>"; };
+		CF8B6C3C1E58B42000D06B39 /* GPKGUserUniqueConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUserUniqueConstraint.m; sourceTree = "<group>"; };
+		CF8B6C3D1E58B42000D06B39 /* GPKGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGUtils.h; sourceTree = "<group>"; };
+		CF8B6C3E1E58B42000D06B39 /* GPKGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKGUtils.m; sourceTree = "<group>"; };
+		CF8B6CBE1E58B45B00D06B39 /* wkb_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wkb_ios.h; sourceTree = "<group>"; };
+		CF8B6CBF1E58B45B00D06B39 /* wkb-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wkb-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		CF8B6CC01E58B45B00D06B39 /* WKBByteReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBByteReader.h; sourceTree = "<group>"; };
+		CF8B6CC11E58B45B00D06B39 /* WKBByteReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBByteReader.m; sourceTree = "<group>"; };
+		CF8B6CC21E58B45B00D06B39 /* WKBByteWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBByteWriter.h; sourceTree = "<group>"; };
+		CF8B6CC31E58B45B00D06B39 /* WKBByteWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBByteWriter.m; sourceTree = "<group>"; };
+		CF8B6CC41E58B45B00D06B39 /* WKBCircularString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBCircularString.h; sourceTree = "<group>"; };
+		CF8B6CC51E58B45B00D06B39 /* WKBCircularString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBCircularString.m; sourceTree = "<group>"; };
+		CF8B6CC61E58B45B00D06B39 /* WKBCompoundCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBCompoundCurve.h; sourceTree = "<group>"; };
+		CF8B6CC71E58B45B00D06B39 /* WKBCompoundCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBCompoundCurve.m; sourceTree = "<group>"; };
+		CF8B6CC81E58B45B00D06B39 /* WKBCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBCurve.h; sourceTree = "<group>"; };
+		CF8B6CC91E58B45B00D06B39 /* WKBCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBCurve.m; sourceTree = "<group>"; };
+		CF8B6CCA1E58B45B00D06B39 /* WKBCurvePolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBCurvePolygon.h; sourceTree = "<group>"; };
+		CF8B6CCB1E58B45B00D06B39 /* WKBCurvePolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBCurvePolygon.m; sourceTree = "<group>"; };
+		CF8B6CCC1E58B45B00D06B39 /* WKBGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometry.h; sourceTree = "<group>"; };
+		CF8B6CCD1E58B45B00D06B39 /* WKBGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometry.m; sourceTree = "<group>"; };
+		CF8B6CCE1E58B45B00D06B39 /* WKBGeometryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryCollection.h; sourceTree = "<group>"; };
+		CF8B6CCF1E58B45B00D06B39 /* WKBGeometryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryCollection.m; sourceTree = "<group>"; };
+		CF8B6CD01E58B45B00D06B39 /* WKBGeometryEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryEnvelope.h; sourceTree = "<group>"; };
+		CF8B6CD11E58B45B00D06B39 /* WKBGeometryEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryEnvelope.m; sourceTree = "<group>"; };
+		CF8B6CD21E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryEnvelopeBuilder.h; sourceTree = "<group>"; };
+		CF8B6CD31E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryEnvelopeBuilder.m; sourceTree = "<group>"; };
+		CF8B6CD41E58B45B00D06B39 /* WKBGeometryPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryPrinter.h; sourceTree = "<group>"; };
+		CF8B6CD51E58B45B00D06B39 /* WKBGeometryPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryPrinter.m; sourceTree = "<group>"; };
+		CF8B6CD61E58B45B00D06B39 /* WKBGeometryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryReader.h; sourceTree = "<group>"; };
+		CF8B6CD71E58B45B00D06B39 /* WKBGeometryReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryReader.m; sourceTree = "<group>"; };
+		CF8B6CD81E58B45B00D06B39 /* WKBGeometryTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryTypes.h; sourceTree = "<group>"; };
+		CF8B6CD91E58B45B00D06B39 /* WKBGeometryTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryTypes.m; sourceTree = "<group>"; };
+		CF8B6CDA1E58B45B00D06B39 /* WKBGeometryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBGeometryWriter.h; sourceTree = "<group>"; };
+		CF8B6CDB1E58B45B00D06B39 /* WKBGeometryWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBGeometryWriter.m; sourceTree = "<group>"; };
+		CF8B6CDC1E58B45B00D06B39 /* WKBLineString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBLineString.h; sourceTree = "<group>"; };
+		CF8B6CDD1E58B45B00D06B39 /* WKBLineString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBLineString.m; sourceTree = "<group>"; };
+		CF8B6CDE1E58B45B00D06B39 /* WKBMultiCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBMultiCurve.h; sourceTree = "<group>"; };
+		CF8B6CDF1E58B45B00D06B39 /* WKBMultiCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBMultiCurve.m; sourceTree = "<group>"; };
+		CF8B6CE01E58B45B00D06B39 /* WKBMultiLineString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBMultiLineString.h; sourceTree = "<group>"; };
+		CF8B6CE11E58B45B00D06B39 /* WKBMultiLineString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBMultiLineString.m; sourceTree = "<group>"; };
+		CF8B6CE21E58B45B00D06B39 /* WKBMultiPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBMultiPoint.h; sourceTree = "<group>"; };
+		CF8B6CE31E58B45B00D06B39 /* WKBMultiPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBMultiPoint.m; sourceTree = "<group>"; };
+		CF8B6CE41E58B45B00D06B39 /* WKBMultiPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBMultiPolygon.h; sourceTree = "<group>"; };
+		CF8B6CE51E58B45B00D06B39 /* WKBMultiPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBMultiPolygon.m; sourceTree = "<group>"; };
+		CF8B6CE61E58B45B00D06B39 /* WKBMultiSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBMultiSurface.h; sourceTree = "<group>"; };
+		CF8B6CE71E58B45B00D06B39 /* WKBMultiSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBMultiSurface.m; sourceTree = "<group>"; };
+		CF8B6CE81E58B45B00D06B39 /* WKBPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBPoint.h; sourceTree = "<group>"; };
+		CF8B6CE91E58B45B00D06B39 /* WKBPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBPoint.m; sourceTree = "<group>"; };
+		CF8B6CEA1E58B45B00D06B39 /* WKBPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBPolygon.h; sourceTree = "<group>"; };
+		CF8B6CEB1E58B45B00D06B39 /* WKBPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBPolygon.m; sourceTree = "<group>"; };
+		CF8B6CEC1E58B45B00D06B39 /* WKBPolyhedralSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBPolyhedralSurface.h; sourceTree = "<group>"; };
+		CF8B6CED1E58B45B00D06B39 /* WKBPolyhedralSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBPolyhedralSurface.m; sourceTree = "<group>"; };
+		CF8B6CEE1E58B45B00D06B39 /* WKBSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBSurface.h; sourceTree = "<group>"; };
+		CF8B6CEF1E58B45B00D06B39 /* WKBSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBSurface.m; sourceTree = "<group>"; };
+		CF8B6CF01E58B45B00D06B39 /* WKBTIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBTIN.h; sourceTree = "<group>"; };
+		CF8B6CF11E58B45B00D06B39 /* WKBTIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBTIN.m; sourceTree = "<group>"; };
+		CF8B6CF21E58B45B00D06B39 /* WKBTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBTriangle.h; sourceTree = "<group>"; };
+		CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBTriangle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +818,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8B6AB11E58B3D900D06B39 /* libProj4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +836,530 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				CF8B69B81E58B31300D06B39 /* TerragoEdge */,
 				B3E7B5881CC2AC0600A0062D /* RNGeoPackageLibrary.h */,
 				B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		CF8B69B81E58B31300D06B39 /* TerragoEdge */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B69F91E58B3A600D06B39 /* Geopackage */,
+			);
+			name = TerragoEdge;
+			sourceTree = "<group>";
+		};
+		CF8B69F91E58B3A600D06B39 /* Geopackage */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B69FA1E58B3C800D06B39 /* Proj4 */,
+				CF8B6B3B1E58B3FB00D06B39 /* SDK */,
+				CF8B6CBD1E58B43100D06B39 /* wkb-iOS */,
+			);
+			name = Geopackage;
+			sourceTree = "<group>";
+		};
+		CF8B69FA1E58B3C800D06B39 /* Proj4 */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B69FB1E58B3D800D06B39 /* aasincos.c */,
+				CF8B69FC1E58B3D800D06B39 /* adjlon.c */,
+				CF8B69FD1E58B3D800D06B39 /* bch2bps.c */,
+				CF8B69FE1E58B3D800D06B39 /* bchgen.c */,
+				CF8B69FF1E58B3D800D06B39 /* biveval.c */,
+				CF8B6A001E58B3D800D06B39 /* cs2cs.c */,
+				CF8B6A011E58B3D800D06B39 /* dmstor.c */,
+				CF8B6A021E58B3D800D06B39 /* emess.c */,
+				CF8B6A031E58B3D800D06B39 /* emess.h */,
+				CF8B6A041E58B3D800D06B39 /* gen_cheb.c */,
+				CF8B6A051E58B3D800D06B39 /* geocent.c */,
+				CF8B6A061E58B3D800D06B39 /* geocent.h */,
+				CF8B6A071E58B3D800D06B39 /* geod_for.c */,
+				CF8B6A081E58B3D800D06B39 /* geod_inv.c */,
+				CF8B6A091E58B3D800D06B39 /* geod_set.c */,
+				CF8B6A0A1E58B3D800D06B39 /* geod.c */,
+				CF8B6A0B1E58B3D800D06B39 /* geodesic.h */,
+				CF8B6A0C1E58B3D800D06B39 /* jniproj.c */,
+				CF8B6A0D1E58B3D800D06B39 /* libProj4.a */,
+				CF8B6A0E1E58B3D800D06B39 /* Makefile */,
+				CF8B6A0F1E58B3D800D06B39 /* Makefile.am */,
+				CF8B6A101E58B3D800D06B39 /* Makefile.in */,
+				CF8B6A111E58B3D800D06B39 /* makefile.vc */,
+				CF8B6A121E58B3D800D06B39 /* mk_cheby.c */,
+				CF8B6A131E58B3D800D06B39 /* nad_cvt.c */,
+				CF8B6A141E58B3D800D06B39 /* nad_init.c */,
+				CF8B6A151E58B3D800D06B39 /* nad_intr.c */,
+				CF8B6A161E58B3D800D06B39 /* nad_list.h */,
+				CF8B6A171E58B3D800D06B39 /* nad2bin.c */,
+				CF8B6A181E58B3D800D06B39 /* nad2nad.c */,
+				CF8B6A191E58B3D800D06B39 /* org_proj4_Projections.h */,
+				CF8B6A1A1E58B3D800D06B39 /* p_series.c */,
+				CF8B6A1B1E58B3D800D06B39 /* PJ_aea.c */,
+				CF8B6A1C1E58B3D800D06B39 /* PJ_aeqd.c */,
+				CF8B6A1D1E58B3D800D06B39 /* PJ_airy.c */,
+				CF8B6A1E1E58B3D800D06B39 /* PJ_aitoff.c */,
+				CF8B6A1F1E58B3D800D06B39 /* pj_apply_gridshift.c */,
+				CF8B6A201E58B3D800D06B39 /* PJ_august.c */,
+				CF8B6A211E58B3D800D06B39 /* pj_auth.c */,
+				CF8B6A221E58B3D800D06B39 /* PJ_bacon.c */,
+				CF8B6A231E58B3D800D06B39 /* PJ_bipc.c */,
+				CF8B6A241E58B3D800D06B39 /* PJ_boggs.c */,
+				CF8B6A251E58B3D800D06B39 /* PJ_bonne.c */,
+				CF8B6A261E58B3D800D06B39 /* PJ_cass.c */,
+				CF8B6A271E58B3D800D06B39 /* PJ_cc.c */,
+				CF8B6A281E58B3D800D06B39 /* PJ_cea.c */,
+				CF8B6A291E58B3D800D06B39 /* PJ_chamb.c */,
+				CF8B6A2A1E58B3D800D06B39 /* PJ_collg.c */,
+				CF8B6A2B1E58B3D800D06B39 /* PJ_crast.c */,
+				CF8B6A2C1E58B3D800D06B39 /* pj_datum_set.c */,
+				CF8B6A2D1E58B3D800D06B39 /* pj_datums.c */,
+				CF8B6A2E1E58B3D800D06B39 /* PJ_denoy.c */,
+				CF8B6A2F1E58B3D800D06B39 /* pj_deriv.c */,
+				CF8B6A301E58B3D800D06B39 /* PJ_eck1.c */,
+				CF8B6A311E58B3D800D06B39 /* PJ_eck2.c */,
+				CF8B6A321E58B3D800D06B39 /* PJ_eck3.c */,
+				CF8B6A331E58B3D800D06B39 /* PJ_eck4.c */,
+				CF8B6A341E58B3D800D06B39 /* PJ_eck5.c */,
+				CF8B6A351E58B3D800D06B39 /* pj_ell_set.c */,
+				CF8B6A361E58B3D800D06B39 /* pj_ellps.c */,
+				CF8B6A371E58B3D800D06B39 /* PJ_eqc.c */,
+				CF8B6A381E58B3D800D06B39 /* PJ_eqdc.c */,
+				CF8B6A391E58B3D800D06B39 /* pj_errno.c */,
+				CF8B6A3A1E58B3D800D06B39 /* pj_factors.c */,
+				CF8B6A3B1E58B3D800D06B39 /* PJ_fahey.c */,
+				CF8B6A3C1E58B3D800D06B39 /* PJ_fouc_s.c */,
+				CF8B6A3D1E58B3D800D06B39 /* pj_fwd.c */,
+				CF8B6A3E1E58B3D800D06B39 /* PJ_gall.c */,
+				CF8B6A3F1E58B3D800D06B39 /* pj_gauss.c */,
+				CF8B6A401E58B3D800D06B39 /* pj_geocent.c */,
+				CF8B6A411E58B3D800D06B39 /* PJ_geos.c */,
+				CF8B6A421E58B3D800D06B39 /* PJ_gins8.c */,
+				CF8B6A431E58B3D800D06B39 /* PJ_gn_sinu.c */,
+				CF8B6A441E58B3D800D06B39 /* PJ_gnom.c */,
+				CF8B6A451E58B3D800D06B39 /* PJ_goode.c */,
+				CF8B6A461E58B3D800D06B39 /* pj_gridinfo.c */,
+				CF8B6A471E58B3D800D06B39 /* pj_gridlist.c */,
+				CF8B6A481E58B3D800D06B39 /* PJ_gstmerc.c */,
+				CF8B6A491E58B3D800D06B39 /* PJ_hammer.c */,
+				CF8B6A4A1E58B3D800D06B39 /* PJ_hatano.c */,
+				CF8B6A4B1E58B3D800D06B39 /* PJ_imw_p.c */,
+				CF8B6A4C1E58B3D800D06B39 /* pj_init.c */,
+				CF8B6A4D1E58B3D800D06B39 /* pj_initcache.c */,
+				CF8B6A4E1E58B3D800D06B39 /* pj_inv.c */,
+				CF8B6A4F1E58B3D800D06B39 /* PJ_krovak.c */,
+				CF8B6A501E58B3D800D06B39 /* PJ_labrd.c */,
+				CF8B6A511E58B3D800D06B39 /* PJ_laea.c */,
+				CF8B6A521E58B3D800D06B39 /* PJ_lagrng.c */,
+				CF8B6A531E58B3D800D06B39 /* PJ_larr.c */,
+				CF8B6A541E58B3D800D06B39 /* PJ_lask.c */,
+				CF8B6A551E58B3D800D06B39 /* pj_latlong.c */,
+				CF8B6A561E58B3D800D06B39 /* PJ_lcc.c */,
+				CF8B6A571E58B3D800D06B39 /* PJ_lcca.c */,
+				CF8B6A581E58B3D800D06B39 /* pj_list.c */,
+				CF8B6A591E58B3D800D06B39 /* pj_list.h */,
+				CF8B6A5A1E58B3D800D06B39 /* PJ_loxim.c */,
+				CF8B6A5B1E58B3D800D06B39 /* PJ_lsat.c */,
+				CF8B6A5C1E58B3D800D06B39 /* pj_malloc.c */,
+				CF8B6A5D1E58B3D800D06B39 /* PJ_mbt_fps.c */,
+				CF8B6A5E1E58B3D800D06B39 /* PJ_mbtfpp.c */,
+				CF8B6A5F1E58B3D800D06B39 /* PJ_mbtfpq.c */,
+				CF8B6A601E58B3D800D06B39 /* PJ_merc.c */,
+				CF8B6A611E58B3D800D06B39 /* PJ_mill.c */,
+				CF8B6A621E58B3D800D06B39 /* pj_mlfn.c */,
+				CF8B6A631E58B3D800D06B39 /* PJ_mod_ster.c */,
+				CF8B6A641E58B3D800D06B39 /* PJ_moll.c */,
+				CF8B6A651E58B3D800D06B39 /* pj_msfn.c */,
+				CF8B6A661E58B3D800D06B39 /* pj_mutex.c */,
+				CF8B6A671E58B3D800D06B39 /* PJ_nell_h.c */,
+				CF8B6A681E58B3D800D06B39 /* PJ_nell.c */,
+				CF8B6A691E58B3D800D06B39 /* PJ_nocol.c */,
+				CF8B6A6A1E58B3D800D06B39 /* PJ_nsper.c */,
+				CF8B6A6B1E58B3D800D06B39 /* PJ_nzmg.c */,
+				CF8B6A6C1E58B3D800D06B39 /* PJ_ob_tran.c */,
+				CF8B6A6D1E58B3D800D06B39 /* PJ_ocea.c */,
+				CF8B6A6E1E58B3D800D06B39 /* PJ_oea.c */,
+				CF8B6A6F1E58B3D800D06B39 /* PJ_omerc.c */,
+				CF8B6A701E58B3D800D06B39 /* pj_open_lib.c */,
+				CF8B6A711E58B3D800D06B39 /* PJ_ortho.c */,
+				CF8B6A721E58B3D800D06B39 /* pj_param.c */,
+				CF8B6A731E58B3D900D06B39 /* pj_phi2.c */,
+				CF8B6A741E58B3D900D06B39 /* PJ_poly.c */,
+				CF8B6A751E58B3D900D06B39 /* pj_pr_list.c */,
+				CF8B6A761E58B3D900D06B39 /* PJ_putp2.c */,
+				CF8B6A771E58B3D900D06B39 /* PJ_putp3.c */,
+				CF8B6A781E58B3D900D06B39 /* PJ_putp4p.c */,
+				CF8B6A791E58B3D900D06B39 /* PJ_putp5.c */,
+				CF8B6A7A1E58B3D900D06B39 /* PJ_putp6.c */,
+				CF8B6A7B1E58B3D900D06B39 /* pj_qsfn.c */,
+				CF8B6A7C1E58B3D900D06B39 /* pj_release.c */,
+				CF8B6A7D1E58B3D900D06B39 /* PJ_robin.c */,
+				CF8B6A7E1E58B3D900D06B39 /* PJ_rpoly.c */,
+				CF8B6A7F1E58B3D900D06B39 /* PJ_sconics.c */,
+				CF8B6A801E58B3D900D06B39 /* PJ_somerc.c */,
+				CF8B6A811E58B3D900D06B39 /* PJ_stere.c */,
+				CF8B6A821E58B3D900D06B39 /* PJ_sterea.c */,
+				CF8B6A831E58B3D900D06B39 /* pj_strerrno.c */,
+				CF8B6A841E58B3D900D06B39 /* PJ_sts.c */,
+				CF8B6A851E58B3D900D06B39 /* PJ_tcc.c */,
+				CF8B6A861E58B3D900D06B39 /* PJ_tcea.c */,
+				CF8B6A871E58B3D900D06B39 /* PJ_tmerc.c */,
+				CF8B6A881E58B3D900D06B39 /* PJ_tpeqd.c */,
+				CF8B6A891E58B3D900D06B39 /* pj_transform.c */,
+				CF8B6A8A1E58B3D900D06B39 /* pj_tsfn.c */,
+				CF8B6A8B1E58B3D900D06B39 /* pj_units.c */,
+				CF8B6A8C1E58B3D900D06B39 /* PJ_urm5.c */,
+				CF8B6A8D1E58B3D900D06B39 /* PJ_urmfps.c */,
+				CF8B6A8E1E58B3D900D06B39 /* pj_utils.c */,
+				CF8B6A8F1E58B3D900D06B39 /* PJ_vandg.c */,
+				CF8B6A901E58B3D900D06B39 /* PJ_vandg2.c */,
+				CF8B6A911E58B3D900D06B39 /* PJ_vandg4.c */,
+				CF8B6A921E58B3D900D06B39 /* PJ_wag2.c */,
+				CF8B6A931E58B3D900D06B39 /* PJ_wag3.c */,
+				CF8B6A941E58B3D900D06B39 /* PJ_wag7.c */,
+				CF8B6A951E58B3D900D06B39 /* PJ_wink1.c */,
+				CF8B6A961E58B3D900D06B39 /* PJ_wink2.c */,
+				CF8B6A971E58B3D900D06B39 /* pj_zpoly1.c */,
+				CF8B6A981E58B3D900D06B39 /* proj_api.h */,
+				CF8B6A991E58B3D900D06B39 /* proj_config.h */,
+				CF8B6A9A1E58B3D900D06B39 /* proj_config.h.in */,
+				CF8B6A9B1E58B3D900D06B39 /* proj_mdist.c */,
+				CF8B6A9C1E58B3D900D06B39 /* proj_rouss.c */,
+				CF8B6A9D1E58B3D900D06B39 /* proj.c */,
+				CF8B6A9E1E58B3D900D06B39 /* proj.def */,
+				CF8B6A9F1E58B3D900D06B39 /* projects.h */,
+				CF8B6AA01E58B3D900D06B39 /* rtodms.c */,
+				CF8B6AA11E58B3D900D06B39 /* vector1.c */,
+			);
+			name = Proj4;
+			sourceTree = "<group>";
+		};
+		CF8B6B3B1E58B3FB00D06B39 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B6B3C1E58B41F00D06B39 /* geopackage_ios.h */,
+				CF8B6B3D1E58B41F00D06B39 /* geopackage-ios-Bridging-Header.h */,
+				CF8B6B3E1E58B41F00D06B39 /* GPKGBaseDao.h */,
+				CF8B6B3F1E58B41F00D06B39 /* GPKGBaseDao.m */,
+				CF8B6B401E58B41F00D06B39 /* GPKGBoundedOverlay.h */,
+				CF8B6B411E58B41F00D06B39 /* GPKGBoundedOverlay.m */,
+				CF8B6B421E58B41F00D06B39 /* GPKGBoundingBox.h */,
+				CF8B6B431E58B41F00D06B39 /* GPKGBoundingBox.m */,
+				CF8B6B441E58B41F00D06B39 /* GPKGColumnValue.h */,
+				CF8B6B451E58B41F00D06B39 /* GPKGColumnValue.m */,
+				CF8B6B461E58B41F00D06B39 /* GPKGColumnValues.h */,
+				CF8B6B471E58B41F00D06B39 /* GPKGColumnValues.m */,
+				CF8B6B481E58B41F00D06B39 /* GPKGCompressFormats.h */,
+				CF8B6B491E58B41F00D06B39 /* GPKGCompressFormats.m */,
+				CF8B6B4A1E58B41F00D06B39 /* GPKGConnection.h */,
+				CF8B6B4B1E58B41F00D06B39 /* GPKGConnection.m */,
+				CF8B6B4C1E58B41F00D06B39 /* GPKGConnectionPool.h */,
+				CF8B6B4D1E58B41F00D06B39 /* GPKGConnectionPool.m */,
+				CF8B6B4E1E58B41F00D06B39 /* GPKGContents.h */,
+				CF8B6B4F1E58B41F00D06B39 /* GPKGContents.m */,
+				CF8B6B501E58B41F00D06B39 /* GPKGContentsDao.h */,
+				CF8B6B511E58B41F00D06B39 /* GPKGContentsDao.m */,
+				CF8B6B521E58B41F00D06B39 /* GPKGContentValues.h */,
+				CF8B6B531E58B41F00D06B39 /* GPKGContentValues.m */,
+				CF8B6B541E58B41F00D06B39 /* GPKGCustomFeaturesTile.h */,
+				CF8B6B551E58B41F00D06B39 /* GPKGDataColumnConstraints.h */,
+				CF8B6B561E58B41F00D06B39 /* GPKGDataColumnConstraints.m */,
+				CF8B6B571E58B41F00D06B39 /* GPKGDataColumnConstraintsDao.h */,
+				CF8B6B581E58B41F00D06B39 /* GPKGDataColumnConstraintsDao.m */,
+				CF8B6B591E58B41F00D06B39 /* GPKGDataColumns.h */,
+				CF8B6B5A1E58B41F00D06B39 /* GPKGDataColumns.m */,
+				CF8B6B5B1E58B41F00D06B39 /* GPKGDataColumnsDao.h */,
+				CF8B6B5C1E58B41F00D06B39 /* GPKGDataColumnsDao.m */,
+				CF8B6B5D1E58B41F00D06B39 /* GPKGDataTypes.h */,
+				CF8B6B5E1E58B41F00D06B39 /* GPKGDataTypes.m */,
+				CF8B6B5F1E58B41F00D06B39 /* GPKGDateTimeUtils.h */,
+				CF8B6B601E58B41F00D06B39 /* GPKGDateTimeUtils.m */,
+				CF8B6B611E58B41F00D06B39 /* GPKGDbConnection.h */,
+				CF8B6B621E58B41F00D06B39 /* GPKGDbConnection.m */,
+				CF8B6B631E58B41F00D06B39 /* GPKGExtensions.h */,
+				CF8B6B641E58B41F00D06B39 /* GPKGExtensions.m */,
+				CF8B6B651E58B41F00D06B39 /* GPKGExtensionsDao.h */,
+				CF8B6B661E58B41F00D06B39 /* GPKGExtensionsDao.m */,
+				CF8B6B671E58B41F00D06B39 /* GPKGFeatureColumn.h */,
+				CF8B6B681E58B41F00D06B39 /* GPKGFeatureColumn.m */,
+				CF8B6B691E58B41F00D06B39 /* GPKGFeatureDao.h */,
+				CF8B6B6A1E58B41F00D06B39 /* GPKGFeatureDao.m */,
+				CF8B6B6B1E58B41F00D06B39 /* GPKGFeatureIndexer.h */,
+				CF8B6B6C1E58B41F00D06B39 /* GPKGFeatureIndexer.m */,
+				CF8B6B6D1E58B41F00D06B39 /* GPKGFeatureIndexGeoPackageResults.h */,
+				CF8B6B6E1E58B41F00D06B39 /* GPKGFeatureIndexGeoPackageResults.m */,
+				CF8B6B6F1E58B41F00D06B39 /* GPKGFeatureIndexManager.h */,
+				CF8B6B701E58B41F00D06B39 /* GPKGFeatureIndexManager.m */,
+				CF8B6B711E58B41F00D06B39 /* GPKGFeatureIndexMetadataResults.h */,
+				CF8B6B721E58B41F00D06B39 /* GPKGFeatureIndexMetadataResults.m */,
+				CF8B6B731E58B41F00D06B39 /* GPKGFeatureIndexResults.h */,
+				CF8B6B741E58B41F00D06B39 /* GPKGFeatureIndexResults.m */,
+				CF8B6B751E58B41F00D06B39 /* GPKGFeatureIndexTypes.h */,
+				CF8B6B761E58B41F00D06B39 /* GPKGFeatureIndexTypes.m */,
+				CF8B6B771E58B41F00D06B39 /* GPKGFeatureOverlay.h */,
+				CF8B6B781E58B41F00D06B39 /* GPKGFeatureOverlay.m */,
+				CF8B6B791E58B41F00D06B39 /* GPKGFeatureOverlayQuery.h */,
+				CF8B6B7A1E58B41F00D06B39 /* GPKGFeatureOverlayQuery.m */,
+				CF8B6B7B1E58B41F00D06B39 /* GPKGFeatureRow.h */,
+				CF8B6B7C1E58B41F00D06B39 /* GPKGFeatureRow.m */,
+				CF8B6B7D1E58B41F00D06B39 /* GPKGFeatureTable.h */,
+				CF8B6B7E1E58B41F00D06B39 /* GPKGFeatureTable.m */,
+				CF8B6B7F1E58B41F00D06B39 /* GPKGFeatureTableIndex.h */,
+				CF8B6B801E58B41F00D06B39 /* GPKGFeatureTableIndex.m */,
+				CF8B6B811E58B41F00D06B39 /* GPKGFeatureTableReader.h */,
+				CF8B6B821E58B41F00D06B39 /* GPKGFeatureTableReader.m */,
+				CF8B6B831E58B41F00D06B39 /* GPKGFeatureTileGenerator.h */,
+				CF8B6B841E58B41F00D06B39 /* GPKGFeatureTileGenerator.m */,
+				CF8B6B851E58B41F00D06B39 /* GPKGFeatureTileLink.h */,
+				CF8B6B861E58B41F00D06B39 /* GPKGFeatureTileLink.m */,
+				CF8B6B871E58B41F00D06B39 /* GPKGFeatureTileLinkDao.h */,
+				CF8B6B881E58B41F00D06B39 /* GPKGFeatureTileLinkDao.m */,
+				CF8B6B891E58B41F00D06B39 /* GPKGFeatureTilePointIcon.h */,
+				CF8B6B8A1E58B41F00D06B39 /* GPKGFeatureTilePointIcon.m */,
+				CF8B6B8B1E58B41F00D06B39 /* GPKGFeatureTiles.h */,
+				CF8B6B8C1E58B41F00D06B39 /* GPKGFeatureTiles.m */,
+				CF8B6B8D1E58B41F00D06B39 /* GPKGFeatureTileTableLinker.h */,
+				CF8B6B8E1E58B41F00D06B39 /* GPKGFeatureTileTableLinker.m */,
+				CF8B6B8F1E58B41F00D06B39 /* GPKGGeometryColumns.h */,
+				CF8B6B901E58B41F00D06B39 /* GPKGGeometryColumns.m */,
+				CF8B6B911E58B41F00D06B39 /* GPKGGeometryColumnsDao.h */,
+				CF8B6B921E58B41F00D06B39 /* GPKGGeometryColumnsDao.m */,
+				CF8B6B931E58B41F00D06B39 /* GPKGGeometryData.h */,
+				CF8B6B941E58B41F00D06B39 /* GPKGGeometryData.m */,
+				CF8B6B951E58B41F00D06B39 /* GPKGGeometryExtensions.h */,
+				CF8B6B961E58B41F00D06B39 /* GPKGGeometryExtensions.m */,
+				CF8B6B971E58B41F00D06B39 /* GPKGGeometryIndex.h */,
+				CF8B6B981E58B41F00D06B39 /* GPKGGeometryIndex.m */,
+				CF8B6B991E58B41F00D06B39 /* GPKGGeometryIndexDao.h */,
+				CF8B6B9A1E58B41F00D06B39 /* GPKGGeometryIndexDao.m */,
+				CF8B6B9B1E58B41F00D06B39 /* GPKGGeometryMetadata.h */,
+				CF8B6B9C1E58B41F00D06B39 /* GPKGGeometryMetadata.m */,
+				CF8B6B9D1E58B41F00D06B39 /* GPKGGeometryMetadataDao.h */,
+				CF8B6B9E1E58B41F00D06B39 /* GPKGGeometryMetadataDao.m */,
+				CF8B6B9F1E58B41F00D06B39 /* GPKGGeometryProjectionTransform.h */,
+				CF8B6BA01E58B41F00D06B39 /* GPKGGeometryProjectionTransform.m */,
+				CF8B6BA11E58B41F00D06B39 /* GPKGGeoPackage.h */,
+				CF8B6BA21E58B41F00D06B39 /* GPKGGeoPackage.m */,
+				CF8B6BA31E58B41F00D06B39 /* GPKGGeoPackageCache.h */,
+				CF8B6BA41E58B41F00D06B39 /* GPKGGeoPackageCache.m */,
+				CF8B6BA51E58B41F00D06B39 /* GPKGGeoPackageConstants.h */,
+				CF8B6BA61E58B41F00D06B39 /* GPKGGeoPackageConstants.m */,
+				CF8B6BA71E58B41F00D06B39 /* GPKGGeoPackageFactory.h */,
+				CF8B6BA81E58B41F00D06B39 /* GPKGGeoPackageFactory.m */,
+				CF8B6BA91E58B41F00D06B39 /* GPKGGeoPackageManager.h */,
+				CF8B6BAA1E58B41F00D06B39 /* GPKGGeoPackageManager.m */,
+				CF8B6BAB1E58B41F00D06B39 /* GPKGGeoPackageMetadata.h */,
+				CF8B6BAC1E58B41F00D06B39 /* GPKGGeoPackageMetadata.m */,
+				CF8B6BAD1E58B41F00D06B39 /* GPKGGeoPackageMetadataDao.h */,
+				CF8B6BAE1E58B41F00D06B39 /* GPKGGeoPackageMetadataDao.m */,
+				CF8B6BAF1E58B41F00D06B39 /* GPKGGeoPackageMetadataTableCreator.h */,
+				CF8B6BB01E58B41F00D06B39 /* GPKGGeoPackageMetadataTableCreator.m */,
+				CF8B6BB11E58B41F00D06B39 /* GPKGGeoPackageOverlay.h */,
+				CF8B6BB21E58B41F00D06B39 /* GPKGGeoPackageOverlay.m */,
+				CF8B6BB31E58B41F00D06B39 /* GPKGGeoPackageTableCreator.h */,
+				CF8B6BB41E58B41F00D06B39 /* GPKGGeoPackageTableCreator.m */,
+				CF8B6BB51E58B41F00D06B39 /* GPKGGeoPackageValidate.h */,
+				CF8B6BB61E58B41F00D06B39 /* GPKGGeoPackageValidate.m */,
+				CF8B6BB71E58B41F00D06B39 /* GPKGImageConverter.h */,
+				CF8B6BB81E58B41F00D06B39 /* GPKGImageConverter.m */,
+				CF8B6BB91E58B41F00D06B39 /* GPKGIOUtils.h */,
+				CF8B6BBA1E58B41F00D06B39 /* GPKGIOUtils.m */,
+				CF8B6BBB1E58B41F00D06B39 /* GPKGMapPoint.h */,
+				CF8B6BBC1E58B41F00D06B39 /* GPKGMapPoint.m */,
+				CF8B6BBD1E58B41F00D06B39 /* GPKGMapPointInitializer.h */,
+				CF8B6BBE1E58B41F00D06B39 /* GPKGMapPointOptions.h */,
+				CF8B6BBF1E58B41F00D06B39 /* GPKGMapPointOptions.m */,
+				CF8B6BC01E58B41F00D06B39 /* GPKGMapShape.h */,
+				CF8B6BC11E58B41F00D06B39 /* GPKGMapShape.m */,
+				CF8B6BC21E58B41F00D06B39 /* GPKGMapShapeConverter.h */,
+				CF8B6BC31E58B41F00D06B39 /* GPKGMapShapeConverter.m */,
+				CF8B6BC41E58B41F00D06B39 /* GPKGMapShapePoints.h */,
+				CF8B6BC51E58B41F00D06B39 /* GPKGMapShapePoints.m */,
+				CF8B6BC61E58B41F00D06B39 /* GPKGMapShapeTypes.h */,
+				CF8B6BC71E58B41F00D06B39 /* GPKGMapShapeTypes.m */,
+				CF8B6BC81E58B41F00D06B39 /* GPKGMetadata.h */,
+				CF8B6BC91E58B41F00D06B39 /* GPKGMetadata.m */,
+				CF8B6BCA1E58B41F00D06B39 /* GPKGMetadataDao.h */,
+				CF8B6BCB1E58B41F00D06B39 /* GPKGMetadataDao.m */,
+				CF8B6BCC1E58B41F00D06B39 /* GPKGMetadataDb.h */,
+				CF8B6BCD1E58B41F00D06B39 /* GPKGMetadataDb.m */,
+				CF8B6BCE1E58B41F00D06B39 /* GPKGMetadataReference.h */,
+				CF8B6BCF1E58B41F00D06B39 /* GPKGMetadataReference.m */,
+				CF8B6BD01E58B41F00D06B39 /* GPKGMetadataReferenceDao.h */,
+				CF8B6BD11E58B41F00D06B39 /* GPKGMetadataReferenceDao.m */,
+				CF8B6BD21E58B41F00D06B39 /* GPKGMetadataScope.h */,
+				CF8B6BD31E58B41F00D06B39 /* GPKGMetadataScope.m */,
+				CF8B6BD41E58B41F00D06B39 /* GPKGMultiPoint.h */,
+				CF8B6BD51E58B41F00D06B39 /* GPKGMultiPoint.m */,
+				CF8B6BD61E58B41F00D06B39 /* GPKGMultiPolygon.h */,
+				CF8B6BD71E58B42000D06B39 /* GPKGMultiPolygon.m */,
+				CF8B6BD81E58B42000D06B39 /* GPKGMultiPolygonPoints.h */,
+				CF8B6BD91E58B42000D06B39 /* GPKGMultiPolygonPoints.m */,
+				CF8B6BDA1E58B42000D06B39 /* GPKGMultiPolyline.h */,
+				CF8B6BDB1E58B42000D06B39 /* GPKGMultiPolyline.m */,
+				CF8B6BDC1E58B42000D06B39 /* GPKGMultiPolylinePoints.h */,
+				CF8B6BDD1E58B42000D06B39 /* GPKGMultiPolylinePoints.m */,
+				CF8B6BDE1E58B42000D06B39 /* GPKGNGAExtensions.h */,
+				CF8B6BDF1E58B42000D06B39 /* GPKGNGAExtensions.m */,
+				CF8B6BE01E58B42000D06B39 /* GPKGNumberFeaturesTile.h */,
+				CF8B6BE11E58B42000D06B39 /* GPKGNumberFeaturesTile.m */,
+				CF8B6BE21E58B42000D06B39 /* GPKGOverlayFactory.h */,
+				CF8B6BE31E58B42000D06B39 /* GPKGOverlayFactory.m */,
+				CF8B6BE41E58B42000D06B39 /* GPKGPolygonHolePoints.h */,
+				CF8B6BE51E58B42000D06B39 /* GPKGPolygonHolePoints.m */,
+				CF8B6BE61E58B42000D06B39 /* GPKGPolygonPoints.h */,
+				CF8B6BE71E58B42000D06B39 /* GPKGPolygonPoints.m */,
+				CF8B6BE81E58B42000D06B39 /* GPKGPolylinePoints.h */,
+				CF8B6BE91E58B42000D06B39 /* GPKGPolylinePoints.m */,
+				CF8B6BEA1E58B42000D06B39 /* GPKGProgress.h */,
+				CF8B6BEB1E58B42000D06B39 /* GPKGProjection.h */,
+				CF8B6BEC1E58B42000D06B39 /* GPKGProjection.m */,
+				CF8B6BED1E58B42000D06B39 /* GPKGProjectionConstants.h */,
+				CF8B6BEE1E58B42000D06B39 /* GPKGProjectionConstants.m */,
+				CF8B6BEF1E58B42000D06B39 /* GPKGProjectionFactory.h */,
+				CF8B6BF01E58B42000D06B39 /* GPKGProjectionFactory.m */,
+				CF8B6BF11E58B42000D06B39 /* GPKGProjectionRetriever.h */,
+				CF8B6BF21E58B42000D06B39 /* GPKGProjectionRetriever.m */,
+				CF8B6BF31E58B42000D06B39 /* GPKGProjectionTransform.h */,
+				CF8B6BF41E58B42000D06B39 /* GPKGProjectionTransform.m */,
+				CF8B6BF51E58B42000D06B39 /* GPKGProperties.h */,
+				CF8B6BF61E58B42000D06B39 /* GPKGProperties.m */,
+				CF8B6BF71E58B42000D06B39 /* GPKGPropertyConstants.h */,
+				CF8B6BF81E58B42000D06B39 /* GPKGPropertyConstants.m */,
+				CF8B6BF91E58B42000D06B39 /* GPKGResultSet.h */,
+				CF8B6BFA1E58B42000D06B39 /* GPKGResultSet.m */,
+				CF8B6BFB1E58B42000D06B39 /* GPKGShapePoints.h */,
+				CF8B6BFC1E58B42000D06B39 /* GPKGShapeWithChildrenPoints.h */,
+				CF8B6BFD1E58B42000D06B39 /* GPKGSLocationCoordinate3D.h */,
+				CF8B6BFE1E58B42000D06B39 /* GPKGSLocationCoordinate3D.m */,
+				CF8B6BFF1E58B42000D06B39 /* GPKGSpatialReferenceSystem.h */,
+				CF8B6C001E58B42000D06B39 /* GPKGSpatialReferenceSystem.m */,
+				CF8B6C011E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.h */,
+				CF8B6C021E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m */,
+				CF8B6C031E58B42000D06B39 /* GPKGSqliteConnection.h */,
+				CF8B6C041E58B42000D06B39 /* GPKGSqliteConnection.m */,
+				CF8B6C051E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.h */,
+				CF8B6C061E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.m */,
+				CF8B6C071E58B42000D06B39 /* GPKGSqlUtils.h */,
+				CF8B6C081E58B42000D06B39 /* GPKGSqlUtils.m */,
+				CF8B6C091E58B42000D06B39 /* GPKGStandardFormatOverlay.h */,
+				CF8B6C0A1E58B42000D06B39 /* GPKGStandardFormatOverlay.m */,
+				CF8B6C0B1E58B42000D06B39 /* GPKGTableCreator.h */,
+				CF8B6C0C1E58B42000D06B39 /* GPKGTableCreator.m */,
+				CF8B6C0D1E58B42000D06B39 /* GPKGTableIndex.h */,
+				CF8B6C0E1E58B42000D06B39 /* GPKGTableIndex.m */,
+				CF8B6C0F1E58B42000D06B39 /* GPKGTableIndexDao.h */,
+				CF8B6C101E58B42000D06B39 /* GPKGTableIndexDao.m */,
+				CF8B6C111E58B42000D06B39 /* GPKGTableMetadata.h */,
+				CF8B6C121E58B42000D06B39 /* GPKGTableMetadata.m */,
+				CF8B6C131E58B42000D06B39 /* GPKGTableMetadataDao.h */,
+				CF8B6C141E58B42000D06B39 /* GPKGTableMetadataDao.m */,
+				CF8B6C151E58B42000D06B39 /* GPKGTileBoundingBoxUtils.h */,
+				CF8B6C161E58B42000D06B39 /* GPKGTileBoundingBoxUtils.m */,
+				CF8B6C171E58B42000D06B39 /* GPKGTileColumn.h */,
+				CF8B6C181E58B42000D06B39 /* GPKGTileColumn.m */,
+				CF8B6C191E58B42000D06B39 /* GPKGTileDao.h */,
+				CF8B6C1A1E58B42000D06B39 /* GPKGTileDao.m */,
+				CF8B6C1B1E58B42000D06B39 /* GPKGTileDaoUtils.h */,
+				CF8B6C1C1E58B42000D06B39 /* GPKGTileDaoUtils.m */,
+				CF8B6C1D1E58B42000D06B39 /* GPKGTileGenerator.h */,
+				CF8B6C1E1E58B42000D06B39 /* GPKGTileGenerator.m */,
+				CF8B6C1F1E58B42000D06B39 /* GPKGTileGrid.h */,
+				CF8B6C201E58B42000D06B39 /* GPKGTileGrid.m */,
+				CF8B6C211E58B42000D06B39 /* GPKGTileMatrix.h */,
+				CF8B6C221E58B42000D06B39 /* GPKGTileMatrix.m */,
+				CF8B6C231E58B42000D06B39 /* GPKGTileMatrixDao.h */,
+				CF8B6C241E58B42000D06B39 /* GPKGTileMatrixDao.m */,
+				CF8B6C251E58B42000D06B39 /* GPKGTileMatrixSet.h */,
+				CF8B6C261E58B42000D06B39 /* GPKGTileMatrixSet.m */,
+				CF8B6C271E58B42000D06B39 /* GPKGTileMatrixSetDao.h */,
+				CF8B6C281E58B42000D06B39 /* GPKGTileMatrixSetDao.m */,
+				CF8B6C291E58B42000D06B39 /* GPKGTileRow.h */,
+				CF8B6C2A1E58B42000D06B39 /* GPKGTileRow.m */,
+				CF8B6C2B1E58B42000D06B39 /* GPKGTileTable.h */,
+				CF8B6C2C1E58B42000D06B39 /* GPKGTileTable.m */,
+				CF8B6C2D1E58B42000D06B39 /* GPKGTileTableReader.h */,
+				CF8B6C2E1E58B42000D06B39 /* GPKGTileTableReader.m */,
+				CF8B6C2F1E58B42000D06B39 /* GPKGUrlTileGenerator.h */,
+				CF8B6C301E58B42000D06B39 /* GPKGUrlTileGenerator.m */,
+				CF8B6C311E58B42000D06B39 /* GPKGUserColumn.h */,
+				CF8B6C321E58B42000D06B39 /* GPKGUserColumn.m */,
+				CF8B6C331E58B42000D06B39 /* GPKGUserDao.h */,
+				CF8B6C341E58B42000D06B39 /* GPKGUserDao.m */,
+				CF8B6C351E58B42000D06B39 /* GPKGUserRow.h */,
+				CF8B6C361E58B42000D06B39 /* GPKGUserRow.m */,
+				CF8B6C371E58B42000D06B39 /* GPKGUserTable.h */,
+				CF8B6C381E58B42000D06B39 /* GPKGUserTable.m */,
+				CF8B6C391E58B42000D06B39 /* GPKGUserTableReader.h */,
+				CF8B6C3A1E58B42000D06B39 /* GPKGUserTableReader.m */,
+				CF8B6C3B1E58B42000D06B39 /* GPKGUserUniqueConstraint.h */,
+				CF8B6C3C1E58B42000D06B39 /* GPKGUserUniqueConstraint.m */,
+				CF8B6C3D1E58B42000D06B39 /* GPKGUtils.h */,
+				CF8B6C3E1E58B42000D06B39 /* GPKGUtils.m */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
+		CF8B6CBD1E58B43100D06B39 /* wkb-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B6CBE1E58B45B00D06B39 /* wkb_ios.h */,
+				CF8B6CBF1E58B45B00D06B39 /* wkb-ios-Bridging-Header.h */,
+				CF8B6CC01E58B45B00D06B39 /* WKBByteReader.h */,
+				CF8B6CC11E58B45B00D06B39 /* WKBByteReader.m */,
+				CF8B6CC21E58B45B00D06B39 /* WKBByteWriter.h */,
+				CF8B6CC31E58B45B00D06B39 /* WKBByteWriter.m */,
+				CF8B6CC41E58B45B00D06B39 /* WKBCircularString.h */,
+				CF8B6CC51E58B45B00D06B39 /* WKBCircularString.m */,
+				CF8B6CC61E58B45B00D06B39 /* WKBCompoundCurve.h */,
+				CF8B6CC71E58B45B00D06B39 /* WKBCompoundCurve.m */,
+				CF8B6CC81E58B45B00D06B39 /* WKBCurve.h */,
+				CF8B6CC91E58B45B00D06B39 /* WKBCurve.m */,
+				CF8B6CCA1E58B45B00D06B39 /* WKBCurvePolygon.h */,
+				CF8B6CCB1E58B45B00D06B39 /* WKBCurvePolygon.m */,
+				CF8B6CCC1E58B45B00D06B39 /* WKBGeometry.h */,
+				CF8B6CCD1E58B45B00D06B39 /* WKBGeometry.m */,
+				CF8B6CCE1E58B45B00D06B39 /* WKBGeometryCollection.h */,
+				CF8B6CCF1E58B45B00D06B39 /* WKBGeometryCollection.m */,
+				CF8B6CD01E58B45B00D06B39 /* WKBGeometryEnvelope.h */,
+				CF8B6CD11E58B45B00D06B39 /* WKBGeometryEnvelope.m */,
+				CF8B6CD21E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.h */,
+				CF8B6CD31E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.m */,
+				CF8B6CD41E58B45B00D06B39 /* WKBGeometryPrinter.h */,
+				CF8B6CD51E58B45B00D06B39 /* WKBGeometryPrinter.m */,
+				CF8B6CD61E58B45B00D06B39 /* WKBGeometryReader.h */,
+				CF8B6CD71E58B45B00D06B39 /* WKBGeometryReader.m */,
+				CF8B6CD81E58B45B00D06B39 /* WKBGeometryTypes.h */,
+				CF8B6CD91E58B45B00D06B39 /* WKBGeometryTypes.m */,
+				CF8B6CDA1E58B45B00D06B39 /* WKBGeometryWriter.h */,
+				CF8B6CDB1E58B45B00D06B39 /* WKBGeometryWriter.m */,
+				CF8B6CDC1E58B45B00D06B39 /* WKBLineString.h */,
+				CF8B6CDD1E58B45B00D06B39 /* WKBLineString.m */,
+				CF8B6CDE1E58B45B00D06B39 /* WKBMultiCurve.h */,
+				CF8B6CDF1E58B45B00D06B39 /* WKBMultiCurve.m */,
+				CF8B6CE01E58B45B00D06B39 /* WKBMultiLineString.h */,
+				CF8B6CE11E58B45B00D06B39 /* WKBMultiLineString.m */,
+				CF8B6CE21E58B45B00D06B39 /* WKBMultiPoint.h */,
+				CF8B6CE31E58B45B00D06B39 /* WKBMultiPoint.m */,
+				CF8B6CE41E58B45B00D06B39 /* WKBMultiPolygon.h */,
+				CF8B6CE51E58B45B00D06B39 /* WKBMultiPolygon.m */,
+				CF8B6CE61E58B45B00D06B39 /* WKBMultiSurface.h */,
+				CF8B6CE71E58B45B00D06B39 /* WKBMultiSurface.m */,
+				CF8B6CE81E58B45B00D06B39 /* WKBPoint.h */,
+				CF8B6CE91E58B45B00D06B39 /* WKBPoint.m */,
+				CF8B6CEA1E58B45B00D06B39 /* WKBPolygon.h */,
+				CF8B6CEB1E58B45B00D06B39 /* WKBPolygon.m */,
+				CF8B6CEC1E58B45B00D06B39 /* WKBPolyhedralSurface.h */,
+				CF8B6CED1E58B45B00D06B39 /* WKBPolyhedralSurface.m */,
+				CF8B6CEE1E58B45B00D06B39 /* WKBSurface.h */,
+				CF8B6CEF1E58B45B00D06B39 /* WKBSurface.m */,
+				CF8B6CF01E58B45B00D06B39 /* WKBTIN.h */,
+				CF8B6CF11E58B45B00D06B39 /* WKBTIN.m */,
+				CF8B6CF21E58B45B00D06B39 /* WKBTriangle.h */,
+				CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */,
+			);
+			name = "wkb-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,7 +1418,311 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8B6B171E58B3D900D06B39 /* PJ_putp5.c in Sources */,
+				CF8B6CBB1E58B42000D06B39 /* GPKGUserUniqueConstraint.m in Sources */,
+				CF8B6B081E58B3D900D06B39 /* PJ_nsper.c in Sources */,
+				CF8B6B131E58B3D900D06B39 /* pj_pr_list.c in Sources */,
+				CF8B6D051E58B45B00D06B39 /* WKBMultiPoint.m in Sources */,
+				CF8B6CFF1E58B45B00D06B39 /* WKBGeometryReader.m in Sources */,
+				CF8B6AEC1E58B3D900D06B39 /* pj_initcache.c in Sources */,
+				CF8B6D001E58B45B00D06B39 /* WKBGeometryTypes.m in Sources */,
+				CF8B6C751E58B42000D06B39 /* GPKGGeoPackageMetadata.m in Sources */,
+				CF8B6B181E58B3D900D06B39 /* PJ_putp6.c in Sources */,
+				CF8B6C8B1E58B42000D06B39 /* GPKGMultiPolygonPoints.m in Sources */,
+				CF8B6AD61E58B3D900D06B39 /* PJ_eqc.c in Sources */,
+				CF8B6CA91E58B42000D06B39 /* GPKGTileColumn.m in Sources */,
+				CF8B6C491E58B42000D06B39 /* GPKGContentValues.m in Sources */,
+				CF8B6AB41E58B3D900D06B39 /* nad_cvt.c in Sources */,
+				CF8B6CA41E58B42000D06B39 /* GPKGTableIndex.m in Sources */,
+				CF8B6AC51E58B3D900D06B39 /* PJ_cass.c in Sources */,
+				CF8B6AFE1E58B3D900D06B39 /* PJ_merc.c in Sources */,
+				CF8B6C661E58B42000D06B39 /* GPKGFeatureTileTableLinker.m in Sources */,
+				CF8B6D0B1E58B45B00D06B39 /* WKBSurface.m in Sources */,
+				CF8B6B111E58B3D900D06B39 /* pj_phi2.c in Sources */,
+				CF8B6ACB1E58B3D900D06B39 /* pj_datum_set.c in Sources */,
+				CF8B6B021E58B3D900D06B39 /* PJ_moll.c in Sources */,
+				CF8B6B231E58B3D900D06B39 /* PJ_tcc.c in Sources */,
+				CF8B6AE61E58B3D900D06B39 /* pj_gridlist.c in Sources */,
+				CF8B6C431E58B42000D06B39 /* GPKGColumnValues.m in Sources */,
+				CF8B6B331E58B3D900D06B39 /* PJ_wink1.c in Sources */,
+				CF8B6AC41E58B3D900D06B39 /* PJ_bonne.c in Sources */,
+				CF8B6C481E58B42000D06B39 /* GPKGContentsDao.m in Sources */,
+				CF8B6B291E58B3D900D06B39 /* pj_units.c in Sources */,
+				CF8B6B2D1E58B3D900D06B39 /* PJ_vandg.c in Sources */,
+				CF8B6AF91E58B3D900D06B39 /* PJ_lsat.c in Sources */,
+				CF8B6AB51E58B3D900D06B39 /* nad_init.c in Sources */,
+				CF8B6B071E58B3D900D06B39 /* PJ_nocol.c in Sources */,
+				CF8B6CFB1E58B45B00D06B39 /* WKBGeometryCollection.m in Sources */,
+				CF8B6CF81E58B45B00D06B39 /* WKBCurve.m in Sources */,
+				CF8B6CA61E58B42000D06B39 /* GPKGTableMetadata.m in Sources */,
+				CF8B6C5C1E58B42000D06B39 /* GPKGFeatureOverlayQuery.m in Sources */,
+				CF8B6B0B1E58B3D900D06B39 /* PJ_ocea.c in Sources */,
+				CF8B6CA21E58B42000D06B39 /* GPKGStandardFormatOverlay.m in Sources */,
+				CF8B6D081E58B45B00D06B39 /* WKBPoint.m in Sources */,
+				CF8B6D011E58B45B00D06B39 /* WKBGeometryWriter.m in Sources */,
+				CF8B6ADB1E58B3D900D06B39 /* PJ_fouc_s.c in Sources */,
+				CF8B6C421E58B42000D06B39 /* GPKGColumnValue.m in Sources */,
+				CF8B6AFC1E58B3D900D06B39 /* PJ_mbtfpp.c in Sources */,
+				CF8B6D0A1E58B45B00D06B39 /* WKBPolyhedralSurface.m in Sources */,
+				CF8B6B0F1E58B3D900D06B39 /* PJ_ortho.c in Sources */,
+				CF8B6AEE1E58B3D900D06B39 /* PJ_krovak.c in Sources */,
+				CF8B6B281E58B3D900D06B39 /* pj_tsfn.c in Sources */,
+				CF8B6C9A1E58B42000D06B39 /* GPKGPropertyConstants.m in Sources */,
+				CF8B6AF21E58B3D900D06B39 /* PJ_larr.c in Sources */,
+				CF8B6C4B1E58B42000D06B39 /* GPKGDataColumnConstraintsDao.m in Sources */,
+				CF8B6ADD1E58B3D900D06B39 /* PJ_gall.c in Sources */,
+				CF8B6CB01E58B42000D06B39 /* GPKGTileMatrixSet.m in Sources */,
+				CF8B6AC31E58B3D900D06B39 /* PJ_boggs.c in Sources */,
+				CF8B6C4C1E58B42000D06B39 /* GPKGDataColumns.m in Sources */,
+				CF8B6CAC1E58B42000D06B39 /* GPKGTileGenerator.m in Sources */,
+				CF8B6B341E58B3D900D06B39 /* PJ_wink2.c in Sources */,
+				CF8B6C961E58B42000D06B39 /* GPKGProjectionFactory.m in Sources */,
+				CF8B6AFD1E58B3D900D06B39 /* PJ_mbtfpq.c in Sources */,
+				CF8B6AF81E58B3D900D06B39 /* PJ_loxim.c in Sources */,
+				CF8B6B1F1E58B3D900D06B39 /* PJ_stere.c in Sources */,
+				CF8B6C8C1E58B42000D06B39 /* GPKGMultiPolyline.m in Sources */,
+				CF8B6C451E58B42000D06B39 /* GPKGConnection.m in Sources */,
+				CF8B6AA31E58B3D900D06B39 /* adjlon.c in Sources */,
+				CF8B6CB31E58B42000D06B39 /* GPKGTileTable.m in Sources */,
+				CF8B6AF01E58B3D900D06B39 /* PJ_laea.c in Sources */,
+				CF8B6B351E58B3D900D06B39 /* pj_zpoly1.c in Sources */,
+				CF8B6C5B1E58B42000D06B39 /* GPKGFeatureOverlay.m in Sources */,
+				CF8B6AE41E58B3D900D06B39 /* PJ_goode.c in Sources */,
+				CF8B6AFA1E58B3D900D06B39 /* pj_malloc.c in Sources */,
+				CF8B6ADC1E58B3D900D06B39 /* pj_fwd.c in Sources */,
+				CF8B6C4F1E58B42000D06B39 /* GPKGDateTimeUtils.m in Sources */,
+				CF8B6D041E58B45B00D06B39 /* WKBMultiLineString.m in Sources */,
+				CF8B6B311E58B3D900D06B39 /* PJ_wag3.c in Sources */,
+				CF8B6C831E58B42000D06B39 /* GPKGMetadata.m in Sources */,
+				CF8B6C9F1E58B42000D06B39 /* GPKGSqliteConnection.m in Sources */,
+				CF8B6C901E58B42000D06B39 /* GPKGOverlayFactory.m in Sources */,
+				CF8B6AE21E58B3D900D06B39 /* PJ_gn_sinu.c in Sources */,
+				CF8B6C4E1E58B42000D06B39 /* GPKGDataTypes.m in Sources */,
+				CF8B6AF31E58B3D900D06B39 /* PJ_lask.c in Sources */,
+				CF8B6B271E58B3D900D06B39 /* pj_transform.c in Sources */,
+				CF8B6B061E58B3D900D06B39 /* PJ_nell.c in Sources */,
+				CF8B6CB71E58B42000D06B39 /* GPKGUserDao.m in Sources */,
+				CF8B6AE51E58B3D900D06B39 /* pj_gridinfo.c in Sources */,
+				CF8B6B221E58B3D900D06B39 /* PJ_sts.c in Sources */,
+				CF8B6C841E58B42000D06B39 /* GPKGMetadataDao.m in Sources */,
+				CF8B6C861E58B42000D06B39 /* GPKGMetadataReference.m in Sources */,
+				CF8B6AE71E58B3D900D06B39 /* PJ_gstmerc.c in Sources */,
+				CF8B6C531E58B42000D06B39 /* GPKGFeatureColumn.m in Sources */,
+				CF8B6AE91E58B3D900D06B39 /* PJ_hatano.c in Sources */,
+				CF8B6B031E58B3D900D06B39 /* pj_msfn.c in Sources */,
+				CF8B6C881E58B42000D06B39 /* GPKGMetadataScope.m in Sources */,
+				CF8B6AB21E58B3D900D06B39 /* Makefile in Sources */,
+				CF8B6CAF1E58B42000D06B39 /* GPKGTileMatrixDao.m in Sources */,
+				CF8B6C581E58B42000D06B39 /* GPKGFeatureIndexMetadataResults.m in Sources */,
+				CF8B6C721E58B42000D06B39 /* GPKGGeoPackageConstants.m in Sources */,
+				CF8B6AF41E58B3D900D06B39 /* pj_latlong.c in Sources */,
+				CF8B6C811E58B42000D06B39 /* GPKGMapShapePoints.m in Sources */,
+				CF8B6AB71E58B3D900D06B39 /* nad2bin.c in Sources */,
+				CF8B6AD71E58B3D900D06B39 /* PJ_eqdc.c in Sources */,
+				CF8B6B001E58B3D900D06B39 /* pj_mlfn.c in Sources */,
+				CF8B6CFD1E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.m in Sources */,
+				CF8B6AB91E58B3D900D06B39 /* p_series.c in Sources */,
+				CF8B6CAB1E58B42000D06B39 /* GPKGTileDaoUtils.m in Sources */,
+				CF8B6AC71E58B3D900D06B39 /* PJ_cea.c in Sources */,
+				CF8B6AD21E58B3D900D06B39 /* PJ_eck4.c in Sources */,
+				CF8B6C9C1E58B42000D06B39 /* GPKGSLocationCoordinate3D.m in Sources */,
+				CF8B6AA51E58B3D900D06B39 /* bchgen.c in Sources */,
+				CF8B6B1D1E58B3D900D06B39 /* PJ_sconics.c in Sources */,
+				CF8B6C5F1E58B42000D06B39 /* GPKGFeatureTableIndex.m in Sources */,
+				CF8B6CB51E58B42000D06B39 /* GPKGUrlTileGenerator.m in Sources */,
+				CF8B6AB81E58B3D900D06B39 /* nad2nad.c in Sources */,
+				CF8B6AFF1E58B3D900D06B39 /* PJ_mill.c in Sources */,
+				CF8B6CA81E58B42000D06B39 /* GPKGTileBoundingBoxUtils.m in Sources */,
+				CF8B6C6A1E58B42000D06B39 /* GPKGGeometryExtensions.m in Sources */,
+				CF8B6B2C1E58B3D900D06B39 /* pj_utils.c in Sources */,
+				CF8B6B1E1E58B3D900D06B39 /* PJ_somerc.c in Sources */,
+				CF8B6AD91E58B3D900D06B39 /* pj_factors.c in Sources */,
+				CF8B6CA11E58B42000D06B39 /* GPKGSqlUtils.m in Sources */,
+				CF8B6ADA1E58B3D900D06B39 /* PJ_fahey.c in Sources */,
+				CF8B6CB41E58B42000D06B39 /* GPKGTileTableReader.m in Sources */,
+				CF8B6B391E58B3D900D06B39 /* rtodms.c in Sources */,
+				CF8B6C701E58B42000D06B39 /* GPKGGeoPackage.m in Sources */,
+				CF8B6C511E58B42000D06B39 /* GPKGExtensions.m in Sources */,
+				CF8B6CA71E58B42000D06B39 /* GPKGTableMetadataDao.m in Sources */,
+				CF8B6C621E58B42000D06B39 /* GPKGFeatureTileLink.m in Sources */,
+				CF8B6C851E58B42000D06B39 /* GPKGMetadataDb.m in Sources */,
+				CF8B6C561E58B42000D06B39 /* GPKGFeatureIndexGeoPackageResults.m in Sources */,
+				CF8B6B3A1E58B3D900D06B39 /* vector1.c in Sources */,
+				CF8B6C521E58B42000D06B39 /* GPKGExtensionsDao.m in Sources */,
+				CF8B6C411E58B42000D06B39 /* GPKGBoundingBox.m in Sources */,
+				CF8B6CA01E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.m in Sources */,
+				CF8B6C771E58B42000D06B39 /* GPKGGeoPackageMetadataTableCreator.m in Sources */,
+				CF8B6C671E58B42000D06B39 /* GPKGGeometryColumns.m in Sources */,
+				CF8B6C971E58B42000D06B39 /* GPKGProjectionRetriever.m in Sources */,
+				CF8B6C991E58B42000D06B39 /* GPKGProperties.m in Sources */,
+				CF8B6ABA1E58B3D900D06B39 /* PJ_aea.c in Sources */,
+				CF8B6AAA1E58B3D900D06B39 /* gen_cheb.c in Sources */,
+				CF8B6B2B1E58B3D900D06B39 /* PJ_urmfps.c in Sources */,
+				CF8B6B151E58B3D900D06B39 /* PJ_putp3.c in Sources */,
+				CF8B6AEB1E58B3D900D06B39 /* pj_init.c in Sources */,
+				CF8B6C7B1E58B42000D06B39 /* GPKGImageConverter.m in Sources */,
+				CF8B6ACD1E58B3D900D06B39 /* PJ_denoy.c in Sources */,
+				CF8B6C981E58B42000D06B39 /* GPKGProjectionTransform.m in Sources */,
+				CF8B6ABC1E58B3D900D06B39 /* PJ_airy.c in Sources */,
+				CF8B6B041E58B3D900D06B39 /* pj_mutex.c in Sources */,
+				CF8B6CF51E58B45B00D06B39 /* WKBByteWriter.m in Sources */,
+				CF8B6B121E58B3D900D06B39 /* PJ_poly.c in Sources */,
+				CF8B6C401E58B42000D06B39 /* GPKGBoundedOverlay.m in Sources */,
+				CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */,
+				CF8B6C8E1E58B42000D06B39 /* GPKGNGAExtensions.m in Sources */,
+				CF8B6C6E1E58B42000D06B39 /* GPKGGeometryMetadataDao.m in Sources */,
+				CF8B6B0A1E58B3D900D06B39 /* PJ_ob_tran.c in Sources */,
+				CF8B6B0C1E58B3D900D06B39 /* PJ_oea.c in Sources */,
+				CF8B6ACC1E58B3D900D06B39 /* pj_datums.c in Sources */,
+				CF8B6C871E58B42000D06B39 /* GPKGMetadataReferenceDao.m in Sources */,
+				CF8B6AEA1E58B3D900D06B39 /* PJ_imw_p.c in Sources */,
+				CF8B6B241E58B3D900D06B39 /* PJ_tcea.c in Sources */,
+				CF8B6AD31E58B3D900D06B39 /* PJ_eck5.c in Sources */,
+				CF8B6CFE1E58B45B00D06B39 /* WKBGeometryPrinter.m in Sources */,
+				CF8B6AA81E58B3D900D06B39 /* dmstor.c in Sources */,
+				CF8B6B1B1E58B3D900D06B39 /* PJ_robin.c in Sources */,
+				CF8B6C571E58B42000D06B39 /* GPKGFeatureIndexManager.m in Sources */,
+				CF8B6C6C1E58B42000D06B39 /* GPKGGeometryIndexDao.m in Sources */,
+				CF8B6AAC1E58B3D900D06B39 /* geod_for.c in Sources */,
+				CF8B6CBC1E58B42000D06B39 /* GPKGUtils.m in Sources */,
+				CF8B6C7F1E58B42000D06B39 /* GPKGMapShape.m in Sources */,
+				CF8B6C891E58B42000D06B39 /* GPKGMultiPoint.m in Sources */,
+				CF8B6C3F1E58B42000D06B39 /* GPKGBaseDao.m in Sources */,
+				CF8B6C8D1E58B42000D06B39 /* GPKGMultiPolylinePoints.m in Sources */,
+				CF8B6C5E1E58B42000D06B39 /* GPKGFeatureTable.m in Sources */,
+				CF8B6ABE1E58B3D900D06B39 /* pj_apply_gridshift.c in Sources */,
+				CF8B6CBA1E58B42000D06B39 /* GPKGUserTableReader.m in Sources */,
+				CF8B6C691E58B42000D06B39 /* GPKGGeometryData.m in Sources */,
+				CF8B6AD41E58B3D900D06B39 /* pj_ell_set.c in Sources */,
+				CF8B6C781E58B42000D06B39 /* GPKGGeoPackageOverlay.m in Sources */,
+				CF8B6CAE1E58B42000D06B39 /* GPKGTileMatrix.m in Sources */,
+				CF8B6AAF1E58B3D900D06B39 /* geod.c in Sources */,
+				CF8B6C821E58B42000D06B39 /* GPKGMapShapeTypes.m in Sources */,
+				CF8B6C931E58B42000D06B39 /* GPKGPolylinePoints.m in Sources */,
+				CF8B6CB81E58B42000D06B39 /* GPKGUserRow.m in Sources */,
+				CF8B6ABD1E58B3D900D06B39 /* PJ_aitoff.c in Sources */,
+				CF8B6AB01E58B3D900D06B39 /* jniproj.c in Sources */,
+				CF8B6CF71E58B45B00D06B39 /* WKBCompoundCurve.m in Sources */,
+				CF8B6AC91E58B3D900D06B39 /* PJ_collg.c in Sources */,
+				CF8B6AD11E58B3D900D06B39 /* PJ_eck3.c in Sources */,
+				CF8B6AAE1E58B3D900D06B39 /* geod_set.c in Sources */,
+				CF8B6AB31E58B3D900D06B39 /* mk_cheby.c in Sources */,
+				CF8B6C631E58B42000D06B39 /* GPKGFeatureTileLinkDao.m in Sources */,
+				CF8B6C441E58B42000D06B39 /* GPKGCompressFormats.m in Sources */,
+				CF8B6C601E58B42000D06B39 /* GPKGFeatureTableReader.m in Sources */,
+				CF8B6AA21E58B3D900D06B39 /* aasincos.c in Sources */,
+				CF8B6B261E58B3D900D06B39 /* PJ_tpeqd.c in Sources */,
+				CF8B6C471E58B42000D06B39 /* GPKGContents.m in Sources */,
+				CF8B6C791E58B42000D06B39 /* GPKGGeoPackageTableCreator.m in Sources */,
+				CF8B6CF91E58B45B00D06B39 /* WKBCurvePolygon.m in Sources */,
+				CF8B6ABF1E58B3D900D06B39 /* PJ_august.c in Sources */,
+				CF8B6AA41E58B3D900D06B39 /* bch2bps.c in Sources */,
+				CF8B6B2A1E58B3D900D06B39 /* PJ_urm5.c in Sources */,
+				CF8B6CB61E58B42000D06B39 /* GPKGUserColumn.m in Sources */,
+				CF8B6CFC1E58B45B00D06B39 /* WKBGeometryEnvelope.m in Sources */,
+				CF8B6B1C1E58B3D900D06B39 /* PJ_rpoly.c in Sources */,
+				CF8B6D031E58B45B00D06B39 /* WKBMultiCurve.m in Sources */,
+				CF8B6AF71E58B3D900D06B39 /* pj_list.c in Sources */,
+				CF8B6AF61E58B3D900D06B39 /* PJ_lcca.c in Sources */,
+				CF8B6B211E58B3D900D06B39 /* pj_strerrno.c in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNGeoPackageLibrary.m in Sources */,
+				CF8B6C761E58B42000D06B39 /* GPKGGeoPackageMetadataDao.m in Sources */,
+				CF8B6C7D1E58B42000D06B39 /* GPKGMapPoint.m in Sources */,
+				CF8B6B251E58B3D900D06B39 /* PJ_tmerc.c in Sources */,
+				CF8B6C7E1E58B42000D06B39 /* GPKGMapPointOptions.m in Sources */,
+				CF8B6AED1E58B3D900D06B39 /* pj_inv.c in Sources */,
+				CF8B6C4D1E58B42000D06B39 /* GPKGDataColumnsDao.m in Sources */,
+				CF8B6B191E58B3D900D06B39 /* pj_qsfn.c in Sources */,
+				CF8B6AC11E58B3D900D06B39 /* PJ_bacon.c in Sources */,
+				CF8B6CAA1E58B42000D06B39 /* GPKGTileDao.m in Sources */,
+				CF8B6C921E58B42000D06B39 /* GPKGPolygonPoints.m in Sources */,
+				CF8B6C911E58B42000D06B39 /* GPKGPolygonHolePoints.m in Sources */,
+				CF8B6AA91E58B3D900D06B39 /* emess.c in Sources */,
+				CF8B6AD81E58B3D900D06B39 /* pj_errno.c in Sources */,
+				CF8B6B361E58B3D900D06B39 /* proj_mdist.c in Sources */,
+				CF8B6C461E58B42000D06B39 /* GPKGConnectionPool.m in Sources */,
+				CF8B6CF41E58B45B00D06B39 /* WKBByteReader.m in Sources */,
+				CF8B6AC01E58B3D900D06B39 /* pj_auth.c in Sources */,
+				CF8B6C5A1E58B42000D06B39 /* GPKGFeatureIndexTypes.m in Sources */,
+				CF8B6ACE1E58B3D900D06B39 /* pj_deriv.c in Sources */,
+				CF8B6D0C1E58B45B00D06B39 /* WKBTIN.m in Sources */,
+				CF8B6C7A1E58B42000D06B39 /* GPKGGeoPackageValidate.m in Sources */,
+				CF8B6AE81E58B3D900D06B39 /* PJ_hammer.c in Sources */,
+				CF8B6C6B1E58B42000D06B39 /* GPKGGeometryIndex.m in Sources */,
+				CF8B6D091E58B45B00D06B39 /* WKBPolygon.m in Sources */,
+				CF8B6B161E58B3D900D06B39 /* PJ_putp4p.c in Sources */,
+				CF8B6B0E1E58B3D900D06B39 /* pj_open_lib.c in Sources */,
+				CF8B6C951E58B42000D06B39 /* GPKGProjectionConstants.m in Sources */,
+				CF8B6B371E58B3D900D06B39 /* proj_rouss.c in Sources */,
+				CF8B6B0D1E58B3D900D06B39 /* PJ_omerc.c in Sources */,
+				CF8B6B091E58B3D900D06B39 /* PJ_nzmg.c in Sources */,
+				CF8B6ADE1E58B3D900D06B39 /* pj_gauss.c in Sources */,
+				CF8B6D061E58B45B00D06B39 /* WKBMultiPolygon.m in Sources */,
+				CF8B6AB61E58B3D900D06B39 /* nad_intr.c in Sources */,
+				CF8B6C711E58B42000D06B39 /* GPKGGeoPackageCache.m in Sources */,
+				CF8B6C8A1E58B42000D06B39 /* GPKGMultiPolygon.m in Sources */,
+				CF8B6AA61E58B3D900D06B39 /* biveval.c in Sources */,
+				CF8B6CA51E58B42000D06B39 /* GPKGTableIndexDao.m in Sources */,
+				CF8B6B051E58B3D900D06B39 /* PJ_nell_h.c in Sources */,
+				CF8B6C741E58B42000D06B39 /* GPKGGeoPackageManager.m in Sources */,
+				CF8B6AC61E58B3D900D06B39 /* PJ_cc.c in Sources */,
+				CF8B6C4A1E58B42000D06B39 /* GPKGDataColumnConstraints.m in Sources */,
+				CF8B6C681E58B42000D06B39 /* GPKGGeometryColumnsDao.m in Sources */,
+				CF8B6B2F1E58B3D900D06B39 /* PJ_vandg4.c in Sources */,
+				CF8B6AF11E58B3D900D06B39 /* PJ_lagrng.c in Sources */,
+				CF8B6C551E58B42000D06B39 /* GPKGFeatureIndexer.m in Sources */,
+				CF8B6CA31E58B42000D06B39 /* GPKGTableCreator.m in Sources */,
+				CF8B6D071E58B45B00D06B39 /* WKBMultiSurface.m in Sources */,
+				CF8B6AE31E58B3D900D06B39 /* PJ_gnom.c in Sources */,
+				CF8B6CB91E58B42000D06B39 /* GPKGUserTable.m in Sources */,
+				CF8B6ABB1E58B3D900D06B39 /* PJ_aeqd.c in Sources */,
+				CF8B6AAD1E58B3D900D06B39 /* geod_inv.c in Sources */,
+				CF8B6CF61E58B45B00D06B39 /* WKBCircularString.m in Sources */,
+				CF8B6AD51E58B3D900D06B39 /* pj_ellps.c in Sources */,
+				CF8B6C651E58B42000D06B39 /* GPKGFeatureTiles.m in Sources */,
+				CF8B6C591E58B42000D06B39 /* GPKGFeatureIndexResults.m in Sources */,
+				CF8B6AF51E58B3D900D06B39 /* PJ_lcc.c in Sources */,
+				CF8B6C541E58B42000D06B39 /* GPKGFeatureDao.m in Sources */,
+				CF8B6C7C1E58B42000D06B39 /* GPKGIOUtils.m in Sources */,
+				CF8B6B201E58B3D900D06B39 /* PJ_sterea.c in Sources */,
+				CF8B6AC81E58B3D900D06B39 /* PJ_chamb.c in Sources */,
+				CF8B6B011E58B3D900D06B39 /* PJ_mod_ster.c in Sources */,
+				CF8B6B1A1E58B3D900D06B39 /* pj_release.c in Sources */,
+				CF8B6C941E58B42000D06B39 /* GPKGProjection.m in Sources */,
+				CF8B6B301E58B3D900D06B39 /* PJ_wag2.c in Sources */,
+				CF8B6AFB1E58B3D900D06B39 /* PJ_mbt_fps.c in Sources */,
+				CF8B6C801E58B42000D06B39 /* GPKGMapShapeConverter.m in Sources */,
+				CF8B6B2E1E58B3D900D06B39 /* PJ_vandg2.c in Sources */,
+				CF8B6C641E58B42000D06B39 /* GPKGFeatureTilePointIcon.m in Sources */,
+				CF8B6AE01E58B3D900D06B39 /* PJ_geos.c in Sources */,
+				CF8B6C501E58B42000D06B39 /* GPKGDbConnection.m in Sources */,
+				CF8B6CFA1E58B45B00D06B39 /* WKBGeometry.m in Sources */,
+				CF8B6C731E58B42000D06B39 /* GPKGGeoPackageFactory.m in Sources */,
+				CF8B6AEF1E58B3D900D06B39 /* PJ_labrd.c in Sources */,
+				CF8B6B381E58B3D900D06B39 /* proj.c in Sources */,
+				CF8B6C611E58B42000D06B39 /* GPKGFeatureTileGenerator.m in Sources */,
+				CF8B6C6F1E58B42000D06B39 /* GPKGGeometryProjectionTransform.m in Sources */,
+				CF8B6AA71E58B3D900D06B39 /* cs2cs.c in Sources */,
+				CF8B6AC21E58B3D900D06B39 /* PJ_bipc.c in Sources */,
+				CF8B6CB21E58B42000D06B39 /* GPKGTileRow.m in Sources */,
+				CF8B6AD01E58B3D900D06B39 /* PJ_eck2.c in Sources */,
+				CF8B6ACA1E58B3D900D06B39 /* PJ_crast.c in Sources */,
+				CF8B6C5D1E58B42000D06B39 /* GPKGFeatureRow.m in Sources */,
+				CF8B6B101E58B3D900D06B39 /* pj_param.c in Sources */,
+				CF8B6C8F1E58B42000D06B39 /* GPKGNumberFeaturesTile.m in Sources */,
+				CF8B6ADF1E58B3D900D06B39 /* pj_geocent.c in Sources */,
+				CF8B6CB11E58B42000D06B39 /* GPKGTileMatrixSetDao.m in Sources */,
+				CF8B6CAD1E58B42000D06B39 /* GPKGTileGrid.m in Sources */,
+				CF8B6B141E58B3D900D06B39 /* PJ_putp2.c in Sources */,
+				CF8B6C9E1E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m in Sources */,
+				CF8B6B321E58B3D900D06B39 /* PJ_wag7.c in Sources */,
+				CF8B6C9D1E58B42000D06B39 /* GPKGSpatialReferenceSystem.m in Sources */,
+				CF8B6AE11E58B3D900D06B39 /* PJ_gins8.c in Sources */,
+				CF8B6C9B1E58B42000D06B39 /* GPKGResultSet.m in Sources */,
+				CF8B6AAB1E58B3D900D06B39 /* geocent.c in Sources */,
+				CF8B6ACF1E58B3D900D06B39 /* PJ_eck1.c in Sources */,
+				CF8B6C6D1E58B42000D06B39 /* GPKGGeometryMetadata.m in Sources */,
+				CF8B6D021E58B45B00D06B39 /* WKBLineString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,12 +1807,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNGeoPackageLibrary;
 				SKIP_INSTALL = YES;
@@ -218,7 +1831,10 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNGeoPackageLibrary;
 				SKIP_INSTALL = YES;

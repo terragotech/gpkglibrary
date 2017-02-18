@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="351b0986-7720-4f7b-b4e7-3955e53aefe1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.xcworkspace/xcuserdata/sunilkarthicksivabalan.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.xcworkspace/xcuserdata/sunilkarthicksivabalan.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="gpkglibrary.iws" />
     <ignored path=".idea/workspace.xml" />
