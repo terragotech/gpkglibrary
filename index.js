@@ -3,9 +3,30 @@ import { NativeModules } from 'react-native';
 const { RNGeoPackageLibrary } = NativeModules;
 var promisify = require("es6-promisify");
 var _libsample = promisify(RNGeoPackageLibrary.LibrarySampleCall);
-var ZipArchive = {
-  LibrarySampleCall(testString) {
-    return _libsample(testString)
+var _initGeoPackage = promisify(RNGeoPackageLibrary.initGeoPackageatPath);
+var _createFeatureClass = promisify(RNGeoPackageLibrary.createFeatureclass);
+var _insertFeatureRecord = promisify(RNGeoPackageLibrary.insertFeatureclassRecord);
+var _closeGeoPackage = promisify(RNGeoPackageLibrary.closeGeoPackage);
+
+var GeoPackage = {
+  LibrarySampleCall(testString,callback) {
+    return _libsample(testString,callback)
+      .catch(_error)
+  },
+  initGeoPackageatPath(directoryPath,fileName, callback){
+    return _initGeoPackage(directoryPath,fileName, callback)
+      .catch(_error)
+  },
+  createFeatureclass(featureDict,geomentry, callback){
+    return _createFeatureClass(featureDict,geomentry, callback)
+      .catch(_error)
+  },
+  insertFeatureclassRecord(featureRecordDict,geomentry, callback){
+    return _insertFeatureRecord(featureRecordDict,geomentry, callback)
+      .catch(_error)
+  },
+  closeGeoPackage(callback){
+    return _closeGeoPackage(callback)
       .catch(_error)
   }
 }
