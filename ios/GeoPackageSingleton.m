@@ -56,7 +56,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [self.featureClasses removeAllObjects];
 }
 
--(int)createFeatureTable:(NSMutableDictionary*)featureDict forGeomentry:(GeomentryType)geomentry{
+-(int)createFeatureclass:(NSMutableDictionary*)featureDict forGeomentry:(int)geomentry{
     int ret = -1;
     
     NSString *featureName = [featureDict objectForKey:@"FeatureName"];
@@ -76,10 +76,10 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [self.columnsTypesArray removeAllObjects];
     
     enum WKBGeometryType geoColumnType = WKB_POINT;
-    if (geomentry == LINESTRING) {
+    if (geomentry == 2) {
         geoColumnType = WKB_LINESTRING;
     }
-    if (geomentry == POLYGON) {
+    if (geomentry == 3) {
         geoColumnType = WKB_POLYGON;
     }
     NSMutableArray *columns = [[NSMutableArray alloc]init];
@@ -99,7 +99,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     
     GPKGFeatureTable *featureTable = [[GPKGFeatureTable alloc]initWithTable:featureName andColumns:columns];
     [geoPackage createFeatureTable:featureTable];
-
+    
     [contentsDao create:point2dContents];
     
     GPKGGeometryColumns * point2dGeometryColumns = [[GPKGGeometryColumns alloc] init];
@@ -117,7 +117,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     return ret;
 }
 
--(void)insertFeatureTableRecord:(NSMutableDictionary*)featureRecordDict forGeomentry:(GeomentryType)geomentry{
+-(void)insertFeatureclassRecord:(NSMutableDictionary*)featureRecordDict forGeomentry:(int)geomentry{
     
     NSString *featureName = [featureRecordDict objectForKey:@"FeatureName"];
     GPKGFeatureDao *featureDAO = [geoPackage getFeatureDaoWithTableName:featureName];
@@ -130,7 +130,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     NSString* geojson = [featureRecordDict objectForKey:@"Location"];
     
     NSMutableArray *pointsArray = [[NSMutableArray alloc]init];
-    if (geomentry == LINESTRING) {
+    if (geomentry == 2) {
         for (CLLocation *loc in [self getCoordinatesFromGeoJson:geojson]) {
             [pointsArray addObject:[[GPKGMapPoint alloc]initWithLocation:[loc coordinate]]];
         }
@@ -138,7 +138,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         GeomData = [[GPKGGeometryData alloc] initWithSrsId:srsId];
         [GeomData setGeometry:line];
     }
-    if (geomentry == POLYGON) {
+    if (geomentry == 3) {
         for (CLLocation *loc in [self getCoordinatesFromGeoJson:geojson]) {
             [pointsArray addObject:[[GPKGMapPoint alloc]initWithLocation:[loc coordinate]]];
         }
@@ -146,7 +146,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         GeomData = [[GPKGGeometryData alloc] initWithSrsId:srsId];
         [GeomData setGeometry:polygon];
     }
-    if (geomentry == POINT) {
+    if (geomentry == 1) {
         GPKGMapPoint *pt;
         if ([[self getCoordinatesFromGeoJson:geojson]count]>=1) {
             CLLocationCoordinate2D cd = [(CLLocation*)[[self getCoordinatesFromGeoJson:geojson]objectAtIndex:0]coordinate];
@@ -164,21 +164,26 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         if ([[tdict objectForKey:@"columnName"]isEqualToString:@"fid"]) {
             continue;
         }
-         [newLine setValueWithColumnName:[tdict objectForKey:@"columnName"] andValue:[tdict objectForKey:@"columnValue"]];
+        [newLine setValueWithColumnName:[tdict objectForKey:@"columnName"] andValue:[tdict objectForKey:@"columnValue"]];
     }
-     [featureDAO insert:newLine];
+    [featureDAO insert:newLine];
     
 }
 
+-(void)closeGeoPackage{
+    [geoPackage close];
+    [manager close];
+}
+
 -(NSMutableArray*)getCoordinatesFromGeoJson:(NSString*)geojson {
-     NSMutableArray* coordinates = [[NSMutableArray alloc]init];
+    NSMutableArray* coordinates = [[NSMutableArray alloc]init];
     @try {
-       
+        
         if ( !geojson || [geojson isEqualToString:@""] ) {
             return coordinates;
         }
         //     NSString * newString = [geometryVal stringByReplacingOccurrencesOfString:@"\"\"" withString:@"\""];
-//        NSString* geometry = geojson;
+        //        NSString* geometry = geojson;
         
         
         NSMutableDictionary *json  = [NSJSONSerialization JSONObjectWithData:[geojson dataUsingEncoding:NSUTF8StringEncoding]

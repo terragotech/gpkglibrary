@@ -11,7 +11,7 @@
 RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(LibrarySampleCall:(NSString *)testString callback:(RCTResponseSenderBlock)callback) {
-     callback(@[testString]);
+    callback(@[testString]);
 }
 
 RCT_EXPORT_METHOD(initGeoPackageatPath:(NSString *)path  forFileName:(NSString*)filename callback:(RCTResponseSenderBlock)callback) {
@@ -19,15 +19,19 @@ RCT_EXPORT_METHOD(initGeoPackageatPath:(NSString *)path  forFileName:(NSString*)
     callback(@[@""]);
 }
 //createFeatureclass (featureDict, geomentry)
-RCT_EXPORT_METHOD(createFeatureclass:(NSDictionary *)featureDict  forGeomentryType:(GeomentryType)geomentry callback:(RCTResponseSenderBlock)callback) {
-    [[GeoPackageSingleton getSharedInstanceValue]createFeatureTable:featureDict forGeomentry:geomentry];
+RCT_EXPORT_METHOD(createFeatureclass:(NSDictionary *)featureDict  forGeomentryType:(int)geomentry callback:(RCTResponseSenderBlock)callback) {
+    [[GeoPackageSingleton getSharedInstanceValue]createFeatureclass:featureDict forGeomentry:geomentry];
     callback(@[@""]);
 }
 //insertFeatureclassRecord:(featureRecordDict, geomentry)
-RCT_EXPORT_METHOD(insertFeatureclassRecord:(NSDictionary *)featurerecordDict  forGeomentryType:(GeomentryType)geomentry callback:(RCTResponseSenderBlock)callback) {
-    [[GeoPackageSingleton getSharedInstanceValue]insertFeatureTableRecord:featurerecordDict forGeomentry:geomentry];
+RCT_EXPORT_METHOD(insertFeatureclassRecord:(NSDictionary *)featurerecordDict  forGeomentryType:(int)geomentry callback:(RCTResponseSenderBlock)callback) {
+    [[GeoPackageSingleton getSharedInstanceValue]insertFeatureclassRecord:featurerecordDict forGeomentry:geomentry];
     callback(@[@""]);
 }
 
+RCT_EXPORT_METHOD(closeGeoPackage:(RCTResponseSenderBlock)callback) {
+    [[GeoPackageSingleton getSharedInstanceValue]closeGeoPackage];
+    callback(@[@""]);
+}
 @end
-  
+

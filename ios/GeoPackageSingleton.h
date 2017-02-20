@@ -33,8 +33,9 @@ typedef enum Goetypes
 @property(nonatomic, retain)NSMutableArray* featureClasses;
 
 +(GeoPackageSingleton*)getSharedInstanceValue;
--(int)createFeatureTable:(NSMutableDictionary*)featureDict forGeomentry:(GeomentryType)geomentry;
--(void)insertFeatureTableRecord:(NSMutableDictionary*)featureRecordDict forGeomentry:(GeomentryType)geomentry;
+-(int)createFeatureclass:(NSMutableDictionary*)featureDict forGeomentry:(int)geomentry;
+-(void)insertFeatureclassRecord:(NSMutableDictionary*)featureRecordDict forGeomentry:(int)geomentry;
 -(void)initGeoPackageatPath:(NSString*)path forFileName:(NSString*)filename;
+-(void)closeGeoPackage;
 
 @end
