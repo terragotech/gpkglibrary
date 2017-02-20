@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="feature_tiles_polygon_fill">false</bool>
+    <bool name="manager_validation_import_header">true</bool>
+    <bool name="manager_validation_import_integrity">false</bool>
+    <bool name="manager_validation_open_header">false</bool>
+    <bool name="manager_validation_open_integrity">false</bool>
+    <bool name="number_features_tile_border_draw">true</bool>
+    <bool name="number_features_tile_circle_draw">true</bool>
+    <bool name="number_features_tile_circle_fill_draw">true</bool>
+    <bool name="number_features_tile_fill_draw">true</bool>
+    <bool name="number_features_tile_unindexed_draw">true</bool>
+    <color name="number_features_tile_border_color">#FF000000</color>
+    <color name="number_features_tile_circle_color">#40000000</color>
+    <color name="number_features_tile_circle_fill_color">#FF000000</color>
+    <color name="number_features_tile_fill_color">#10000000</color>
+    <color name="number_features_tile_text_color">#FFFFFFFF</color>
+    <item format="float" name="number_features_tile_border_stroke_width" type="dimen">2.0</item>
+    <item format="float" name="number_features_tile_circle_padding_percentage" type="dimen">.1</item>
+    <item format="float" name="number_features_tile_circle_stroke_width" type="dimen">5.0</item>
+    <item format="float" name="number_features_tile_text_size" type="dimen">7.0</item>
+    <integer name="feature_tiles_height">256</integer>
+    <integer name="feature_tiles_polygon_fill_alpha">25</integer>
+    <integer name="feature_tiles_width">256</integer>
+    <string name="app_name">GeoPackageSDK</string>
+    <string name="feature_tiles_compress_format">PNG</string>
+    <string name="feature_tiles_line_stroke_width">2.0</string>
+    <string name="feature_tiles_point_radius">2.0</string>
+    <string name="feature_tiles_polygon_stroke_width">2.0</string>
+    <string name="geopackage_db_rollback_suffix">-journal</string>
+    <string name="tile_generator_variable_max_lat">\\{maxLat\\}</string>
+    <string name="tile_generator_variable_max_lon">\\{maxLon\\}</string>
+    <string name="tile_generator_variable_min_lat">\\{minLat\\}</string>
+    <string name="tile_generator_variable_min_lon">\\{minLon\\}</string>
+    <string name="tile_generator_variable_x">\\{x\\}</string>
+    <string name="tile_generator_variable_y">\\{y\\}</string>
+    <string name="tile_generator_variable_z">\\{z\\}</string>
+</resources>
