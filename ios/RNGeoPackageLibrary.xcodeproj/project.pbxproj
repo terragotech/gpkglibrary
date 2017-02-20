@@ -313,6 +313,8 @@
 		CF8B6D0B1E58B45B00D06B39 /* WKBSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CEF1E58B45B00D06B39 /* WKBSurface.m */; };
 		CF8B6D0C1E58B45B00D06B39 /* WKBTIN.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CF11E58B45B00D06B39 /* WKBTIN.m */; };
 		CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */; };
+		CF8B6D111E58C71400D06B39 /* GeoPackageSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */; };
+		CF8B6D141E5968CC00D06B39 /* GeoPackageColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -811,6 +813,10 @@
 		CF8B6CF11E58B45B00D06B39 /* WKBTIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBTIN.m; sourceTree = "<group>"; };
 		CF8B6CF21E58B45B00D06B39 /* WKBTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBTriangle.h; sourceTree = "<group>"; };
 		CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBTriangle.m; sourceTree = "<group>"; };
+		CF8B6D0F1E58C71400D06B39 /* GeoPackageSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageSingleton.h; sourceTree = "<group>"; };
+		CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageSingleton.m; sourceTree = "<group>"; };
+		CF8B6D121E5968CC00D06B39 /* GeoPackageColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageColumn.h; sourceTree = "<group>"; };
+		CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageColumn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -854,9 +860,13 @@
 		CF8B69F91E58B3A600D06B39 /* Geopackage */ = {
 			isa = PBXGroup;
 			children = (
+				CF8B6D121E5968CC00D06B39 /* GeoPackageColumn.h */,
+				CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */,
 				CF8B69FA1E58B3C800D06B39 /* Proj4 */,
 				CF8B6B3B1E58B3FB00D06B39 /* SDK */,
 				CF8B6CBD1E58B43100D06B39 /* wkb-iOS */,
+				CF8B6D0F1E58C71400D06B39 /* GeoPackageSingleton.h */,
+				CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */,
 			);
 			name = Geopackage;
 			sourceTree = "<group>";
@@ -1571,6 +1581,7 @@
 				CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */,
 				CF8B6C8E1E58B42000D06B39 /* GPKGNGAExtensions.m in Sources */,
 				CF8B6C6E1E58B42000D06B39 /* GPKGGeometryMetadataDao.m in Sources */,
+				CF8B6D141E5968CC00D06B39 /* GeoPackageColumn.m in Sources */,
 				CF8B6B0A1E58B3D900D06B39 /* PJ_ob_tran.c in Sources */,
 				CF8B6B0C1E58B3D900D06B39 /* PJ_oea.c in Sources */,
 				CF8B6ACC1E58B3D900D06B39 /* pj_datums.c in Sources */,
@@ -1626,6 +1637,7 @@
 				CF8B6AF61E58B3D900D06B39 /* PJ_lcca.c in Sources */,
 				CF8B6B211E58B3D900D06B39 /* pj_strerrno.c in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNGeoPackageLibrary.m in Sources */,
+				CF8B6D111E58C71400D06B39 /* GeoPackageSingleton.m in Sources */,
 				CF8B6C761E58B42000D06B39 /* GPKGGeoPackageMetadataDao.m in Sources */,
 				CF8B6C7D1E58B42000D06B39 /* GPKGMapPoint.m in Sources */,
 				CF8B6B251E58B3D900D06B39 /* PJ_tmerc.c in Sources */,

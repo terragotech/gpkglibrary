@@ -1,5 +1,6 @@
 
 #import "RCTBridgeModule.h"
+#import "GeoPackageSingleton.h"
 
 @interface RNGeoPackageLibrary : NSObject <RCTBridgeModule>
 

@@ -10,9 +10,9 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
+  "author": "SuniLKarthick",
   "license": "",
   "peerDependencies": {
-    "react-native": "^0.41.0"
+    "react-native": "^0.40.0"
   }
 }
