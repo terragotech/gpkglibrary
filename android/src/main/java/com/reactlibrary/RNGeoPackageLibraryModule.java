@@ -114,6 +114,14 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }
   }
 
+  @ReactMethod
+  public void closeGeoPackage(Callback callback){
+    if(geoPackage != null){
+      geoPackage.close();
+    }
+    callback.invoke("true");
+  }
+
   private void createDefaultFeatureClass(){
     //Must create the gpkg_geometry_column table, as this is not created by default
     geoPackage.createGeometryColumnsTable();
