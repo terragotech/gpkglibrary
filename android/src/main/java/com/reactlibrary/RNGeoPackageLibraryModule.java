@@ -64,7 +64,11 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       srs.setId(4326);
       File dbFolder = new File(dbPath);
       GeoPackageManager geoPackageManager = GeoPackageFactory.getManager(reactContext);
-      geoPackageManager.delete(dbName);// delete db if already exist
+      File dbFile = new File(dbPath+File.separator+dbName);
+      if(dbFile.exists()){// delete db if already exist
+        dbFile.delete();
+      }
+//      geoPackageManager.delete(dbName);
       geoPackageManager.createAtPath(dbName,dbFolder);// create db
       geoPackage = geoPackageManager.open(dbName);
     }catch (Exception e){
