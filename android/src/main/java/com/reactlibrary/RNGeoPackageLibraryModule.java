@@ -64,11 +64,10 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       srs.setId(4326);
       File dbFolder = new File(dbPath);
       GeoPackageManager geoPackageManager = GeoPackageFactory.getManager(reactContext);
-      File dbFile = new File(dbPath+File.separator+dbName);
+      File dbFile = new File(dbPath+File.separator+dbName+".gpkg");
       if(dbFile.exists()){// delete db if already exist
         dbFile.delete();
       }
-//      geoPackageManager.delete(dbName);
       geoPackageManager.createAtPath(dbName,dbFolder);// create db
       geoPackage = geoPackageManager.open(dbName);
     }catch (Exception e){
@@ -78,9 +77,9 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-    public void LibrarySampleCall(String testString, Callback completionCallback) {
+  public void LibrarySampleCall(String testString, Callback completionCallback) {
     completionCallback.invoke(testString);
-    }
+  }
   @ReactMethod
   public void createFeatureclass(ReadableMap readableMap,int geometryType,Callback callback){
     if (geoPackage != null) {
@@ -106,14 +105,21 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void insertFeatureclassRecord(ReadableMap readableMap,int geometryType,Callback callback){
     try {
-      FeatureRow featureRow = currentFeatureClassFeatureDAO.newRow();
       String tableName = readableMap.getString("FeatureName");
       String geometry = readableMap.getString("Location");
-      String fieldName = readableMap.getString("columnName");
-      String fieldValue = readableMap.getString("columnValue");
       insertDefaultTableValue(tableName, geometryType);
+      FeatureRow featureRow = currentFeatureClassFeatureDAO.newRow();
       addGeometryValuefromJson(geometry,featureRow);
-      insertValue(fieldName, fieldValue,featureRow);
+      ReadableArray columnsArray = readableMap.getArray("values");
+      if(columnsArray != null){
+        int size = columnsArray.size();
+        for(int i=0;i<size;i++){
+          ReadableMap readableMap1 = columnsArray.getMap(i);
+          String fieldName = readableMap1.getString("columnName");
+          String fieldValue = readableMap1.getString("columnValue");
+          insertValue(fieldName, fieldValue,featureRow);
+        }
+      }
       currentFeatureClassFeatureDAO.create(featureRow);
     }catch (Exception e){
       e.printStackTrace();
@@ -147,8 +153,9 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   private void addField(int id,String fieldName,List<FeatureColumn> lstFeatureColumns) {
+    int size = lstFeatureColumns.size();
     //Note:- Current implementation supports only text
-    lstFeatureColumns.add(FeatureColumn.createColumn(id, fieldName, GeoPackageDataType.TEXT, false, ""));
+    lstFeatureColumns.add(FeatureColumn.createColumn(size, fieldName, GeoPackageDataType.TEXT, false, ""));
   }
 
   private void insertDefaultTableValue(String currentFeatureClassName, int geometryType){
@@ -199,6 +206,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       currentFeatureClassFeatureDAO = geoPackage.getFeatureDao(currentFeatureClassGeomColums);
     }catch (Exception e){
       e.printStackTrace();
+
     }
   }
   private void addGeometryValuefromJson(String geoJsonString,FeatureRow featureRow) {
