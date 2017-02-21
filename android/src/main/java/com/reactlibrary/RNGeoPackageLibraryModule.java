@@ -58,7 +58,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void initGeoPackageatPath(String dbPath,String dbName){
+  public void initGeoPackageatPath(String dbPath,String dbName,Callback callback){
     try {
       srs = new SpatialReferenceSystem();
       srs.setId(4326);
@@ -70,6 +70,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }catch (Exception e){
       e.printStackTrace();
     }
+    callback.invoke("true");
   }
 
   @ReactMethod
@@ -77,7 +78,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     completionCallback.invoke(testString);
     }
   @ReactMethod
-  public void createFeatureclass(ReadableMap readableMap,int geometryType){
+  public void createFeatureclass(ReadableMap readableMap,int geometryType,Callback callback){
     if (geoPackage != null) {
       createDefaultFeatureClass();
       List<FeatureColumn> lstFeatureColumns = new ArrayList<>();
@@ -95,10 +96,11 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       currentFeatureTable = new FeatureTable(tableName, lstFeatureColumns);
       geoPackage.createFeatureTable(currentFeatureTable);
     }
+    callback.invoke("true");
   }
 
   @ReactMethod
-  public void insertFeatureclassRecord(ReadableMap readableMap,int geometryType){
+  public void insertFeatureclassRecord(ReadableMap readableMap,int geometryType,Callback callback){
     try {
       FeatureRow featureRow = currentFeatureClassFeatureDAO.newRow();
       String tableName = readableMap.getString("FeatureName");
@@ -112,6 +114,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }catch (Exception e){
       e.printStackTrace();
     }
+    callback.invoke("true");
   }
 
   @ReactMethod
