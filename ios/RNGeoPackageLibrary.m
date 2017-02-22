@@ -33,5 +33,20 @@ RCT_EXPORT_METHOD(closeGeoPackage:(RCTResponseSenderBlock)callback) {
     [[GeoPackageSingleton getSharedInstanceValue]closeGeoPackage];
     callback(@[@""]);
 }
+
+//import details
+RCT_EXPORT_METHOD(initImportGeoPackageforPath:(NSString *)path callback:(RCTResponseSenderBlock)callback) {
+    [[GeoPackageSingleton getSharedInstanceValue]initGeoPackageforPath:path];
+     callback(@[@""]);
+}
+
+RCT_EXPORT_METHOD(checkIsRasterforPath:(NSString *)path callback:(RCTResponseSenderBlock)callback) {
+    BOOL isRaster = [[GeoPackageSingleton getSharedInstanceValue]checkIsRasterforPath:path];
+    NSString *result = @"false";
+    if (isRaster) {
+        result = @"true";
+    }
+    callback(@[result]);
+}
 @end
 

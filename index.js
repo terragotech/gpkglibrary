@@ -8,6 +8,10 @@ var _createFeatureClass = promisify(RNGeoPackageLibrary.createFeatureclass);
 var _insertFeatureRecord = promisify(RNGeoPackageLibrary.insertFeatureclassRecord);
 var _closeGeoPackage = promisify(RNGeoPackageLibrary.closeGeoPackage);
 
+//import
+var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
+var _checkRaster = RNGeoPackageLibrary.checkIsRasterforPath
+
 var GeoPackage = {
   LibrarySampleCall(testString,callback) {
     return _libsample(testString,callback)
@@ -27,6 +31,14 @@ var GeoPackage = {
   },
   closeGeoPackage(callback){
     return _closeGeoPackage(callback)
+      .catch(_error)
+  },
+  initImportGeoPackageforPath(path, callback){
+    return _initImport(path, callback)
+      .catch(_error)
+  },
+  checkIsRasterforPath(path, callback){
+    return _checkRaster(path, callback)
       .catch(_error)
   }
 }

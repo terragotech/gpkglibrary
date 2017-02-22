@@ -315,6 +315,19 @@
 		CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */; };
 		CF8B6D111E58C71400D06B39 /* GeoPackageSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */; };
 		CF8B6D141E5968CC00D06B39 /* GeoPackageColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */; };
+		CFF2F2BA1E5D8E080064FC02 /* commonutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F25B1E5D8E080064FC02 /* commonutils.cpp */; };
+		CFF2F2BB1E5D8E080064FC02 /* gdal_to_tiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2861E5D8E080064FC02 /* gdal_to_tiles.cpp */; };
+		CFF2F2BC1E5D8E080064FC02 /* gdalwarp_bin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2961E5D8E080064FC02 /* gdalwarp_bin.cpp */; };
+		CFF2F2BD1E5D8E080064FC02 /* GeoPackageRasterReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F29A1E5D8E080064FC02 /* GeoPackageRasterReader.cpp */; };
+		CFF2F2BE1E5D8E080064FC02 /* global_mercator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F29C1E5D8E080064FC02 /* global_mercator.cpp */; };
+		CFF2F2BF1E5D8E080064FC02 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2A11E5D8E080064FC02 /* logger.cpp */; };
+		CFF2F2C01E5D8E080064FC02 /* logger2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2A31E5D8E080064FC02 /* logger2.cpp */; };
+		CFF2F2C11E5D8E080064FC02 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2A51E5D8E080064FC02 /* main.cpp */; };
+		CFF2F2C21E5D8E080064FC02 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2B71E5D8E080064FC02 /* utils.cpp */; };
+		CFF2F2C81E5D91D80064FC02 /* P2JDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2C51E5D91D80064FC02 /* P2JDatabase.m */; };
+		CFF2F2C91E5D91D80064FC02 /* P2JMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2C71E5D91D80064FC02 /* P2JMetadata.m */; };
+		CFF2F2CC1E5D92660064FC02 /* GeoPackageRaster.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2CB1E5D92660064FC02 /* GeoPackageRaster.mm */; };
+		CFF2F2D01E5DAD140064FC02 /* GeoPackageImport.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2CF1E5DAD140064FC02 /* GeoPackageImport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -817,6 +830,109 @@
 		CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageSingleton.m; sourceTree = "<group>"; };
 		CF8B6D121E5968CC00D06B39 /* GeoPackageColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageColumn.h; sourceTree = "<group>"; };
 		CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageColumn.m; sourceTree = "<group>"; };
+		CFF2F25B1E5D8E080064FC02 /* commonutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = commonutils.cpp; path = GeoPackageRaster/commonutils.cpp; sourceTree = "<group>"; };
+		CFF2F25C1E5D8E080064FC02 /* commonutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commonutils.h; path = GeoPackageRaster/commonutils.h; sourceTree = "<group>"; };
+		CFF2F25D1E5D8E080064FC02 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = GeoPackageRaster/config.h; sourceTree = "<group>"; };
+		CFF2F25E1E5D8E080064FC02 /* cpl_atomic_ops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_atomic_ops.h; path = GeoPackageRaster/cpl_atomic_ops.h; sourceTree = "<group>"; };
+		CFF2F25F1E5D8E080064FC02 /* cpl_aws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_aws.h; path = GeoPackageRaster/cpl_aws.h; sourceTree = "<group>"; };
+		CFF2F2601E5D8E080064FC02 /* cpl_config_extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_config_extras.h; path = GeoPackageRaster/cpl_config_extras.h; sourceTree = "<group>"; };
+		CFF2F2611E5D8E080064FC02 /* cpl_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_config.h; path = GeoPackageRaster/cpl_config.h; sourceTree = "<group>"; };
+		CFF2F2621E5D8E080064FC02 /* cpl_conv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_conv.h; path = GeoPackageRaster/cpl_conv.h; sourceTree = "<group>"; };
+		CFF2F2631E5D8E080064FC02 /* cpl_csv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_csv.h; path = GeoPackageRaster/cpl_csv.h; sourceTree = "<group>"; };
+		CFF2F2641E5D8E080064FC02 /* cpl_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_error.h; path = GeoPackageRaster/cpl_error.h; sourceTree = "<group>"; };
+		CFF2F2651E5D8E080064FC02 /* cpl_hash_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_hash_set.h; path = GeoPackageRaster/cpl_hash_set.h; sourceTree = "<group>"; };
+		CFF2F2661E5D8E080064FC02 /* cpl_http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_http.h; path = GeoPackageRaster/cpl_http.h; sourceTree = "<group>"; };
+		CFF2F2671E5D8E080064FC02 /* cpl_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_list.h; path = GeoPackageRaster/cpl_list.h; sourceTree = "<group>"; };
+		CFF2F2681E5D8E080064FC02 /* cpl_minixml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_minixml.h; path = GeoPackageRaster/cpl_minixml.h; sourceTree = "<group>"; };
+		CFF2F2691E5D8E080064FC02 /* cpl_minizip_ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_minizip_ioapi.h; path = GeoPackageRaster/cpl_minizip_ioapi.h; sourceTree = "<group>"; };
+		CFF2F26A1E5D8E080064FC02 /* cpl_minizip_unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_minizip_unzip.h; path = GeoPackageRaster/cpl_minizip_unzip.h; sourceTree = "<group>"; };
+		CFF2F26B1E5D8E080064FC02 /* cpl_minizip_zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_minizip_zip.h; path = GeoPackageRaster/cpl_minizip_zip.h; sourceTree = "<group>"; };
+		CFF2F26C1E5D8E080064FC02 /* cpl_multiproc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_multiproc.h; path = GeoPackageRaster/cpl_multiproc.h; sourceTree = "<group>"; };
+		CFF2F26D1E5D8E080064FC02 /* cpl_odbc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_odbc.h; path = GeoPackageRaster/cpl_odbc.h; sourceTree = "<group>"; };
+		CFF2F26E1E5D8E080064FC02 /* cpl_port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_port.h; path = GeoPackageRaster/cpl_port.h; sourceTree = "<group>"; };
+		CFF2F26F1E5D8E080064FC02 /* cpl_progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_progress.h; path = GeoPackageRaster/cpl_progress.h; sourceTree = "<group>"; };
+		CFF2F2701E5D8E080064FC02 /* cpl_quad_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_quad_tree.h; path = GeoPackageRaster/cpl_quad_tree.h; sourceTree = "<group>"; };
+		CFF2F2711E5D8E080064FC02 /* cpl_sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_sha256.h; path = GeoPackageRaster/cpl_sha256.h; sourceTree = "<group>"; };
+		CFF2F2721E5D8E080064FC02 /* cpl_spawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_spawn.h; path = GeoPackageRaster/cpl_spawn.h; sourceTree = "<group>"; };
+		CFF2F2731E5D8E080064FC02 /* cpl_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_string.h; path = GeoPackageRaster/cpl_string.h; sourceTree = "<group>"; };
+		CFF2F2741E5D8E080064FC02 /* cpl_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_time.h; path = GeoPackageRaster/cpl_time.h; sourceTree = "<group>"; };
+		CFF2F2751E5D8E080064FC02 /* cpl_virtualmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_virtualmem.h; path = GeoPackageRaster/cpl_virtualmem.h; sourceTree = "<group>"; };
+		CFF2F2761E5D8E080064FC02 /* cpl_vsi_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_vsi_error.h; path = GeoPackageRaster/cpl_vsi_error.h; sourceTree = "<group>"; };
+		CFF2F2771E5D8E080064FC02 /* cpl_vsi_virtual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_vsi_virtual.h; path = GeoPackageRaster/cpl_vsi_virtual.h; sourceTree = "<group>"; };
+		CFF2F2781E5D8E080064FC02 /* cpl_vsi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_vsi.h; path = GeoPackageRaster/cpl_vsi.h; sourceTree = "<group>"; };
+		CFF2F2791E5D8E080064FC02 /* cpl_vsil_curl_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_vsil_curl_priv.h; path = GeoPackageRaster/cpl_vsil_curl_priv.h; sourceTree = "<group>"; };
+		CFF2F27A1E5D8E080064FC02 /* cpl_worker_thread_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpl_worker_thread_pool.h; path = GeoPackageRaster/cpl_worker_thread_pool.h; sourceTree = "<group>"; };
+		CFF2F27B1E5D8E080064FC02 /* cplkeywordparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cplkeywordparser.h; path = GeoPackageRaster/cplkeywordparser.h; sourceTree = "<group>"; };
+		CFF2F27C1E5D8E080064FC02 /* gdal_alg_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_alg_priv.h; path = GeoPackageRaster/gdal_alg_priv.h; sourceTree = "<group>"; };
+		CFF2F27D1E5D8E080064FC02 /* gdal_alg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_alg.h; path = GeoPackageRaster/gdal_alg.h; sourceTree = "<group>"; };
+		CFF2F27E1E5D8E080064FC02 /* gdal_csv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_csv.h; path = GeoPackageRaster/gdal_csv.h; sourceTree = "<group>"; };
+		CFF2F27F1E5D8E080064FC02 /* gdal_frmts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_frmts.h; path = GeoPackageRaster/gdal_frmts.h; sourceTree = "<group>"; };
+		CFF2F2801E5D8E080064FC02 /* gdal_mdreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_mdreader.h; path = GeoPackageRaster/gdal_mdreader.h; sourceTree = "<group>"; };
+		CFF2F2811E5D8E080064FC02 /* gdal_pam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_pam.h; path = GeoPackageRaster/gdal_pam.h; sourceTree = "<group>"; };
+		CFF2F2821E5D8E080064FC02 /* gdal_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_priv.h; path = GeoPackageRaster/gdal_priv.h; sourceTree = "<group>"; };
+		CFF2F2831E5D8E080064FC02 /* gdal_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_proxy.h; path = GeoPackageRaster/gdal_proxy.h; sourceTree = "<group>"; };
+		CFF2F2841E5D8E080064FC02 /* gdal_rat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_rat.h; path = GeoPackageRaster/gdal_rat.h; sourceTree = "<group>"; };
+		CFF2F2851E5D8E080064FC02 /* gdal_simplesurf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_simplesurf.h; path = GeoPackageRaster/gdal_simplesurf.h; sourceTree = "<group>"; };
+		CFF2F2861E5D8E080064FC02 /* gdal_to_tiles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gdal_to_tiles.cpp; path = GeoPackageRaster/gdal_to_tiles.cpp; sourceTree = "<group>"; };
+		CFF2F2871E5D8E080064FC02 /* gdal_to_tiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_to_tiles.h; path = GeoPackageRaster/gdal_to_tiles.h; sourceTree = "<group>"; };
+		CFF2F2881E5D8E080064FC02 /* gdal_utils_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_utils_priv.h; path = GeoPackageRaster/gdal_utils_priv.h; sourceTree = "<group>"; };
+		CFF2F2891E5D8E080064FC02 /* gdal_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_utils.h; path = GeoPackageRaster/gdal_utils.h; sourceTree = "<group>"; };
+		CFF2F28A1E5D8E080064FC02 /* gdal_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_version.h; path = GeoPackageRaster/gdal_version.h; sourceTree = "<group>"; };
+		CFF2F28B1E5D8E080064FC02 /* gdal_vrt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal_vrt.h; path = GeoPackageRaster/gdal_vrt.h; sourceTree = "<group>"; };
+		CFF2F28C1E5D8E080064FC02 /* gdal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdal.h; path = GeoPackageRaster/gdal.h; sourceTree = "<group>"; };
+		CFF2F28D1E5D8E080064FC02 /* gdalexif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalexif.h; path = GeoPackageRaster/gdalexif.h; sourceTree = "<group>"; };
+		CFF2F28E1E5D8E080064FC02 /* gdalgeorefpamdataset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalgeorefpamdataset.h; path = GeoPackageRaster/gdalgeorefpamdataset.h; sourceTree = "<group>"; };
+		CFF2F28F1E5D8E080064FC02 /* gdalgrid_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalgrid_priv.h; path = GeoPackageRaster/gdalgrid_priv.h; sourceTree = "<group>"; };
+		CFF2F2901E5D8E080064FC02 /* gdalgrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalgrid.h; path = GeoPackageRaster/gdalgrid.h; sourceTree = "<group>"; };
+		CFF2F2911E5D8E080064FC02 /* gdaljp2abstractdataset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdaljp2abstractdataset.h; path = GeoPackageRaster/gdaljp2abstractdataset.h; sourceTree = "<group>"; };
+		CFF2F2921E5D8E080064FC02 /* gdaljp2metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdaljp2metadata.h; path = GeoPackageRaster/gdaljp2metadata.h; sourceTree = "<group>"; };
+		CFF2F2931E5D8E080064FC02 /* gdaljp2metadatagenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdaljp2metadatagenerator.h; path = GeoPackageRaster/gdaljp2metadatagenerator.h; sourceTree = "<group>"; };
+		CFF2F2941E5D8E080064FC02 /* gdalpansharpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalpansharpen.h; path = GeoPackageRaster/gdalpansharpen.h; sourceTree = "<group>"; };
+		CFF2F2951E5D8E080064FC02 /* gdalsse_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalsse_priv.h; path = GeoPackageRaster/gdalsse_priv.h; sourceTree = "<group>"; };
+		CFF2F2961E5D8E080064FC02 /* gdalwarp_bin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gdalwarp_bin.cpp; path = GeoPackageRaster/gdalwarp_bin.cpp; sourceTree = "<group>"; };
+		CFF2F2971E5D8E080064FC02 /* gdalwarp_bin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalwarp_bin.h; path = GeoPackageRaster/gdalwarp_bin.h; sourceTree = "<group>"; };
+		CFF2F2981E5D8E080064FC02 /* gdalwarper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalwarper.h; path = GeoPackageRaster/gdalwarper.h; sourceTree = "<group>"; };
+		CFF2F2991E5D8E080064FC02 /* gdalwarpkernel_opencl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdalwarpkernel_opencl.h; path = GeoPackageRaster/gdalwarpkernel_opencl.h; sourceTree = "<group>"; };
+		CFF2F29A1E5D8E080064FC02 /* GeoPackageRasterReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeoPackageRasterReader.cpp; path = GeoPackageRaster/GeoPackageRasterReader.cpp; sourceTree = "<group>"; };
+		CFF2F29B1E5D8E080064FC02 /* GeoPackageRasterReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoPackageRasterReader.h; path = GeoPackageRaster/GeoPackageRasterReader.h; sourceTree = "<group>"; };
+		CFF2F29C1E5D8E080064FC02 /* global_mercator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = global_mercator.cpp; path = GeoPackageRaster/global_mercator.cpp; sourceTree = "<group>"; };
+		CFF2F29D1E5D8E080064FC02 /* global_mercator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global_mercator.h; path = GeoPackageRaster/global_mercator.h; sourceTree = "<group>"; };
+		CFF2F29E1E5D8E080064FC02 /* gvgcpfit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gvgcpfit.h; path = GeoPackageRaster/gvgcpfit.h; sourceTree = "<group>"; };
+		CFF2F29F1E5D8E080064FC02 /* internal_qhull_headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = internal_qhull_headers.h; path = GeoPackageRaster/internal_qhull_headers.h; sourceTree = "<group>"; };
+		CFF2F2A01E5D8E080064FC02 /* latlong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = latlong.h; path = GeoPackageRaster/latlong.h; sourceTree = "<group>"; };
+		CFF2F2A11E5D8E080064FC02 /* logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logger.cpp; path = GeoPackageRaster/logger.cpp; sourceTree = "<group>"; };
+		CFF2F2A21E5D8E080064FC02 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logger.h; path = GeoPackageRaster/logger.h; sourceTree = "<group>"; };
+		CFF2F2A31E5D8E080064FC02 /* logger2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logger2.cpp; path = GeoPackageRaster/logger2.cpp; sourceTree = "<group>"; };
+		CFF2F2A41E5D8E080064FC02 /* logger2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logger2.h; path = GeoPackageRaster/logger2.h; sourceTree = "<group>"; };
+		CFF2F2A51E5D8E080064FC02 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = GeoPackageRaster/main.cpp; sourceTree = "<group>"; };
+		CFF2F2A61E5D8E080064FC02 /* memdataset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = memdataset.h; path = GeoPackageRaster/memdataset.h; sourceTree = "<group>"; };
+		CFF2F2A71E5D8E080064FC02 /* ogr_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_api.h; path = GeoPackageRaster/ogr_api.h; sourceTree = "<group>"; };
+		CFF2F2A81E5D8E080064FC02 /* ogr_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_core.h; path = GeoPackageRaster/ogr_core.h; sourceTree = "<group>"; };
+		CFF2F2A91E5D8E080064FC02 /* ogr_feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_feature.h; path = GeoPackageRaster/ogr_feature.h; sourceTree = "<group>"; };
+		CFF2F2AA1E5D8E080064FC02 /* ogr_featurestyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_featurestyle.h; path = GeoPackageRaster/ogr_featurestyle.h; sourceTree = "<group>"; };
+		CFF2F2AB1E5D8E080064FC02 /* ogr_geocoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_geocoding.h; path = GeoPackageRaster/ogr_geocoding.h; sourceTree = "<group>"; };
+		CFF2F2AC1E5D8E080064FC02 /* ogr_geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_geometry.h; path = GeoPackageRaster/ogr_geometry.h; sourceTree = "<group>"; };
+		CFF2F2AD1E5D8E080064FC02 /* ogr_p.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_p.h; path = GeoPackageRaster/ogr_p.h; sourceTree = "<group>"; };
+		CFF2F2AE1E5D8E080064FC02 /* ogr_spatialref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_spatialref.h; path = GeoPackageRaster/ogr_spatialref.h; sourceTree = "<group>"; };
+		CFF2F2AF1E5D8E080064FC02 /* ogr_srs_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogr_srs_api.h; path = GeoPackageRaster/ogr_srs_api.h; sourceTree = "<group>"; };
+		CFF2F2B01E5D8E080064FC02 /* ogrsf_frmts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogrsf_frmts.h; path = GeoPackageRaster/ogrsf_frmts.h; sourceTree = "<group>"; };
+		CFF2F2B11E5D8E080064FC02 /* org_proj4_Projections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = org_proj4_Projections.h; path = GeoPackageRaster/org_proj4_Projections.h; sourceTree = "<group>"; };
+		CFF2F2B21E5D8E080064FC02 /* png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = png.h; path = GeoPackageRaster/png.h; sourceTree = "<group>"; };
+		CFF2F2B31E5D8E080064FC02 /* pngconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pngconf.h; path = GeoPackageRaster/pngconf.h; sourceTree = "<group>"; };
+		CFF2F2B41E5D8E080064FC02 /* proj_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = proj_api.h; path = GeoPackageRaster/proj_api.h; sourceTree = "<group>"; };
+		CFF2F2B51E5D8E080064FC02 /* rawdataset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rawdataset.h; path = GeoPackageRaster/rawdataset.h; sourceTree = "<group>"; };
+		CFF2F2B61E5D8E080064FC02 /* thinplatespline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = thinplatespline.h; path = GeoPackageRaster/thinplatespline.h; sourceTree = "<group>"; };
+		CFF2F2B71E5D8E080064FC02 /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utils.cpp; path = GeoPackageRaster/utils.cpp; sourceTree = "<group>"; };
+		CFF2F2B81E5D8E080064FC02 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = GeoPackageRaster/utils.h; sourceTree = "<group>"; };
+		CFF2F2B91E5D8E080064FC02 /* vrtdataset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vrtdataset.h; path = GeoPackageRaster/vrtdataset.h; sourceTree = "<group>"; };
+		CFF2F2C41E5D91D80064FC02 /* P2JDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2JDatabase.h; sourceTree = "<group>"; };
+		CFF2F2C51E5D91D80064FC02 /* P2JDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2JDatabase.m; sourceTree = "<group>"; };
+		CFF2F2C61E5D91D80064FC02 /* P2JMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2JMetadata.h; sourceTree = "<group>"; };
+		CFF2F2C71E5D91D80064FC02 /* P2JMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2JMetadata.m; sourceTree = "<group>"; };
+		CFF2F2CA1E5D92660064FC02 /* GeoPackageRaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageRaster.h; sourceTree = "<group>"; };
+		CFF2F2CB1E5D92660064FC02 /* GeoPackageRaster.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeoPackageRaster.mm; sourceTree = "<group>"; };
+		CFF2F2CE1E5DAD140064FC02 /* GeoPackageImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageImport.h; sourceTree = "<group>"; };
+		CFF2F2CF1E5DAD140064FC02 /* GeoPackageImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageImport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -860,8 +976,9 @@
 		CF8B69F91E58B3A600D06B39 /* Geopackage */ = {
 			isa = PBXGroup;
 			children = (
-				CF8B6D121E5968CC00D06B39 /* GeoPackageColumn.h */,
-				CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */,
+				CFF2F2CD1E5D926D0064FC02 /* GeopackageLists */,
+				CFF2F2C31E5D91C30064FC02 /* P2JData */,
+				CFF2F25A1E5D8DA40064FC02 /* GeopackageRaster */,
 				CF8B69FA1E58B3C800D06B39 /* Proj4 */,
 				CF8B6B3B1E58B3FB00D06B39 /* SDK */,
 				CF8B6CBD1E58B43100D06B39 /* wkb-iOS */,
@@ -1372,6 +1489,132 @@
 			name = "wkb-iOS";
 			sourceTree = "<group>";
 		};
+		CFF2F25A1E5D8DA40064FC02 /* GeopackageRaster */ = {
+			isa = PBXGroup;
+			children = (
+				CFF2F25B1E5D8E080064FC02 /* commonutils.cpp */,
+				CFF2F25C1E5D8E080064FC02 /* commonutils.h */,
+				CFF2F25D1E5D8E080064FC02 /* config.h */,
+				CFF2F25E1E5D8E080064FC02 /* cpl_atomic_ops.h */,
+				CFF2F25F1E5D8E080064FC02 /* cpl_aws.h */,
+				CFF2F2601E5D8E080064FC02 /* cpl_config_extras.h */,
+				CFF2F2611E5D8E080064FC02 /* cpl_config.h */,
+				CFF2F2621E5D8E080064FC02 /* cpl_conv.h */,
+				CFF2F2631E5D8E080064FC02 /* cpl_csv.h */,
+				CFF2F2641E5D8E080064FC02 /* cpl_error.h */,
+				CFF2F2651E5D8E080064FC02 /* cpl_hash_set.h */,
+				CFF2F2661E5D8E080064FC02 /* cpl_http.h */,
+				CFF2F2671E5D8E080064FC02 /* cpl_list.h */,
+				CFF2F2681E5D8E080064FC02 /* cpl_minixml.h */,
+				CFF2F2691E5D8E080064FC02 /* cpl_minizip_ioapi.h */,
+				CFF2F26A1E5D8E080064FC02 /* cpl_minizip_unzip.h */,
+				CFF2F26B1E5D8E080064FC02 /* cpl_minizip_zip.h */,
+				CFF2F26C1E5D8E080064FC02 /* cpl_multiproc.h */,
+				CFF2F26D1E5D8E080064FC02 /* cpl_odbc.h */,
+				CFF2F26E1E5D8E080064FC02 /* cpl_port.h */,
+				CFF2F26F1E5D8E080064FC02 /* cpl_progress.h */,
+				CFF2F2701E5D8E080064FC02 /* cpl_quad_tree.h */,
+				CFF2F2711E5D8E080064FC02 /* cpl_sha256.h */,
+				CFF2F2721E5D8E080064FC02 /* cpl_spawn.h */,
+				CFF2F2731E5D8E080064FC02 /* cpl_string.h */,
+				CFF2F2741E5D8E080064FC02 /* cpl_time.h */,
+				CFF2F2751E5D8E080064FC02 /* cpl_virtualmem.h */,
+				CFF2F2761E5D8E080064FC02 /* cpl_vsi_error.h */,
+				CFF2F2771E5D8E080064FC02 /* cpl_vsi_virtual.h */,
+				CFF2F2781E5D8E080064FC02 /* cpl_vsi.h */,
+				CFF2F2791E5D8E080064FC02 /* cpl_vsil_curl_priv.h */,
+				CFF2F27A1E5D8E080064FC02 /* cpl_worker_thread_pool.h */,
+				CFF2F27B1E5D8E080064FC02 /* cplkeywordparser.h */,
+				CFF2F27C1E5D8E080064FC02 /* gdal_alg_priv.h */,
+				CFF2F27D1E5D8E080064FC02 /* gdal_alg.h */,
+				CFF2F27E1E5D8E080064FC02 /* gdal_csv.h */,
+				CFF2F27F1E5D8E080064FC02 /* gdal_frmts.h */,
+				CFF2F2801E5D8E080064FC02 /* gdal_mdreader.h */,
+				CFF2F2811E5D8E080064FC02 /* gdal_pam.h */,
+				CFF2F2821E5D8E080064FC02 /* gdal_priv.h */,
+				CFF2F2831E5D8E080064FC02 /* gdal_proxy.h */,
+				CFF2F2841E5D8E080064FC02 /* gdal_rat.h */,
+				CFF2F2851E5D8E080064FC02 /* gdal_simplesurf.h */,
+				CFF2F2861E5D8E080064FC02 /* gdal_to_tiles.cpp */,
+				CFF2F2871E5D8E080064FC02 /* gdal_to_tiles.h */,
+				CFF2F2881E5D8E080064FC02 /* gdal_utils_priv.h */,
+				CFF2F2891E5D8E080064FC02 /* gdal_utils.h */,
+				CFF2F28A1E5D8E080064FC02 /* gdal_version.h */,
+				CFF2F28B1E5D8E080064FC02 /* gdal_vrt.h */,
+				CFF2F28C1E5D8E080064FC02 /* gdal.h */,
+				CFF2F28D1E5D8E080064FC02 /* gdalexif.h */,
+				CFF2F28E1E5D8E080064FC02 /* gdalgeorefpamdataset.h */,
+				CFF2F28F1E5D8E080064FC02 /* gdalgrid_priv.h */,
+				CFF2F2901E5D8E080064FC02 /* gdalgrid.h */,
+				CFF2F2911E5D8E080064FC02 /* gdaljp2abstractdataset.h */,
+				CFF2F2921E5D8E080064FC02 /* gdaljp2metadata.h */,
+				CFF2F2931E5D8E080064FC02 /* gdaljp2metadatagenerator.h */,
+				CFF2F2941E5D8E080064FC02 /* gdalpansharpen.h */,
+				CFF2F2951E5D8E080064FC02 /* gdalsse_priv.h */,
+				CFF2F2961E5D8E080064FC02 /* gdalwarp_bin.cpp */,
+				CFF2F2971E5D8E080064FC02 /* gdalwarp_bin.h */,
+				CFF2F2981E5D8E080064FC02 /* gdalwarper.h */,
+				CFF2F2991E5D8E080064FC02 /* gdalwarpkernel_opencl.h */,
+				CFF2F29A1E5D8E080064FC02 /* GeoPackageRasterReader.cpp */,
+				CFF2F29B1E5D8E080064FC02 /* GeoPackageRasterReader.h */,
+				CFF2F29C1E5D8E080064FC02 /* global_mercator.cpp */,
+				CFF2F29D1E5D8E080064FC02 /* global_mercator.h */,
+				CFF2F29E1E5D8E080064FC02 /* gvgcpfit.h */,
+				CFF2F29F1E5D8E080064FC02 /* internal_qhull_headers.h */,
+				CFF2F2A01E5D8E080064FC02 /* latlong.h */,
+				CFF2F2A11E5D8E080064FC02 /* logger.cpp */,
+				CFF2F2A21E5D8E080064FC02 /* logger.h */,
+				CFF2F2A31E5D8E080064FC02 /* logger2.cpp */,
+				CFF2F2A41E5D8E080064FC02 /* logger2.h */,
+				CFF2F2A51E5D8E080064FC02 /* main.cpp */,
+				CFF2F2A61E5D8E080064FC02 /* memdataset.h */,
+				CFF2F2A71E5D8E080064FC02 /* ogr_api.h */,
+				CFF2F2A81E5D8E080064FC02 /* ogr_core.h */,
+				CFF2F2A91E5D8E080064FC02 /* ogr_feature.h */,
+				CFF2F2AA1E5D8E080064FC02 /* ogr_featurestyle.h */,
+				CFF2F2AB1E5D8E080064FC02 /* ogr_geocoding.h */,
+				CFF2F2AC1E5D8E080064FC02 /* ogr_geometry.h */,
+				CFF2F2AD1E5D8E080064FC02 /* ogr_p.h */,
+				CFF2F2AE1E5D8E080064FC02 /* ogr_spatialref.h */,
+				CFF2F2AF1E5D8E080064FC02 /* ogr_srs_api.h */,
+				CFF2F2B01E5D8E080064FC02 /* ogrsf_frmts.h */,
+				CFF2F2B11E5D8E080064FC02 /* org_proj4_Projections.h */,
+				CFF2F2B21E5D8E080064FC02 /* png.h */,
+				CFF2F2B31E5D8E080064FC02 /* pngconf.h */,
+				CFF2F2B41E5D8E080064FC02 /* proj_api.h */,
+				CFF2F2B51E5D8E080064FC02 /* rawdataset.h */,
+				CFF2F2B61E5D8E080064FC02 /* thinplatespline.h */,
+				CFF2F2B71E5D8E080064FC02 /* utils.cpp */,
+				CFF2F2B81E5D8E080064FC02 /* utils.h */,
+				CFF2F2B91E5D8E080064FC02 /* vrtdataset.h */,
+			);
+			name = GeopackageRaster;
+			sourceTree = "<group>";
+		};
+		CFF2F2C31E5D91C30064FC02 /* P2JData */ = {
+			isa = PBXGroup;
+			children = (
+				CFF2F2C41E5D91D80064FC02 /* P2JDatabase.h */,
+				CFF2F2C51E5D91D80064FC02 /* P2JDatabase.m */,
+				CFF2F2C61E5D91D80064FC02 /* P2JMetadata.h */,
+				CFF2F2C71E5D91D80064FC02 /* P2JMetadata.m */,
+			);
+			name = P2JData;
+			sourceTree = "<group>";
+		};
+		CFF2F2CD1E5D926D0064FC02 /* GeopackageLists */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B6D121E5968CC00D06B39 /* GeoPackageColumn.h */,
+				CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */,
+				CFF2F2CA1E5D92660064FC02 /* GeoPackageRaster.h */,
+				CFF2F2CB1E5D92660064FC02 /* GeoPackageRaster.mm */,
+				CFF2F2CE1E5DAD140064FC02 /* GeoPackageImport.h */,
+				CFF2F2CF1E5DAD140064FC02 /* GeoPackageImport.m */,
+			);
+			name = GeopackageLists;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1439,6 +1682,7 @@
 				CF8B6C751E58B42000D06B39 /* GPKGGeoPackageMetadata.m in Sources */,
 				CF8B6B181E58B3D900D06B39 /* PJ_putp6.c in Sources */,
 				CF8B6C8B1E58B42000D06B39 /* GPKGMultiPolygonPoints.m in Sources */,
+				CFF2F2C91E5D91D80064FC02 /* P2JMetadata.m in Sources */,
 				CF8B6AD61E58B3D900D06B39 /* PJ_eqc.c in Sources */,
 				CF8B6CA91E58B42000D06B39 /* GPKGTileColumn.m in Sources */,
 				CF8B6C491E58B42000D06B39 /* GPKGContentValues.m in Sources */,
@@ -1474,6 +1718,7 @@
 				CF8B6C421E58B42000D06B39 /* GPKGColumnValue.m in Sources */,
 				CF8B6AFC1E58B3D900D06B39 /* PJ_mbtfpp.c in Sources */,
 				CF8B6D0A1E58B45B00D06B39 /* WKBPolyhedralSurface.m in Sources */,
+				CFF2F2D01E5DAD140064FC02 /* GeoPackageImport.m in Sources */,
 				CF8B6B0F1E58B3D900D06B39 /* PJ_ortho.c in Sources */,
 				CF8B6AEE1E58B3D900D06B39 /* PJ_krovak.c in Sources */,
 				CF8B6B281E58B3D900D06B39 /* pj_tsfn.c in Sources */,
@@ -1486,6 +1731,7 @@
 				CF8B6C4C1E58B42000D06B39 /* GPKGDataColumns.m in Sources */,
 				CF8B6CAC1E58B42000D06B39 /* GPKGTileGenerator.m in Sources */,
 				CF8B6B341E58B3D900D06B39 /* PJ_wink2.c in Sources */,
+				CFF2F2BA1E5D8E080064FC02 /* commonutils.cpp in Sources */,
 				CF8B6C961E58B42000D06B39 /* GPKGProjectionFactory.m in Sources */,
 				CF8B6AFD1E58B3D900D06B39 /* PJ_mbtfpq.c in Sources */,
 				CF8B6AF81E58B3D900D06B39 /* PJ_loxim.c in Sources */,
@@ -1522,6 +1768,7 @@
 				CF8B6B031E58B3D900D06B39 /* pj_msfn.c in Sources */,
 				CF8B6C881E58B42000D06B39 /* GPKGMetadataScope.m in Sources */,
 				CF8B6AB21E58B3D900D06B39 /* Makefile in Sources */,
+				CFF2F2C21E5D8E080064FC02 /* utils.cpp in Sources */,
 				CF8B6CAF1E58B42000D06B39 /* GPKGTileMatrixDao.m in Sources */,
 				CF8B6C581E58B42000D06B39 /* GPKGFeatureIndexMetadataResults.m in Sources */,
 				CF8B6C721E58B42000D06B39 /* GPKGGeoPackageConstants.m in Sources */,
@@ -1579,6 +1826,7 @@
 				CF8B6B121E58B3D900D06B39 /* PJ_poly.c in Sources */,
 				CF8B6C401E58B42000D06B39 /* GPKGBoundedOverlay.m in Sources */,
 				CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */,
+				CFF2F2C01E5D8E080064FC02 /* logger2.cpp in Sources */,
 				CF8B6C8E1E58B42000D06B39 /* GPKGNGAExtensions.m in Sources */,
 				CF8B6C6E1E58B42000D06B39 /* GPKGGeometryMetadataDao.m in Sources */,
 				CF8B6D141E5968CC00D06B39 /* GeoPackageColumn.m in Sources */,
@@ -1587,15 +1835,18 @@
 				CF8B6ACC1E58B3D900D06B39 /* pj_datums.c in Sources */,
 				CF8B6C871E58B42000D06B39 /* GPKGMetadataReferenceDao.m in Sources */,
 				CF8B6AEA1E58B3D900D06B39 /* PJ_imw_p.c in Sources */,
+				CFF2F2BF1E5D8E080064FC02 /* logger.cpp in Sources */,
 				CF8B6B241E58B3D900D06B39 /* PJ_tcea.c in Sources */,
 				CF8B6AD31E58B3D900D06B39 /* PJ_eck5.c in Sources */,
 				CF8B6CFE1E58B45B00D06B39 /* WKBGeometryPrinter.m in Sources */,
 				CF8B6AA81E58B3D900D06B39 /* dmstor.c in Sources */,
 				CF8B6B1B1E58B3D900D06B39 /* PJ_robin.c in Sources */,
 				CF8B6C571E58B42000D06B39 /* GPKGFeatureIndexManager.m in Sources */,
+				CFF2F2CC1E5D92660064FC02 /* GeoPackageRaster.mm in Sources */,
 				CF8B6C6C1E58B42000D06B39 /* GPKGGeometryIndexDao.m in Sources */,
 				CF8B6AAC1E58B3D900D06B39 /* geod_for.c in Sources */,
 				CF8B6CBC1E58B42000D06B39 /* GPKGUtils.m in Sources */,
+				CFF2F2BB1E5D8E080064FC02 /* gdal_to_tiles.cpp in Sources */,
 				CF8B6C7F1E58B42000D06B39 /* GPKGMapShape.m in Sources */,
 				CF8B6C891E58B42000D06B39 /* GPKGMultiPoint.m in Sources */,
 				CF8B6C3F1E58B42000D06B39 /* GPKGBaseDao.m in Sources */,
@@ -1654,6 +1905,7 @@
 				CF8B6B361E58B3D900D06B39 /* proj_mdist.c in Sources */,
 				CF8B6C461E58B42000D06B39 /* GPKGConnectionPool.m in Sources */,
 				CF8B6CF41E58B45B00D06B39 /* WKBByteReader.m in Sources */,
+				CFF2F2BD1E5D8E080064FC02 /* GeoPackageRasterReader.cpp in Sources */,
 				CF8B6AC01E58B3D900D06B39 /* pj_auth.c in Sources */,
 				CF8B6C5A1E58B42000D06B39 /* GPKGFeatureIndexTypes.m in Sources */,
 				CF8B6ACE1E58B3D900D06B39 /* pj_deriv.c in Sources */,
@@ -1666,6 +1918,7 @@
 				CF8B6B0E1E58B3D900D06B39 /* pj_open_lib.c in Sources */,
 				CF8B6C951E58B42000D06B39 /* GPKGProjectionConstants.m in Sources */,
 				CF8B6B371E58B3D900D06B39 /* proj_rouss.c in Sources */,
+				CFF2F2BE1E5D8E080064FC02 /* global_mercator.cpp in Sources */,
 				CF8B6B0D1E58B3D900D06B39 /* PJ_omerc.c in Sources */,
 				CF8B6B091E58B3D900D06B39 /* PJ_nzmg.c in Sources */,
 				CF8B6ADE1E58B3D900D06B39 /* pj_gauss.c in Sources */,
@@ -1673,6 +1926,7 @@
 				CF8B6AB61E58B3D900D06B39 /* nad_intr.c in Sources */,
 				CF8B6C711E58B42000D06B39 /* GPKGGeoPackageCache.m in Sources */,
 				CF8B6C8A1E58B42000D06B39 /* GPKGMultiPolygon.m in Sources */,
+				CFF2F2BC1E5D8E080064FC02 /* gdalwarp_bin.cpp in Sources */,
 				CF8B6AA61E58B3D900D06B39 /* biveval.c in Sources */,
 				CF8B6CA51E58B42000D06B39 /* GPKGTableIndexDao.m in Sources */,
 				CF8B6B051E58B3D900D06B39 /* PJ_nell_h.c in Sources */,
@@ -1684,6 +1938,7 @@
 				CF8B6AF11E58B3D900D06B39 /* PJ_lagrng.c in Sources */,
 				CF8B6C551E58B42000D06B39 /* GPKGFeatureIndexer.m in Sources */,
 				CF8B6CA31E58B42000D06B39 /* GPKGTableCreator.m in Sources */,
+				CFF2F2C11E5D8E080064FC02 /* main.cpp in Sources */,
 				CF8B6D071E58B45B00D06B39 /* WKBMultiSurface.m in Sources */,
 				CF8B6AE31E58B3D900D06B39 /* PJ_gnom.c in Sources */,
 				CF8B6CB91E58B42000D06B39 /* GPKGUserTable.m in Sources */,
@@ -1724,6 +1979,7 @@
 				CF8B6C8F1E58B42000D06B39 /* GPKGNumberFeaturesTile.m in Sources */,
 				CF8B6ADF1E58B3D900D06B39 /* pj_geocent.c in Sources */,
 				CF8B6CB11E58B42000D06B39 /* GPKGTileMatrixSetDao.m in Sources */,
+				CFF2F2C81E5D91D80064FC02 /* P2JDatabase.m in Sources */,
 				CF8B6CAD1E58B42000D06B39 /* GPKGTileGrid.m in Sources */,
 				CF8B6B141E58B3D900D06B39 /* PJ_putp2.c in Sources */,
 				CF8B6C9E1E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m in Sources */,

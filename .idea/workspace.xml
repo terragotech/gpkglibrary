@@ -2,8 +2,208 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="351b0986-7720-4f7b-b4e7-3955e53aefe1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java" afterPath="$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageImport.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageImport.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster.mm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/GeoPackageRasterReader.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/GeoPackageRasterReader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/commonutils.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/commonutils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/config.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_atomic_ops.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_aws.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_config.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_config_extras.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_conv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_csv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_error.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_hash_set.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_http.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_list.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_minixml.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_minizip_ioapi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_minizip_unzip.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_minizip_zip.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_multiproc.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_odbc.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_progress.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_quad_tree.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_sha256.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_spawn.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_string.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_time.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_virtualmem.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_vsi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_vsi_error.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_vsi_virtual.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_vsil_curl_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cpl_worker_thread_pool.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/cplkeywordparser.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_alg.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_alg_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_csv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_frmts.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_mdreader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_pam.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_proxy.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_rat.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_simplesurf.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_to_tiles.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_to_tiles.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_utils_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_version.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdal_vrt.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalexif.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalgeorefpamdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalgrid.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalgrid_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdaljp2abstractdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdaljp2metadata.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdaljp2metadatagenerator.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalpansharpen.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalsse_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalwarp_bin.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalwarp_bin.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalwarper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gdalwarpkernel_opencl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/global_mercator.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/global_mercator.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/gvgcpfit.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/internal_qhull_headers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/latlong.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/logger.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/logger.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/logger2.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/logger2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/main.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/memdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_api.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_core.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_feature.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_featurestyle.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_geocoding.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_geometry.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_p.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_spatialref.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogr_srs_api.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/ogrsf_frmts.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/org_proj4_Projections.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/png.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/pngconf.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/proj_api.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/rawdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/thinplatespline.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/utils.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRaster/vrtdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRasterReader.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/GeoPackageRasterReader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/P2JDatabase.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/P2JDatabase.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/P2JMetadata.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/P2JMetadata.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/commonutils.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/commonutils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/config.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_atomic_ops.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_aws.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_config.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_config_extras.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_conv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_csv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_error.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_hash_set.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_http.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_list.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_minixml.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_minizip_ioapi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_minizip_unzip.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_minizip_zip.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_multiproc.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_odbc.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_progress.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_quad_tree.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_sha256.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_spawn.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_string.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_time.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_virtualmem.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_vsi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_vsi_error.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_vsi_virtual.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_vsil_curl_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cpl_worker_thread_pool.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/cplkeywordparser.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_alg.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_alg_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_csv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_frmts.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_mdreader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_pam.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_proxy.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_rat.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_simplesurf.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_to_tiles.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_to_tiles.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_utils_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_version.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdal_vrt.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalexif.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalgeorefpamdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalgrid.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalgrid_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdaljp2abstractdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdaljp2metadata.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdaljp2metadatagenerator.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalpansharpen.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalsse_priv.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalwarp_bin.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalwarp_bin.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalwarper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gdalwarpkernel_opencl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/global_mercator.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/global_mercator.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/gvgcpfit.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/internal_qhull_headers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/latlong.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/logger.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/logger.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/logger2.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/logger2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/main.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/memdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_api.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_core.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_feature.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_featurestyle.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_geocoding.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_geometry.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_p.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_spatialref.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogr_srs_api.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/ogrsf_frmts.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/png.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/pngconf.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/rawdataset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/thinplatespline.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/utils.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ios/vrtdataset.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.xcworkspace/xcuserdata/sunilkarthicksivabalan.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.xcworkspace/xcuserdata/sunilkarthicksivabalan.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/GeoPackageSingleton.h" afterPath="$PROJECT_DIR$/ios/GeoPackageSingleton.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/GeoPackageSingleton.m" afterPath="$PROJECT_DIR$/ios/GeoPackageSingleton.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.m" afterPath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ios/RNGeoPackageLibrary.xcodeproj/project.pbxproj" />
     </list>
     <ignored path="gpkglibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +217,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -27,11 +226,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RNGeoPackageLibraryModule.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -51,6 +250,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -93,9 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -128,144 +326,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpkglibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpkglibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpkglibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpkglibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactlibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -295,11 +371,12 @@
       <option name="presentableId" value="Default" />
       <updated>1487335770305</updated>
       <workItem from="1487335771692" duration="873000" />
+      <workItem from="1487763526930" duration="434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="873000" />
+    <option name="totallyTimeSpent" value="1307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,36 +389,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="40" width="1260" height="692" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.49671593" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905295" sideWeight="0.5095238" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905295" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.50656813" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.49343187" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -378,8 +455,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/src/main/java/com/reactlibrary/RNGeoPackageLibraryModule.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding />
         </state>
       </provider>

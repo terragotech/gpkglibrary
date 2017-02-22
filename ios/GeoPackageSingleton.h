@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "geopackage-ios-Bridging-Header.h"
 #import "GeoPackageColumn.h"
+#import "GeoPackageRaster.h"
+#import "GeoPackageImport.h"
 
 @interface GeoPackageSingleton : NSObject
 {
@@ -20,6 +22,9 @@
     GPKGGeometryColumnsDao *geometryColumnsDao;
     GPKGContentsDao *contentsDao;
     GPKGDataColumnConstraintsDao *constraintsDao;
+    
+    //import
+    GeoPackageImport *import;
 }
 
 typedef enum Goetypes
@@ -32,10 +37,16 @@ typedef enum Goetypes
 @property(nonatomic, retain)NSMutableArray* columnsTypesArray;
 @property(nonatomic, retain)NSMutableArray* featureClasses;
 
+//Export
 +(GeoPackageSingleton*)getSharedInstanceValue;
 -(int)createFeatureclass:(NSMutableDictionary*)featureDict forGeomentry:(int)geomentry;
 -(void)insertFeatureclassRecord:(NSMutableDictionary*)featureRecordDict forGeomentry:(int)geomentry;
 -(void)initGeoPackageatPath:(NSString*)path forFileName:(NSString*)filename;
 -(void)closeGeoPackage;
+
+//Import
+@property(nonatomic,retain)GeoPackageRaster *georaster;
+-(void)initGeoPackageforPath:(NSString*)path;
+-(BOOL)checkIsRasterforPath:(NSString*)path;
 
 @end

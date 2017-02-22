@@ -229,4 +229,31 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     }
 }
 
+#pragma mark import
+
+-(void)initGeoPackageforPath:(NSString*)path{
+    if(!self.georaster){
+        self.georaster = [[GeoPackageRaster alloc]init];
+    }
+    BOOL isRaster = [self.georaster isRasterGeoPackage:path];
+    if (isRaster) {
+        NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+        [userDef setObject:@"GeoPackageRaster" forKey:@"packageType"];
+        [userDef synchronize];
+    }
+    if (!import) {
+        import = [[GeoPackageImport alloc]init];
+    }
+    [import initGeoPackageforpath:path];
+}
+
+-(BOOL)checkIsRasterforPath:(NSString*)path{
+    BOOL ret = false;
+    if(!self.georaster){
+        self.georaster = [[GeoPackageRaster alloc]init];
+    }
+    ret = [self.georaster isRasterGeoPackage:path];
+    return ret;
+}
+
 @end
