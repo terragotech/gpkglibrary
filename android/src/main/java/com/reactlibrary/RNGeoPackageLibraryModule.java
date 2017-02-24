@@ -1,17 +1,24 @@
 
 package com.reactlibrary;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.WritableMap;
 import com.google.gson.Gson;
 import com.reactlibrary.json.Location;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -26,10 +33,15 @@ import mil.nga.geopackage.factory.GeoPackageFactory;
 import mil.nga.geopackage.features.columns.GeometryColumns;
 import mil.nga.geopackage.features.columns.GeometryColumnsDao;
 import mil.nga.geopackage.features.user.FeatureColumn;
+import mil.nga.geopackage.features.user.FeatureCursor;
 import mil.nga.geopackage.features.user.FeatureDao;
 import mil.nga.geopackage.features.user.FeatureRow;
 import mil.nga.geopackage.features.user.FeatureTable;
 import mil.nga.geopackage.geom.GeoPackageGeometryData;
+import mil.nga.geopackage.projection.Projection;
+import mil.nga.geopackage.projection.ProjectionConstants;
+import mil.nga.geopackage.projection.ProjectionFactory;
+import mil.nga.geopackage.projection.ProjectionTransform;
 import mil.nga.geopackage.schema.TableColumnKey;
 import mil.nga.wkb.geom.Geometry;
 import mil.nga.wkb.geom.GeometryType;
@@ -46,6 +58,10 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   private GeometryColumnsDao geomColumnsDao;
   private FeatureDao currentFeatureClassFeatureDAO;
   private FeatureTable currentFeatureTable;
+  private int geomState,geomTypeFound;
+  private ProjectionTransform projectionTransform = null;
+  private List<String> features = new ArrayList<>();
+  private FeatureDao featureDao = null;
 
   public RNGeoPackageLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -133,6 +149,30 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       geoPackage.close();
     }
     callback.invoke("true");
+  }
+
+  @ReactMethod
+  public void getgpkgFileDetails(String filePath,Callback callback){
+    WritableMap writableMap = Arguments.createMap();
+    try{
+      File file = new File(filePath);
+      String fileName = file.getName();
+      String extension = com.reactlibrary.FileUtils.getFileExt(fileName);
+      if(extension.equals("pdf")){//if file is pdf
+        WritableArray geoPackageNames = Arguments.createArray();
+        PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), "output target path need to give", geoPackageNames);
+        PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), "output target path need to give", geoPackageNames);
+        if(geoPackageNames.size() > 0){
+          writableMap = parseGeopackageFile(filePath);
+        }
+        writableMap.putArray("geopackageNames",geoPackageNames);
+      }else if(extension.equals("gpkg")){//if file is gpkg
+        writableMap = parseGeopackageFile(filePath);
+      }
+    }catch (Exception e){
+      e.printStackTrace();
+    }
+    callback.invoke(writableMap);
   }
 
   private void createDefaultFeatureClass(){
@@ -280,5 +320,146 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     if (!fieldFound) {
       throw new Exception("Unknow field name");
     }
+  }
+  public void closeGeoPkg(){
+    if(geoPackage != null) {
+      geoPackage.close();
+      geoPackage = null;
+    }
+  }
+
+  private void openFile(String fileName){
+
+    File geoPkgFile = new File(fileName);
+    GeoPackageManager geoPackageManager = GeoPackageFactory.getManager(reactContext);
+
+    try{
+      // Import database
+      if(!geoPackageManager.exists(fileName)){
+        geoPackageManager.importGeoPackage(geoPkgFile,true);
+      }
+    }catch (Exception e){
+      e.printStackTrace();
+    }
+
+    // Available databases
+    List<String> databases = geoPackageManager.databases();
+    int index = databases.indexOf(FileUtils.getResourceNameNoExt(fileName));
+    if(index != -1){
+      geoPackage = geoPackageManager.open(databases.get(index));
+    }
+  }
+
+  /**
+   * get feature tables count
+   * @return
+     */
+  private int getLayerCount(){
+    int featureClassCount = 0;
+    if(geoPackage != null){
+      features = geoPackage.getFeatureTables();
+      if(features != null){
+        featureClassCount = features.size();
+      }
+    }
+    return featureClassCount;
+  }
+  private String selectLayerByIndex(int layerIndex){
+    String tableName = "";
+
+    if(features != null && geoPackage != null){
+      //As the layer selected make sure the Dao object is created
+      //So all other method can access the data via dao
+      featureDao = geoPackage.getFeatureDao(features.get(layerIndex));
+      FeatureCursor featureCursor = featureDao.queryForAll();
+      tableName = featureCursor.getTable().getTableName();
+      //Get the status of the Projection
+      geomState = GeoPackageUtil.getProjStatus(featureDao);
+
+      geomTypeFound = GeoPackageUtil.getGeomType(featureDao.getGeometryType());
+      //If required generate the projection transformation object, so it can
+      //be used when processing the Geometry objects
+
+      if(geomState == GeoPackageUtil.PROJ_STATUS_RE_PROJ_REQUIRED){
+        //Generate Projection Objection  once
+        Projection prj4326 = ProjectionFactory.getProjection(ProjectionConstants.EPSG_WORLD_GEODETIC_SYSTEM);
+        Projection projection = featureDao.getProjection();
+        projectionTransform = projection.getTransformation(prj4326);
+      }
+    }
+    return tableName;
+  }
+
+  private WritableArray getColumnNames(){
+    String[] columns = featureDao.getTable().getColumnNames();
+    WritableArray writableArray = Arguments.createArray();
+    int size = columns.length;
+    for(int i=0;i<size;i++){
+      if(i != 0 && i != featureDao.getTable().getGeometryColumnIndex()){
+        writableArray.pushString(columns[i]);
+      }
+    }
+    return writableArray;
+  }
+  private int getSelectedLayerFeatureCount(){
+    int featureCount;
+    featureCount = featureDao.count();
+    return featureCount;
+  }
+
+  private WritableArray getRasterLayers(String rasterFilePath){
+    WritableArray writableArray = Arguments.createArray();
+    GeoPackageRasterReader gr = new GeoPackageRasterReader();
+    String gdalDataPath = "file:///android_asset/";
+    gr.openGeoPackage(rasterFilePath, gdalDataPath);
+    String rasterNameList =  gr.getGeoPackageRasterNameListAsJSON();
+    try{
+      JSONObject obj = new JSONObject(rasterNameList);
+      JSONArray arrayJS = obj.getJSONArray("tile_sources");
+      int rasterLength = arrayJS.length();
+      for(int i=0;i<rasterLength;i++)
+      {
+        JSONObject obj1 = arrayJS.getJSONObject(i);
+        writableArray.pushString(obj1.getString("tilename"));
+      }
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
+    gr.closeGeoPackage();
+    return writableArray;
+  }
+
+  private WritableMap parseGeopackageFile(String filePath){
+    openFile(filePath);
+    int featureClassCount = getLayerCount();
+    int notesCount = 0;
+    WritableArray featureClasses = Arguments.createArray();
+    for(int i=0;i<featureClassCount;i++){
+      String tableName = selectLayerByIndex(i);
+      WritableMap featureClass = Arguments.createMap();
+      featureClass.putString("name",tableName);
+      featureClass.putBoolean("state",true);
+      int currentNotesCount = getSelectedLayerFeatureCount();
+      notesCount += currentNotesCount;
+      featureClass.putInt("notesCount",currentNotesCount);
+      featureClass.putArray("attributes",getColumnNames());
+      featureClasses.pushMap(featureClass);
+    }
+
+    WritableMap geoPackageContent = Arguments.createMap();
+    WritableMap notesContent = Arguments.createMap();
+    notesContent.putInt("size",notesCount);
+    notesContent.putBoolean("state",true);
+    geoPackageContent.putMap("notes",notesContent);
+    geoPackageContent.putArray("featureClasses",featureClasses);
+    closeGeoPkg();
+    WritableArray rasterLayers = getRasterLayers(filePath);
+    geoPackageContent.putArray("rasterLayers",rasterLayers);
+    if(rasterLayers.size() > 0){
+      geoPackageContent.putBoolean("isRaster",true);
+    }
+    return geoPackageContent;
   }
 }
