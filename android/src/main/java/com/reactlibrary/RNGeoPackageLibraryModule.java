@@ -19,7 +19,8 @@ import com.reactlibrary.enums.NotesType;
 import com.reactlibrary.json.LatLng;
 import com.reactlibrary.json.Location;
 import com.reactlibrary.json.Properties;
-
+import com.reactlibrary.gpkgimport.GeoPackageRasterReader;
+import com.reactlibrary.gpkgimport.PDFAttachmentExtractor;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
