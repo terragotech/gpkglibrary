@@ -8,9 +8,10 @@
 
 #import "GeoPackageRaster.h"
 #import "GeoPackageRasterReader.h"
-#import "Constants.h"
 #import "P2JDatabase.h"
 #import <Foundation/Foundation.h>
+
+#define GPKGStoragePath [NSString stringWithFormat:@"%@/Data", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)objectAtIndex:0]]
 
 @interface GeoPackageRaster(){
 //private interface, can define private methods and properties here
@@ -30,7 +31,7 @@
 @implementation GeoPackageRaster
 
 -(BOOL)isRasterGeoPackage:(NSString*)gpkgPath{
-    rasterDataFilePath = [NSString stringWithFormat:@"%@/GeoData",StoragePath];
+    rasterDataFilePath = [NSString stringWithFormat:@"%@/GeoData",GPKGStoragePath];
     gpkgFilePath = gpkgPath;
     
    
@@ -39,7 +40,7 @@
     isRasterPackage = false;
     cstrgpkgFilePath = (char*)[gpkgFilePath UTF8String];
     cstrgpkgFilePath1 = (char*)[gpkgFilePath UTF8String];
-    tempPath =(char*) [[NSString stringWithFormat:@"%@/Temps",StoragePath]UTF8String];
+    tempPath =(char*) [[NSString stringWithFormat:@"%@/Temps",GPKGStoragePath]UTF8String];
     
     cstrGeoData =(char*) [rasterDataFilePath UTF8String];
 //    GDALClose(<#GDALDatasetH hDS#>)
@@ -99,7 +100,7 @@
     //Jpeg Conversion
     
     char *tableName = (char*)[tileName UTF8String];
-    tempPath =(char*)[[NSString stringWithFormat:@"%@/Temps",StoragePath]UTF8String];
+    tempPath =(char*)[[NSString stringWithFormat:@"%@/Temps",GPKGStoragePath]UTF8String];
     char *mbTile = (char*)[[NSString stringWithFormat:@"%@/%@.mbtiles",rasterDataFilePath,tileName]UTF8String];
     GDALAllRegister();
     gr.logFileObj = "LogFile.log";
@@ -117,7 +118,7 @@
     convertToMBtiles(&gr,cstrgpkgFilePath1,mbTile,tableName,tempPath);
     }
     NSError *error;
-    [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/Temps/mbtiles",StoragePath] error:&error];
+    [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/Temps/mbtiles",GPKGStoragePath] error:&error];
     return [NSString stringWithFormat:@"%@/%@.mbtiles",rasterDataFilePath,tileName];
 }
 

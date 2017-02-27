@@ -14,6 +14,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 +(GeoPackageSingleton*)getSharedInstanceValue{
     if (!sharedsingletonGeoPackageValue) {
         sharedsingletonGeoPackageValue = [[super allocWithZone:NULL]init];
+        sharedsingletonGeoPackageValue.geoPdf = [[GeoPDFAttachment alloc]init];
     }
     return sharedsingletonGeoPackageValue;
 }
@@ -248,12 +249,35 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 }
 
 -(BOOL)checkIsRasterforPath:(NSString*)path{
-    BOOL ret = false;
     if(!self.georaster){
         self.georaster = [[GeoPackageRaster alloc]init];
     }
-    ret = [self.georaster isRasterGeoPackage:path];
-    return ret;
+    return [self.georaster isRasterGeoPackage:path];
+}
+
+-(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path{
+    [self initGeoPackageforPath:path];
+    NSMutableDictionary *geoContent = [[NSMutableDictionary alloc]init];
+    BOOL isRaster = [self checkIsRasterforPath:path];
+    [geoContent setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
+    NSArray *tempFeatureClasses = [import getAllFeatureClasses];
+    NSMutableArray *featureArray = [[NSMutableArray alloc]init];
+    for (NSString *feaName in tempFeatureClasses) {
+        NSMutableDictionary *fetDict = [[NSMutableDictionary alloc]init];
+        [fetDict setObject:feaName forKey:@"name"];
+        [fetDict setObject:[import getAllAttributesforFeature:feaName] forKey:@"attributes"];
+        [fetDict setObject:[NSNumber numberWithInt:[import notescountforFeature:feaName]] forKey:@"notesCount"];
+        [featureArray addObject:fetDict];
+    }
+    [geoContent setObject:featureArray forKey:@"featureClasses"];
+    if (isRaster) {
+        [geoContent setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
+    }
+    if ([[[path pathExtension]lowercaseString]isEqualToString:@"pdf"]) {
+        [geoContent setObject:[self.geoPdf getAllGeoPackagesforPDF:path] forKey:@"geopackageNames"];
+    }
+    
+    return geoContent;
 }
 
 @end

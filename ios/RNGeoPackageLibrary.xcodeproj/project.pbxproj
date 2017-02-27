@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNGeoPackageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */; };
+		CF5823951E63FEF700FB4950 /* GeoPDFAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */; };
+		CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5823971E6402AC00FB4950 /* CoreGraphics.framework */; };
 		CF8B6AA21E58B3D900D06B39 /* aasincos.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FB1E58B3D800D06B39 /* aasincos.c */; };
 		CF8B6AA31E58B3D900D06B39 /* adjlon.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FC1E58B3D800D06B39 /* adjlon.c */; };
 		CF8B6AA41E58B3D900D06B39 /* bch2bps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FD1E58B3D800D06B39 /* bch2bps.c */; };
@@ -346,6 +348,9 @@
 		134814201AA4EA6300B7C361 /* libRNGeoPackageLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNGeoPackageLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNGeoPackageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGeoPackageLibrary.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGeoPackageLibrary.m; sourceTree = "<group>"; };
+		CF5823931E63FEF700FB4950 /* GeoPDFAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPDFAttachment.h; sourceTree = "<group>"; };
+		CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPDFAttachment.m; sourceTree = "<group>"; };
+		CF5823971E6402AC00FB4950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CF8B69FB1E58B3D800D06B39 /* aasincos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aasincos.c; sourceTree = "<group>"; };
 		CF8B69FC1E58B3D800D06B39 /* adjlon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adjlon.c; sourceTree = "<group>"; };
 		CF8B69FD1E58B3D800D06B39 /* bch2bps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch2bps.c; sourceTree = "<group>"; };
@@ -940,6 +945,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */,
 				CF8B6AB11E58B3D900D06B39 /* libProj4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -962,7 +968,25 @@
 				B3E7B5881CC2AC0600A0062D /* RNGeoPackageLibrary.h */,
 				B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				CF5823961E6402AB00FB4950 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		CF5823921E63FEB200FB4950 /* GeoPDF */ = {
+			isa = PBXGroup;
+			children = (
+				CF5823931E63FEF700FB4950 /* GeoPDFAttachment.h */,
+				CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */,
+			);
+			name = GeoPDF;
+			sourceTree = "<group>";
+		};
+		CF5823961E6402AB00FB4950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF5823971E6402AC00FB4950 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CF8B69B81E58B31300D06B39 /* TerragoEdge */ = {
@@ -976,6 +1000,7 @@
 		CF8B69F91E58B3A600D06B39 /* Geopackage */ = {
 			isa = PBXGroup;
 			children = (
+				CF5823921E63FEB200FB4950 /* GeoPDF */,
 				CFF2F2CD1E5D926D0064FC02 /* GeopackageLists */,
 				CFF2F2C31E5D91C30064FC02 /* P2JData */,
 				CFF2F25A1E5D8DA40064FC02 /* GeopackageRaster */,
@@ -1712,6 +1737,7 @@
 				CF8B6C5C1E58B42000D06B39 /* GPKGFeatureOverlayQuery.m in Sources */,
 				CF8B6B0B1E58B3D900D06B39 /* PJ_ocea.c in Sources */,
 				CF8B6CA21E58B42000D06B39 /* GPKGStandardFormatOverlay.m in Sources */,
+				CF5823951E63FEF700FB4950 /* GeoPDFAttachment.m in Sources */,
 				CF8B6D081E58B45B00D06B39 /* WKBPoint.m in Sources */,
 				CF8B6D011E58B45B00D06B39 /* WKBGeometryWriter.m in Sources */,
 				CF8B6ADB1E58B3D900D06B39 /* PJ_fouc_s.c in Sources */,

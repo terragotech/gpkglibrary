@@ -11,6 +11,7 @@
 #import "GeoPackageColumn.h"
 #import "GeoPackageRaster.h"
 #import "GeoPackageImport.h"
+#import "GeoPDFAttachment.h"
 
 @interface GeoPackageSingleton : NSObject
 {
@@ -25,6 +26,7 @@
     
     //import
     GeoPackageImport *import;
+    
 }
 
 typedef enum Goetypes
@@ -46,7 +48,9 @@ typedef enum Goetypes
 
 //Import
 @property(nonatomic,retain)GeoPackageRaster *georaster;
+@property(nonatomic,retain)GeoPDFAttachment *geoPdf;
 -(void)initGeoPackageforPath:(NSString*)path;
 -(BOOL)checkIsRasterforPath:(NSString*)path;
+-(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path;
 
 @end

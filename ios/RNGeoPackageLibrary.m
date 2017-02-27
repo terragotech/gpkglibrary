@@ -35,7 +35,7 @@ RCT_EXPORT_METHOD(closeGeoPackage:(RCTResponseSenderBlock)callback) {
 }
 
 //import details
-RCT_EXPORT_METHOD(initImportGeoPackageforPath:(NSString *)path callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(getgpkgFileDetails:(NSString *)path callback:(RCTResponseSenderBlock)callback) {
     [[GeoPackageSingleton getSharedInstanceValue]initGeoPackageforPath:path];
      callback(@[@""]);
 }
