@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.reactlibrary.utils;
 
 import android.location.Location;
 

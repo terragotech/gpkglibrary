@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.reactlibrary.utils;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import mil.nga.wkb.geom.MultiPolygon;
 import mil.nga.wkb.geom.Point;
 import mil.nga.wkb.geom.Polygon;
 
- class GeoPackageUtil {
+ public class GeoPackageUtil {
 
 	private final static int GEOM_TYPE_UNSUPPORTED = 0;
 	private final static int GEOM_TYPE_NONE = 1;
