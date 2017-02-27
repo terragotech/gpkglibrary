@@ -6,7 +6,6 @@ package com.reactlibrary.json;
 
 public class Geometry {
     private String type;
-    //private List<List<List<Double>>> coordinates = new ArrayList<List<List<Double>>>();
     private Object coordinates = new Object();
 
     public String getType() {
