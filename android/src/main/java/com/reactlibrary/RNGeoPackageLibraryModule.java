@@ -202,7 +202,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
    * @param userName
      */
   @ReactMethod
-  public void processGeopackage(final ReadbleMap geoPackageContent,final String filePath,String userName){
+  public void processGeopackage(final ReadableMap geoPackageContent,final String filePath,String userName){
     openFile(filePath);
     ReadableArray featureClasses = geoPackageContent.getArray("featureClasses");
     int featureClassCount = getLayerCount();
