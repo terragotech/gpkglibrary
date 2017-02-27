@@ -165,6 +165,11 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     callback.invoke("true");
   }
 
+  /**
+   * To get all details from gpkg file import
+   * @param filePath
+   * @param callback
+     */
   @ReactMethod
   public void getgpkgFileDetails(String filePath,Callback callback){
     WritableMap writableMap = Arguments.createMap();
@@ -188,6 +193,13 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }
     callback.invoke(writableMap);
   }
+
+  /**
+   * process geopackage and convert geopackage data to edge data
+   * @param geoPackageContent
+   * @param filePath
+   * @param userName
+     */
   @ReactMethod
   public void processGeopackage(final WritableMap geoPackageContent,final String filePath,String userName){
     openFile(filePath);
@@ -1104,4 +1116,3 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     return form;
     }
   }
-}
