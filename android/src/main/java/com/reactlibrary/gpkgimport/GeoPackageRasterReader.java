@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.reactlibrary.gpkgimport;
 
 /**
  * Created by Ganesan on 06/07/16.
