@@ -15,6 +15,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     if (!sharedsingletonGeoPackageValue) {
         sharedsingletonGeoPackageValue = [[super allocWithZone:NULL]init];
         sharedsingletonGeoPackageValue.geoPdf = [[GeoPDFAttachment alloc]init];
+        sharedsingletonGeoPackageValue.gpkgFiles = [[NSMutableArray alloc]init];
     }
     return sharedsingletonGeoPackageValue;
 }
@@ -256,7 +257,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 }
 
 -(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path{
-   
+    [[self gpkgFiles]removeAllObjects];
     NSMutableDictionary *geoContent = [[NSMutableDictionary alloc]init];
     if ([[[path pathExtension]lowercaseString]isEqualToString:@"pdf"]) {
         NSMutableArray *tgpkArray = [[NSMutableArray alloc]init];
@@ -265,6 +266,10 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             NSMutableDictionary *tGpkgDict = [[NSMutableDictionary alloc]init];
             [tGpkgDict setObject:gpkgName forKey:@"gpkgName"];
             NSString *tempPath = [self.geoPdf extractGeoPackagefromPDF:path forGeoPackage:gpkgName];
+            NSMutableDictionary *fileDict = [[NSMutableDictionary alloc]init];
+            [fileDict setObject:gpkgName forKey:@"Name"];
+            [fileDict setObject:tempPath forKey:@"Path"];
+            [[self gpkgFiles]addObject:fileDict];
             [self initGeoPackageforPath:tempPath];
             BOOL isRaster = [self checkIsRasterforPath:tempPath];
             [tGpkgDict setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
@@ -410,16 +415,45 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 -(void)importGeoPackage:(NSMutableDictionary*)gpkgParameters{
     NSString *gpkgName = [gpkgParameters objectForKey:@"gpkgName"];
     if (gpkgName) {
-        
-    }else{
+        NSString *gpkgPath=@"";
+        for (NSDictionary* dict in [self gpkgFiles]) {
+            if ([[dict objectForKey:@"Name"]isEqualToString:gpkgName]) {
+                gpkgPath = [dict objectForKey:@"Path"];
+                break;
+            }
+        }
+        if (!import) {
+            import = [[GeoPackageImport alloc]init];
+        }else{
+            [import closeGeoPackage];
+        }
+        [import initGeoPackageforpath:gpkgPath];
         NSArray *tFeatureArray = [gpkgParameters objectForKey:@"featureClasses"];
         for (NSDictionary *tFeatureDict in tFeatureArray) {
-            if ([tFeatureDict objectForKey:@"defaultName"]) {
-                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[tFeatureDict objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            if ([gpkgParameters objectForKey:@"defaultName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[gpkgParameters objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
             }
             if ([tFeatureDict objectForKey:@"attributeName"]) {
                 [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withAttributeName:[tFeatureDict objectForKey:@"attributeName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
             }
+        }
+        NSArray *tRasterArray = [gpkgParameters objectForKey:@"rasterTiles"];
+        for (NSString* tileName in tRasterArray) {
+            [self importRaster:tileName];
+        }
+    }else{
+        NSArray *tFeatureArray = [gpkgParameters objectForKey:@"featureClasses"];
+        for (NSDictionary *tFeatureDict in tFeatureArray) {
+            if ([gpkgParameters objectForKey:@"defaultName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[gpkgParameters objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            }
+            if ([tFeatureDict objectForKey:@"attributeName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withAttributeName:[tFeatureDict objectForKey:@"attributeName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            }
+        }
+        NSArray *tRasterArray = [gpkgParameters objectForKey:@"rasterTiles"];
+        for (NSString* tileName in tRasterArray) {
+            [self importRaster:tileName];
         }
     }
 }

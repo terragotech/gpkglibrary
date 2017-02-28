@@ -54,6 +54,7 @@ typedef enum Goetypes
 //Import
 @property(nonatomic,retain)GeoPackageRaster *georaster;
 @property(nonatomic,retain)GeoPDFAttachment *geoPdf;
+@property(nonatomic, retain)NSMutableArray *gpkgFiles;
 -(void)initGeoPackageforPath:(NSString*)path;
 -(BOOL)checkIsRasterforPath:(NSString*)path;
 -(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path;
