@@ -351,6 +351,7 @@
 		CF5823931E63FEF700FB4950 /* GeoPDFAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPDFAttachment.h; sourceTree = "<group>"; };
 		CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPDFAttachment.m; sourceTree = "<group>"; };
 		CF5823971E6402AC00FB4950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CF58239A1E64297D00FB4950 /* GPKGConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPKGConstant.h; path = Constants/GPKGConstant.h; sourceTree = "<group>"; };
 		CF8B69FB1E58B3D800D06B39 /* aasincos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aasincos.c; sourceTree = "<group>"; };
 		CF8B69FC1E58B3D800D06B39 /* adjlon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adjlon.c; sourceTree = "<group>"; };
 		CF8B69FD1E58B3D800D06B39 /* bch2bps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch2bps.c; sourceTree = "<group>"; };
@@ -989,6 +990,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF5823991E64294300FB4950 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CF58239A1E64297D00FB4950 /* GPKGConstant.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		CF8B69B81E58B31300D06B39 /* TerragoEdge */ = {
 			isa = PBXGroup;
 			children = (
@@ -1000,6 +1009,7 @@
 		CF8B69F91E58B3A600D06B39 /* Geopackage */ = {
 			isa = PBXGroup;
 			children = (
+				CF5823991E64294300FB4950 /* Constants */,
 				CF5823921E63FEB200FB4950 /* GeoPDF */,
 				CFF2F2CD1E5D926D0064FC02 /* GeopackageLists */,
 				CFF2F2C31E5D91C30064FC02 /* P2JData */,

@@ -10,8 +10,8 @@
 #import "GeoPackageRasterReader.h"
 #import "P2JDatabase.h"
 #import <Foundation/Foundation.h>
+#import "GPKGConstant.h"
 
-#define GPKGStoragePath [NSString stringWithFormat:@"%@/Data", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)objectAtIndex:0]]
 
 @interface GeoPackageRaster(){
 //private interface, can define private methods and properties here

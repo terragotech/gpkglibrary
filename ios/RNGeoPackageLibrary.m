@@ -1,7 +1,11 @@
 
 #import "RNGeoPackageLibrary.h"
+#import "RCTBridge.h"
+#import "RCTEventDispatcher.h"
 
 @implementation RNGeoPackageLibrary
+
+@synthesize bridge = _bridge;
 
 - (dispatch_queue_t)methodQueue
 {
@@ -36,17 +40,16 @@ RCT_EXPORT_METHOD(closeGeoPackage:(RCTResponseSenderBlock)callback) {
 
 //import details
 RCT_EXPORT_METHOD(getgpkgFileDetails:(NSString *)path callback:(RCTResponseSenderBlock)callback) {
-    [[GeoPackageSingleton getSharedInstanceValue]initGeoPackageforPath:path];
+    [[GeoPackageSingleton getSharedInstanceValue]setEvent:self.bridge];
+    NSMutableDictionary*dict = [[GeoPackageSingleton getSharedInstanceValue]getgpkgFileDetails:path];
+     callback(@[dict]);
+}
+
+RCT_EXPORT_METHOD(importGeoPackage:(NSMutableDictionary *)gpkgArguments callback:(RCTResponseSenderBlock)callback) {
+    [[GeoPackageSingleton getSharedInstanceValue]importGeoPackage:gpkgArguments];
      callback(@[@""]);
 }
 
-RCT_EXPORT_METHOD(checkIsRasterforPath:(NSString *)path callback:(RCTResponseSenderBlock)callback) {
-    BOOL isRaster = [[GeoPackageSingleton getSharedInstanceValue]checkIsRasterforPath:path];
-    NSString *result = @"false";
-    if (isRaster) {
-        result = @"true";
-    }
-    callback(@[result]);
-}
+
 @end
 

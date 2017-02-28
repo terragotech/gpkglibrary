@@ -12,6 +12,9 @@
 #import "GeoPackageRaster.h"
 #import "GeoPackageImport.h"
 #import "GeoPDFAttachment.h"
+#import "GPKGConstant.h"
+#import "RCTBridge.h"
+#import "RCTEventDispatcher.h"
 
 @interface GeoPackageSingleton : NSObject
 {
@@ -39,6 +42,8 @@ typedef enum Goetypes
 @property(nonatomic, retain)NSMutableArray* columnsTypesArray;
 @property(nonatomic, retain)NSMutableArray* featureClasses;
 
+@property(nonatomic, retain)id event;
+
 //Export
 +(GeoPackageSingleton*)getSharedInstanceValue;
 -(int)createFeatureclass:(NSMutableDictionary*)featureDict forGeomentry:(int)geomentry;
@@ -52,5 +57,6 @@ typedef enum Goetypes
 -(void)initGeoPackageforPath:(NSString*)path;
 -(BOOL)checkIsRasterforPath:(NSString*)path;
 -(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path;
+-(void)importGeoPackage:(NSMutableDictionary*)gpkgParameters;
 
 @end

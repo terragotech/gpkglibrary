@@ -256,28 +256,179 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 }
 
 -(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path{
-    [self initGeoPackageforPath:path];
+   
     NSMutableDictionary *geoContent = [[NSMutableDictionary alloc]init];
-    BOOL isRaster = [self checkIsRasterforPath:path];
-    [geoContent setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
-    NSArray *tempFeatureClasses = [import getAllFeatureClasses];
-    NSMutableArray *featureArray = [[NSMutableArray alloc]init];
-    for (NSString *feaName in tempFeatureClasses) {
-        NSMutableDictionary *fetDict = [[NSMutableDictionary alloc]init];
-        [fetDict setObject:feaName forKey:@"name"];
-        [fetDict setObject:[import getAllAttributesforFeature:feaName] forKey:@"attributes"];
-        [fetDict setObject:[NSNumber numberWithInt:[import notescountforFeature:feaName]] forKey:@"notesCount"];
-        [featureArray addObject:fetDict];
-    }
-    [geoContent setObject:featureArray forKey:@"featureClasses"];
-    if (isRaster) {
-        [geoContent setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
-    }
     if ([[[path pathExtension]lowercaseString]isEqualToString:@"pdf"]) {
-        [geoContent setObject:[self.geoPdf getAllGeoPackagesforPDF:path] forKey:@"geopackageNames"];
+        NSMutableArray *tgpkArray = [[NSMutableArray alloc]init];
+        NSArray *tempGpkgArray = [self.geoPdf getAllGeoPackagesforPDF:path];
+        for (NSString *gpkgName in tempGpkgArray) {
+            NSMutableDictionary *tGpkgDict = [[NSMutableDictionary alloc]init];
+            [tGpkgDict setObject:gpkgName forKey:@"gpkgName"];
+            NSString *tempPath = [self.geoPdf extractGeoPackagefromPDF:path forGeoPackage:gpkgName];
+            [self initGeoPackageforPath:tempPath];
+            BOOL isRaster = [self checkIsRasterforPath:tempPath];
+            [tGpkgDict setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
+            NSArray *tempFeatureClasses = [import getAllFeatureClasses];
+            NSMutableArray *featureArray = [[NSMutableArray alloc]init];
+            for (NSString *feaName in tempFeatureClasses) {
+                NSMutableDictionary *fetDict = [[NSMutableDictionary alloc]init];
+                [fetDict setObject:feaName forKey:@"name"];
+                [fetDict setObject:[self getGUID] forKey:@"guid"];
+                [fetDict setObject:[import getAllAttributesforFeature:feaName] forKey:@"attributes"];
+                [fetDict setObject:[NSNumber numberWithInt:[import notescountforFeature:feaName]] forKey:@"notesCount"];
+                [featureArray addObject:fetDict];
+            }
+            [tGpkgDict setObject:featureArray forKey:@"featureClasses"];
+            if (isRaster) {
+                [tGpkgDict setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
+            }
+        }
+        [geoContent setObject:tgpkArray forKey:@"geopackageNames"];
+    }else{
+        [self initGeoPackageforPath:path];
+        BOOL isRaster = [self checkIsRasterforPath:path];
+        [geoContent setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
+        NSArray *tempFeatureClasses = [import getAllFeatureClasses];
+        NSMutableArray *featureArray = [[NSMutableArray alloc]init];
+        for (NSString *feaName in tempFeatureClasses) {
+            NSMutableDictionary *fetDict = [[NSMutableDictionary alloc]init];
+            [fetDict setObject:feaName forKey:@"name"];
+            [fetDict setObject:[self getGUID] forKey:@"guid"];
+            [fetDict setObject:[import getAllAttributesforFeature:feaName] forKey:@"attributes"];
+            [fetDict setObject:[NSNumber numberWithInt:[import notescountforFeature:feaName]] forKey:@"notesCount"];
+            [featureArray addObject:fetDict];
+        }
+        [geoContent setObject:featureArray forKey:@"featureClasses"];
+        if (isRaster) {
+            [geoContent setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
+        }
     }
     
     return geoContent;
+}
+
+-(void)importgeoPackageforFeatureClass:(NSString*)featureClass withDefaultNoteName:(NSString*)defaultName withFormGuid:(NSString*)formTemplateGuid{
+    if([import isFormFeatureclass:featureClass]){
+        NSMutableDictionary *frmtemp = [import createFormTemplateforFeatureClass:featureClass];
+        
+        NSMutableArray *geoNotes = [import importFeaturesforFeatureTemplate:frmtemp forFeatureClass:featureClass];
+        int i = 0,j=0;
+        for(int k=0; k<[geoNotes count];k++){
+            NSMutableDictionary *note = [geoNotes objectAtIndex:k];
+            [note setObject:defaultName forKey:@"title"];
+            if (i>0) {
+                [note setObject:[NSString stringWithFormat:@"%@_%d",defaultName,i] forKey:@"title"];
+            }
+            i++;
+            j++;
+            // Side menu Cancel button pressed means
+            // Need to work later for cancel
+//            if (self.isGeoPkgCancelled)
+//            {
+//                [self checkForUnSuccessfullImports];
+//                break;
+//            }
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
+            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+            [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+//                [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
+        }
+    }
+    else{
+        
+        NSMutableArray *geoNotes = [import importFeaturesforNonFormNotesFeatureClass:featureClass];
+        int j=0;
+         for(int k=0; k<[geoNotes count];k++){
+             NSMutableDictionary *note = [geoNotes objectAtIndex:k];
+            j++;
+            // Side menu Cancel button pressed means
+//            if (self.isGeoPkgCancelled)
+//            {
+//                [self checkForUnSuccessfullImports];
+//                break;
+//            }
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
+             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+//                [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
+             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+        }
+    }
+}
+
+
+-(void)importgeoPackageforFeatureClass:(NSString*)featureClass withAttributeName:(NSString*)attributename withFormGuid:(NSString*)formTemplateGuid{
+    if([import isFormFeatureclass:featureClass]){
+        NSMutableDictionary *frmtemp = [import createFormTemplateforFeatureClass:featureClass];
+        NSMutableArray *geoNotes = [import importFeaturesforFeatureTemplate:frmtemp forFeatureClass:featureClass withAttribute:attributename];
+        int i = 0;
+        for (NSMutableDictionary *note in geoNotes) {
+            i++;
+
+            // Side menu Cancel button pressed means
+//            if (self.isGeoPkgCancelled)
+//            {
+//                [self checkForUnSuccessfullImports];
+//                break;
+//            }
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
+            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
+            [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+        }
+    }else{
+        NSMutableArray *geoNotes = [import importFeaturesforNonFormNotesFeatureClass:featureClass];
+        int j=0;
+        for (NSMutableDictionary *note in geoNotes) {
+            j++;
+            // Side menu Cancel button pressed means
+//            if (self.isGeoPkgCancelled)
+//            {
+//                [self checkForUnSuccessfullImports];
+//                break;
+//            }
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
+            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
+            [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+        }
+    }
+}
+
+-(void)importRaster:(NSString*)tileName{
+    NSString *frmPath = [[self georaster]convertMBTiles:tileName];
+    NSMutableDictionary *raster = [[NSMutableDictionary alloc]init];
+    [raster setObject:tileName forKey:@"rasterName"];
+    [raster setObject:frmPath forKey:@"convertedPath"];
+    if(frmPath.length > 0)
+    {
+        NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
+        [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+    }
+}
+
+-(void)importGeoPackage:(NSMutableDictionary*)gpkgParameters{
+    NSString *gpkgName = [gpkgParameters objectForKey:@"gpkgName"];
+    if (gpkgName) {
+        
+    }else{
+        NSArray *tFeatureArray = [gpkgParameters objectForKey:@"featureClasses"];
+        for (NSDictionary *tFeatureDict in tFeatureArray) {
+            if ([tFeatureDict objectForKey:@"defaultName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[tFeatureDict objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            }
+            if ([tFeatureDict objectForKey:@"attributeName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withAttributeName:[tFeatureDict objectForKey:@"attributeName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            }
+        }
+    }
+}
+
+-(NSString*)getGUID {
+    NSUUID  *UUID = [NSUUID UUID];
+    NSString* stringUUID = [UUID UUIDString];
+    //
+    return stringUUID;
 }
 
 @end

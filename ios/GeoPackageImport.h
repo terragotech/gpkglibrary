@@ -8,14 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "geopackage-ios-Bridging-Header.h"
-#import "FormElement.h"
 #import "GPKGDataTypes.h"
-#import "GeoPackageFormTemplate.h"
-#import "GeoPackageEdgeNote.h"
-#import "GeoPackageDMEdgeNote.h"
-#import "FormCaptured.h"
-#import "FormCaptureWrite.h"
-#import "Constants.h"
+#import "GPKGConstant.h"
 
 @interface GeoPackageImport : NSObject
 {
@@ -30,9 +24,9 @@
 -(NSArray*)getAllFeatureClasses;
 -(NSArray*)getAllAttributesforFeature:(NSString*)featureName;
 -(int)notescountforFeature:(NSString*)featureName;
--(DMFormTemplate*)createFormTemplateforFeatureClass:(NSString*)featureName;
--(NSMutableArray*)importFeaturesforFeatureTemplate:(DMFormTemplate*)featureTemplate forFeatureClass:(NSString*)featureName;
--(NSMutableArray*)importFeaturesforFeatureTemplate:(DMFormTemplate*)featureTemplate forFeatureClass:(NSString*)featureName withAttribute:(NSString*)attributeName;
+-(NSMutableDictionary*)createFormTemplateforFeatureClass:(NSString*)featureName;
+-(NSMutableArray*)importFeaturesforFeatureTemplate:(NSMutableDictionary*)featureTemplate forFeatureClass:(NSString*)featureName;
+-(NSMutableArray*)importFeaturesforFeatureTemplate:(NSMutableDictionary*)featureTemplate forFeatureClass:(NSString*)featureName withAttribute:(NSString*)attributeName;
 -(NSString*)getFeatureIDforFeatureClass:(NSString*)featureName;
 -(void)geoPackageImportforFeatureClass:(NSString*)featureName;
 

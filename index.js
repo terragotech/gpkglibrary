@@ -1,5 +1,7 @@
 
 import { NativeModules } from 'react-native';
+var React = require('react-native')
+var { DeviceEventEmitter, NativeAppEventEmitter, Platform } = React
 const { RNGeoPackageLibrary } = NativeModules;
 var promisify = require("es6-promisify");
 var _libsample = promisify(RNGeoPackageLibrary.LibrarySampleCall);
@@ -11,6 +13,7 @@ var _closeGeoPackage = promisify(RNGeoPackageLibrary.closeGeoPackage);
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
 var _gpkgFileDetails = RNGeoPackageLibrary.getgpkgFileDetails
+var _importGeoPackage = RNGeoPackageLibrary.importGeoPackage
 
 var GeoPackage = {
   LibrarySampleCall(testString,callback) {
@@ -40,6 +43,14 @@ var GeoPackage = {
   _gpkgFileDetails(path, callback){
     return _gpkgFileDetails(path, callback)
       .catch(_error)
+  },
+  _importGeoPackage(gpkgargument, callback){
+  	 return _importGeoPackage(gpkgargument, callback)
+      .catch(_error)
+  },
+  subscribe(callback) {
+    var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
+    return emitter.addListener("noteImported", callback);
   }
 }
 
