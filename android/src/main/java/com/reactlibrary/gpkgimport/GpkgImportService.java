@@ -485,7 +485,7 @@ public class GpkgImportService {
         gr.closeGeoPackage();
     }
 
-    public void createNonformNote(String tableName, String geometry, String userName, ReadableMap geoPackageContent, int currentRow, ReadableMap featureClass, String noteType){
+    public void createNonformNote(String tableName, String geometry, ReadableMap geoPackageContent, int currentRow, ReadableMap featureClass, String noteType){
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
             String resourceName = "";
@@ -632,7 +632,7 @@ public class GpkgImportService {
         return title;
     }
 
-    public void getCurrentFeatureFields(String tableName, String geometry, String userName, ReadableMap geoPackageContent, int currentRow, ReadableMap featureClass){
+    public void getCurrentFeatureFields(String tableName, String geometry, ReadableMap geoPackageContent, int currentRow, ReadableMap featureClass){
         WritableMap edgeNote = Arguments.createMap();
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();

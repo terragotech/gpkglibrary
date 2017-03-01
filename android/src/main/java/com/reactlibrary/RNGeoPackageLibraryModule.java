@@ -164,10 +164,9 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
    * process geopackage and convert geopackage data to edge data
    * @param geoPackageContent
    * @param filePath
-   * @param userName
      */
   @ReactMethod
-  public void processGeopackage(final ReadableMap geoPackageContent,final String filePath,String userName){
+  public void processGeopackage(final ReadableMap geoPackageContent,final String filePath){
     gpkgImportService.openFile(filePath);
     ReadableArray featureClasses = geoPackageContent.getArray("featureClasses");
     int featureClassCount = gpkgImportService.getLayerCount();
@@ -194,13 +193,13 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
             gpkgImportService.getNextRow();
             String geometry = gpkgImportService.getCurrentFeatureGeom();
             if (noteTypeColumnIndex == -1) {//create form note
-              gpkgImportService.getCurrentFeatureFields(tableName, geometry, userName, geoPackageContent, currentRow, featureClass);
+              gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
             } else {//create form note
               String noteType = gpkgImportService.getNoteType(noteTypeColumnIndex);
               if (noteType.equals(NotesType.forms.name()) || noteType.equals(NotesType.multiupload.name())) {
-                gpkgImportService.getCurrentFeatureFields(tableName, geometry, userName, geoPackageContent, currentRow, featureClass);
+                gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
               } else {//create non form notes
-                gpkgImportService.createNonformNote(tableName, geometry, userName, geoPackageContent, currentRow, featureClass, noteType);
+                gpkgImportService.createNonformNote(tableName, geometry, geoPackageContent, currentRow, featureClass, noteType);
               }
             }
           }
