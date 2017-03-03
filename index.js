@@ -3,12 +3,12 @@ import { NativeModules } from 'react-native';
 var React = require('react-native')
 var { DeviceEventEmitter, NativeAppEventEmitter, Platform } = React
 const { RNGeoPackageLibrary } = NativeModules;
-var promisify = require("es6-promisify");
-var _libsample = promisify(RNGeoPackageLibrary.LibrarySampleCall);
-var _initGeoPackage = promisify(RNGeoPackageLibrary.initGeoPackageatPath);
-var _createFeatureClass = promisify(RNGeoPackageLibrary.createFeatureclass);
-var _insertFeatureRecord = promisify(RNGeoPackageLibrary.insertFeatureclassRecord);
-var _closeGeoPackage = promisify(RNGeoPackageLibrary.closeGeoPackage);
+
+var _libsample = RNGeoPackageLibrary.LibrarySampleCall;
+var _initGeoPackage = RNGeoPackageLibrary.initGeoPackageatPath;
+var _createFeatureClass = RNGeoPackageLibrary.createFeatureclass;
+var _insertFeatureRecord = RNGeoPackageLibrary.insertFeatureclassRecord;
+var _closeGeoPackage = RNGeoPackageLibrary.closeGeoPackage;
 
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;

@@ -203,7 +203,6 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
                 [coordinates addObject:lc];
             }
         }
-        //     {"type":"Feature","geometry":{"type":"LineString","coordinates":[[-65.56640624087308,-14.60484715306493],[-58.88671874180289,-4.390228925853468]]},"properties":{"name":""}}
         //for polyline geojson
         if ([[geomentry objectForKey:@"type"]isEqualToString:@"LineString"]) {
             NSMutableArray *points = [geomentry valueForKeyPath:@"coordinates"];
@@ -317,7 +316,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         NSMutableDictionary *frmtemp = [import createFormTemplateforFeatureClass:featureClass];
         
         NSMutableArray *geoNotes = [import importFeaturesforFeatureTemplate:frmtemp forFeatureClass:featureClass];
-        int i = 0,j=0;
+        int i = 0;
         for(int k=0; k<[geoNotes count];k++){
             NSMutableDictionary *note = [geoNotes objectAtIndex:k];
             [note setObject:defaultName forKey:@"title"];
@@ -325,7 +324,6 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
                 [note setObject:[NSString stringWithFormat:@"%@_%d",defaultName,i] forKey:@"title"];
             }
             i++;
-            j++;
             // Side menu Cancel button pressed means
             // Need to work later for cancel
 //            if (self.isGeoPkgCancelled)
@@ -336,16 +334,12 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
-//                [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
         }
     }
     else{
-        
         NSMutableArray *geoNotes = [import importFeaturesforNonFormNotesFeatureClass:featureClass];
-        int j=0;
          for(int k=0; k<[geoNotes count];k++){
              NSMutableDictionary *note = [geoNotes objectAtIndex:k];
-            j++;
             // Side menu Cancel button pressed means
 //            if (self.isGeoPkgCancelled)
 //            {
@@ -354,7 +348,6 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
              [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-//                [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
              [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
         }
     }
@@ -365,10 +358,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     if([import isFormFeatureclass:featureClass]){
         NSMutableDictionary *frmtemp = [import createFormTemplateforFeatureClass:featureClass];
         NSMutableArray *geoNotes = [import importFeaturesforFeatureTemplate:frmtemp forFeatureClass:featureClass withAttribute:attributename];
-        int i = 0;
         for (NSMutableDictionary *note in geoNotes) {
-            i++;
-
             // Side menu Cancel button pressed means
 //            if (self.isGeoPkgCancelled)
 //            {
@@ -377,14 +367,11 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
         }
     }else{
         NSMutableArray *geoNotes = [import importFeaturesforNonFormNotesFeatureClass:featureClass];
-        int j=0;
         for (NSMutableDictionary *note in geoNotes) {
-            j++;
             // Side menu Cancel button pressed means
 //            if (self.isGeoPkgCancelled)
 //            {
@@ -393,7 +380,6 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
         }
     }
@@ -407,7 +393,6 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     if(frmPath.length > 0)
     {
         NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"noteimportedEvent" object:nil userInfo:dict];
         [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
     }
 }
