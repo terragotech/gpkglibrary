@@ -136,7 +136,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
    * @param callback
      */
   @ReactMethod
-  public void getgpkgFileDetails(String filePath,Callback callback){
+  public void gpkgFileDetails(String filePath,Callback callback){
     WritableMap writableMap = Arguments.createMap();
     try{
       File file = new File(filePath);
