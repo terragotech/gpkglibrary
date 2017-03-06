@@ -41,6 +41,7 @@ typedef enum Goetypes
 
 @property(nonatomic, retain)NSMutableArray* columnsTypesArray;
 @property(nonatomic, retain)NSMutableArray* featureClasses;
+@property(nonatomic, retain)NSString* importGuid;
 
 @property(nonatomic, retain)id event;
 

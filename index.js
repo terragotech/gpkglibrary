@@ -50,6 +50,7 @@ var GeoPackage = {
   },
   subscribe(callback) {
     var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
+    emitter.addListener("rasterImported", callback);
     return emitter.addListener("noteImported", callback);
   }
 }

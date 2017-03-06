@@ -307,7 +307,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [geoContent setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
         }
     }
-    
+    [self setImportGuid:[self getGUID]];
+    [geoContent setObject:[self importGuid] forKey:@"importGuid"];
     return geoContent;
 }
 
@@ -331,6 +332,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //                [self checkForUnSuccessfullImports];
 //                break;
 //            }
+            [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
@@ -346,6 +348,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //                [self checkForUnSuccessfullImports];
 //                break;
 //            }
+             [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
              [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
              [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
@@ -365,6 +368,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //                [self checkForUnSuccessfullImports];
 //                break;
 //            }
+            [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
@@ -378,6 +382,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 //                [self checkForUnSuccessfullImports];
 //                break;
 //            }
+            [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
@@ -390,10 +395,11 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     NSMutableDictionary *raster = [[NSMutableDictionary alloc]init];
     [raster setObject:tileName forKey:@"rasterName"];
     [raster setObject:frmPath forKey:@"convertedPath"];
+    [raster setObject:[self importGuid] forKey:@"importGuid"];
     if(frmPath.length > 0)
     {
         NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
-        [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+        [self.event.eventDispatcher sendAppEventWithName:@"rasterImported" body:dict];
     }
 }
 
