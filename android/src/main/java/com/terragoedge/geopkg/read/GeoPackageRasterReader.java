@@ -1,4 +1,4 @@
-package com.reactlibrary.gpkgimport;
+package com.terragoedge.geopkg.read;
 
 /**
  * Created by Ganesan on 06/07/16.

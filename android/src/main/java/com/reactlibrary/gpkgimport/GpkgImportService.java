@@ -16,6 +16,7 @@ import com.reactlibrary.json.Properties;
 import com.reactlibrary.utils.FileUtils;
 import com.reactlibrary.utils.GeoPackageUtil;
 import com.reactlibrary.utils.Utils;
+import com.terragoedge.geopkg.read.GeoPackageRasterReader;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
