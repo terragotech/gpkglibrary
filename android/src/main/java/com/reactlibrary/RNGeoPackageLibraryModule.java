@@ -2,6 +2,7 @@ package com.reactlibrary;
 
 
 import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -53,7 +54,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void initGeoPackageatPath(String dbPath,String dbName,Callback callback){
+  public void initGeoPackageatPath(String dbPath,String dbName,Promise promise){
     try {
       srs = new SpatialReferenceSystem();
       srs.setId(4326);
@@ -68,7 +69,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }catch (Exception e){
       e.printStackTrace();
     }
-    callback.invoke("true");
+    promise.resolve("true");
   }
 
   @ReactMethod
@@ -76,7 +77,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     completionCallback.invoke(testString);
   }
   @ReactMethod
-  public void createFeatureclass(ReadableMap readableMap,int geometryType,Callback callback){
+  public void createFeatureclass(ReadableMap readableMap,int geometryType,Promise promise){
     if (geoPackage != null) {
       gpkgExportService.createDefaultFeatureClass();
       List<FeatureColumn> lstFeatureColumns = new ArrayList<>();
@@ -94,11 +95,11 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       currentFeatureTable = new FeatureTable(tableName, lstFeatureColumns);
       geoPackage.createFeatureTable(currentFeatureTable);
     }
-    callback.invoke("true");
+    promise.resolve("true");
   }
 
   @ReactMethod
-  public void insertFeatureclassRecord(ReadableMap readableMap,int geometryType,Callback callback){
+  public void insertFeatureclassRecord(ReadableMap readableMap,int geometryType,Promise promise){
     try {
       String tableName = readableMap.getString("FeatureName");
       String geometry = readableMap.getString("Location");
@@ -119,24 +120,24 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }catch (Exception e){
       e.printStackTrace();
     }
-    callback.invoke("true");
+    promise.resolve("true");
   }
 
   @ReactMethod
-  public void closeGeoPackage(Callback callback){
+  public void closeGeoPackage(Promise promise){
     if(geoPackage != null){
       geoPackage.close();
     }
-    callback.invoke("true");
+    promise.resolve("true");
   }
 
   /**
    * To get all details from gpkg file import
    * @param filePath
-   * @param callback
+   * @param promise
      */
   @ReactMethod
-  public void gpkgFileDetails(String filePath,Callback callback){
+  public void gpkgFileDetails(String filePath,Promise promise){
     WritableMap writableMap = Arguments.createMap();
     try{
       File file = new File(filePath);
@@ -156,7 +157,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }catch (Exception e){
       e.printStackTrace();
     }
-    callback.invoke(writableMap);
+    promise.resolve(writableMap);
   }
 
   /**
