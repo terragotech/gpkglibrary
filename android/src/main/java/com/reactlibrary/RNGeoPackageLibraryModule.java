@@ -153,7 +153,6 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       }else if(extension.equals("gpkg")){//if file is gpkg
         writableMap = gpkgImportService.parseGeopackageFile(filePath);
       }
-      Utils.sendEvent(reactContext,Utils.SEND_NOTE_EVENT,writableMap);
     }catch (Exception e){
       e.printStackTrace();
     }
