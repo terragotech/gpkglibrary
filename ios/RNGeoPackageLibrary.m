@@ -1,7 +1,11 @@
 
 #import "RNGeoPackageLibrary.h"
-#import "RCTBridge.h"
+
+#if __has_include("RCTBridge.h")
 #import "RCTEventDispatcher.h"
+#else
+#import <React/RCTEventDispatcher.h>
+#endif
 
 @implementation RNGeoPackageLibrary
 
@@ -11,7 +15,21 @@
 {
     return dispatch_get_main_queue();
 }
-
+-(id)init{
+    if (self) {
+        return self;
+    }
+    self = [super init];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"noteImported"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"rasterImported"
+                                               object:nil];
+    return self;
+}
 RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(LibrarySampleCall:(NSString *)testString resolver:(RCTPromiseResolveBlock)resolve
@@ -36,21 +54,31 @@ RCT_EXPORT_METHOD(insertFeatureclassRecord:(NSDictionary *)featurerecordDict  fo
 
 RCT_EXPORT_METHOD(closeGeoPackage:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)  {
     [[GeoPackageSingleton getSharedInstanceValue]closeGeoPackage];
-     resolve(@"");
+    resolve(@"");
 }
 
 //import details
 RCT_EXPORT_METHOD(getgpkgFileDetails:(NSString *)path resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)  {
-    [[GeoPackageSingleton getSharedInstanceValue]setEvent:self.bridge];
+    //    [[GeoPackageSingleton getSharedInstanceValue]setEvent:self.bridge];
     NSMutableDictionary*dict = [[GeoPackageSingleton getSharedInstanceValue]getgpkgFileDetails:path];
-     resolve(dict);
+    resolve(dict);
 }
 
 RCT_EXPORT_METHOD(importGeoPackage:(NSMutableDictionary *)gpkgArguments  resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [[GeoPackageSingleton getSharedInstanceValue]importGeoPackage:gpkgArguments];
-     resolve(@"");
+    resolve(@"");
 }
 
+-(void)receiveNotification:(NSNotification *)notification{
+    if ([[notification name] isEqualToString:@"noteImported"]){
+        NSDictionary* userInfo = notification.userInfo;
+        [self.bridge.eventDispatcher sendAppEventWithName:@"noteImported" body:userInfo];
+    }
+    if ([[notification name] isEqualToString:@"rasterImported"]){
+        NSDictionary* userInfo = notification.userInfo;
+        [self.bridge.eventDispatcher sendAppEventWithName:@"rasterImported" body:userInfo];
+    }
+}
 
 @end
 

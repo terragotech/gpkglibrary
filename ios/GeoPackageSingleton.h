@@ -13,8 +13,6 @@
 #import "GeoPackageImport.h"
 #import "GeoPDFAttachment.h"
 #import "GPKGConstant.h"
-#import "RCTBridge.h"
-#import "RCTEventDispatcher.h"
 
 @interface GeoPackageSingleton : NSObject
 {
@@ -43,7 +41,8 @@ typedef enum Goetypes
 @property(nonatomic, retain)NSMutableArray* featureClasses;
 @property(nonatomic, retain)NSString* importGuid;
 
-@property(nonatomic, retain)id event;
+// @property(nonatomic, weak)RCTBridge<RCTBridgeModule> event;
+
 
 //Export
 +(GeoPackageSingleton*)getSharedInstanceValue;

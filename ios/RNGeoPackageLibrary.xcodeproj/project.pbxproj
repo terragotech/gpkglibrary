@@ -10,159 +10,6 @@
 		B3E7B58A1CC2AC0600A0062D /* RNGeoPackageLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */; };
 		CF5823951E63FEF700FB4950 /* GeoPDFAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */; };
 		CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5823971E6402AC00FB4950 /* CoreGraphics.framework */; };
-		CF8B6AA21E58B3D900D06B39 /* aasincos.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FB1E58B3D800D06B39 /* aasincos.c */; };
-		CF8B6AA31E58B3D900D06B39 /* adjlon.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FC1E58B3D800D06B39 /* adjlon.c */; };
-		CF8B6AA41E58B3D900D06B39 /* bch2bps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FD1E58B3D800D06B39 /* bch2bps.c */; };
-		CF8B6AA51E58B3D900D06B39 /* bchgen.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FE1E58B3D800D06B39 /* bchgen.c */; };
-		CF8B6AA61E58B3D900D06B39 /* biveval.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B69FF1E58B3D800D06B39 /* biveval.c */; };
-		CF8B6AA71E58B3D900D06B39 /* cs2cs.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A001E58B3D800D06B39 /* cs2cs.c */; };
-		CF8B6AA81E58B3D900D06B39 /* dmstor.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A011E58B3D800D06B39 /* dmstor.c */; };
-		CF8B6AA91E58B3D900D06B39 /* emess.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A021E58B3D800D06B39 /* emess.c */; };
-		CF8B6AAA1E58B3D900D06B39 /* gen_cheb.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A041E58B3D800D06B39 /* gen_cheb.c */; };
-		CF8B6AAB1E58B3D900D06B39 /* geocent.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A051E58B3D800D06B39 /* geocent.c */; };
-		CF8B6AAC1E58B3D900D06B39 /* geod_for.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A071E58B3D800D06B39 /* geod_for.c */; };
-		CF8B6AAD1E58B3D900D06B39 /* geod_inv.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A081E58B3D800D06B39 /* geod_inv.c */; };
-		CF8B6AAE1E58B3D900D06B39 /* geod_set.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A091E58B3D800D06B39 /* geod_set.c */; };
-		CF8B6AAF1E58B3D900D06B39 /* geod.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A0A1E58B3D800D06B39 /* geod.c */; };
-		CF8B6AB01E58B3D900D06B39 /* jniproj.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A0C1E58B3D800D06B39 /* jniproj.c */; };
-		CF8B6AB11E58B3D900D06B39 /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B6A0D1E58B3D800D06B39 /* libProj4.a */; };
-		CF8B6AB21E58B3D900D06B39 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A0E1E58B3D800D06B39 /* Makefile */; };
-		CF8B6AB31E58B3D900D06B39 /* mk_cheby.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A121E58B3D800D06B39 /* mk_cheby.c */; };
-		CF8B6AB41E58B3D900D06B39 /* nad_cvt.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A131E58B3D800D06B39 /* nad_cvt.c */; };
-		CF8B6AB51E58B3D900D06B39 /* nad_init.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A141E58B3D800D06B39 /* nad_init.c */; };
-		CF8B6AB61E58B3D900D06B39 /* nad_intr.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A151E58B3D800D06B39 /* nad_intr.c */; };
-		CF8B6AB71E58B3D900D06B39 /* nad2bin.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A171E58B3D800D06B39 /* nad2bin.c */; };
-		CF8B6AB81E58B3D900D06B39 /* nad2nad.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A181E58B3D800D06B39 /* nad2nad.c */; };
-		CF8B6AB91E58B3D900D06B39 /* p_series.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1A1E58B3D800D06B39 /* p_series.c */; };
-		CF8B6ABA1E58B3D900D06B39 /* PJ_aea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1B1E58B3D800D06B39 /* PJ_aea.c */; };
-		CF8B6ABB1E58B3D900D06B39 /* PJ_aeqd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1C1E58B3D800D06B39 /* PJ_aeqd.c */; };
-		CF8B6ABC1E58B3D900D06B39 /* PJ_airy.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1D1E58B3D800D06B39 /* PJ_airy.c */; };
-		CF8B6ABD1E58B3D900D06B39 /* PJ_aitoff.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1E1E58B3D800D06B39 /* PJ_aitoff.c */; };
-		CF8B6ABE1E58B3D900D06B39 /* pj_apply_gridshift.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A1F1E58B3D800D06B39 /* pj_apply_gridshift.c */; };
-		CF8B6ABF1E58B3D900D06B39 /* PJ_august.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A201E58B3D800D06B39 /* PJ_august.c */; };
-		CF8B6AC01E58B3D900D06B39 /* pj_auth.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A211E58B3D800D06B39 /* pj_auth.c */; };
-		CF8B6AC11E58B3D900D06B39 /* PJ_bacon.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A221E58B3D800D06B39 /* PJ_bacon.c */; };
-		CF8B6AC21E58B3D900D06B39 /* PJ_bipc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A231E58B3D800D06B39 /* PJ_bipc.c */; };
-		CF8B6AC31E58B3D900D06B39 /* PJ_boggs.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A241E58B3D800D06B39 /* PJ_boggs.c */; };
-		CF8B6AC41E58B3D900D06B39 /* PJ_bonne.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A251E58B3D800D06B39 /* PJ_bonne.c */; };
-		CF8B6AC51E58B3D900D06B39 /* PJ_cass.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A261E58B3D800D06B39 /* PJ_cass.c */; };
-		CF8B6AC61E58B3D900D06B39 /* PJ_cc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A271E58B3D800D06B39 /* PJ_cc.c */; };
-		CF8B6AC71E58B3D900D06B39 /* PJ_cea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A281E58B3D800D06B39 /* PJ_cea.c */; };
-		CF8B6AC81E58B3D900D06B39 /* PJ_chamb.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A291E58B3D800D06B39 /* PJ_chamb.c */; };
-		CF8B6AC91E58B3D900D06B39 /* PJ_collg.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2A1E58B3D800D06B39 /* PJ_collg.c */; };
-		CF8B6ACA1E58B3D900D06B39 /* PJ_crast.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2B1E58B3D800D06B39 /* PJ_crast.c */; };
-		CF8B6ACB1E58B3D900D06B39 /* pj_datum_set.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2C1E58B3D800D06B39 /* pj_datum_set.c */; };
-		CF8B6ACC1E58B3D900D06B39 /* pj_datums.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2D1E58B3D800D06B39 /* pj_datums.c */; };
-		CF8B6ACD1E58B3D900D06B39 /* PJ_denoy.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2E1E58B3D800D06B39 /* PJ_denoy.c */; };
-		CF8B6ACE1E58B3D900D06B39 /* pj_deriv.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A2F1E58B3D800D06B39 /* pj_deriv.c */; };
-		CF8B6ACF1E58B3D900D06B39 /* PJ_eck1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A301E58B3D800D06B39 /* PJ_eck1.c */; };
-		CF8B6AD01E58B3D900D06B39 /* PJ_eck2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A311E58B3D800D06B39 /* PJ_eck2.c */; };
-		CF8B6AD11E58B3D900D06B39 /* PJ_eck3.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A321E58B3D800D06B39 /* PJ_eck3.c */; };
-		CF8B6AD21E58B3D900D06B39 /* PJ_eck4.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A331E58B3D800D06B39 /* PJ_eck4.c */; };
-		CF8B6AD31E58B3D900D06B39 /* PJ_eck5.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A341E58B3D800D06B39 /* PJ_eck5.c */; };
-		CF8B6AD41E58B3D900D06B39 /* pj_ell_set.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A351E58B3D800D06B39 /* pj_ell_set.c */; };
-		CF8B6AD51E58B3D900D06B39 /* pj_ellps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A361E58B3D800D06B39 /* pj_ellps.c */; };
-		CF8B6AD61E58B3D900D06B39 /* PJ_eqc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A371E58B3D800D06B39 /* PJ_eqc.c */; };
-		CF8B6AD71E58B3D900D06B39 /* PJ_eqdc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A381E58B3D800D06B39 /* PJ_eqdc.c */; };
-		CF8B6AD81E58B3D900D06B39 /* pj_errno.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A391E58B3D800D06B39 /* pj_errno.c */; };
-		CF8B6AD91E58B3D900D06B39 /* pj_factors.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3A1E58B3D800D06B39 /* pj_factors.c */; };
-		CF8B6ADA1E58B3D900D06B39 /* PJ_fahey.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3B1E58B3D800D06B39 /* PJ_fahey.c */; };
-		CF8B6ADB1E58B3D900D06B39 /* PJ_fouc_s.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3C1E58B3D800D06B39 /* PJ_fouc_s.c */; };
-		CF8B6ADC1E58B3D900D06B39 /* pj_fwd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3D1E58B3D800D06B39 /* pj_fwd.c */; };
-		CF8B6ADD1E58B3D900D06B39 /* PJ_gall.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3E1E58B3D800D06B39 /* PJ_gall.c */; };
-		CF8B6ADE1E58B3D900D06B39 /* pj_gauss.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A3F1E58B3D800D06B39 /* pj_gauss.c */; };
-		CF8B6ADF1E58B3D900D06B39 /* pj_geocent.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A401E58B3D800D06B39 /* pj_geocent.c */; };
-		CF8B6AE01E58B3D900D06B39 /* PJ_geos.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A411E58B3D800D06B39 /* PJ_geos.c */; };
-		CF8B6AE11E58B3D900D06B39 /* PJ_gins8.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A421E58B3D800D06B39 /* PJ_gins8.c */; };
-		CF8B6AE21E58B3D900D06B39 /* PJ_gn_sinu.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A431E58B3D800D06B39 /* PJ_gn_sinu.c */; };
-		CF8B6AE31E58B3D900D06B39 /* PJ_gnom.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A441E58B3D800D06B39 /* PJ_gnom.c */; };
-		CF8B6AE41E58B3D900D06B39 /* PJ_goode.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A451E58B3D800D06B39 /* PJ_goode.c */; };
-		CF8B6AE51E58B3D900D06B39 /* pj_gridinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A461E58B3D800D06B39 /* pj_gridinfo.c */; };
-		CF8B6AE61E58B3D900D06B39 /* pj_gridlist.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A471E58B3D800D06B39 /* pj_gridlist.c */; };
-		CF8B6AE71E58B3D900D06B39 /* PJ_gstmerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A481E58B3D800D06B39 /* PJ_gstmerc.c */; };
-		CF8B6AE81E58B3D900D06B39 /* PJ_hammer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A491E58B3D800D06B39 /* PJ_hammer.c */; };
-		CF8B6AE91E58B3D900D06B39 /* PJ_hatano.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4A1E58B3D800D06B39 /* PJ_hatano.c */; };
-		CF8B6AEA1E58B3D900D06B39 /* PJ_imw_p.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4B1E58B3D800D06B39 /* PJ_imw_p.c */; };
-		CF8B6AEB1E58B3D900D06B39 /* pj_init.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4C1E58B3D800D06B39 /* pj_init.c */; };
-		CF8B6AEC1E58B3D900D06B39 /* pj_initcache.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4D1E58B3D800D06B39 /* pj_initcache.c */; };
-		CF8B6AED1E58B3D900D06B39 /* pj_inv.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4E1E58B3D800D06B39 /* pj_inv.c */; };
-		CF8B6AEE1E58B3D900D06B39 /* PJ_krovak.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A4F1E58B3D800D06B39 /* PJ_krovak.c */; };
-		CF8B6AEF1E58B3D900D06B39 /* PJ_labrd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A501E58B3D800D06B39 /* PJ_labrd.c */; };
-		CF8B6AF01E58B3D900D06B39 /* PJ_laea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A511E58B3D800D06B39 /* PJ_laea.c */; };
-		CF8B6AF11E58B3D900D06B39 /* PJ_lagrng.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A521E58B3D800D06B39 /* PJ_lagrng.c */; };
-		CF8B6AF21E58B3D900D06B39 /* PJ_larr.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A531E58B3D800D06B39 /* PJ_larr.c */; };
-		CF8B6AF31E58B3D900D06B39 /* PJ_lask.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A541E58B3D800D06B39 /* PJ_lask.c */; };
-		CF8B6AF41E58B3D900D06B39 /* pj_latlong.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A551E58B3D800D06B39 /* pj_latlong.c */; };
-		CF8B6AF51E58B3D900D06B39 /* PJ_lcc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A561E58B3D800D06B39 /* PJ_lcc.c */; };
-		CF8B6AF61E58B3D900D06B39 /* PJ_lcca.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A571E58B3D800D06B39 /* PJ_lcca.c */; };
-		CF8B6AF71E58B3D900D06B39 /* pj_list.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A581E58B3D800D06B39 /* pj_list.c */; };
-		CF8B6AF81E58B3D900D06B39 /* PJ_loxim.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5A1E58B3D800D06B39 /* PJ_loxim.c */; };
-		CF8B6AF91E58B3D900D06B39 /* PJ_lsat.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5B1E58B3D800D06B39 /* PJ_lsat.c */; };
-		CF8B6AFA1E58B3D900D06B39 /* pj_malloc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5C1E58B3D800D06B39 /* pj_malloc.c */; };
-		CF8B6AFB1E58B3D900D06B39 /* PJ_mbt_fps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5D1E58B3D800D06B39 /* PJ_mbt_fps.c */; };
-		CF8B6AFC1E58B3D900D06B39 /* PJ_mbtfpp.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5E1E58B3D800D06B39 /* PJ_mbtfpp.c */; };
-		CF8B6AFD1E58B3D900D06B39 /* PJ_mbtfpq.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A5F1E58B3D800D06B39 /* PJ_mbtfpq.c */; };
-		CF8B6AFE1E58B3D900D06B39 /* PJ_merc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A601E58B3D800D06B39 /* PJ_merc.c */; };
-		CF8B6AFF1E58B3D900D06B39 /* PJ_mill.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A611E58B3D800D06B39 /* PJ_mill.c */; };
-		CF8B6B001E58B3D900D06B39 /* pj_mlfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A621E58B3D800D06B39 /* pj_mlfn.c */; };
-		CF8B6B011E58B3D900D06B39 /* PJ_mod_ster.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A631E58B3D800D06B39 /* PJ_mod_ster.c */; };
-		CF8B6B021E58B3D900D06B39 /* PJ_moll.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A641E58B3D800D06B39 /* PJ_moll.c */; };
-		CF8B6B031E58B3D900D06B39 /* pj_msfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A651E58B3D800D06B39 /* pj_msfn.c */; };
-		CF8B6B041E58B3D900D06B39 /* pj_mutex.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A661E58B3D800D06B39 /* pj_mutex.c */; };
-		CF8B6B051E58B3D900D06B39 /* PJ_nell_h.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A671E58B3D800D06B39 /* PJ_nell_h.c */; };
-		CF8B6B061E58B3D900D06B39 /* PJ_nell.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A681E58B3D800D06B39 /* PJ_nell.c */; };
-		CF8B6B071E58B3D900D06B39 /* PJ_nocol.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A691E58B3D800D06B39 /* PJ_nocol.c */; };
-		CF8B6B081E58B3D900D06B39 /* PJ_nsper.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6A1E58B3D800D06B39 /* PJ_nsper.c */; };
-		CF8B6B091E58B3D900D06B39 /* PJ_nzmg.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6B1E58B3D800D06B39 /* PJ_nzmg.c */; };
-		CF8B6B0A1E58B3D900D06B39 /* PJ_ob_tran.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6C1E58B3D800D06B39 /* PJ_ob_tran.c */; };
-		CF8B6B0B1E58B3D900D06B39 /* PJ_ocea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6D1E58B3D800D06B39 /* PJ_ocea.c */; };
-		CF8B6B0C1E58B3D900D06B39 /* PJ_oea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6E1E58B3D800D06B39 /* PJ_oea.c */; };
-		CF8B6B0D1E58B3D900D06B39 /* PJ_omerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A6F1E58B3D800D06B39 /* PJ_omerc.c */; };
-		CF8B6B0E1E58B3D900D06B39 /* pj_open_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A701E58B3D800D06B39 /* pj_open_lib.c */; };
-		CF8B6B0F1E58B3D900D06B39 /* PJ_ortho.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A711E58B3D800D06B39 /* PJ_ortho.c */; };
-		CF8B6B101E58B3D900D06B39 /* pj_param.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A721E58B3D800D06B39 /* pj_param.c */; };
-		CF8B6B111E58B3D900D06B39 /* pj_phi2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A731E58B3D900D06B39 /* pj_phi2.c */; };
-		CF8B6B121E58B3D900D06B39 /* PJ_poly.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A741E58B3D900D06B39 /* PJ_poly.c */; };
-		CF8B6B131E58B3D900D06B39 /* pj_pr_list.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A751E58B3D900D06B39 /* pj_pr_list.c */; };
-		CF8B6B141E58B3D900D06B39 /* PJ_putp2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A761E58B3D900D06B39 /* PJ_putp2.c */; };
-		CF8B6B151E58B3D900D06B39 /* PJ_putp3.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A771E58B3D900D06B39 /* PJ_putp3.c */; };
-		CF8B6B161E58B3D900D06B39 /* PJ_putp4p.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A781E58B3D900D06B39 /* PJ_putp4p.c */; };
-		CF8B6B171E58B3D900D06B39 /* PJ_putp5.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A791E58B3D900D06B39 /* PJ_putp5.c */; };
-		CF8B6B181E58B3D900D06B39 /* PJ_putp6.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7A1E58B3D900D06B39 /* PJ_putp6.c */; };
-		CF8B6B191E58B3D900D06B39 /* pj_qsfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7B1E58B3D900D06B39 /* pj_qsfn.c */; };
-		CF8B6B1A1E58B3D900D06B39 /* pj_release.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7C1E58B3D900D06B39 /* pj_release.c */; };
-		CF8B6B1B1E58B3D900D06B39 /* PJ_robin.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7D1E58B3D900D06B39 /* PJ_robin.c */; };
-		CF8B6B1C1E58B3D900D06B39 /* PJ_rpoly.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7E1E58B3D900D06B39 /* PJ_rpoly.c */; };
-		CF8B6B1D1E58B3D900D06B39 /* PJ_sconics.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A7F1E58B3D900D06B39 /* PJ_sconics.c */; };
-		CF8B6B1E1E58B3D900D06B39 /* PJ_somerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A801E58B3D900D06B39 /* PJ_somerc.c */; };
-		CF8B6B1F1E58B3D900D06B39 /* PJ_stere.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A811E58B3D900D06B39 /* PJ_stere.c */; };
-		CF8B6B201E58B3D900D06B39 /* PJ_sterea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A821E58B3D900D06B39 /* PJ_sterea.c */; };
-		CF8B6B211E58B3D900D06B39 /* pj_strerrno.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A831E58B3D900D06B39 /* pj_strerrno.c */; };
-		CF8B6B221E58B3D900D06B39 /* PJ_sts.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A841E58B3D900D06B39 /* PJ_sts.c */; };
-		CF8B6B231E58B3D900D06B39 /* PJ_tcc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A851E58B3D900D06B39 /* PJ_tcc.c */; };
-		CF8B6B241E58B3D900D06B39 /* PJ_tcea.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A861E58B3D900D06B39 /* PJ_tcea.c */; };
-		CF8B6B251E58B3D900D06B39 /* PJ_tmerc.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A871E58B3D900D06B39 /* PJ_tmerc.c */; };
-		CF8B6B261E58B3D900D06B39 /* PJ_tpeqd.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A881E58B3D900D06B39 /* PJ_tpeqd.c */; };
-		CF8B6B271E58B3D900D06B39 /* pj_transform.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A891E58B3D900D06B39 /* pj_transform.c */; };
-		CF8B6B281E58B3D900D06B39 /* pj_tsfn.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8A1E58B3D900D06B39 /* pj_tsfn.c */; };
-		CF8B6B291E58B3D900D06B39 /* pj_units.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8B1E58B3D900D06B39 /* pj_units.c */; };
-		CF8B6B2A1E58B3D900D06B39 /* PJ_urm5.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8C1E58B3D900D06B39 /* PJ_urm5.c */; };
-		CF8B6B2B1E58B3D900D06B39 /* PJ_urmfps.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8D1E58B3D900D06B39 /* PJ_urmfps.c */; };
-		CF8B6B2C1E58B3D900D06B39 /* pj_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8E1E58B3D900D06B39 /* pj_utils.c */; };
-		CF8B6B2D1E58B3D900D06B39 /* PJ_vandg.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A8F1E58B3D900D06B39 /* PJ_vandg.c */; };
-		CF8B6B2E1E58B3D900D06B39 /* PJ_vandg2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A901E58B3D900D06B39 /* PJ_vandg2.c */; };
-		CF8B6B2F1E58B3D900D06B39 /* PJ_vandg4.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A911E58B3D900D06B39 /* PJ_vandg4.c */; };
-		CF8B6B301E58B3D900D06B39 /* PJ_wag2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A921E58B3D900D06B39 /* PJ_wag2.c */; };
-		CF8B6B311E58B3D900D06B39 /* PJ_wag3.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A931E58B3D900D06B39 /* PJ_wag3.c */; };
-		CF8B6B321E58B3D900D06B39 /* PJ_wag7.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A941E58B3D900D06B39 /* PJ_wag7.c */; };
-		CF8B6B331E58B3D900D06B39 /* PJ_wink1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A951E58B3D900D06B39 /* PJ_wink1.c */; };
-		CF8B6B341E58B3D900D06B39 /* PJ_wink2.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A961E58B3D900D06B39 /* PJ_wink2.c */; };
-		CF8B6B351E58B3D900D06B39 /* pj_zpoly1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A971E58B3D900D06B39 /* pj_zpoly1.c */; };
-		CF8B6B361E58B3D900D06B39 /* proj_mdist.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A9B1E58B3D900D06B39 /* proj_mdist.c */; };
-		CF8B6B371E58B3D900D06B39 /* proj_rouss.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A9C1E58B3D900D06B39 /* proj_rouss.c */; };
-		CF8B6B381E58B3D900D06B39 /* proj.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6A9D1E58B3D900D06B39 /* proj.c */; };
-		CF8B6B391E58B3D900D06B39 /* rtodms.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6AA01E58B3D900D06B39 /* rtodms.c */; };
-		CF8B6B3A1E58B3D900D06B39 /* vector1.c in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6AA11E58B3D900D06B39 /* vector1.c */; };
 		CF8B6C3F1E58B42000D06B39 /* GPKGBaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B3F1E58B41F00D06B39 /* GPKGBaseDao.m */; };
 		CF8B6C401E58B42000D06B39 /* GPKGBoundedOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B411E58B41F00D06B39 /* GPKGBoundedOverlay.m */; };
 		CF8B6C411E58B42000D06B39 /* GPKGBoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B431E58B41F00D06B39 /* GPKGBoundingBox.m */; };
@@ -317,6 +164,8 @@
 		CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6CF31E58B45B00D06B39 /* WKBTriangle.m */; };
 		CF8B6D111E58C71400D06B39 /* GeoPackageSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */; };
 		CF8B6D141E5968CC00D06B39 /* GeoPackageColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */; };
+		CFAB75691E6EF9E10042A059 /* libGeoPackageRasterReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAB75661E6EF9E10042A059 /* libGeoPackageRasterReader.a */; };
+		CFAB756A1E6EF9E10042A059 /* libproj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAB75671E6EF9E10042A059 /* libproj.a */; };
 		CFF2F2BA1E5D8E080064FC02 /* commonutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F25B1E5D8E080064FC02 /* commonutils.cpp */; };
 		CFF2F2BB1E5D8E080064FC02 /* gdal_to_tiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2861E5D8E080064FC02 /* gdal_to_tiles.cpp */; };
 		CFF2F2BC1E5D8E080064FC02 /* gdalwarp_bin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2961E5D8E080064FC02 /* gdalwarp_bin.cpp */; };
@@ -352,173 +201,6 @@
 		CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPDFAttachment.m; sourceTree = "<group>"; };
 		CF5823971E6402AC00FB4950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CF58239A1E64297D00FB4950 /* GPKGConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPKGConstant.h; path = Constants/GPKGConstant.h; sourceTree = "<group>"; };
-		CF8B69FB1E58B3D800D06B39 /* aasincos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aasincos.c; sourceTree = "<group>"; };
-		CF8B69FC1E58B3D800D06B39 /* adjlon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adjlon.c; sourceTree = "<group>"; };
-		CF8B69FD1E58B3D800D06B39 /* bch2bps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch2bps.c; sourceTree = "<group>"; };
-		CF8B69FE1E58B3D800D06B39 /* bchgen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bchgen.c; sourceTree = "<group>"; };
-		CF8B69FF1E58B3D800D06B39 /* biveval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = biveval.c; sourceTree = "<group>"; };
-		CF8B6A001E58B3D800D06B39 /* cs2cs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cs2cs.c; sourceTree = "<group>"; };
-		CF8B6A011E58B3D800D06B39 /* dmstor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dmstor.c; sourceTree = "<group>"; };
-		CF8B6A021E58B3D800D06B39 /* emess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = emess.c; sourceTree = "<group>"; };
-		CF8B6A031E58B3D800D06B39 /* emess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emess.h; sourceTree = "<group>"; };
-		CF8B6A041E58B3D800D06B39 /* gen_cheb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gen_cheb.c; sourceTree = "<group>"; };
-		CF8B6A051E58B3D800D06B39 /* geocent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geocent.c; sourceTree = "<group>"; };
-		CF8B6A061E58B3D800D06B39 /* geocent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geocent.h; sourceTree = "<group>"; };
-		CF8B6A071E58B3D800D06B39 /* geod_for.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod_for.c; sourceTree = "<group>"; };
-		CF8B6A081E58B3D800D06B39 /* geod_inv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod_inv.c; sourceTree = "<group>"; };
-		CF8B6A091E58B3D800D06B39 /* geod_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod_set.c; sourceTree = "<group>"; };
-		CF8B6A0A1E58B3D800D06B39 /* geod.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geod.c; sourceTree = "<group>"; };
-		CF8B6A0B1E58B3D800D06B39 /* geodesic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geodesic.h; sourceTree = "<group>"; };
-		CF8B6A0C1E58B3D800D06B39 /* jniproj.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jniproj.c; sourceTree = "<group>"; };
-		CF8B6A0D1E58B3D800D06B39 /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libProj4.a; sourceTree = "<group>"; };
-		CF8B6A0E1E58B3D800D06B39 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		CF8B6A0F1E58B3D800D06B39 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
-		CF8B6A101E58B3D800D06B39 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
-		CF8B6A111E58B3D800D06B39 /* makefile.vc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makefile.vc; sourceTree = "<group>"; };
-		CF8B6A121E58B3D800D06B39 /* mk_cheby.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mk_cheby.c; sourceTree = "<group>"; };
-		CF8B6A131E58B3D800D06B39 /* nad_cvt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad_cvt.c; sourceTree = "<group>"; };
-		CF8B6A141E58B3D800D06B39 /* nad_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad_init.c; sourceTree = "<group>"; };
-		CF8B6A151E58B3D800D06B39 /* nad_intr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad_intr.c; sourceTree = "<group>"; };
-		CF8B6A161E58B3D800D06B39 /* nad_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nad_list.h; sourceTree = "<group>"; };
-		CF8B6A171E58B3D800D06B39 /* nad2bin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad2bin.c; sourceTree = "<group>"; };
-		CF8B6A181E58B3D800D06B39 /* nad2nad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nad2nad.c; sourceTree = "<group>"; };
-		CF8B6A191E58B3D800D06B39 /* org_proj4_Projections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = org_proj4_Projections.h; sourceTree = "<group>"; };
-		CF8B6A1A1E58B3D800D06B39 /* p_series.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = p_series.c; sourceTree = "<group>"; };
-		CF8B6A1B1E58B3D800D06B39 /* PJ_aea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_aea.c; sourceTree = "<group>"; };
-		CF8B6A1C1E58B3D800D06B39 /* PJ_aeqd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_aeqd.c; sourceTree = "<group>"; };
-		CF8B6A1D1E58B3D800D06B39 /* PJ_airy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_airy.c; sourceTree = "<group>"; };
-		CF8B6A1E1E58B3D800D06B39 /* PJ_aitoff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_aitoff.c; sourceTree = "<group>"; };
-		CF8B6A1F1E58B3D800D06B39 /* pj_apply_gridshift.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_apply_gridshift.c; sourceTree = "<group>"; };
-		CF8B6A201E58B3D800D06B39 /* PJ_august.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_august.c; sourceTree = "<group>"; };
-		CF8B6A211E58B3D800D06B39 /* pj_auth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_auth.c; sourceTree = "<group>"; };
-		CF8B6A221E58B3D800D06B39 /* PJ_bacon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_bacon.c; sourceTree = "<group>"; };
-		CF8B6A231E58B3D800D06B39 /* PJ_bipc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_bipc.c; sourceTree = "<group>"; };
-		CF8B6A241E58B3D800D06B39 /* PJ_boggs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_boggs.c; sourceTree = "<group>"; };
-		CF8B6A251E58B3D800D06B39 /* PJ_bonne.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_bonne.c; sourceTree = "<group>"; };
-		CF8B6A261E58B3D800D06B39 /* PJ_cass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_cass.c; sourceTree = "<group>"; };
-		CF8B6A271E58B3D800D06B39 /* PJ_cc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_cc.c; sourceTree = "<group>"; };
-		CF8B6A281E58B3D800D06B39 /* PJ_cea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_cea.c; sourceTree = "<group>"; };
-		CF8B6A291E58B3D800D06B39 /* PJ_chamb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_chamb.c; sourceTree = "<group>"; };
-		CF8B6A2A1E58B3D800D06B39 /* PJ_collg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_collg.c; sourceTree = "<group>"; };
-		CF8B6A2B1E58B3D800D06B39 /* PJ_crast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_crast.c; sourceTree = "<group>"; };
-		CF8B6A2C1E58B3D800D06B39 /* pj_datum_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_datum_set.c; sourceTree = "<group>"; };
-		CF8B6A2D1E58B3D800D06B39 /* pj_datums.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_datums.c; sourceTree = "<group>"; };
-		CF8B6A2E1E58B3D800D06B39 /* PJ_denoy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_denoy.c; sourceTree = "<group>"; };
-		CF8B6A2F1E58B3D800D06B39 /* pj_deriv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_deriv.c; sourceTree = "<group>"; };
-		CF8B6A301E58B3D800D06B39 /* PJ_eck1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck1.c; sourceTree = "<group>"; };
-		CF8B6A311E58B3D800D06B39 /* PJ_eck2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck2.c; sourceTree = "<group>"; };
-		CF8B6A321E58B3D800D06B39 /* PJ_eck3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck3.c; sourceTree = "<group>"; };
-		CF8B6A331E58B3D800D06B39 /* PJ_eck4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck4.c; sourceTree = "<group>"; };
-		CF8B6A341E58B3D800D06B39 /* PJ_eck5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eck5.c; sourceTree = "<group>"; };
-		CF8B6A351E58B3D800D06B39 /* pj_ell_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_ell_set.c; sourceTree = "<group>"; };
-		CF8B6A361E58B3D800D06B39 /* pj_ellps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_ellps.c; sourceTree = "<group>"; };
-		CF8B6A371E58B3D800D06B39 /* PJ_eqc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eqc.c; sourceTree = "<group>"; };
-		CF8B6A381E58B3D800D06B39 /* PJ_eqdc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_eqdc.c; sourceTree = "<group>"; };
-		CF8B6A391E58B3D800D06B39 /* pj_errno.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_errno.c; sourceTree = "<group>"; };
-		CF8B6A3A1E58B3D800D06B39 /* pj_factors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_factors.c; sourceTree = "<group>"; };
-		CF8B6A3B1E58B3D800D06B39 /* PJ_fahey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_fahey.c; sourceTree = "<group>"; };
-		CF8B6A3C1E58B3D800D06B39 /* PJ_fouc_s.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_fouc_s.c; sourceTree = "<group>"; };
-		CF8B6A3D1E58B3D800D06B39 /* pj_fwd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_fwd.c; sourceTree = "<group>"; };
-		CF8B6A3E1E58B3D800D06B39 /* PJ_gall.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gall.c; sourceTree = "<group>"; };
-		CF8B6A3F1E58B3D800D06B39 /* pj_gauss.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_gauss.c; sourceTree = "<group>"; };
-		CF8B6A401E58B3D800D06B39 /* pj_geocent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_geocent.c; sourceTree = "<group>"; };
-		CF8B6A411E58B3D800D06B39 /* PJ_geos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_geos.c; sourceTree = "<group>"; };
-		CF8B6A421E58B3D800D06B39 /* PJ_gins8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gins8.c; sourceTree = "<group>"; };
-		CF8B6A431E58B3D800D06B39 /* PJ_gn_sinu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gn_sinu.c; sourceTree = "<group>"; };
-		CF8B6A441E58B3D800D06B39 /* PJ_gnom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gnom.c; sourceTree = "<group>"; };
-		CF8B6A451E58B3D800D06B39 /* PJ_goode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_goode.c; sourceTree = "<group>"; };
-		CF8B6A461E58B3D800D06B39 /* pj_gridinfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_gridinfo.c; sourceTree = "<group>"; };
-		CF8B6A471E58B3D800D06B39 /* pj_gridlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_gridlist.c; sourceTree = "<group>"; };
-		CF8B6A481E58B3D800D06B39 /* PJ_gstmerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_gstmerc.c; sourceTree = "<group>"; };
-		CF8B6A491E58B3D800D06B39 /* PJ_hammer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_hammer.c; sourceTree = "<group>"; };
-		CF8B6A4A1E58B3D800D06B39 /* PJ_hatano.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_hatano.c; sourceTree = "<group>"; };
-		CF8B6A4B1E58B3D800D06B39 /* PJ_imw_p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_imw_p.c; sourceTree = "<group>"; };
-		CF8B6A4C1E58B3D800D06B39 /* pj_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_init.c; sourceTree = "<group>"; };
-		CF8B6A4D1E58B3D800D06B39 /* pj_initcache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_initcache.c; sourceTree = "<group>"; };
-		CF8B6A4E1E58B3D800D06B39 /* pj_inv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_inv.c; sourceTree = "<group>"; };
-		CF8B6A4F1E58B3D800D06B39 /* PJ_krovak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_krovak.c; sourceTree = "<group>"; };
-		CF8B6A501E58B3D800D06B39 /* PJ_labrd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_labrd.c; sourceTree = "<group>"; };
-		CF8B6A511E58B3D800D06B39 /* PJ_laea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_laea.c; sourceTree = "<group>"; };
-		CF8B6A521E58B3D800D06B39 /* PJ_lagrng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lagrng.c; sourceTree = "<group>"; };
-		CF8B6A531E58B3D800D06B39 /* PJ_larr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_larr.c; sourceTree = "<group>"; };
-		CF8B6A541E58B3D800D06B39 /* PJ_lask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lask.c; sourceTree = "<group>"; };
-		CF8B6A551E58B3D800D06B39 /* pj_latlong.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_latlong.c; sourceTree = "<group>"; };
-		CF8B6A561E58B3D800D06B39 /* PJ_lcc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lcc.c; sourceTree = "<group>"; };
-		CF8B6A571E58B3D800D06B39 /* PJ_lcca.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lcca.c; sourceTree = "<group>"; };
-		CF8B6A581E58B3D800D06B39 /* pj_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_list.c; sourceTree = "<group>"; };
-		CF8B6A591E58B3D800D06B39 /* pj_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pj_list.h; sourceTree = "<group>"; };
-		CF8B6A5A1E58B3D800D06B39 /* PJ_loxim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_loxim.c; sourceTree = "<group>"; };
-		CF8B6A5B1E58B3D800D06B39 /* PJ_lsat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_lsat.c; sourceTree = "<group>"; };
-		CF8B6A5C1E58B3D800D06B39 /* pj_malloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_malloc.c; sourceTree = "<group>"; };
-		CF8B6A5D1E58B3D800D06B39 /* PJ_mbt_fps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mbt_fps.c; sourceTree = "<group>"; };
-		CF8B6A5E1E58B3D800D06B39 /* PJ_mbtfpp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mbtfpp.c; sourceTree = "<group>"; };
-		CF8B6A5F1E58B3D800D06B39 /* PJ_mbtfpq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mbtfpq.c; sourceTree = "<group>"; };
-		CF8B6A601E58B3D800D06B39 /* PJ_merc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_merc.c; sourceTree = "<group>"; };
-		CF8B6A611E58B3D800D06B39 /* PJ_mill.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mill.c; sourceTree = "<group>"; };
-		CF8B6A621E58B3D800D06B39 /* pj_mlfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_mlfn.c; sourceTree = "<group>"; };
-		CF8B6A631E58B3D800D06B39 /* PJ_mod_ster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_mod_ster.c; sourceTree = "<group>"; };
-		CF8B6A641E58B3D800D06B39 /* PJ_moll.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_moll.c; sourceTree = "<group>"; };
-		CF8B6A651E58B3D800D06B39 /* pj_msfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_msfn.c; sourceTree = "<group>"; };
-		CF8B6A661E58B3D800D06B39 /* pj_mutex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_mutex.c; sourceTree = "<group>"; };
-		CF8B6A671E58B3D800D06B39 /* PJ_nell_h.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nell_h.c; sourceTree = "<group>"; };
-		CF8B6A681E58B3D800D06B39 /* PJ_nell.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nell.c; sourceTree = "<group>"; };
-		CF8B6A691E58B3D800D06B39 /* PJ_nocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nocol.c; sourceTree = "<group>"; };
-		CF8B6A6A1E58B3D800D06B39 /* PJ_nsper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nsper.c; sourceTree = "<group>"; };
-		CF8B6A6B1E58B3D800D06B39 /* PJ_nzmg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_nzmg.c; sourceTree = "<group>"; };
-		CF8B6A6C1E58B3D800D06B39 /* PJ_ob_tran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_ob_tran.c; sourceTree = "<group>"; };
-		CF8B6A6D1E58B3D800D06B39 /* PJ_ocea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_ocea.c; sourceTree = "<group>"; };
-		CF8B6A6E1E58B3D800D06B39 /* PJ_oea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_oea.c; sourceTree = "<group>"; };
-		CF8B6A6F1E58B3D800D06B39 /* PJ_omerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_omerc.c; sourceTree = "<group>"; };
-		CF8B6A701E58B3D800D06B39 /* pj_open_lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_open_lib.c; sourceTree = "<group>"; };
-		CF8B6A711E58B3D800D06B39 /* PJ_ortho.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_ortho.c; sourceTree = "<group>"; };
-		CF8B6A721E58B3D800D06B39 /* pj_param.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_param.c; sourceTree = "<group>"; };
-		CF8B6A731E58B3D900D06B39 /* pj_phi2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_phi2.c; sourceTree = "<group>"; };
-		CF8B6A741E58B3D900D06B39 /* PJ_poly.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_poly.c; sourceTree = "<group>"; };
-		CF8B6A751E58B3D900D06B39 /* pj_pr_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_pr_list.c; sourceTree = "<group>"; };
-		CF8B6A761E58B3D900D06B39 /* PJ_putp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp2.c; sourceTree = "<group>"; };
-		CF8B6A771E58B3D900D06B39 /* PJ_putp3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp3.c; sourceTree = "<group>"; };
-		CF8B6A781E58B3D900D06B39 /* PJ_putp4p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp4p.c; sourceTree = "<group>"; };
-		CF8B6A791E58B3D900D06B39 /* PJ_putp5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp5.c; sourceTree = "<group>"; };
-		CF8B6A7A1E58B3D900D06B39 /* PJ_putp6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_putp6.c; sourceTree = "<group>"; };
-		CF8B6A7B1E58B3D900D06B39 /* pj_qsfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_qsfn.c; sourceTree = "<group>"; };
-		CF8B6A7C1E58B3D900D06B39 /* pj_release.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_release.c; sourceTree = "<group>"; };
-		CF8B6A7D1E58B3D900D06B39 /* PJ_robin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_robin.c; sourceTree = "<group>"; };
-		CF8B6A7E1E58B3D900D06B39 /* PJ_rpoly.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_rpoly.c; sourceTree = "<group>"; };
-		CF8B6A7F1E58B3D900D06B39 /* PJ_sconics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_sconics.c; sourceTree = "<group>"; };
-		CF8B6A801E58B3D900D06B39 /* PJ_somerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_somerc.c; sourceTree = "<group>"; };
-		CF8B6A811E58B3D900D06B39 /* PJ_stere.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_stere.c; sourceTree = "<group>"; };
-		CF8B6A821E58B3D900D06B39 /* PJ_sterea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_sterea.c; sourceTree = "<group>"; };
-		CF8B6A831E58B3D900D06B39 /* pj_strerrno.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_strerrno.c; sourceTree = "<group>"; };
-		CF8B6A841E58B3D900D06B39 /* PJ_sts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_sts.c; sourceTree = "<group>"; };
-		CF8B6A851E58B3D900D06B39 /* PJ_tcc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tcc.c; sourceTree = "<group>"; };
-		CF8B6A861E58B3D900D06B39 /* PJ_tcea.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tcea.c; sourceTree = "<group>"; };
-		CF8B6A871E58B3D900D06B39 /* PJ_tmerc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tmerc.c; sourceTree = "<group>"; };
-		CF8B6A881E58B3D900D06B39 /* PJ_tpeqd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_tpeqd.c; sourceTree = "<group>"; };
-		CF8B6A891E58B3D900D06B39 /* pj_transform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_transform.c; sourceTree = "<group>"; };
-		CF8B6A8A1E58B3D900D06B39 /* pj_tsfn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_tsfn.c; sourceTree = "<group>"; };
-		CF8B6A8B1E58B3D900D06B39 /* pj_units.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_units.c; sourceTree = "<group>"; };
-		CF8B6A8C1E58B3D900D06B39 /* PJ_urm5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_urm5.c; sourceTree = "<group>"; };
-		CF8B6A8D1E58B3D900D06B39 /* PJ_urmfps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_urmfps.c; sourceTree = "<group>"; };
-		CF8B6A8E1E58B3D900D06B39 /* pj_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_utils.c; sourceTree = "<group>"; };
-		CF8B6A8F1E58B3D900D06B39 /* PJ_vandg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_vandg.c; sourceTree = "<group>"; };
-		CF8B6A901E58B3D900D06B39 /* PJ_vandg2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_vandg2.c; sourceTree = "<group>"; };
-		CF8B6A911E58B3D900D06B39 /* PJ_vandg4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_vandg4.c; sourceTree = "<group>"; };
-		CF8B6A921E58B3D900D06B39 /* PJ_wag2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wag2.c; sourceTree = "<group>"; };
-		CF8B6A931E58B3D900D06B39 /* PJ_wag3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wag3.c; sourceTree = "<group>"; };
-		CF8B6A941E58B3D900D06B39 /* PJ_wag7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wag7.c; sourceTree = "<group>"; };
-		CF8B6A951E58B3D900D06B39 /* PJ_wink1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wink1.c; sourceTree = "<group>"; };
-		CF8B6A961E58B3D900D06B39 /* PJ_wink2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PJ_wink2.c; sourceTree = "<group>"; };
-		CF8B6A971E58B3D900D06B39 /* pj_zpoly1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pj_zpoly1.c; sourceTree = "<group>"; };
-		CF8B6A981E58B3D900D06B39 /* proj_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proj_api.h; sourceTree = "<group>"; };
-		CF8B6A991E58B3D900D06B39 /* proj_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proj_config.h; sourceTree = "<group>"; };
-		CF8B6A9A1E58B3D900D06B39 /* proj_config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proj_config.h.in; sourceTree = "<group>"; };
-		CF8B6A9B1E58B3D900D06B39 /* proj_mdist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proj_mdist.c; sourceTree = "<group>"; };
-		CF8B6A9C1E58B3D900D06B39 /* proj_rouss.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proj_rouss.c; sourceTree = "<group>"; };
-		CF8B6A9D1E58B3D900D06B39 /* proj.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proj.c; sourceTree = "<group>"; };
-		CF8B6A9E1E58B3D900D06B39 /* proj.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proj.def; sourceTree = "<group>"; };
-		CF8B6A9F1E58B3D900D06B39 /* projects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projects.h; sourceTree = "<group>"; };
-		CF8B6AA01E58B3D900D06B39 /* rtodms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtodms.c; sourceTree = "<group>"; };
-		CF8B6AA11E58B3D900D06B39 /* vector1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector1.c; sourceTree = "<group>"; };
 		CF8B6B3C1E58B41F00D06B39 /* geopackage_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geopackage_ios.h; sourceTree = "<group>"; };
 		CF8B6B3D1E58B41F00D06B39 /* geopackage-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "geopackage-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF8B6B3E1E58B41F00D06B39 /* GPKGBaseDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKGBaseDao.h; sourceTree = "<group>"; };
@@ -836,6 +518,8 @@
 		CF8B6D101E58C71400D06B39 /* GeoPackageSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageSingleton.m; sourceTree = "<group>"; };
 		CF8B6D121E5968CC00D06B39 /* GeoPackageColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageColumn.h; sourceTree = "<group>"; };
 		CF8B6D131E5968CC00D06B39 /* GeoPackageColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageColumn.m; sourceTree = "<group>"; };
+		CFAB75661E6EF9E10042A059 /* libGeoPackageRasterReader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGeoPackageRasterReader.a; sourceTree = "<group>"; };
+		CFAB75671E6EF9E10042A059 /* libproj.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libproj.a; sourceTree = "<group>"; };
 		CFF2F25B1E5D8E080064FC02 /* commonutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = commonutils.cpp; path = GeoPackageRaster/commonutils.cpp; sourceTree = "<group>"; };
 		CFF2F25C1E5D8E080064FC02 /* commonutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commonutils.h; path = GeoPackageRaster/commonutils.h; sourceTree = "<group>"; };
 		CFF2F25D1E5D8E080064FC02 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = GeoPackageRaster/config.h; sourceTree = "<group>"; };
@@ -947,7 +631,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */,
-				CF8B6AB11E58B3D900D06B39 /* libProj4.a in Frameworks */,
+				CFAB75691E6EF9E10042A059 /* libGeoPackageRasterReader.a in Frameworks */,
+				CFAB756A1E6EF9E10042A059 /* libproj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +694,7 @@
 		CF8B69F91E58B3A600D06B39 /* Geopackage */ = {
 			isa = PBXGroup;
 			children = (
+				CFAB75641E6EF9830042A059 /* LibGdal */,
 				CF5823991E64294300FB4950 /* Constants */,
 				CF5823921E63FEB200FB4950 /* GeoPDF */,
 				CFF2F2CD1E5D926D0064FC02 /* GeopackageLists */,
@@ -1026,173 +712,6 @@
 		CF8B69FA1E58B3C800D06B39 /* Proj4 */ = {
 			isa = PBXGroup;
 			children = (
-				CF8B69FB1E58B3D800D06B39 /* aasincos.c */,
-				CF8B69FC1E58B3D800D06B39 /* adjlon.c */,
-				CF8B69FD1E58B3D800D06B39 /* bch2bps.c */,
-				CF8B69FE1E58B3D800D06B39 /* bchgen.c */,
-				CF8B69FF1E58B3D800D06B39 /* biveval.c */,
-				CF8B6A001E58B3D800D06B39 /* cs2cs.c */,
-				CF8B6A011E58B3D800D06B39 /* dmstor.c */,
-				CF8B6A021E58B3D800D06B39 /* emess.c */,
-				CF8B6A031E58B3D800D06B39 /* emess.h */,
-				CF8B6A041E58B3D800D06B39 /* gen_cheb.c */,
-				CF8B6A051E58B3D800D06B39 /* geocent.c */,
-				CF8B6A061E58B3D800D06B39 /* geocent.h */,
-				CF8B6A071E58B3D800D06B39 /* geod_for.c */,
-				CF8B6A081E58B3D800D06B39 /* geod_inv.c */,
-				CF8B6A091E58B3D800D06B39 /* geod_set.c */,
-				CF8B6A0A1E58B3D800D06B39 /* geod.c */,
-				CF8B6A0B1E58B3D800D06B39 /* geodesic.h */,
-				CF8B6A0C1E58B3D800D06B39 /* jniproj.c */,
-				CF8B6A0D1E58B3D800D06B39 /* libProj4.a */,
-				CF8B6A0E1E58B3D800D06B39 /* Makefile */,
-				CF8B6A0F1E58B3D800D06B39 /* Makefile.am */,
-				CF8B6A101E58B3D800D06B39 /* Makefile.in */,
-				CF8B6A111E58B3D800D06B39 /* makefile.vc */,
-				CF8B6A121E58B3D800D06B39 /* mk_cheby.c */,
-				CF8B6A131E58B3D800D06B39 /* nad_cvt.c */,
-				CF8B6A141E58B3D800D06B39 /* nad_init.c */,
-				CF8B6A151E58B3D800D06B39 /* nad_intr.c */,
-				CF8B6A161E58B3D800D06B39 /* nad_list.h */,
-				CF8B6A171E58B3D800D06B39 /* nad2bin.c */,
-				CF8B6A181E58B3D800D06B39 /* nad2nad.c */,
-				CF8B6A191E58B3D800D06B39 /* org_proj4_Projections.h */,
-				CF8B6A1A1E58B3D800D06B39 /* p_series.c */,
-				CF8B6A1B1E58B3D800D06B39 /* PJ_aea.c */,
-				CF8B6A1C1E58B3D800D06B39 /* PJ_aeqd.c */,
-				CF8B6A1D1E58B3D800D06B39 /* PJ_airy.c */,
-				CF8B6A1E1E58B3D800D06B39 /* PJ_aitoff.c */,
-				CF8B6A1F1E58B3D800D06B39 /* pj_apply_gridshift.c */,
-				CF8B6A201E58B3D800D06B39 /* PJ_august.c */,
-				CF8B6A211E58B3D800D06B39 /* pj_auth.c */,
-				CF8B6A221E58B3D800D06B39 /* PJ_bacon.c */,
-				CF8B6A231E58B3D800D06B39 /* PJ_bipc.c */,
-				CF8B6A241E58B3D800D06B39 /* PJ_boggs.c */,
-				CF8B6A251E58B3D800D06B39 /* PJ_bonne.c */,
-				CF8B6A261E58B3D800D06B39 /* PJ_cass.c */,
-				CF8B6A271E58B3D800D06B39 /* PJ_cc.c */,
-				CF8B6A281E58B3D800D06B39 /* PJ_cea.c */,
-				CF8B6A291E58B3D800D06B39 /* PJ_chamb.c */,
-				CF8B6A2A1E58B3D800D06B39 /* PJ_collg.c */,
-				CF8B6A2B1E58B3D800D06B39 /* PJ_crast.c */,
-				CF8B6A2C1E58B3D800D06B39 /* pj_datum_set.c */,
-				CF8B6A2D1E58B3D800D06B39 /* pj_datums.c */,
-				CF8B6A2E1E58B3D800D06B39 /* PJ_denoy.c */,
-				CF8B6A2F1E58B3D800D06B39 /* pj_deriv.c */,
-				CF8B6A301E58B3D800D06B39 /* PJ_eck1.c */,
-				CF8B6A311E58B3D800D06B39 /* PJ_eck2.c */,
-				CF8B6A321E58B3D800D06B39 /* PJ_eck3.c */,
-				CF8B6A331E58B3D800D06B39 /* PJ_eck4.c */,
-				CF8B6A341E58B3D800D06B39 /* PJ_eck5.c */,
-				CF8B6A351E58B3D800D06B39 /* pj_ell_set.c */,
-				CF8B6A361E58B3D800D06B39 /* pj_ellps.c */,
-				CF8B6A371E58B3D800D06B39 /* PJ_eqc.c */,
-				CF8B6A381E58B3D800D06B39 /* PJ_eqdc.c */,
-				CF8B6A391E58B3D800D06B39 /* pj_errno.c */,
-				CF8B6A3A1E58B3D800D06B39 /* pj_factors.c */,
-				CF8B6A3B1E58B3D800D06B39 /* PJ_fahey.c */,
-				CF8B6A3C1E58B3D800D06B39 /* PJ_fouc_s.c */,
-				CF8B6A3D1E58B3D800D06B39 /* pj_fwd.c */,
-				CF8B6A3E1E58B3D800D06B39 /* PJ_gall.c */,
-				CF8B6A3F1E58B3D800D06B39 /* pj_gauss.c */,
-				CF8B6A401E58B3D800D06B39 /* pj_geocent.c */,
-				CF8B6A411E58B3D800D06B39 /* PJ_geos.c */,
-				CF8B6A421E58B3D800D06B39 /* PJ_gins8.c */,
-				CF8B6A431E58B3D800D06B39 /* PJ_gn_sinu.c */,
-				CF8B6A441E58B3D800D06B39 /* PJ_gnom.c */,
-				CF8B6A451E58B3D800D06B39 /* PJ_goode.c */,
-				CF8B6A461E58B3D800D06B39 /* pj_gridinfo.c */,
-				CF8B6A471E58B3D800D06B39 /* pj_gridlist.c */,
-				CF8B6A481E58B3D800D06B39 /* PJ_gstmerc.c */,
-				CF8B6A491E58B3D800D06B39 /* PJ_hammer.c */,
-				CF8B6A4A1E58B3D800D06B39 /* PJ_hatano.c */,
-				CF8B6A4B1E58B3D800D06B39 /* PJ_imw_p.c */,
-				CF8B6A4C1E58B3D800D06B39 /* pj_init.c */,
-				CF8B6A4D1E58B3D800D06B39 /* pj_initcache.c */,
-				CF8B6A4E1E58B3D800D06B39 /* pj_inv.c */,
-				CF8B6A4F1E58B3D800D06B39 /* PJ_krovak.c */,
-				CF8B6A501E58B3D800D06B39 /* PJ_labrd.c */,
-				CF8B6A511E58B3D800D06B39 /* PJ_laea.c */,
-				CF8B6A521E58B3D800D06B39 /* PJ_lagrng.c */,
-				CF8B6A531E58B3D800D06B39 /* PJ_larr.c */,
-				CF8B6A541E58B3D800D06B39 /* PJ_lask.c */,
-				CF8B6A551E58B3D800D06B39 /* pj_latlong.c */,
-				CF8B6A561E58B3D800D06B39 /* PJ_lcc.c */,
-				CF8B6A571E58B3D800D06B39 /* PJ_lcca.c */,
-				CF8B6A581E58B3D800D06B39 /* pj_list.c */,
-				CF8B6A591E58B3D800D06B39 /* pj_list.h */,
-				CF8B6A5A1E58B3D800D06B39 /* PJ_loxim.c */,
-				CF8B6A5B1E58B3D800D06B39 /* PJ_lsat.c */,
-				CF8B6A5C1E58B3D800D06B39 /* pj_malloc.c */,
-				CF8B6A5D1E58B3D800D06B39 /* PJ_mbt_fps.c */,
-				CF8B6A5E1E58B3D800D06B39 /* PJ_mbtfpp.c */,
-				CF8B6A5F1E58B3D800D06B39 /* PJ_mbtfpq.c */,
-				CF8B6A601E58B3D800D06B39 /* PJ_merc.c */,
-				CF8B6A611E58B3D800D06B39 /* PJ_mill.c */,
-				CF8B6A621E58B3D800D06B39 /* pj_mlfn.c */,
-				CF8B6A631E58B3D800D06B39 /* PJ_mod_ster.c */,
-				CF8B6A641E58B3D800D06B39 /* PJ_moll.c */,
-				CF8B6A651E58B3D800D06B39 /* pj_msfn.c */,
-				CF8B6A661E58B3D800D06B39 /* pj_mutex.c */,
-				CF8B6A671E58B3D800D06B39 /* PJ_nell_h.c */,
-				CF8B6A681E58B3D800D06B39 /* PJ_nell.c */,
-				CF8B6A691E58B3D800D06B39 /* PJ_nocol.c */,
-				CF8B6A6A1E58B3D800D06B39 /* PJ_nsper.c */,
-				CF8B6A6B1E58B3D800D06B39 /* PJ_nzmg.c */,
-				CF8B6A6C1E58B3D800D06B39 /* PJ_ob_tran.c */,
-				CF8B6A6D1E58B3D800D06B39 /* PJ_ocea.c */,
-				CF8B6A6E1E58B3D800D06B39 /* PJ_oea.c */,
-				CF8B6A6F1E58B3D800D06B39 /* PJ_omerc.c */,
-				CF8B6A701E58B3D800D06B39 /* pj_open_lib.c */,
-				CF8B6A711E58B3D800D06B39 /* PJ_ortho.c */,
-				CF8B6A721E58B3D800D06B39 /* pj_param.c */,
-				CF8B6A731E58B3D900D06B39 /* pj_phi2.c */,
-				CF8B6A741E58B3D900D06B39 /* PJ_poly.c */,
-				CF8B6A751E58B3D900D06B39 /* pj_pr_list.c */,
-				CF8B6A761E58B3D900D06B39 /* PJ_putp2.c */,
-				CF8B6A771E58B3D900D06B39 /* PJ_putp3.c */,
-				CF8B6A781E58B3D900D06B39 /* PJ_putp4p.c */,
-				CF8B6A791E58B3D900D06B39 /* PJ_putp5.c */,
-				CF8B6A7A1E58B3D900D06B39 /* PJ_putp6.c */,
-				CF8B6A7B1E58B3D900D06B39 /* pj_qsfn.c */,
-				CF8B6A7C1E58B3D900D06B39 /* pj_release.c */,
-				CF8B6A7D1E58B3D900D06B39 /* PJ_robin.c */,
-				CF8B6A7E1E58B3D900D06B39 /* PJ_rpoly.c */,
-				CF8B6A7F1E58B3D900D06B39 /* PJ_sconics.c */,
-				CF8B6A801E58B3D900D06B39 /* PJ_somerc.c */,
-				CF8B6A811E58B3D900D06B39 /* PJ_stere.c */,
-				CF8B6A821E58B3D900D06B39 /* PJ_sterea.c */,
-				CF8B6A831E58B3D900D06B39 /* pj_strerrno.c */,
-				CF8B6A841E58B3D900D06B39 /* PJ_sts.c */,
-				CF8B6A851E58B3D900D06B39 /* PJ_tcc.c */,
-				CF8B6A861E58B3D900D06B39 /* PJ_tcea.c */,
-				CF8B6A871E58B3D900D06B39 /* PJ_tmerc.c */,
-				CF8B6A881E58B3D900D06B39 /* PJ_tpeqd.c */,
-				CF8B6A891E58B3D900D06B39 /* pj_transform.c */,
-				CF8B6A8A1E58B3D900D06B39 /* pj_tsfn.c */,
-				CF8B6A8B1E58B3D900D06B39 /* pj_units.c */,
-				CF8B6A8C1E58B3D900D06B39 /* PJ_urm5.c */,
-				CF8B6A8D1E58B3D900D06B39 /* PJ_urmfps.c */,
-				CF8B6A8E1E58B3D900D06B39 /* pj_utils.c */,
-				CF8B6A8F1E58B3D900D06B39 /* PJ_vandg.c */,
-				CF8B6A901E58B3D900D06B39 /* PJ_vandg2.c */,
-				CF8B6A911E58B3D900D06B39 /* PJ_vandg4.c */,
-				CF8B6A921E58B3D900D06B39 /* PJ_wag2.c */,
-				CF8B6A931E58B3D900D06B39 /* PJ_wag3.c */,
-				CF8B6A941E58B3D900D06B39 /* PJ_wag7.c */,
-				CF8B6A951E58B3D900D06B39 /* PJ_wink1.c */,
-				CF8B6A961E58B3D900D06B39 /* PJ_wink2.c */,
-				CF8B6A971E58B3D900D06B39 /* pj_zpoly1.c */,
-				CF8B6A981E58B3D900D06B39 /* proj_api.h */,
-				CF8B6A991E58B3D900D06B39 /* proj_config.h */,
-				CF8B6A9A1E58B3D900D06B39 /* proj_config.h.in */,
-				CF8B6A9B1E58B3D900D06B39 /* proj_mdist.c */,
-				CF8B6A9C1E58B3D900D06B39 /* proj_rouss.c */,
-				CF8B6A9D1E58B3D900D06B39 /* proj.c */,
-				CF8B6A9E1E58B3D900D06B39 /* proj.def */,
-				CF8B6A9F1E58B3D900D06B39 /* projects.h */,
-				CF8B6AA01E58B3D900D06B39 /* rtodms.c */,
-				CF8B6AA11E58B3D900D06B39 /* vector1.c */,
 			);
 			name = Proj4;
 			sourceTree = "<group>";
@@ -1524,6 +1043,15 @@
 			name = "wkb-iOS";
 			sourceTree = "<group>";
 		};
+		CFAB75641E6EF9830042A059 /* LibGdal */ = {
+			isa = PBXGroup;
+			children = (
+				CFAB75661E6EF9E10042A059 /* libGeoPackageRasterReader.a */,
+				CFAB75671E6EF9E10042A059 /* libproj.a */,
+			);
+			name = LibGdal;
+			sourceTree = "<group>";
+		};
 		CFF2F25A1E5D8DA40064FC02 /* GeopackageRaster */ = {
 			isa = PBXGroup;
 			children = (
@@ -1706,141 +1234,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8B6B171E58B3D900D06B39 /* PJ_putp5.c in Sources */,
 				CF8B6CBB1E58B42000D06B39 /* GPKGUserUniqueConstraint.m in Sources */,
-				CF8B6B081E58B3D900D06B39 /* PJ_nsper.c in Sources */,
-				CF8B6B131E58B3D900D06B39 /* pj_pr_list.c in Sources */,
 				CF8B6D051E58B45B00D06B39 /* WKBMultiPoint.m in Sources */,
 				CF8B6CFF1E58B45B00D06B39 /* WKBGeometryReader.m in Sources */,
-				CF8B6AEC1E58B3D900D06B39 /* pj_initcache.c in Sources */,
 				CF8B6D001E58B45B00D06B39 /* WKBGeometryTypes.m in Sources */,
 				CF8B6C751E58B42000D06B39 /* GPKGGeoPackageMetadata.m in Sources */,
-				CF8B6B181E58B3D900D06B39 /* PJ_putp6.c in Sources */,
 				CF8B6C8B1E58B42000D06B39 /* GPKGMultiPolygonPoints.m in Sources */,
 				CFF2F2C91E5D91D80064FC02 /* P2JMetadata.m in Sources */,
-				CF8B6AD61E58B3D900D06B39 /* PJ_eqc.c in Sources */,
 				CF8B6CA91E58B42000D06B39 /* GPKGTileColumn.m in Sources */,
 				CF8B6C491E58B42000D06B39 /* GPKGContentValues.m in Sources */,
-				CF8B6AB41E58B3D900D06B39 /* nad_cvt.c in Sources */,
 				CF8B6CA41E58B42000D06B39 /* GPKGTableIndex.m in Sources */,
-				CF8B6AC51E58B3D900D06B39 /* PJ_cass.c in Sources */,
-				CF8B6AFE1E58B3D900D06B39 /* PJ_merc.c in Sources */,
 				CF8B6C661E58B42000D06B39 /* GPKGFeatureTileTableLinker.m in Sources */,
 				CF8B6D0B1E58B45B00D06B39 /* WKBSurface.m in Sources */,
-				CF8B6B111E58B3D900D06B39 /* pj_phi2.c in Sources */,
-				CF8B6ACB1E58B3D900D06B39 /* pj_datum_set.c in Sources */,
-				CF8B6B021E58B3D900D06B39 /* PJ_moll.c in Sources */,
-				CF8B6B231E58B3D900D06B39 /* PJ_tcc.c in Sources */,
-				CF8B6AE61E58B3D900D06B39 /* pj_gridlist.c in Sources */,
 				CF8B6C431E58B42000D06B39 /* GPKGColumnValues.m in Sources */,
-				CF8B6B331E58B3D900D06B39 /* PJ_wink1.c in Sources */,
-				CF8B6AC41E58B3D900D06B39 /* PJ_bonne.c in Sources */,
 				CF8B6C481E58B42000D06B39 /* GPKGContentsDao.m in Sources */,
-				CF8B6B291E58B3D900D06B39 /* pj_units.c in Sources */,
-				CF8B6B2D1E58B3D900D06B39 /* PJ_vandg.c in Sources */,
-				CF8B6AF91E58B3D900D06B39 /* PJ_lsat.c in Sources */,
-				CF8B6AB51E58B3D900D06B39 /* nad_init.c in Sources */,
-				CF8B6B071E58B3D900D06B39 /* PJ_nocol.c in Sources */,
 				CF8B6CFB1E58B45B00D06B39 /* WKBGeometryCollection.m in Sources */,
 				CF8B6CF81E58B45B00D06B39 /* WKBCurve.m in Sources */,
 				CF8B6CA61E58B42000D06B39 /* GPKGTableMetadata.m in Sources */,
 				CF8B6C5C1E58B42000D06B39 /* GPKGFeatureOverlayQuery.m in Sources */,
-				CF8B6B0B1E58B3D900D06B39 /* PJ_ocea.c in Sources */,
 				CF8B6CA21E58B42000D06B39 /* GPKGStandardFormatOverlay.m in Sources */,
 				CF5823951E63FEF700FB4950 /* GeoPDFAttachment.m in Sources */,
 				CF8B6D081E58B45B00D06B39 /* WKBPoint.m in Sources */,
 				CF8B6D011E58B45B00D06B39 /* WKBGeometryWriter.m in Sources */,
-				CF8B6ADB1E58B3D900D06B39 /* PJ_fouc_s.c in Sources */,
 				CF8B6C421E58B42000D06B39 /* GPKGColumnValue.m in Sources */,
-				CF8B6AFC1E58B3D900D06B39 /* PJ_mbtfpp.c in Sources */,
 				CF8B6D0A1E58B45B00D06B39 /* WKBPolyhedralSurface.m in Sources */,
 				CFF2F2D01E5DAD140064FC02 /* GeoPackageImport.m in Sources */,
-				CF8B6B0F1E58B3D900D06B39 /* PJ_ortho.c in Sources */,
-				CF8B6AEE1E58B3D900D06B39 /* PJ_krovak.c in Sources */,
-				CF8B6B281E58B3D900D06B39 /* pj_tsfn.c in Sources */,
 				CF8B6C9A1E58B42000D06B39 /* GPKGPropertyConstants.m in Sources */,
-				CF8B6AF21E58B3D900D06B39 /* PJ_larr.c in Sources */,
 				CF8B6C4B1E58B42000D06B39 /* GPKGDataColumnConstraintsDao.m in Sources */,
-				CF8B6ADD1E58B3D900D06B39 /* PJ_gall.c in Sources */,
 				CF8B6CB01E58B42000D06B39 /* GPKGTileMatrixSet.m in Sources */,
-				CF8B6AC31E58B3D900D06B39 /* PJ_boggs.c in Sources */,
 				CF8B6C4C1E58B42000D06B39 /* GPKGDataColumns.m in Sources */,
 				CF8B6CAC1E58B42000D06B39 /* GPKGTileGenerator.m in Sources */,
-				CF8B6B341E58B3D900D06B39 /* PJ_wink2.c in Sources */,
 				CFF2F2BA1E5D8E080064FC02 /* commonutils.cpp in Sources */,
 				CF8B6C961E58B42000D06B39 /* GPKGProjectionFactory.m in Sources */,
-				CF8B6AFD1E58B3D900D06B39 /* PJ_mbtfpq.c in Sources */,
-				CF8B6AF81E58B3D900D06B39 /* PJ_loxim.c in Sources */,
-				CF8B6B1F1E58B3D900D06B39 /* PJ_stere.c in Sources */,
 				CF8B6C8C1E58B42000D06B39 /* GPKGMultiPolyline.m in Sources */,
 				CF8B6C451E58B42000D06B39 /* GPKGConnection.m in Sources */,
-				CF8B6AA31E58B3D900D06B39 /* adjlon.c in Sources */,
 				CF8B6CB31E58B42000D06B39 /* GPKGTileTable.m in Sources */,
-				CF8B6AF01E58B3D900D06B39 /* PJ_laea.c in Sources */,
-				CF8B6B351E58B3D900D06B39 /* pj_zpoly1.c in Sources */,
 				CF8B6C5B1E58B42000D06B39 /* GPKGFeatureOverlay.m in Sources */,
-				CF8B6AE41E58B3D900D06B39 /* PJ_goode.c in Sources */,
-				CF8B6AFA1E58B3D900D06B39 /* pj_malloc.c in Sources */,
-				CF8B6ADC1E58B3D900D06B39 /* pj_fwd.c in Sources */,
 				CF8B6C4F1E58B42000D06B39 /* GPKGDateTimeUtils.m in Sources */,
 				CF8B6D041E58B45B00D06B39 /* WKBMultiLineString.m in Sources */,
-				CF8B6B311E58B3D900D06B39 /* PJ_wag3.c in Sources */,
 				CF8B6C831E58B42000D06B39 /* GPKGMetadata.m in Sources */,
 				CF8B6C9F1E58B42000D06B39 /* GPKGSqliteConnection.m in Sources */,
 				CF8B6C901E58B42000D06B39 /* GPKGOverlayFactory.m in Sources */,
-				CF8B6AE21E58B3D900D06B39 /* PJ_gn_sinu.c in Sources */,
 				CF8B6C4E1E58B42000D06B39 /* GPKGDataTypes.m in Sources */,
-				CF8B6AF31E58B3D900D06B39 /* PJ_lask.c in Sources */,
-				CF8B6B271E58B3D900D06B39 /* pj_transform.c in Sources */,
-				CF8B6B061E58B3D900D06B39 /* PJ_nell.c in Sources */,
 				CF8B6CB71E58B42000D06B39 /* GPKGUserDao.m in Sources */,
-				CF8B6AE51E58B3D900D06B39 /* pj_gridinfo.c in Sources */,
-				CF8B6B221E58B3D900D06B39 /* PJ_sts.c in Sources */,
 				CF8B6C841E58B42000D06B39 /* GPKGMetadataDao.m in Sources */,
 				CF8B6C861E58B42000D06B39 /* GPKGMetadataReference.m in Sources */,
-				CF8B6AE71E58B3D900D06B39 /* PJ_gstmerc.c in Sources */,
 				CF8B6C531E58B42000D06B39 /* GPKGFeatureColumn.m in Sources */,
-				CF8B6AE91E58B3D900D06B39 /* PJ_hatano.c in Sources */,
-				CF8B6B031E58B3D900D06B39 /* pj_msfn.c in Sources */,
 				CF8B6C881E58B42000D06B39 /* GPKGMetadataScope.m in Sources */,
-				CF8B6AB21E58B3D900D06B39 /* Makefile in Sources */,
 				CFF2F2C21E5D8E080064FC02 /* utils.cpp in Sources */,
 				CF8B6CAF1E58B42000D06B39 /* GPKGTileMatrixDao.m in Sources */,
 				CF8B6C581E58B42000D06B39 /* GPKGFeatureIndexMetadataResults.m in Sources */,
 				CF8B6C721E58B42000D06B39 /* GPKGGeoPackageConstants.m in Sources */,
-				CF8B6AF41E58B3D900D06B39 /* pj_latlong.c in Sources */,
 				CF8B6C811E58B42000D06B39 /* GPKGMapShapePoints.m in Sources */,
-				CF8B6AB71E58B3D900D06B39 /* nad2bin.c in Sources */,
-				CF8B6AD71E58B3D900D06B39 /* PJ_eqdc.c in Sources */,
-				CF8B6B001E58B3D900D06B39 /* pj_mlfn.c in Sources */,
 				CF8B6CFD1E58B45B00D06B39 /* WKBGeometryEnvelopeBuilder.m in Sources */,
-				CF8B6AB91E58B3D900D06B39 /* p_series.c in Sources */,
 				CF8B6CAB1E58B42000D06B39 /* GPKGTileDaoUtils.m in Sources */,
-				CF8B6AC71E58B3D900D06B39 /* PJ_cea.c in Sources */,
-				CF8B6AD21E58B3D900D06B39 /* PJ_eck4.c in Sources */,
 				CF8B6C9C1E58B42000D06B39 /* GPKGSLocationCoordinate3D.m in Sources */,
-				CF8B6AA51E58B3D900D06B39 /* bchgen.c in Sources */,
-				CF8B6B1D1E58B3D900D06B39 /* PJ_sconics.c in Sources */,
 				CF8B6C5F1E58B42000D06B39 /* GPKGFeatureTableIndex.m in Sources */,
 				CF8B6CB51E58B42000D06B39 /* GPKGUrlTileGenerator.m in Sources */,
-				CF8B6AB81E58B3D900D06B39 /* nad2nad.c in Sources */,
-				CF8B6AFF1E58B3D900D06B39 /* PJ_mill.c in Sources */,
 				CF8B6CA81E58B42000D06B39 /* GPKGTileBoundingBoxUtils.m in Sources */,
 				CF8B6C6A1E58B42000D06B39 /* GPKGGeometryExtensions.m in Sources */,
-				CF8B6B2C1E58B3D900D06B39 /* pj_utils.c in Sources */,
-				CF8B6B1E1E58B3D900D06B39 /* PJ_somerc.c in Sources */,
-				CF8B6AD91E58B3D900D06B39 /* pj_factors.c in Sources */,
 				CF8B6CA11E58B42000D06B39 /* GPKGSqlUtils.m in Sources */,
-				CF8B6ADA1E58B3D900D06B39 /* PJ_fahey.c in Sources */,
 				CF8B6CB41E58B42000D06B39 /* GPKGTileTableReader.m in Sources */,
-				CF8B6B391E58B3D900D06B39 /* rtodms.c in Sources */,
 				CF8B6C701E58B42000D06B39 /* GPKGGeoPackage.m in Sources */,
 				CF8B6C511E58B42000D06B39 /* GPKGExtensions.m in Sources */,
 				CF8B6CA71E58B42000D06B39 /* GPKGTableMetadataDao.m in Sources */,
 				CF8B6C621E58B42000D06B39 /* GPKGFeatureTileLink.m in Sources */,
 				CF8B6C851E58B42000D06B39 /* GPKGMetadataDb.m in Sources */,
 				CF8B6C561E58B42000D06B39 /* GPKGFeatureIndexGeoPackageResults.m in Sources */,
-				CF8B6B3A1E58B3D900D06B39 /* vector1.c in Sources */,
 				CF8B6C521E58B42000D06B39 /* GPKGExtensionsDao.m in Sources */,
 				CF8B6C411E58B42000D06B39 /* GPKGBoundingBox.m in Sources */,
 				CF8B6CA01E58B42000D06B39 /* GPKGSqlLiteQueryBuilder.m in Sources */,
@@ -1848,39 +1308,21 @@
 				CF8B6C671E58B42000D06B39 /* GPKGGeometryColumns.m in Sources */,
 				CF8B6C971E58B42000D06B39 /* GPKGProjectionRetriever.m in Sources */,
 				CF8B6C991E58B42000D06B39 /* GPKGProperties.m in Sources */,
-				CF8B6ABA1E58B3D900D06B39 /* PJ_aea.c in Sources */,
-				CF8B6AAA1E58B3D900D06B39 /* gen_cheb.c in Sources */,
-				CF8B6B2B1E58B3D900D06B39 /* PJ_urmfps.c in Sources */,
-				CF8B6B151E58B3D900D06B39 /* PJ_putp3.c in Sources */,
-				CF8B6AEB1E58B3D900D06B39 /* pj_init.c in Sources */,
 				CF8B6C7B1E58B42000D06B39 /* GPKGImageConverter.m in Sources */,
-				CF8B6ACD1E58B3D900D06B39 /* PJ_denoy.c in Sources */,
 				CF8B6C981E58B42000D06B39 /* GPKGProjectionTransform.m in Sources */,
-				CF8B6ABC1E58B3D900D06B39 /* PJ_airy.c in Sources */,
-				CF8B6B041E58B3D900D06B39 /* pj_mutex.c in Sources */,
 				CF8B6CF51E58B45B00D06B39 /* WKBByteWriter.m in Sources */,
-				CF8B6B121E58B3D900D06B39 /* PJ_poly.c in Sources */,
 				CF8B6C401E58B42000D06B39 /* GPKGBoundedOverlay.m in Sources */,
 				CF8B6D0D1E58B45B00D06B39 /* WKBTriangle.m in Sources */,
 				CFF2F2C01E5D8E080064FC02 /* logger2.cpp in Sources */,
 				CF8B6C8E1E58B42000D06B39 /* GPKGNGAExtensions.m in Sources */,
 				CF8B6C6E1E58B42000D06B39 /* GPKGGeometryMetadataDao.m in Sources */,
 				CF8B6D141E5968CC00D06B39 /* GeoPackageColumn.m in Sources */,
-				CF8B6B0A1E58B3D900D06B39 /* PJ_ob_tran.c in Sources */,
-				CF8B6B0C1E58B3D900D06B39 /* PJ_oea.c in Sources */,
-				CF8B6ACC1E58B3D900D06B39 /* pj_datums.c in Sources */,
 				CF8B6C871E58B42000D06B39 /* GPKGMetadataReferenceDao.m in Sources */,
-				CF8B6AEA1E58B3D900D06B39 /* PJ_imw_p.c in Sources */,
 				CFF2F2BF1E5D8E080064FC02 /* logger.cpp in Sources */,
-				CF8B6B241E58B3D900D06B39 /* PJ_tcea.c in Sources */,
-				CF8B6AD31E58B3D900D06B39 /* PJ_eck5.c in Sources */,
 				CF8B6CFE1E58B45B00D06B39 /* WKBGeometryPrinter.m in Sources */,
-				CF8B6AA81E58B3D900D06B39 /* dmstor.c in Sources */,
-				CF8B6B1B1E58B3D900D06B39 /* PJ_robin.c in Sources */,
 				CF8B6C571E58B42000D06B39 /* GPKGFeatureIndexManager.m in Sources */,
 				CFF2F2CC1E5D92660064FC02 /* GeoPackageRaster.mm in Sources */,
 				CF8B6C6C1E58B42000D06B39 /* GPKGGeometryIndexDao.m in Sources */,
-				CF8B6AAC1E58B3D900D06B39 /* geod_for.c in Sources */,
 				CF8B6CBC1E58B42000D06B39 /* GPKGUtils.m in Sources */,
 				CFF2F2BB1E5D8E080064FC02 /* gdal_to_tiles.cpp in Sources */,
 				CF8B6C7F1E58B42000D06B39 /* GPKGMapShape.m in Sources */,
@@ -1888,143 +1330,77 @@
 				CF8B6C3F1E58B42000D06B39 /* GPKGBaseDao.m in Sources */,
 				CF8B6C8D1E58B42000D06B39 /* GPKGMultiPolylinePoints.m in Sources */,
 				CF8B6C5E1E58B42000D06B39 /* GPKGFeatureTable.m in Sources */,
-				CF8B6ABE1E58B3D900D06B39 /* pj_apply_gridshift.c in Sources */,
 				CF8B6CBA1E58B42000D06B39 /* GPKGUserTableReader.m in Sources */,
 				CF8B6C691E58B42000D06B39 /* GPKGGeometryData.m in Sources */,
-				CF8B6AD41E58B3D900D06B39 /* pj_ell_set.c in Sources */,
 				CF8B6C781E58B42000D06B39 /* GPKGGeoPackageOverlay.m in Sources */,
 				CF8B6CAE1E58B42000D06B39 /* GPKGTileMatrix.m in Sources */,
-				CF8B6AAF1E58B3D900D06B39 /* geod.c in Sources */,
 				CF8B6C821E58B42000D06B39 /* GPKGMapShapeTypes.m in Sources */,
 				CF8B6C931E58B42000D06B39 /* GPKGPolylinePoints.m in Sources */,
 				CF8B6CB81E58B42000D06B39 /* GPKGUserRow.m in Sources */,
-				CF8B6ABD1E58B3D900D06B39 /* PJ_aitoff.c in Sources */,
-				CF8B6AB01E58B3D900D06B39 /* jniproj.c in Sources */,
 				CF8B6CF71E58B45B00D06B39 /* WKBCompoundCurve.m in Sources */,
-				CF8B6AC91E58B3D900D06B39 /* PJ_collg.c in Sources */,
-				CF8B6AD11E58B3D900D06B39 /* PJ_eck3.c in Sources */,
-				CF8B6AAE1E58B3D900D06B39 /* geod_set.c in Sources */,
-				CF8B6AB31E58B3D900D06B39 /* mk_cheby.c in Sources */,
 				CF8B6C631E58B42000D06B39 /* GPKGFeatureTileLinkDao.m in Sources */,
 				CF8B6C441E58B42000D06B39 /* GPKGCompressFormats.m in Sources */,
 				CF8B6C601E58B42000D06B39 /* GPKGFeatureTableReader.m in Sources */,
-				CF8B6AA21E58B3D900D06B39 /* aasincos.c in Sources */,
-				CF8B6B261E58B3D900D06B39 /* PJ_tpeqd.c in Sources */,
 				CF8B6C471E58B42000D06B39 /* GPKGContents.m in Sources */,
 				CF8B6C791E58B42000D06B39 /* GPKGGeoPackageTableCreator.m in Sources */,
 				CF8B6CF91E58B45B00D06B39 /* WKBCurvePolygon.m in Sources */,
-				CF8B6ABF1E58B3D900D06B39 /* PJ_august.c in Sources */,
-				CF8B6AA41E58B3D900D06B39 /* bch2bps.c in Sources */,
-				CF8B6B2A1E58B3D900D06B39 /* PJ_urm5.c in Sources */,
 				CF8B6CB61E58B42000D06B39 /* GPKGUserColumn.m in Sources */,
 				CF8B6CFC1E58B45B00D06B39 /* WKBGeometryEnvelope.m in Sources */,
-				CF8B6B1C1E58B3D900D06B39 /* PJ_rpoly.c in Sources */,
 				CF8B6D031E58B45B00D06B39 /* WKBMultiCurve.m in Sources */,
-				CF8B6AF71E58B3D900D06B39 /* pj_list.c in Sources */,
-				CF8B6AF61E58B3D900D06B39 /* PJ_lcca.c in Sources */,
-				CF8B6B211E58B3D900D06B39 /* pj_strerrno.c in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNGeoPackageLibrary.m in Sources */,
 				CF8B6D111E58C71400D06B39 /* GeoPackageSingleton.m in Sources */,
 				CF8B6C761E58B42000D06B39 /* GPKGGeoPackageMetadataDao.m in Sources */,
 				CF8B6C7D1E58B42000D06B39 /* GPKGMapPoint.m in Sources */,
-				CF8B6B251E58B3D900D06B39 /* PJ_tmerc.c in Sources */,
 				CF8B6C7E1E58B42000D06B39 /* GPKGMapPointOptions.m in Sources */,
-				CF8B6AED1E58B3D900D06B39 /* pj_inv.c in Sources */,
 				CF8B6C4D1E58B42000D06B39 /* GPKGDataColumnsDao.m in Sources */,
-				CF8B6B191E58B3D900D06B39 /* pj_qsfn.c in Sources */,
-				CF8B6AC11E58B3D900D06B39 /* PJ_bacon.c in Sources */,
 				CF8B6CAA1E58B42000D06B39 /* GPKGTileDao.m in Sources */,
 				CF8B6C921E58B42000D06B39 /* GPKGPolygonPoints.m in Sources */,
 				CF8B6C911E58B42000D06B39 /* GPKGPolygonHolePoints.m in Sources */,
-				CF8B6AA91E58B3D900D06B39 /* emess.c in Sources */,
-				CF8B6AD81E58B3D900D06B39 /* pj_errno.c in Sources */,
-				CF8B6B361E58B3D900D06B39 /* proj_mdist.c in Sources */,
 				CF8B6C461E58B42000D06B39 /* GPKGConnectionPool.m in Sources */,
 				CF8B6CF41E58B45B00D06B39 /* WKBByteReader.m in Sources */,
 				CFF2F2BD1E5D8E080064FC02 /* GeoPackageRasterReader.cpp in Sources */,
-				CF8B6AC01E58B3D900D06B39 /* pj_auth.c in Sources */,
 				CF8B6C5A1E58B42000D06B39 /* GPKGFeatureIndexTypes.m in Sources */,
-				CF8B6ACE1E58B3D900D06B39 /* pj_deriv.c in Sources */,
 				CF8B6D0C1E58B45B00D06B39 /* WKBTIN.m in Sources */,
 				CF8B6C7A1E58B42000D06B39 /* GPKGGeoPackageValidate.m in Sources */,
-				CF8B6AE81E58B3D900D06B39 /* PJ_hammer.c in Sources */,
 				CF8B6C6B1E58B42000D06B39 /* GPKGGeometryIndex.m in Sources */,
 				CF8B6D091E58B45B00D06B39 /* WKBPolygon.m in Sources */,
-				CF8B6B161E58B3D900D06B39 /* PJ_putp4p.c in Sources */,
-				CF8B6B0E1E58B3D900D06B39 /* pj_open_lib.c in Sources */,
 				CF8B6C951E58B42000D06B39 /* GPKGProjectionConstants.m in Sources */,
-				CF8B6B371E58B3D900D06B39 /* proj_rouss.c in Sources */,
 				CFF2F2BE1E5D8E080064FC02 /* global_mercator.cpp in Sources */,
-				CF8B6B0D1E58B3D900D06B39 /* PJ_omerc.c in Sources */,
-				CF8B6B091E58B3D900D06B39 /* PJ_nzmg.c in Sources */,
-				CF8B6ADE1E58B3D900D06B39 /* pj_gauss.c in Sources */,
 				CF8B6D061E58B45B00D06B39 /* WKBMultiPolygon.m in Sources */,
-				CF8B6AB61E58B3D900D06B39 /* nad_intr.c in Sources */,
 				CF8B6C711E58B42000D06B39 /* GPKGGeoPackageCache.m in Sources */,
 				CF8B6C8A1E58B42000D06B39 /* GPKGMultiPolygon.m in Sources */,
 				CFF2F2BC1E5D8E080064FC02 /* gdalwarp_bin.cpp in Sources */,
-				CF8B6AA61E58B3D900D06B39 /* biveval.c in Sources */,
 				CF8B6CA51E58B42000D06B39 /* GPKGTableIndexDao.m in Sources */,
-				CF8B6B051E58B3D900D06B39 /* PJ_nell_h.c in Sources */,
 				CF8B6C741E58B42000D06B39 /* GPKGGeoPackageManager.m in Sources */,
-				CF8B6AC61E58B3D900D06B39 /* PJ_cc.c in Sources */,
 				CF8B6C4A1E58B42000D06B39 /* GPKGDataColumnConstraints.m in Sources */,
 				CF8B6C681E58B42000D06B39 /* GPKGGeometryColumnsDao.m in Sources */,
-				CF8B6B2F1E58B3D900D06B39 /* PJ_vandg4.c in Sources */,
-				CF8B6AF11E58B3D900D06B39 /* PJ_lagrng.c in Sources */,
 				CF8B6C551E58B42000D06B39 /* GPKGFeatureIndexer.m in Sources */,
 				CF8B6CA31E58B42000D06B39 /* GPKGTableCreator.m in Sources */,
 				CFF2F2C11E5D8E080064FC02 /* main.cpp in Sources */,
 				CF8B6D071E58B45B00D06B39 /* WKBMultiSurface.m in Sources */,
-				CF8B6AE31E58B3D900D06B39 /* PJ_gnom.c in Sources */,
 				CF8B6CB91E58B42000D06B39 /* GPKGUserTable.m in Sources */,
-				CF8B6ABB1E58B3D900D06B39 /* PJ_aeqd.c in Sources */,
-				CF8B6AAD1E58B3D900D06B39 /* geod_inv.c in Sources */,
 				CF8B6CF61E58B45B00D06B39 /* WKBCircularString.m in Sources */,
-				CF8B6AD51E58B3D900D06B39 /* pj_ellps.c in Sources */,
 				CF8B6C651E58B42000D06B39 /* GPKGFeatureTiles.m in Sources */,
 				CF8B6C591E58B42000D06B39 /* GPKGFeatureIndexResults.m in Sources */,
-				CF8B6AF51E58B3D900D06B39 /* PJ_lcc.c in Sources */,
 				CF8B6C541E58B42000D06B39 /* GPKGFeatureDao.m in Sources */,
 				CF8B6C7C1E58B42000D06B39 /* GPKGIOUtils.m in Sources */,
-				CF8B6B201E58B3D900D06B39 /* PJ_sterea.c in Sources */,
-				CF8B6AC81E58B3D900D06B39 /* PJ_chamb.c in Sources */,
-				CF8B6B011E58B3D900D06B39 /* PJ_mod_ster.c in Sources */,
-				CF8B6B1A1E58B3D900D06B39 /* pj_release.c in Sources */,
 				CF8B6C941E58B42000D06B39 /* GPKGProjection.m in Sources */,
-				CF8B6B301E58B3D900D06B39 /* PJ_wag2.c in Sources */,
-				CF8B6AFB1E58B3D900D06B39 /* PJ_mbt_fps.c in Sources */,
 				CF8B6C801E58B42000D06B39 /* GPKGMapShapeConverter.m in Sources */,
-				CF8B6B2E1E58B3D900D06B39 /* PJ_vandg2.c in Sources */,
 				CF8B6C641E58B42000D06B39 /* GPKGFeatureTilePointIcon.m in Sources */,
-				CF8B6AE01E58B3D900D06B39 /* PJ_geos.c in Sources */,
 				CF8B6C501E58B42000D06B39 /* GPKGDbConnection.m in Sources */,
 				CF8B6CFA1E58B45B00D06B39 /* WKBGeometry.m in Sources */,
 				CF8B6C731E58B42000D06B39 /* GPKGGeoPackageFactory.m in Sources */,
-				CF8B6AEF1E58B3D900D06B39 /* PJ_labrd.c in Sources */,
-				CF8B6B381E58B3D900D06B39 /* proj.c in Sources */,
 				CF8B6C611E58B42000D06B39 /* GPKGFeatureTileGenerator.m in Sources */,
 				CF8B6C6F1E58B42000D06B39 /* GPKGGeometryProjectionTransform.m in Sources */,
-				CF8B6AA71E58B3D900D06B39 /* cs2cs.c in Sources */,
-				CF8B6AC21E58B3D900D06B39 /* PJ_bipc.c in Sources */,
 				CF8B6CB21E58B42000D06B39 /* GPKGTileRow.m in Sources */,
-				CF8B6AD01E58B3D900D06B39 /* PJ_eck2.c in Sources */,
-				CF8B6ACA1E58B3D900D06B39 /* PJ_crast.c in Sources */,
 				CF8B6C5D1E58B42000D06B39 /* GPKGFeatureRow.m in Sources */,
-				CF8B6B101E58B3D900D06B39 /* pj_param.c in Sources */,
 				CF8B6C8F1E58B42000D06B39 /* GPKGNumberFeaturesTile.m in Sources */,
-				CF8B6ADF1E58B3D900D06B39 /* pj_geocent.c in Sources */,
 				CF8B6CB11E58B42000D06B39 /* GPKGTileMatrixSetDao.m in Sources */,
 				CFF2F2C81E5D91D80064FC02 /* P2JDatabase.m in Sources */,
 				CF8B6CAD1E58B42000D06B39 /* GPKGTileGrid.m in Sources */,
-				CF8B6B141E58B3D900D06B39 /* PJ_putp2.c in Sources */,
 				CF8B6C9E1E58B42000D06B39 /* GPKGSpatialReferenceSystemDao.m in Sources */,
-				CF8B6B321E58B3D900D06B39 /* PJ_wag7.c in Sources */,
 				CF8B6C9D1E58B42000D06B39 /* GPKGSpatialReferenceSystem.m in Sources */,
-				CF8B6AE11E58B3D900D06B39 /* PJ_gins8.c in Sources */,
 				CF8B6C9B1E58B42000D06B39 /* GPKGResultSet.m in Sources */,
-				CF8B6AAB1E58B3D900D06B39 /* geocent.c in Sources */,
-				CF8B6ACF1E58B3D900D06B39 /* PJ_eck1.c in Sources */,
 				CF8B6C6D1E58B42000D06B39 /* GPKGGeometryMetadata.m in Sources */,
 				CF8B6D021E58B45B00D06B39 /* WKBLineString.m in Sources */,
 			);
@@ -2069,6 +1445,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lstdc++.6.0.9",
+					"-lz",
+					"-liconv",
+					"-lsqlite3",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2102,6 +1485,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-lstdc++.6.0.9",
+					"-lz",
+					"-liconv",
+					"-lsqlite3",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2120,7 +1510,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3",
+					"-liconv",
+					"-lz",
+					"-lstdc++.6.0.9",
+				);
 				PRODUCT_NAME = RNGeoPackageLibrary;
 				SKIP_INSTALL = YES;
 			};
@@ -2139,7 +1535,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3",
+					"-liconv",
+					"-lz",
+					"-lstdc++.6.0.9",
+				);
 				PRODUCT_NAME = RNGeoPackageLibrary;
 				SKIP_INSTALL = YES;
 			};

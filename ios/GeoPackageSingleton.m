@@ -8,8 +8,13 @@
 
 #import "GeoPackageSingleton.h"
 
+//#import "RCTBridge.h"
+// #import "RCTEventDispatcher.h"
+
+
 static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 @implementation GeoPackageSingleton
+//@synthesize bridge = _bridge;
 
 +(GeoPackageSingleton*)getSharedInstanceValue{
     if (!sharedsingletonGeoPackageValue) {
@@ -327,31 +332,31 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             i++;
             // Side menu Cancel button pressed means
             // Need to work later for cancel
-//            if (self.isGeoPkgCancelled)
-//            {
-//                [self checkForUnSuccessfullImports];
-//                break;
-//            }
+            //            if (self.isGeoPkgCancelled)
+            //            {
+            //                [self checkForUnSuccessfullImports];
+            //                break;
+            //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-            [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }
     else{
         NSMutableArray *geoNotes = [import importFeaturesforNonFormNotesFeatureClass:featureClass];
-         for(int k=0; k<[geoNotes count];k++){
-             NSMutableDictionary *note = [geoNotes objectAtIndex:k];
+        for(int k=0; k<[geoNotes count];k++){
+            NSMutableDictionary *note = [geoNotes objectAtIndex:k];
             // Side menu Cancel button pressed means
-//            if (self.isGeoPkgCancelled)
-//            {
-//                [self checkForUnSuccessfullImports];
-//                break;
-//            }
-             [note setObject:[self importGuid] forKey:@"importGuid"];
+            //            if (self.isGeoPkgCancelled)
+            //            {
+            //                [self checkForUnSuccessfullImports];
+            //                break;
+            //            }
+            [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
-             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-             [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }
 }
@@ -363,29 +368,29 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         NSMutableArray *geoNotes = [import importFeaturesforFeatureTemplate:frmtemp forFeatureClass:featureClass withAttribute:attributename];
         for (NSMutableDictionary *note in geoNotes) {
             // Side menu Cancel button pressed means
-//            if (self.isGeoPkgCancelled)
-//            {
-//                [self checkForUnSuccessfullImports];
-//                break;
-//            }
+            //            if (self.isGeoPkgCancelled)
+            //            {
+            //                [self checkForUnSuccessfullImports];
+            //                break;
+            //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-            [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }else{
         NSMutableArray *geoNotes = [import importFeaturesforNonFormNotesFeatureClass:featureClass];
         for (NSMutableDictionary *note in geoNotes) {
             // Side menu Cancel button pressed means
-//            if (self.isGeoPkgCancelled)
-//            {
-//                [self checkForUnSuccessfullImports];
-//                break;
-//            }
+            //            if (self.isGeoPkgCancelled)
+            //            {
+            //                [self checkForUnSuccessfullImports];
+            //                break;
+            //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
-            [self.event.eventDispatcher sendAppEventWithName:@"noteImported" body:dict];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }
 }
@@ -399,7 +404,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     if(frmPath.length > 0)
     {
         NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
-        [self.event.eventDispatcher sendAppEventWithName:@"rasterImported" body:dict];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"rasterImported" object:self userInfo:dict];
     }
 }
 
@@ -455,5 +460,6 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     //
     return stringUUID;
 }
+
 
 @end
