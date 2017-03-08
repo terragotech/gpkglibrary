@@ -40,11 +40,11 @@ var GeoPackage = {
     return _initImport(path, callback)
       .catch(_error)
   },
-  _gpkgFileDetails(path, callback){
+  gpkgFileDetails(path, callback){
     return _gpkgFileDetails(path, callback)
       .catch(_error)
   },
-  _importGeoPackage(gpkgargument, callback){
+  importGeoPackage(gpkgargument, callback){
   	 return _importGeoPackage(gpkgargument, callback)
       .catch(_error)
   },

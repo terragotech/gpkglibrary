@@ -64,7 +64,7 @@ RCT_EXPORT_METHOD(getgpkgFileDetails:(NSString *)path resolver:(RCTPromiseResolv
     resolve(dict);
 }
 
-RCT_EXPORT_METHOD(importGeoPackage:(NSMutableDictionary *)gpkgArguments  resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(importGeoPackage:(NSDictionary *)gpkgArguments  resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [[GeoPackageSingleton getSharedInstanceValue]importGeoPackage:gpkgArguments];
     resolve(@"");
 }
