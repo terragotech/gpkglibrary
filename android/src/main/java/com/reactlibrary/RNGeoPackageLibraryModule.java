@@ -137,7 +137,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
    * @param promise
      */
   @ReactMethod
-  public void gpkgFileDetails(String filePath,Promise promise){
+  public void getgpkgFileDetails(String filePath,Promise promise){
     WritableMap writableMap = Arguments.createMap();
     try{
       File file = new File(filePath);
