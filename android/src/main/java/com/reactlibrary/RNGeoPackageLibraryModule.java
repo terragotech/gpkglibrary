@@ -170,7 +170,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
    * @param geoPackageContent
      */
   @ReactMethod
-  public void importGeoPackage(final ReadableMap geoPackageContent){
+  public void importGeoPackage(final ReadableMap geoPackageContent,Promise promise){
     gpkgImportService.openFile(filePath);
     ReadableArray featureClasses = geoPackageContent.getArray("featureClasses");
     int featureClassCount = gpkgImportService.getLayerCount();
@@ -202,18 +202,19 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
           gpkgImportService.getNextRow();
           String geometry = gpkgImportService.getCurrentFeatureGeom();
           if (noteTypeColumnIndex == -1) {//create form note
-            gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
+            gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass);
           } else {//create form note
             String noteType = gpkgImportService.getNoteType(noteTypeColumnIndex);
             if (noteType.equals(NotesType.forms.name()) || noteType.equals(NotesType.multiupload.name())) {
-              gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
+              gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass);
             } else {//create non form notes
-              gpkgImportService.createNonformNote(tableName, geometry, geoPackageContent, currentRow, featureClass, noteType);
+              gpkgImportService.createNonformNote( geometry, featureClass, noteType);
             }
           }
       }
     }
     gpkgImportService.closeGeoPkg();
     importGuid = "";
+    promise.resolve("success");
   }
 }

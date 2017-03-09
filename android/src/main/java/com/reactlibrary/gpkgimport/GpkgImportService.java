@@ -486,7 +486,7 @@ public class GpkgImportService {
         gr.closeGeoPackage();
     }
 
-    public void createNonformNote(String tableName, String geometry, ReadableMap geoPackageContent, int currentRow, ReadableMap featureClass, String noteType){
+    public void createNonformNote(String geometry, ReadableMap featureClass, String noteType){
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
             String resourceName = "";
@@ -553,6 +553,7 @@ public class GpkgImportService {
                     writableMap.putString("formTemplateGuid",featureClass.getString("guid"));
                     writableMap.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
                     Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap);
+
                 }
             }
         }
@@ -626,7 +627,7 @@ public class GpkgImportService {
         return title;
     }
 
-    public void getCurrentFeatureFields(String tableName, String geometry, ReadableMap geoPackageContent, int currentRow, ReadableMap featureClass){
+    public void getCurrentFeatureFields(String tableName, String geometry,ReadableMap featureClass){
         WritableMap edgeNote = Arguments.createMap();
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
