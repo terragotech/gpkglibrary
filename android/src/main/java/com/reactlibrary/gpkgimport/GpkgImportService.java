@@ -549,15 +549,18 @@ public class GpkgImportService {
                         }
 
                     }//end for
-                    createGeopackageNote(geometry, geoPackageContent, currentRow,featureClass, featureRows, tableName, noteType,resourceName);//save geopackage note
+                    WritableMap writableMap = createGeopackageNote(geometry, featureClass, featureRows, noteType,resourceName);//save geopackage note
+                    writableMap.putString("formTemplateGuid",featureClass.getString("guid"));
+                    writableMap.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
+                    Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap);
                 }
             }
         }
     }
-    private WritableMap createGeopackageNote(String geometry,ReadableMap geoPackageContent,int currentRow,ReadableMap featureClass,HashMap<String,String> featureRows,String tableName,String noteType,String resourceName){
+    private WritableMap createGeopackageNote(String geometry,ReadableMap featureClass,HashMap<String,String> featureRows,String noteType,String resourceName){
         WritableMap edgeNote = Arguments.createMap();
         edgeNote.putString("geometry",getGeometryDistance(geometry));
-        edgeNote.putString("title",getNoteTitle(geoPackageContent, tableName, currentRow, featureClass, featureRows));
+        edgeNote.putString("title",getNoteTitle(featureClass, featureRows));
         edgeNote.putString("noteType",noteType);
         edgeNote.putString("formGuid",Utils.randomUUID());
         //get resource file from geofiles foler
@@ -571,7 +574,6 @@ public class GpkgImportService {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            //TODO: need to send note to RN
         }
         return edgeNote;
     }
@@ -608,27 +610,18 @@ public class GpkgImportService {
     private long getFID(){
         return featureRow.getId();
     }
-    private String getNoteTitle(ReadableMap geoPackageContent,String tableName,int currentRow,ReadableMap featureClass,HashMap<String,String> featureRows){
+    private String getNoteTitle(ReadableMap featureClass,HashMap<String,String> featureRows){
         String title = "";
-        String geoPackageNoteType = geoPackageContent.getString("noteType");
-        switch (geoPackageNoteType){
-            case "Custom name":
-                title = geoPackageContent.getString("noteName")+" "+currentRow;
-                break;
-            case "Feature ID":
-                title = String.valueOf(getFID());
-                break;
-            case "Default from file name":
-                title = tableName+" "+currentRow;
-                break;
-            case "Select from file":
-                for(String key : featureRows.keySet()){
-                    if(key.equals(featureClass.getString("selectedAtribute"))){
-                        title = featureRows.get(key);
-                    }
+        String attributeName = featureClass.getString("attributeName");
+        String defaultName = featureClass.getString("defaultName");
+        if(defaultName != null){
+            title = defaultName;
+        }else if(attributeName != null){
+            for(String key : featureRows.keySet()){
+                if(key.equals(featureClass.getString("attributeName"))){
+                    title = featureRows.get(key);
                 }
-                break;
-
+            }
         }
         return title;
     }
@@ -727,11 +720,13 @@ public class GpkgImportService {
                         }
                     }//end for
                     WritableMap edgeFormTemplate = createEdgeFormTemplate(tableName,formTemplates);
-                    edgeNote = createGeopackageNote(geometry, geoPackageContent, currentRow, featureClass, featureRows, tableName, NotesType.forms.name(),"");//save geopackage note
+                    edgeNote = createGeopackageNote(geometry, featureClass, featureRows, NotesType.forms.name(),"");//save geopackage note
                     WritableMap form = createGeoPackageForm(formValues);//save geopackage form
                     edgeNote.putMap("edgeformTemplate",edgeFormTemplate);
                     edgeNote.putMap("form",form);
-                    //TODO: Need to send edgenote object to insert in db
+                    edgeNote.putString("formTemplateGuid",featureClass.getString("guid"));
+                    edgeNote.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
+                    Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,edgeNote);
                 }
             }
         }

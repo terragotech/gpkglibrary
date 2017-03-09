@@ -40,6 +40,8 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   private FeatureTable currentFeatureTable;
   private GpkgImportService gpkgImportService = null;
   private GpkgExportService gpkgExportService = null;
+  private String filePath = "";
+  public static String importGuid = "";
 
   public RNGeoPackageLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -139,6 +141,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getgpkgFileDetails(String filePath,Promise promise){
     WritableMap writableMap = Arguments.createMap();
+    this.filePath = filePath;
     try{
       File file = new File(filePath);
       String fileName = file.getName();
@@ -151,6 +154,8 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
           writableMap = gpkgImportService.parseGeopackageFile(filePath);
         }
         writableMap.putArray("geopackageNames",geoPackageNames);
+        importGuid = Utils.randomUUID();
+        writableMap.putString("importGuid",importGuid);
       }else if(extension.equals("gpkg")){//if file is gpkg
         writableMap = gpkgImportService.parseGeopackageFile(filePath);
       }
@@ -163,14 +168,19 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   /**
    * process geopackage and convert geopackage data to edge data
    * @param geoPackageContent
-   * @param filePath
      */
   @ReactMethod
-  public void processGeopackage(final ReadableMap geoPackageContent,final String filePath){
+  public void importGeoPackage(final ReadableMap geoPackageContent){
     gpkgImportService.openFile(filePath);
     ReadableArray featureClasses = geoPackageContent.getArray("featureClasses");
     int featureClassCount = gpkgImportService.getLayerCount();
-    if(geoPackageContent.getBoolean("isRaster")){
+    List<String> totalLayers = new ArrayList<>();
+    int size = featureClasses.size();
+    for (int i = 0; i < featureClassCount; i++) {
+      String tableName = gpkgImportService.selectLayerByIndex(i);
+      totalLayers.add(tableName);
+    }
+    /*if(geoPackageContent.getBoolean("isRaster")){
       Thread thread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -178,35 +188,32 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         }
       });
       thread.start();
-    }
-    ReadableMap notesObject = geoPackageContent.getMap("notes");
-    if(notesObject != null && notesObject.getBoolean("state")) {
-      for (int i = 0; i < featureClassCount; i++) {
-        int currentRow = 0;
-        ReadableMap featureClass = featureClasses.getMap(i);
-        if (featureClass.getBoolean("state")) {
-          String tableName = gpkgImportService.selectLayerByIndex(i);
-          int noteTypeColumnIndex = gpkgImportService.getNoteTypeColumnIndex();
-          gpkgImportService.getSelectedLayerDefinition();
-          while (gpkgImportService.hasNextFeatureInSelectedLayer()) {
-            currentRow++;
-            gpkgImportService.getNextRow();
-            String geometry = gpkgImportService.getCurrentFeatureGeom();
-            if (noteTypeColumnIndex == -1) {//create form note
+    }*/
+    for(int i=0;i<size;i++) {
+      ReadableMap featureClass = featureClasses.getMap(i);
+      String featureClassName = featureClass.getString("name");
+      int index = totalLayers.indexOf(featureClassName);
+      int currentRow = 0;
+      String tableName = gpkgImportService.selectLayerByIndex(index);
+        int noteTypeColumnIndex = gpkgImportService.getNoteTypeColumnIndex();
+        gpkgImportService.getSelectedLayerDefinition();
+        while (gpkgImportService.hasNextFeatureInSelectedLayer()) {
+          currentRow++;
+          gpkgImportService.getNextRow();
+          String geometry = gpkgImportService.getCurrentFeatureGeom();
+          if (noteTypeColumnIndex == -1) {//create form note
+            gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
+          } else {//create form note
+            String noteType = gpkgImportService.getNoteType(noteTypeColumnIndex);
+            if (noteType.equals(NotesType.forms.name()) || noteType.equals(NotesType.multiupload.name())) {
               gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
-            } else {//create form note
-              String noteType = gpkgImportService.getNoteType(noteTypeColumnIndex);
-              if (noteType.equals(NotesType.forms.name()) || noteType.equals(NotesType.multiupload.name())) {
-                gpkgImportService.getCurrentFeatureFields(tableName, geometry, geoPackageContent, currentRow, featureClass);
-              } else {//create non form notes
-                gpkgImportService.createNonformNote(tableName, geometry, geoPackageContent, currentRow, featureClass, noteType);
-              }
+            } else {//create non form notes
+              gpkgImportService.createNonformNote(tableName, geometry, geoPackageContent, currentRow, featureClass, noteType);
             }
           }
-        }
-
       }
     }
     gpkgImportService.closeGeoPkg();
+    importGuid = "";
   }
 }
