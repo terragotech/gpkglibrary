@@ -387,6 +387,7 @@ public class GpkgImportService {
         com.reactlibrary.UniqueFileNameFilter filenameFilter = new com.reactlibrary.UniqueFileNameFilter(fileName+"_");
         final String convertedPath = context.getFilesDir()+File.separator+"rasterOutput";
         final File file = new File(convertedPath);
+        file.mkdirs();
         File[] files = file.listFiles(filenameFilter);
         int size = files.length;
         final String mapName = fileName+"_"+size;
