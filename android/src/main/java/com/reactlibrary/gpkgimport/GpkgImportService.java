@@ -552,7 +552,9 @@ public class GpkgImportService {
                     WritableMap writableMap = createGeopackageNote(geometry, featureClass, featureRows, noteType,resourceName);//save geopackage note
                     writableMap.putString("formTemplateGuid",featureClass.getString("guid"));
                     writableMap.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
-                    Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap);
+                    WritableMap noteMap = Arguments.createMap();
+                    noteMap.putMap("note",writableMap);
+                    Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,noteMap);
 
                 }
             }
@@ -727,7 +729,9 @@ public class GpkgImportService {
                     edgeNote.putMap("form",form);
                     edgeNote.putString("formTemplateGuid",featureClass.getString("guid"));
                     edgeNote.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
-                    Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,edgeNote);
+                    WritableMap noteMap = Arguments.createMap();
+                    noteMap.putMap("note",edgeNote);
+                    Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,noteMap);
                 }
             }
         }
