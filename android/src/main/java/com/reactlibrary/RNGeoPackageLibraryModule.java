@@ -188,7 +188,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         Thread thread = new Thread(new Runnable() {
           @Override
           public void run() {
-            gpkgImportService.convertRasterFile(readableArray.getString(0), filePath);
+            gpkgImportService.convertRasterFile(readableArray.getString(0), filePath,reactContext);
           }
         });
         thread.start();
