@@ -338,8 +338,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             //                break;
             //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
+            [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
-            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }
@@ -354,8 +354,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             //                break;
             //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
+            [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
-            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }
@@ -374,8 +374,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             //                break;
             //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
+            [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
-            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }else{
@@ -388,8 +388,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             //                break;
             //            }
             [note setObject:[self importGuid] forKey:@"importGuid"];
+            [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
-            [dict setObject:formTemplateGuid forKey:@"formTemplateGuid"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
     }
