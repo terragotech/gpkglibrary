@@ -1,21 +1,22 @@
 
-import { NativeModules } from 'react-native';
+//import { NativeModules } from 'react-native';
 var React = require('react-native')
 var { DeviceEventEmitter, NativeAppEventEmitter, Platform } = React
-const { RNGeoPackageLibrary } = NativeModules;
+//const { RNGeoPackageLibrary } = NativeModules;
+var RNGeoPackageLibraryNATIVE = React.NativeModules.RNGeoPackageLibrary
 
-var _libsample = RNGeoPackageLibrary.LibrarySampleCall;
-var _initGeoPackage = RNGeoPackageLibrary.initGeoPackageatPath;
-var _createFeatureClass = RNGeoPackageLibrary.createFeatureclass;
-var _insertFeatureRecord = RNGeoPackageLibrary.insertFeatureclassRecord;
-var _closeGeoPackage = RNGeoPackageLibrary.closeGeoPackage;
+var _libsample = RNGeoPackageLibraryNATIVE.LibrarySampleCall;
+var _initGeoPackage = RNGeoPackageLibraryNATIVE.initGeoPackageatPath;
+var _createFeatureClass = RNGeoPackageLibraryNATIVE.createFeatureclass;
+var _insertFeatureRecord = RNGeoPackageLibraryNATIVE.insertFeatureclassRecord;
+var _closeGeoPackage = RNGeoPackageLibraryNATIVE.closeGeoPackage;
 
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
-var _getgpkgFileDetails = RNGeoPackageLibrary.getgpkgFileDetails
-var _importGeoPackage = RNGeoPackageLibrary.importGeoPackage
+var _getgpkgFileDetails = RNGeoPackageLibraryNATIVE.getgpkgFileDetails
+var _importGeoPackage = RNGeoPackageLibraryNATIVE.importGeoPackage
 
-var GeoPackage = {
+var RNGeoPackageLibrary = {
   LibrarySampleCall(testString,callback) {
     return _libsample(testString,callback)
       .catch(_error)
@@ -42,15 +43,13 @@ var GeoPackage = {
   },
   getgpkgFileDetails(path){
     return _getgpkgFileDetails(path)
-      .catch(_error)
   },
   importGeoPackage(gpkgargument){
   	 return _importGeoPackage(gpkgargument)
-      .catch(_error)
   },
-  subscribeNoteImported(callback) {
+  subscribenoteImported(notecallback) {
     var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
-    return emitter.addListener("noteImported", callback);
+    return emitter.addListener("noteImported", notecallback);
   },
   subscribeRasterImported(callback) {
     var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
@@ -58,4 +57,4 @@ var GeoPackage = {
   }
 }
 
-export default RNGeoPackageLibrary;
+module.exports = RNGeoPackageLibrary

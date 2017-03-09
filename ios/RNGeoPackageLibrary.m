@@ -16,9 +16,6 @@
     return dispatch_get_main_queue();
 }
 -(id)init{
-    if (self) {
-        return self;
-    }
     self = [super init];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
