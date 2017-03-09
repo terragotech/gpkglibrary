@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#import <UIKit/UIKit.h>
 #import "P2JMetadata.h"
 
 @interface P2JDatabase : NSObject{

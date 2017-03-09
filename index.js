@@ -12,7 +12,7 @@ var _closeGeoPackage = RNGeoPackageLibrary.closeGeoPackage;
 
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
-var _gpkgFileDetails = RNGeoPackageLibrary.getgpkgFileDetails
+var _getgpkgFileDetails = RNGeoPackageLibrary.getgpkgFileDetails
 var _importGeoPackage = RNGeoPackageLibrary.importGeoPackage
 
 var GeoPackage = {
@@ -40,18 +40,21 @@ var GeoPackage = {
     return _initImport(path, callback)
       .catch(_error)
   },
-  gpkgFileDetails(path, callback){
-    return _gpkgFileDetails(path, callback)
+  getgpkgFileDetails(path){
+    return _getgpkgFileDetails(path)
       .catch(_error)
   },
-  importGeoPackage(gpkgargument, callback){
-  	 return _importGeoPackage(gpkgargument, callback)
+  importGeoPackage(gpkgargument){
+  	 return _importGeoPackage(gpkgargument)
       .catch(_error)
   },
-  subscribe(callback) {
+  subscribeNoteImported(callback) {
     var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
-    emitter.addListener("rasterImported", callback);
     return emitter.addListener("noteImported", callback);
+  },
+  subscribeRasterImported(callback) {
+    var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
+    return emitter.addListener("rasterImported", callback);
   }
 }
 
