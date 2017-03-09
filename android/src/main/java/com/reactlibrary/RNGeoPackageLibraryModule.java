@@ -151,9 +151,9 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), "output target path need to give", geoPackageNames);
         PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), "output target path need to give", geoPackageNames);
         if(geoPackageNames.size() > 0){
+          writableMap.putArray("geopackageNames",geoPackageNames);
           writableMap = gpkgImportService.parseGeopackageFile(filePath);
         }
-        writableMap.putArray("geopackageNames",geoPackageNames);
         importGuid = Utils.randomUUID();
         writableMap.putString("importGuid",importGuid);
       }else if(extension.equals("gpkg")){//if file is gpkg
@@ -180,6 +180,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       String tableName = gpkgImportService.selectLayerByIndex(i);
       totalLayers.add(tableName);
     }
+
     /*if(geoPackageContent.getBoolean("isRaster")){
       Thread thread = new Thread(new Runnable() {
         @Override
