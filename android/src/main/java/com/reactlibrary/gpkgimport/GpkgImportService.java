@@ -375,17 +375,18 @@ public class GpkgImportService {
         return null;
     }
 
-    public void convertRasterFile(final String selectedLayer, String filePath) {
+    public void convertRasterFile(final String selectedLayer, String filePath,Context context) {
 
         GeoPackageRasterReader gr = new GeoPackageRasterReader();
         String inputGeoPackageFile = filePath;
         String inputGeoPackageFile1 = inputGeoPackageFile;
-        String gdalDataPath = "";//TODO: gdal path for raster
-        String tmpPath = "";//TODO: raster file output folder path
+        String gdalDataPath = context.getFilesDir()+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
+        String tmpPath = context.getFilesDir()+File.separator+Utils.RASTER_MBTILE_PATH;
         gr.openGeoPackage(inputGeoPackageFile, gdalDataPath);
         String fileName = FileUtils.getResourceNameNoExt(filePath) + "_"+selectedLayer;
         com.reactlibrary.UniqueFileNameFilter filenameFilter = new com.reactlibrary.UniqueFileNameFilter(fileName+"_");
-        final File file = new File("");//TODO: need to give mbtile output path
+        final String convertedPath = context.getFilesDir()+File.separator+"rasterOutput";
+        final File file = new File(convertedPath);
         File[] files = file.listFiles(filenameFilter);
         int size = files.length;
         final String mapName = fileName+"_"+size;
@@ -430,13 +431,13 @@ public class GpkgImportService {
                                     ///////////////////////////////////////////////////////////////////////////////////////
                                     if(dstatus >= 100.0)
                                     {
-                                        WritableMap writableMap = Arguments.createMap();
-                                        WritableMap rasterMap = Arguments.createMap();
-                                        rasterMap.putString("rasterName",selectedLayer);
-                                        rasterMap.putString("convertedPath",file.getAbsolutePath());
-                                        writableMap.putMap("raster",rasterMap);
+                                        System.out.println("terrago successs raster file");
                                         // TODO: need to save map to db
-                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap);
+                                        WritableMap writableMap1 = Arguments.createMap();
+                                        writableMap1.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
+                                        writableMap1.putString("convertedPath", convertedPath);
+                                        writableMap1.putString("rasterName", selectedLayer);
+                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap1);
                                     }else{
                                         ///////////////////////////////////////////////////////////////////////////////////////
                                         //TODO: need to send progress
@@ -478,7 +479,7 @@ public class GpkgImportService {
         thread.start();
         System.out.println("Input file :" + inputGeoPackageFile1);
         try {
-            gr.convertGeoPackage(inputGeoPackageFile1,"map path"+File.separator+fileName+"_"+size+".mbtiles", selectedLayer, tmpPath );
+            gr.convertGeoPackage(inputGeoPackageFile1,convertedPath+File.separator+fileName+"_"+size+".mbtiles", selectedLayer, tmpPath );
         }catch (Exception e){
             e.printStackTrace();
         }

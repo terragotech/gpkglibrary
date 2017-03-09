@@ -23,4 +23,6 @@ public class Utils {
         reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                 .emit(eventName, params);
     }
+    public static final String RASTER_MBTILE_PATH = "rasters/mbtiles";
+    public static final String RASTER_SUPPORTED_FILE_PATH = "rasters/assets/";
 }

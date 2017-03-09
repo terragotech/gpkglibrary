@@ -181,15 +181,19 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       totalLayers.add(tableName);
     }
 
-    /*if(geoPackageContent.getBoolean("isRaster")){
-      Thread thread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          gpkgImportService.convertRasterFile(geoPackageContent.getString("selectedRasterLayer"), filePath);
-        }
-      });
-      thread.start();
-    }*/
+    if(geoPackageContent.hasKey("rasterTiles")){
+      final ReadableArray readableArray = geoPackageContent.getArray("rasterTiles");
+      int rasterSize = readableArray.size();
+      if(rasterSize > 0){
+        Thread thread = new Thread(new Runnable() {
+          @Override
+          public void run() {
+            gpkgImportService.convertRasterFile(readableArray.getString(0), filePath);
+          }
+        });
+        thread.start();
+      }
+    }
     for(int i=0;i<size;i++) {
       ReadableMap featureClass = featureClasses.getMap(i);
       String featureClassName = featureClass.getString("name");
