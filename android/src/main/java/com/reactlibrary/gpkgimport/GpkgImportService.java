@@ -612,8 +612,8 @@ public class GpkgImportService {
     }
     private String getNoteTitle(ReadableMap featureClass,HashMap<String,String> featureRows){
         String title = "";
-        String attributeName = featureClass.getString("attributeName");
-        String defaultName = featureClass.getString("defaultName");
+        String attributeName = featureClass.hasKey("attributeName") ? featureClass.getString("attributeName") : null;
+        String defaultName = featureClass.hasKey("defaultName") ? featureClass.getString("defaultName") : null;
         if(defaultName != null){
             title = defaultName;
         }else if(attributeName != null){
