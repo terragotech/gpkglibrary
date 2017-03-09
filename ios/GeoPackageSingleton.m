@@ -403,8 +403,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [raster setObject:[self importGuid] forKey:@"importGuid"];
     if(frmPath.length > 0)
     {
-        NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"rasterImported" object:self userInfo:dict];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"rasterImported" object:self userInfo:raster];
     }
 }
 
