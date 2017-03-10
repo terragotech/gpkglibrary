@@ -42,6 +42,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   private GpkgExportService gpkgExportService = null;
   private String filePath = "";
   public static String importGuid = "";
+  public static List<String> pdfGpkgs = new ArrayList<>();
 
   public RNGeoPackageLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -148,19 +149,22 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       String fileName = file.getName();
       String extension = FileUtils.getFileExt(fileName);
       if(extension.equals("pdf")){//if file is pdf
-        WritableArray geoPackageNames = Arguments.createArray();
-        PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), "output target path need to give", geoPackageNames);
-        PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), "output target path need to give", geoPackageNames);
-        if(geoPackageNames.size() > 0){
-          WritableMap geopackage = gpkgImportService.parseGeopackageFile(filePath);
+        List<String> geoPackageNames = new ArrayList<>();
+        PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), reactContext.getExternalCacheDir().getAbsolutePath(), geoPackageNames);
+        PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), reactContext.getExternalCacheDir().getAbsolutePath(), geoPackageNames);
+        pdfGpkgs.clear();
+        pdfGpkgs.addAll(geoPackageNames);
+        for(String geoPackageName : geoPackageNames){
+          WritableMap geopackage = gpkgImportService.parseGeopackageFile(geoPackageName);
           geopackages.pushMap(geopackage);
         }
+        } else if(extension.equals("gpkg")){//if file is gpkg
+      WritableMap geopackage = gpkgImportService.parseGeopackageFile(filePath);
+      geopackages.pushMap(geopackage);
+    }
         importGuid = Utils.randomUUID();
         resultMap.putString("importGuid",importGuid);
-      }else if(extension.equals("gpkg")){//if file is gpkg
-        WritableMap geopackage = gpkgImportService.parseGeopackageFile(filePath);
-        geopackages.pushMap(geopackage);
-      }
+
     }catch (Exception e){
       e.printStackTrace();
     }
@@ -174,6 +178,15 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
      */
   @ReactMethod
   public void importGeoPackage(final ReadableMap geoPackageContent,Promise promise){
+    String extension = FileUtils.getFileExt(filePath);
+    if(extension.equals("pdf")){
+      String selectedGpkg = geoPackageContent.getString("gpkgName");
+      for(String geopackage : pdfGpkgs){
+        if(FileUtils.getResourceNameNoExt(geopackage).equals(selectedGpkg)){
+          filePath = geopackage;
+        }
+      }
+    }
     gpkgImportService.openFile(filePath);
     ReadableArray featureClasses = geoPackageContent.getArray("featureClasses");
     int featureClassCount = gpkgImportService.getLayerCount();

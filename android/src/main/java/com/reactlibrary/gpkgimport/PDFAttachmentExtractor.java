@@ -26,7 +26,7 @@ public class PDFAttachmentExtractor {
 
     public static void extractAttachedFiles(String inputFileWithPath,
                                             String targetpath,
-                                            WritableArray lstAttachedFiles) {
+                                            List<String> lstAttachedFiles) {
         try {
             PdfReader reader = new PdfReader(inputFileWithPath);
             PdfArray array;
@@ -53,12 +53,7 @@ public class PDFAttachmentExtractor {
                             fos.close();
                             String geoPackageName = fs.getAsString(pdfname).toString();
                             System.out.println(geoPackageName);
-                            WritableMap geoPackage = Arguments.createMap();
-                            geoPackage.putString("geoPackageName",geoPackageName);
-                            if (id == 0) {
-                                geoPackage.putBoolean("state",true);
-                            }
-                            lstAttachedFiles.pushMap(geoPackage);
+                            lstAttachedFiles.add(targetpath + File.separator + fs.getAsString(pdfname).toString());
                             id++;
                         }
                     }
@@ -71,7 +66,7 @@ public class PDFAttachmentExtractor {
     }
 
     public static void extractEmbeddedFiles(String inputFileWithPath, String targetpath,
-                                            WritableArray lstEmbeddedFiles) {
+                                            List<String> lstEmbeddedFiles) {
         try {
             PdfReader reader = new PdfReader(inputFileWithPath);
             PdfDictionary root = reader.getCatalog();
@@ -90,7 +85,6 @@ public class PDFAttachmentExtractor {
                         refs = filespec.getAsDict(PdfName.EF);
                         Set<PdfName> sePDF = refs.getKeys();
                         Iterator<PdfName> it = sePDF.iterator();
-                        int id = 0;
                         while (it.hasNext()) {
                             PdfName key = it.next();
 
@@ -101,14 +95,7 @@ public class PDFAttachmentExtractor {
                             fos.write(PdfReader.getStreamBytes(stream));
                             fos.flush();
                             fos.close();
-                            String geoPackageName = filespec.getAsString(key).toString();
-                            WritableMap writableMap = Arguments.createMap();
-                            writableMap.putString("geoPackageName",geoPackageName);
-                            if (id == 0) {
-                                writableMap.putBoolean("state",true);
-                            }
-                            lstEmbeddedFiles.pushMap(writableMap);
-                            id++;
+                            lstEmbeddedFiles.add(targetpath + File.separator + filespec.getAsString(key).toString());
                         }
                     }
                 }
