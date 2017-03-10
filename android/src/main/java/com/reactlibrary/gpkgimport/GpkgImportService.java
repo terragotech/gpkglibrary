@@ -736,9 +736,8 @@ public class GpkgImportService {
                     }//end for
                     WritableMap edgeFormTemplate = createEdgeFormTemplate(tableName,formTemplates);
                     edgeNote = createGeopackageNote(geometry, featureClass, featureRows, NotesType.forms.name(),"");//save geopackage note
-                    WritableMap form = createGeoPackageForm(formValues);//save geopackage form
                     edgeNote.putMap("edgeformTemplate",edgeFormTemplate);
-                    edgeNote.putMap("formValues",form);
+                    edgeNote.putArray("formValues",formValues);
                     edgeNote.putString("formTemplateGuid",featureClass.getString("guid"));
                     edgeNote.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
                     WritableMap noteMap = Arguments.createMap();
