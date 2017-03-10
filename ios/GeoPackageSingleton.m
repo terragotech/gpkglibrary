@@ -263,8 +263,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 -(NSMutableDictionary*)getgpkgFileDetails:(NSString*)path{
     [[self gpkgFiles]removeAllObjects];
     NSMutableDictionary *geoContent = [[NSMutableDictionary alloc]init];
+    NSMutableArray *tgpkArray = [[NSMutableArray alloc]init];
     if ([[[path pathExtension]lowercaseString]isEqualToString:@"pdf"]) {
-        NSMutableArray *tgpkArray = [[NSMutableArray alloc]init];
         NSArray *tempGpkgArray = [self.geoPdf getAllGeoPackagesforPDF:path];
         for (NSString *gpkgName in tempGpkgArray) {
             NSMutableDictionary *tGpkgDict = [[NSMutableDictionary alloc]init];
@@ -291,12 +291,15 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             if (isRaster) {
                 [tGpkgDict setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
             }
+            [tgpkArray addObject:tGpkgDict];
         }
-        [geoContent setObject:tgpkArray forKey:@"geopackageNames"];
+        
     }else{
+        NSMutableDictionary *tGpkgDict = [[NSMutableDictionary alloc]init];
         [self initGeoPackageforPath:path];
+        [tGpkgDict setObject:[[path lastPathComponent]stringByDeletingPathExtension] forKey:@"name"];
         BOOL isRaster = [self checkIsRasterforPath:path];
-        [geoContent setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
+        [tGpkgDict setObject:[NSNumber numberWithBool:isRaster] forKey:@"isRaster"];
         NSArray *tempFeatureClasses = [import getAllFeatureClasses];
         NSMutableArray *featureArray = [[NSMutableArray alloc]init];
         for (NSString *feaName in tempFeatureClasses) {
@@ -307,11 +310,13 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [fetDict setObject:[NSNumber numberWithInt:[import notescountforFeature:feaName]] forKey:@"notesCount"];
             [featureArray addObject:fetDict];
         }
-        [geoContent setObject:featureArray forKey:@"featureClasses"];
+        [tGpkgDict setObject:featureArray forKey:@"featureClasses"];
         if (isRaster) {
-            [geoContent setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
+            [tGpkgDict setObject:[self.georaster getTilesList] forKey:@"rasterLayers"];
         }
+        [tgpkArray addObject:tGpkgDict];
     }
+    [geoContent setObject:tgpkArray forKey:@"geopackages"];
     [self setImportGuid:[self getGUID]];
     [geoContent setObject:[self importGuid] forKey:@"importGuid"];
     return geoContent;
@@ -403,6 +408,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [raster setObject:[self importGuid] forKey:@"importGuid"];
     if(frmPath.length > 0)
     {
+        //        NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"rasterImported" object:self userInfo:raster];
     }
 }
@@ -437,6 +443,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [self importRaster:tileName];
         }
     }else{
+        NSLog(@"%@",gpkgParameters);
         NSArray *tFeatureArray = [gpkgParameters objectForKey:@"featureClasses"];
         for (NSDictionary *tFeatureDict in tFeatureArray) {
             if ([gpkgParameters objectForKey:@"defaultName"]) {
