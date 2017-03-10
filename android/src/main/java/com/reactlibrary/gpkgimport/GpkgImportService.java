@@ -178,11 +178,15 @@ public class GpkgImportService {
 
         WritableMap geoPackageContent = Arguments.createMap();
         geoPackageContent.putArray("featureClasses",featureClasses);
+        geoPackageContent.putString("gpkgName", FileUtils.getResourceNameNoExt(filePath));
         closeGeoPkg();
         WritableArray rasterLayers = getRasterLayers(filePath);
+        boolean isRaster = false;
         if(rasterLayers.size() > 0) {
+            isRaster = true;
             geoPackageContent.putArray("rasterLayers", rasterLayers);
         }
+        geoPackageContent.putBoolean("isRaster",isRaster);
         return geoPackageContent;
     }
 

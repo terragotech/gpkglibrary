@@ -140,7 +140,8 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
      */
   @ReactMethod
   public void getgpkgFileDetails(String filePath,Promise promise){
-    WritableMap writableMap = Arguments.createMap();
+    WritableMap resultMap = Arguments.createMap();
+    WritableArray geopackages = Arguments.createArray();
     this.filePath = filePath;
     try{
       File file = new File(filePath);
@@ -151,18 +152,20 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), "output target path need to give", geoPackageNames);
         PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), "output target path need to give", geoPackageNames);
         if(geoPackageNames.size() > 0){
-          writableMap.putArray("geopackageNames",geoPackageNames);
-          writableMap = gpkgImportService.parseGeopackageFile(filePath);
+          WritableMap geopackage = gpkgImportService.parseGeopackageFile(filePath);
+          geopackages.pushMap(geopackage);
         }
         importGuid = Utils.randomUUID();
-        writableMap.putString("importGuid",importGuid);
+        resultMap.putString("importGuid",importGuid);
       }else if(extension.equals("gpkg")){//if file is gpkg
-        writableMap = gpkgImportService.parseGeopackageFile(filePath);
+        WritableMap geopackage = gpkgImportService.parseGeopackageFile(filePath);
+        geopackages.pushMap(geopackage);
       }
     }catch (Exception e){
       e.printStackTrace();
     }
-    promise.resolve(writableMap);
+    resultMap.putArray("geopackages",geopackages);
+    promise.resolve(resultMap);
   }
 
   /**
