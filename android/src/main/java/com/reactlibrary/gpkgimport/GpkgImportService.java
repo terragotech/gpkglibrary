@@ -382,6 +382,8 @@ public class GpkgImportService {
         String inputGeoPackageFile1 = inputGeoPackageFile;
         String gdalDataPath = context.getFilesDir()+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
         String tmpPath = context.getFilesDir()+File.separator+Utils.RASTER_MBTILE_PATH;
+        File tmpFile = new File(tmpPath);
+        tmpFile.mkdirs();
         gr.openGeoPackage(inputGeoPackageFile, gdalDataPath);
         String fileName = FileUtils.getResourceNameNoExt(filePath) + "_"+selectedLayer;
         com.reactlibrary.UniqueFileNameFilter filenameFilter = new com.reactlibrary.UniqueFileNameFilter(fileName+"_");
