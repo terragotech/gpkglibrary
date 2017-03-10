@@ -222,7 +222,6 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       }
     }
     gpkgImportService.closeGeoPkg();
-    importGuid = "";
     promise.resolve("success");
   }
 }

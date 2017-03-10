@@ -14,6 +14,7 @@ import java.util.UUID;
 
 public class Utils {
     public static final String SEND_NOTE_EVENT = "noteImported";
+    public static final String SEND_RASTER_EVENT = "rasterImported";
     public static String randomUUID() {
         return UUID.randomUUID().toString();
     }

@@ -392,7 +392,7 @@ public class GpkgImportService {
         gr.openGeoPackage(inputGeoPackageFile, gdalDataPath);
         final String fileName = FileUtils.getResourceNameNoExt(filePath) + "_"+selectedLayer;
         com.reactlibrary.UniqueFileNameFilter filenameFilter = new com.reactlibrary.UniqueFileNameFilter(fileName+"_");
-        final String convertedPath = context.getFilesDir()+File.separator+"rasterOutput";
+        final String convertedPath = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+"rasterOutput";
         final File file = new File(convertedPath);
         file.mkdirs();
         System.out.println("terrago check"+file.canWrite());
@@ -441,12 +441,12 @@ public class GpkgImportService {
                                     if(dstatus >= 100.0)
                                     {
                                         System.out.println("terrago successs raster file");
-                                        // TODO: need to save map to db
                                         WritableMap writableMap1 = Arguments.createMap();
                                         writableMap1.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
                                         writableMap1.putString("convertedPath", convertedPath+File.separator+fileName+"_"+size+".mbtiles");
                                         writableMap1.putString("rasterName", selectedLayer);
-                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap1);
+                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_RASTER_EVENT,writableMap1);
+                                        blnStopFlag = true;
                                     }else{
                                         ///////////////////////////////////////////////////////////////////////////////////////
                                         //TODO: need to send progress
