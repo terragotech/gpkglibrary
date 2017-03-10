@@ -395,14 +395,15 @@ public class GpkgImportService {
         final String progressFile = inputGeoPackageFile.substring(0,idx) + "_" + selectedLayer + ".txt";
         try {
             File f11 = new File(progressFile);
-
             if (f11.exists()) {
                 f11.delete();
             }
         }catch(Exception e)
         {
+            System.out.println("terrago progress file error");
             e.printStackTrace();
         }
+        System.out.println("terrago progress file created");
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -457,10 +458,12 @@ public class GpkgImportService {
                             try {
                                 Thread.sleep(5000);
                             }catch (Exception e){
+                                System.out.println("terrago progress file error while getting progress");
                                 e.printStackTrace();
                             }
                         }catch (Exception e)
                         {
+                            System.out.println("terrago progress file error interrupt");
                             e.printStackTrace();
                             blnStopFlag = true;
                         }
@@ -480,8 +483,10 @@ public class GpkgImportService {
         thread.start();
         System.out.println("Input file :" + inputGeoPackageFile1);
         try {
+            System.out.println("terrago raster file conversion started");
             gr.convertGeoPackage(inputGeoPackageFile1,convertedPath+File.separator+fileName+"_"+size+".mbtiles", selectedLayer, tmpPath );
         }catch (Exception e){
+            System.out.println("terrago raster file creattion error");
             e.printStackTrace();
         }
         gr.closeGeoPackage();
