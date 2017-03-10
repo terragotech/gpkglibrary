@@ -1,6 +1,7 @@
 package com.reactlibrary.gpkgimport;
 
 import android.content.Context;
+import android.os.Environment;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableMap;
@@ -384,19 +385,19 @@ public class GpkgImportService {
         GeoPackageRasterReader gr = new GeoPackageRasterReader();
         String inputGeoPackageFile = filePath;
         String inputGeoPackageFile1 = inputGeoPackageFile;
-        String gdalDataPath = context.getFilesDir()+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
-        String tmpPath = context.getFilesDir()+File.separator+Utils.RASTER_MBTILE_PATH;
+        String gdalDataPath = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
+        String tmpPath = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_MBTILE_PATH;
         File tmpFile = new File(tmpPath);
         tmpFile.mkdirs();
         gr.openGeoPackage(inputGeoPackageFile, gdalDataPath);
-        String fileName = FileUtils.getResourceNameNoExt(filePath) + "_"+selectedLayer;
+        final String fileName = FileUtils.getResourceNameNoExt(filePath) + "_"+selectedLayer;
         com.reactlibrary.UniqueFileNameFilter filenameFilter = new com.reactlibrary.UniqueFileNameFilter(fileName+"_");
         final String convertedPath = context.getFilesDir()+File.separator+"rasterOutput";
         final File file = new File(convertedPath);
         file.mkdirs();
+        System.out.println("terrago check"+file.canWrite());
         File[] files = file.listFiles(filenameFilter);
-        int size = files.length;
-        final String mapName = fileName+"_"+size;
+        final int size = files.length;
         int idx = inputGeoPackageFile.lastIndexOf(".");
         final String progressFile = inputGeoPackageFile.substring(0,idx) + "_" + selectedLayer + ".txt";
         try {
@@ -443,7 +444,7 @@ public class GpkgImportService {
                                         // TODO: need to save map to db
                                         WritableMap writableMap1 = Arguments.createMap();
                                         writableMap1.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
-                                        writableMap1.putString("convertedPath", convertedPath);
+                                        writableMap1.putString("convertedPath", convertedPath+File.separator+fileName+"_"+size+".mbtiles");
                                         writableMap1.putString("rasterName", selectedLayer);
                                         Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,writableMap1);
                                     }else{
