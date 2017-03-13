@@ -28,6 +28,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 -(void)initGeoPackageatPath:(NSString*)path forFileName:(NSString*)filename{
     NSError *error;
     NSFileManager* fileManager = [NSFileManager defaultManager];
+    self.filePath = path;
     NSString * file = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",filename]];
     NSString* folderPath = [[NSString alloc]initWithFormat:@"%@",file ];
     if (![fileManager fileExistsAtPath:file])
@@ -48,6 +49,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [manager create:filename];
     NSArray * databases = [manager databases];
     geoPackage = [manager open:[databases objectAtIndex:0]];
+    //    [geoPackage setPath:path];
+    //    [geoPackage setName:filename];
     [manager close];
     [geoPackage createGeometryColumnsTable];
     
@@ -178,6 +181,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 }
 
 -(void)closeGeoPackage{
+    [[NSFileManager defaultManager]moveItemAtPath:[geoPackage path] toPath:[NSString stringWithFormat:@"%@/%@/%@",self.filePath, [[[geoPackage path]lastPathComponent]stringByDeletingPathExtension],[[geoPackage path]lastPathComponent]] error:nil];
     [geoPackage close];
     [manager close];
 }

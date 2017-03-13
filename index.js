@@ -21,21 +21,17 @@ var RNGeoPackageLibrary = {
     return _libsample(testString,callback)
       .catch(_error)
   },
-  initGeoPackageatPath(directoryPath,fileName, callback){
-    return _initGeoPackage(directoryPath,fileName, callback)
-      .catch(_error)
+  initGeoPackageatPath(directoryPath,fileName){
+    return _initGeoPackage(directoryPath,fileName)
   },
-  createFeatureclass(featureDict,geomentry, callback){
-    return _createFeatureClass(featureDict,geomentry, callback)
-      .catch(_error)
+  createFeatureclass(featureDict,geomentry){
+    return _createFeatureClass(featureDict,geomentry)
   },
-  insertFeatureclassRecord(featureRecordDict,geomentry, callback){
-    return _insertFeatureRecord(featureRecordDict,geomentry, callback)
-      .catch(_error)
+  insertFeatureclassRecord(featureRecordDict,geomentry){
+    return _insertFeatureRecord(featureRecordDict,geomentry)
   },
-  closeGeoPackage(callback){
-    return _closeGeoPackage(callback)
-      .catch(_error)
+  closeGeoPackage(){
+    return _closeGeoPackage()
   },
   initImportGeoPackageforPath(path, callback){
     return _initImport(path, callback)
