@@ -52,7 +52,7 @@ public class PDFAttachmentExtractor {
                             fos.flush();
                             fos.close();
                             String geoPackageName = fs.getAsString(pdfname).toString();
-                            System.out.println(geoPackageName);
+                            System.out.println("terrago pdf exteractor"+geoPackageName);
                             lstAttachedFiles.add(targetpath + File.separator + fs.getAsString(pdfname).toString());
                             id++;
                         }
@@ -95,6 +95,7 @@ public class PDFAttachmentExtractor {
                             fos.write(PdfReader.getStreamBytes(stream));
                             fos.flush();
                             fos.close();
+                            System.out.println("terrago pdf embedded"+filespec.getAsString(key).toString());
                             lstEmbeddedFiles.add(targetpath + File.separator + filespec.getAsString(key).toString());
                         }
                     }

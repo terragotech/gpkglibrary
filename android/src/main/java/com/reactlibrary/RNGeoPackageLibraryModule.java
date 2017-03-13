@@ -148,10 +148,12 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       File file = new File(filePath);
       String fileName = file.getName();
       String extension = FileUtils.getFileExt(fileName);
+      System.out.println("terrago extension "+extension);
       if(extension.equals("pdf")){//if file is pdf
         List<String> geoPackageNames = new ArrayList<>();
         PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), reactContext.getExternalCacheDir().getAbsolutePath(), geoPackageNames);
         PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), reactContext.getExternalCacheDir().getAbsolutePath(), geoPackageNames);
+        System.out.println("terrago gpkgs "+geoPackageNames);
         pdfGpkgs.clear();
         pdfGpkgs.addAll(geoPackageNames);
         for(String geoPackageName : geoPackageNames){
