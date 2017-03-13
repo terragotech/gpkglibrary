@@ -33,9 +33,11 @@ public class PDFAttachmentExtractor {
             PdfDictionary annot;
             PdfDictionary fs;
             PdfDictionary refs;
+            System.out.println("terrago reader.getNumberOfPages()"+reader.getNumberOfPages());
             for (int i = 1; i <= reader.getNumberOfPages(); i++) {
                 array = reader.getPageN(i).getAsArray(PdfName.ANNOTS);
                 if (array == null) continue;
+                System.out.println("terrago array"+array);
                 for (int j = 0; j < array.size(); j++) {
                     annot = array.getAsDict(j);
                     if (PdfName.FILEATTACHMENT.equals(annot.getAsName(PdfName.SUBTYPE))) {
@@ -46,6 +48,7 @@ public class PDFAttachmentExtractor {
                         int id = 0;
                         while (it.hasNext()) {
                             PdfName pdfname = it.next();
+                            System.out.println("terrago pdf name"+pdfname);
                             FileOutputStream fos = new FileOutputStream(
                                     targetpath + File.separator + fs.getAsString(pdfname).toString());
                             fos.write(PdfReader.getStreamBytes((PRStream) refs.getAsStream(pdfname)));
@@ -72,14 +75,17 @@ public class PDFAttachmentExtractor {
             PdfReader reader = new PdfReader(inputFileWithPath);
             PdfDictionary root = reader.getCatalog();
             PdfDictionary documentnames = root.getAsDict(PdfName.NAMES);
+            System.out.println("terrago documents"+documentnames);
             if (documentnames != null) {
                 PdfDictionary embeddedfiles = documentnames.getAsDict(PdfName.EMBEDDEDFILES);
+                System.out.println("terrago embeddedfiles"+embeddedfiles);
                 if (embeddedfiles != null) {
                     PdfArray filespecs = embeddedfiles.getAsArray(PdfName.NAMES);
                     PdfDictionary filespec;
                     PdfDictionary refs;
                     FileOutputStream fos;
                     PRStream stream;
+                    System.out.println("terrago embeddedfiles"+filespecs);
                     for (int i = 0; i < filespecs.size(); ) {
                         filespecs.getAsString(i++);
                         filespec = filespecs.getAsDict(i++);
@@ -88,7 +94,7 @@ public class PDFAttachmentExtractor {
                         Iterator<PdfName> it = sePDF.iterator();
                         while (it.hasNext()) {
                             PdfName key = it.next();
-
+                            System.out.println("terrago pdf name"+key);
                             fos = new FileOutputStream(targetpath + File.separator + filespec.getAsString(key).toString());
 
                             stream = (PRStream) PdfReader.getPdfObject(
