@@ -61,6 +61,7 @@ public class PDFAttachmentExtractor {
             }
             reader.close();
         } catch (Exception e) {
+            System.out.println("terrago error extractor "+ e);
             e.printStackTrace();
         }
     }
@@ -102,6 +103,7 @@ public class PDFAttachmentExtractor {
                 }
             }
         } catch (Exception e) {
+            System.out.println("terrago error embedded "+ e);
             e.printStackTrace();
         }
     }
