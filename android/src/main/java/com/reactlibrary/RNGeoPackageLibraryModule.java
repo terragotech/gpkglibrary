@@ -85,6 +85,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
   @ReactMethod
   public void createFeatureclass(ReadableMap readableMap,int geometryType,Promise promise){
+    System.out.println("feature class data"+readableMap);
     if (geoPackage != null) {
       gpkgExportService.createDefaultFeatureClass();
       List<FeatureColumn> lstFeatureColumns = new ArrayList<>();
@@ -107,6 +108,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void insertFeatureclassRecord(ReadableMap readableMap,int geometryType,Promise promise){
+    System.out.println("insertFeatureclassRecord"+readableMap);
     try {
       String tableName = readableMap.getString("FeatureName");
       String geometry = readableMap.getString("Location");
