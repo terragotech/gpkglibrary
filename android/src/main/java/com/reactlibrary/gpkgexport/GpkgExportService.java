@@ -38,9 +38,8 @@ public class GpkgExportService {
     private GeoPackage geoPackage = null;
 
 
-    public GpkgExportService(Context context,GeoPackage geoPackage) {
+    public GpkgExportService(Context context) {
         this.context = context;
-        this.geoPackage = geoPackage;
     }
 
     public void createDefaultFeatureClass(){
@@ -190,5 +189,13 @@ public class GpkgExportService {
         if (!fieldFound) {
             throw new Exception("Unknow field name");
         }
+    }
+
+    public GeoPackage getGeoPackage() {
+        return geoPackage;
+    }
+
+    public void setGeoPackage(GeoPackage geoPackage) {
+        this.geoPackage = geoPackage;
     }
 }

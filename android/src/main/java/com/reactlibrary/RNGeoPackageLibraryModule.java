@@ -48,7 +48,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     super(reactContext);
     this.reactContext = reactContext;
     gpkgImportService = new GpkgImportService(reactContext);
-    gpkgExportService = new GpkgExportService(reactContext,geoPackage);
+    gpkgExportService = new GpkgExportService(reactContext);
   }
 
   @Override
@@ -71,6 +71,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       boolean isDbCreated = geoPackageManager.createAtPath(dbName,dbFolder);// create db
       System.out.println("terrago import db created ="+isDbCreated);
       geoPackage = geoPackageManager.open(dbName);
+      gpkgExportService.setGeoPackage(geoPackage);
     }catch (Exception e){
       System.out.println("terrago error"+e);
       e.printStackTrace();
