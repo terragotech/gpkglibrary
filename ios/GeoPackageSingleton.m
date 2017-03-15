@@ -29,15 +29,15 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     NSError *error;
     NSFileManager* fileManager = [NSFileManager defaultManager];
     self.filePath = path;
-    NSString * file = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",filename]];
-    NSString* folderPath = [[NSString alloc]initWithFormat:@"%@",file ];
-    if (![fileManager fileExistsAtPath:file])
-        [fileManager createDirectoryAtPath:file withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+    //    NSString * file = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",filename]];
+    NSString* folderPath = [[NSString alloc]initWithFormat:@"%@",path ];
+    if (![fileManager fileExistsAtPath:folderPath])
+        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
     NSString* resourcePath =[NSString stringWithFormat:@"%@/resources",folderPath];
     if (![fileManager fileExistsAtPath:resourcePath])
         [fileManager createDirectoryAtPath:resourcePath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
     
-    file = [NSString stringWithFormat:@"%@/%@.gpkg",file,filename];
+    NSString *file = [NSString stringWithFormat:@"%@/%@.gpkg",folderPath,filename];
     
     manager = [GPKGGeoPackageFactory getManager];
     //    [manager open:[NSString stringWithFormat:@"%@/%@.gpkg",exportPath,fileName]];

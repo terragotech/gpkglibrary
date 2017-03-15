@@ -212,7 +212,9 @@
         [insertStatement appendString:@"?"];
     }
     [insertStatement appendString:@")"];
-    
+    if (size == 0) {
+        return 0;
+    }
     long long id = [self insertWithDatabase:connection andStatement:insertStatement andArgs:args];
     
     return id;
