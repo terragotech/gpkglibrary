@@ -186,6 +186,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
      */
   @ReactMethod
   public void importGeoPackage(final ReadableMap geoPackageContent,Promise promise){
+    final String notebookGuid = geoPackageContent.getString("notebookGuid");
     String extension = FileUtils.getFileExt(filePath);
     if(extension.equals("pdf")){
       String selectedGpkg = geoPackageContent.getString("gpkgName");
@@ -212,7 +213,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         Thread thread = new Thread(new Runnable() {
           @Override
           public void run() {
-            gpkgImportService.convertRasterFile(readableArray.getString(0), filePath,reactContext);
+            gpkgImportService.convertRasterFile(readableArray.getString(0), filePath,reactContext,notebookGuid);
           }
         });
         thread.start();
@@ -231,13 +232,13 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
           gpkgImportService.getNextRow();
           String geometry = gpkgImportService.getCurrentFeatureGeom();
           if (noteTypeColumnIndex == -1) {//create form note
-            gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass);
+            gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass,notebookGuid);
           } else {//create form note
             String noteType = gpkgImportService.getNoteType(noteTypeColumnIndex);
             if (noteType.equals(NotesType.forms.name()) || noteType.equals(NotesType.multiupload.name())) {
-              gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass);
+              gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass,notebookGuid);
             } else {//create non form notes
-              gpkgImportService.createNonformNote( geometry, featureClass, noteType);
+              gpkgImportService.createNonformNote( geometry, featureClass, noteType,notebookGuid);
             }
           }
       }

@@ -380,7 +380,7 @@ public class GpkgImportService {
         return null;
     }
 
-    public void convertRasterFile(final String selectedLayer, String filePath,Context context) {
+    public void convertRasterFile(final String selectedLayer, String filePath, Context context, final String notebookGuid) {
 
         GeoPackageRasterReader gr = new GeoPackageRasterReader();
         String inputGeoPackageFile = filePath;
@@ -442,6 +442,7 @@ public class GpkgImportService {
                                     {
                                         System.out.println("terrago successs raster file");
                                         WritableMap writableMap1 = Arguments.createMap();
+                                        writableMap1.putString("notebookGuid",notebookGuid);
                                         writableMap1.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
                                         writableMap1.putString("convertedPath", convertedPath+File.separator+fileName+"_"+size+".mbtiles");
                                         writableMap1.putString("rasterName", selectedLayer);
@@ -499,7 +500,7 @@ public class GpkgImportService {
         gr.closeGeoPackage();
     }
 
-    public void createNonformNote(String geometry, ReadableMap featureClass, String noteType){
+    public void createNonformNote(String geometry, ReadableMap featureClass, String noteType,String notebookGuid){
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
             String resourceName = "";
@@ -565,6 +566,7 @@ public class GpkgImportService {
                     WritableMap writableMap = createGeopackageNote(geometry, featureClass, featureRows, noteType,resourceName);//save geopackage note
                     writableMap.putString("formTemplateGuid",featureClass.getString("guid"));
                     writableMap.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
+                    writableMap.putString("notebookGuid",notebookGuid);
                     WritableMap noteMap = Arguments.createMap();
                     noteMap.putMap("note",writableMap);
                     Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,noteMap);
@@ -642,7 +644,7 @@ public class GpkgImportService {
         return title;
     }
 
-    public void getCurrentFeatureFields(String tableName, String geometry,ReadableMap featureClass){
+    public void getCurrentFeatureFields(String tableName, String geometry,ReadableMap featureClass,String notebookGuid){
         WritableMap edgeNote = Arguments.createMap();
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
@@ -741,6 +743,7 @@ public class GpkgImportService {
                     edgeNote.putArray("formValues",formValues);
                     edgeNote.putString("formTemplateGuid",featureClass.getString("guid"));
                     edgeNote.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
+                    edgeNote.putString("notebookGuid",notebookGuid);
                     WritableMap noteMap = Arguments.createMap();
                     noteMap.putMap("note",edgeNote);
                     Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_NOTE_EVENT,noteMap);
