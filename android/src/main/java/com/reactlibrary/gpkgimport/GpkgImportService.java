@@ -731,6 +731,7 @@ public class GpkgImportService {
                                         break;
                                 }
                                 System.out.println("form value" + value);
+                                System.out.println("form components"+ formTemplates);
                                 createGeopackageFormTemplate(formTemplate, idx, options, formTemplates, columnName);//save geopackage form template
                                 createGeoFormValues(idx, columnName, value, formValues);
                                 featureRows.put(columnName, value);
@@ -783,7 +784,7 @@ public class GpkgImportService {
     private WritableMap createEdgeFormTemplate(String tableName,WritableArray formTemplates){
         WritableMap edgeFormTemplate = Arguments.createMap();
         edgeFormTemplate.putString("name",tableName);
-        edgeFormTemplate.putString("formComponents",gson.toJson(formTemplates));
+        edgeFormTemplate.putArray("formComponents",formTemplates);
         return edgeFormTemplate;
     }
 
