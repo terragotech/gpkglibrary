@@ -43,6 +43,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   private String filePath = "";
   public static String importGuid = "";
   public static List<String> pdfGpkgs = new ArrayList<>();
+  public static boolean isImportCancelled = false;
 
   public RNGeoPackageLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -220,6 +221,9 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       }
     }
     for(int i=0;i<size;i++) {
+      if(isImportCancelled) {
+        break;
+      }
       ReadableMap featureClass = featureClasses.getMap(i);
       String featureClassName = featureClass.getString("name");
       int index = totalLayers.indexOf(featureClassName);
