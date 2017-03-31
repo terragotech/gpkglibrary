@@ -179,6 +179,7 @@
 		CFF2F2C91E5D91D80064FC02 /* P2JMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2C71E5D91D80064FC02 /* P2JMetadata.m */; };
 		CFF2F2CC1E5D92660064FC02 /* GeoPackageRaster.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2CB1E5D92660064FC02 /* GeoPackageRaster.mm */; };
 		CFF2F2D01E5DAD140064FC02 /* GeoPackageImport.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF2F2CF1E5DAD140064FC02 /* GeoPackageImport.m */; };
+		CFFBE2B91E8E9699008EBFDE /* libgdal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFBE2B81E8E9699008EBFDE /* libgdal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -623,6 +624,7 @@
 		CFF2F2CB1E5D92660064FC02 /* GeoPackageRaster.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeoPackageRaster.mm; sourceTree = "<group>"; };
 		CFF2F2CE1E5DAD140064FC02 /* GeoPackageImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPackageImport.h; sourceTree = "<group>"; };
 		CFF2F2CF1E5DAD140064FC02 /* GeoPackageImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageImport.m; sourceTree = "<group>"; };
+		CFFBE2B81E8E9699008EBFDE /* libgdal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgdal.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -633,6 +635,7 @@
 				CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */,
 				CFAB75691E6EF9E10042A059 /* libGeoPackageRasterReader.a in Frameworks */,
 				CFAB756A1E6EF9E10042A059 /* libproj.a in Frameworks */,
+				CFFBE2B91E8E9699008EBFDE /* libgdal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,6 +1049,7 @@
 		CFAB75641E6EF9830042A059 /* LibGdal */ = {
 			isa = PBXGroup;
 			children = (
+				CFFBE2B81E8E9699008EBFDE /* libgdal.a */,
 				CFAB75661E6EF9E10042A059 /* libGeoPackageRasterReader.a */,
 				CFAB75671E6EF9E10042A059 /* libproj.a */,
 			);
