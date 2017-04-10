@@ -181,7 +181,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
 }
 
 -(void)closeGeoPackage{
-    [[NSFileManager defaultManager]moveItemAtPath:[geoPackage path] toPath:[NSString stringWithFormat:@"%@/%@/%@",self.filePath, [[[geoPackage path]lastPathComponent]stringByDeletingPathExtension],[[geoPackage path]lastPathComponent]] error:nil];
+    [[NSFileManager defaultManager]moveItemAtPath:[geoPackage path] toPath:[NSString stringWithFormat:@"%@/%@",self.filePath,[[geoPackage path]lastPathComponent]] error:nil];
     [geoPackage close];
     [manager close];
 }
