@@ -66,6 +66,11 @@ RCT_EXPORT_METHOD(importGeoPackage:(NSDictionary *)gpkgArguments  resolver:(RCTP
     resolve(@"");
 }
 
+RCT_EXPORT_METHOD(cancelImport:(NSString *)importID resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)  {
+    [[GeoPackageSingleton getSharedInstanceValue]setIsCancelled:TRUE];
+    resolve(@"");
+}
+
 -(void)receiveNotification:(NSNotification *)notification{
     if ([[notification name] isEqualToString:@"noteImported"]){
         NSDictionary* userInfo = notification.userInfo;

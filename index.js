@@ -10,6 +10,7 @@ var _initGeoPackage = RNGeoPackageLibraryNATIVE.initGeoPackageatPath;
 var _createFeatureClass = RNGeoPackageLibraryNATIVE.createFeatureclass;
 var _insertFeatureRecord = RNGeoPackageLibraryNATIVE.insertFeatureclassRecord;
 var _closeGeoPackage = RNGeoPackageLibraryNATIVE.closeGeoPackage;
+ver _cancelImport = RNGeoPackageLibraryNATIVE.cancelImport;
 
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
@@ -27,6 +28,9 @@ var RNGeoPackageLibrary = {
   createFeatureclass(featureDict,geomentry){
     return _createFeatureClass(featureDict,geomentry)
   },
+  cancelImport(importID){
+    return _cancelImport(importID)
+  }
   insertFeatureclassRecord(featureRecordDict,geomentry){
     return _insertFeatureRecord(featureRecordDict,geomentry)
   },

@@ -42,6 +42,7 @@ typedef enum Goetypes
 @property(nonatomic, retain)NSString* importGuid;
 @property(nonatomic, retain)NSString* filePath;
 @property(nonatomic, retain)NSString* notebookGuid;
+@property(nonatomic, retain)BOOL isCancelled;
 
 // @property(nonatomic, weak)RCTBridge<RCTBridgeModule> event;
 

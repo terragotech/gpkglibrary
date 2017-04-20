@@ -323,6 +323,7 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [geoContent setObject:tgpkArray forKey:@"geopackages"];
     [self setImportGuid:[self getGUID]];
     [geoContent setObject:[self importGuid] forKey:@"importGuid"];
+    self.isCancelled = FALSE;
     return geoContent;
 }
 
@@ -349,6 +350,9 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [note setObject:[self importGuid] forKey:@"importGuid"];
             [note setObject:self.notebookGuid forKey:@"notebookGuid"];
             [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+            if (self.isCancelled) {
+                return;
+            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
@@ -366,6 +370,9 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [note setObject:[self importGuid] forKey:@"importGuid"];
             [note setObject:self.notebookGuid forKey:@"notebookGuid"];
             [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+            if (self.isCancelled) {
+                return;
+            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
@@ -387,6 +394,9 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [note setObject:[self importGuid] forKey:@"importGuid"];
             [note setObject:self.notebookGuid forKey:@"notebookGuid"];
             [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+            if (self.isCancelled) {
+                return;
+            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
@@ -402,6 +412,9 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             [note setObject:[self importGuid] forKey:@"importGuid"];
             [note setObject:self.notebookGuid forKey:@"notebookGuid"];
             [note setObject:formTemplateGuid forKey:@"formTemplateGuid"];
+            if (self.isCancelled) {
+                return;
+            }
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:note forKey:@"note"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noteImported" object:self userInfo:dict];
         }
@@ -417,6 +430,9 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     [raster setObject:self.notebookGuid forKey:@"notebookGuid"];
     if(frmPath.length > 0)
     {
+        if (self.isCancelled) {
+            return;
+        }
         //        NSDictionary *dict = [NSDictionary dictionaryWithObject:raster forKey:@"raster"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"rasterImported" object:self userInfo:raster];
     }
