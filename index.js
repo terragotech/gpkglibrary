@@ -10,7 +10,7 @@ var _initGeoPackage = RNGeoPackageLibraryNATIVE.initGeoPackageatPath;
 var _createFeatureClass = RNGeoPackageLibraryNATIVE.createFeatureclass;
 var _insertFeatureRecord = RNGeoPackageLibraryNATIVE.insertFeatureclassRecord;
 var _closeGeoPackage = RNGeoPackageLibraryNATIVE.closeGeoPackage;
-ver _cancelImport = RNGeoPackageLibraryNATIVE.cancelImport;
+var _cancelImport = RNGeoPackageLibraryNATIVE.cancelImport;
 
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
