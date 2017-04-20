@@ -30,7 +30,7 @@ var RNGeoPackageLibrary = {
   },
   cancelImport(importID){
     return _cancelImport(importID)
-  }
+  },
   insertFeatureclassRecord(featureRecordDict,geomentry){
     return _insertFeatureRecord(featureRecordDict,geomentry)
   },
