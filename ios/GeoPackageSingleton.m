@@ -457,8 +457,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         [import initGeoPackageforpath:gpkgPath];
         NSArray *tFeatureArray = [gpkgParameters objectForKey:@"featureClasses"];
         for (NSDictionary *tFeatureDict in tFeatureArray) {
-            if ([gpkgParameters objectForKey:@"defaultName"]) {
-                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[gpkgParameters objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            if ([tFeatureDict objectForKey:@"defaultName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[tFeatureDict objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
             }
             if ([tFeatureDict objectForKey:@"attributeName"]) {
                 [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withAttributeName:[tFeatureDict objectForKey:@"attributeName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
@@ -472,8 +472,8 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
         NSLog(@"%@",gpkgParameters);
         NSArray *tFeatureArray = [gpkgParameters objectForKey:@"featureClasses"];
         for (NSDictionary *tFeatureDict in tFeatureArray) {
-            if ([gpkgParameters objectForKey:@"defaultName"]) {
-                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[gpkgParameters objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
+            if ([tFeatureDict objectForKey:@"defaultName"]) {
+                [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withDefaultNoteName:[tFeatureDict objectForKey:@"defaultName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
             }
             if ([tFeatureDict objectForKey:@"attributeName"]) {
                 [self importgeoPackageforFeatureClass:[tFeatureDict objectForKey:@"name"] withAttributeName:[tFeatureDict objectForKey:@"attributeName"] withFormGuid:[tFeatureDict objectForKey:@"guid"]];
