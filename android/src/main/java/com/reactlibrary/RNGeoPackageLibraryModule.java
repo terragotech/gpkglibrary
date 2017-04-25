@@ -148,6 +148,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
      */
   @ReactMethod
   public void getgpkgFileDetails(String filePath,Promise promise){
+    isImportCancelled = false;
     WritableMap resultMap = Arguments.createMap();
     WritableArray geopackages = Arguments.createArray();
     this.filePath = filePath;
@@ -155,12 +156,10 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       File file = new File(filePath);
       String fileName = file.getName();
       String extension = FileUtils.getFileExt(fileName);
-      System.out.println("terrago extension "+extension);
       if(extension.equals("pdf")){//if file is pdf
         List<String> geoPackageNames = new ArrayList<>();
         PDFAttachmentExtractor.extractAttachedFiles(file.getPath(), reactContext.getExternalCacheDir().getAbsolutePath(), geoPackageNames);
         PDFAttachmentExtractor.extractEmbeddedFiles(file.getPath(), reactContext.getExternalCacheDir().getAbsolutePath(), geoPackageNames);
-        System.out.println("terrago gpkgs "+geoPackageNames);
         pdfGpkgs.clear();
         pdfGpkgs.addAll(geoPackageNames);
         for(String geoPackageName : geoPackageNames){
@@ -249,5 +248,10 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }
     gpkgImportService.closeGeoPkg();
     promise.resolve("success");
+  }
+
+  @ReactMethod
+  public void cancelImport(String importGuid){
+    isImportCancelled = true;
   }
 }
