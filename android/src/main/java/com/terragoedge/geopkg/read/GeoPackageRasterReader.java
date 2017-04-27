@@ -9,7 +9,7 @@ public class GeoPackageRasterReader {
 
     static {
         try {
-            System.loadLibrary("qwer");
+            System.loadLibrary("geopkgraster");
         } catch (Exception e) {
             e.printStackTrace();
         }
