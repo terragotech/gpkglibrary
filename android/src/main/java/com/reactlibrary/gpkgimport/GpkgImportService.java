@@ -435,8 +435,6 @@ public class GpkgImportService {
                                     String status1 = str.substring(sidx, eidx);
                                     //System.out.println(status1);
                                     double dstatus = Double.parseDouble(status1) * 100;
-                                    final String sdStatus = dstatus + " %";
-                                    System.out.println(sdStatus);
                                     ///////////////////////////////////////////////////////////////////////////////////////
                                     if(dstatus >= 100.0)
                                     {
@@ -446,12 +444,13 @@ public class GpkgImportService {
                                         writableMap1.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
                                         writableMap1.putString("convertedPath", convertedPath+File.separator+fileName+"_"+size+".mbtiles");
                                         writableMap1.putString("rasterName", selectedLayer);
+                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_RASTER_PROGRESS_EVENT,"0");
                                         Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_RASTER_EVENT,writableMap1);
                                         blnStopFlag = true;
                                     }else{
                                         ///////////////////////////////////////////////////////////////////////////////////////
                                         //TODO: need to send progress
-                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_RASTER_PROGRESS_EVENT,String.valueOf(dstatus));
+                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_RASTER_PROGRESS_EVENT,String.valueOf((int) dstatus));
                                     }
                                 }
                                 else
