@@ -54,7 +54,11 @@ var RNGeoPackageLibrary = {
   subscribeRasterImported(callback) {
     var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
     return emitter.addListener("rasterImported", callback);
-  }
+  },
+  subscribeRasterProgress(callback) {
+      var emitter = Platform.OS == 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
+      return emitter.addListener("rasterProgress", callback);
+    }
 }
 
 module.exports = RNGeoPackageLibrary

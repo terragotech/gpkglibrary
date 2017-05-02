@@ -451,6 +451,7 @@ public class GpkgImportService {
                                     }else{
                                         ///////////////////////////////////////////////////////////////////////////////////////
                                         //TODO: need to send progress
+                                        Utils.sendEvent(RNGeoPackageLibraryModule.reactContext,Utils.SEND_RASTER_PROGRESS_EVENT,String.valueOf(dstatus));
                                     }
                                 }
                                 else
