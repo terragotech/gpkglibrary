@@ -139,7 +139,7 @@
                     if ([featureRow getDatabaseValueWithIndex:[featureRow getPkColumnIndex]]) {
                         val = [NSString stringWithFormat:@"%@",[featureRow getDatabaseValueWithIndex:[featureRow getPkColumnIndex]]];
                     }
-                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[[featureRow getPkColumn]name],repeatableLabelDelimiter,val] forKey:@"labelValue"];
+                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[[featureRow getPkColumn]name],repeatableLabelDelimiter,val] forKey:@"value"];
                     [fc setObject:[NSNumber numberWithBool:false] forKey:@"isAttachment"];
                     [frmCaptArr addObject:fc];
                 }
@@ -182,7 +182,7 @@
                         [self copyResourceforFormNote:val];
                     }
                     [fc setObject:strCmnName forKey:@"label"];
-                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",strCmnName,repeatableLabelDelimiter,val] forKey:@"labelValue"];
+                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",strCmnName,repeatableLabelDelimiter,val] forKey:@"value"];
                     
                     [frmCaptArr addObject:fc];
                     index++;
@@ -309,7 +309,7 @@
                     if ([attributeName isEqualToString:[[featureRow getPkColumn]name]]) {
                         noteTitle = [NSString stringWithFormat:@"%@",[featureRow getDatabaseValueWithIndex:[featureRow getPkColumnIndex]]];
                     }
-                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[[featureRow getPkColumn]name],repeatableLabelDelimiter,val] forKey:@"labelValue"];
+                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[[featureRow getPkColumn]name],repeatableLabelDelimiter,val] forKey:@"value"];
                     [fc setObject:[NSNumber numberWithBool:FALSE] forKey:@"isAttachment"];
                     [frmCaptArr addObject:fc];
                 }
@@ -357,7 +357,7 @@
                         [self copyResourceforFormNote:val];
                     }
                     [fc setObject:strCmnName forKey:@"label"];
-                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[featColm name],repeatableLabelDelimiter,val] forKey:@"labelValue"];
+                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[featColm name],repeatableLabelDelimiter,val] forKey:@"value"];
                     [frmCaptArr addObject:fc];
                     index++;
                     
