@@ -25,6 +25,10 @@
                                              selector:@selector(receiveNotification:)
                                                  name:@"rasterImported"
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"RasterProgress"
+                                               object:nil];
     return self;
 }
 RCT_EXPORT_MODULE();
@@ -79,6 +83,10 @@ RCT_EXPORT_METHOD(cancelImport:(NSString *)importID resolver:(RCTPromiseResolveB
     if ([[notification name] isEqualToString:@"rasterImported"]){
         NSDictionary* userInfo = notification.userInfo;
         [self.bridge.eventDispatcher sendAppEventWithName:@"rasterImported" body:userInfo];
+    }
+    if ([[notification name] isEqualToString:@"RasterProgress"]){
+        NSDictionary* userInfo = notification.userInfo;
+        [self.bridge.eventDispatcher sendAppEventWithName:@"rasterProgress" body:[NSString stringWithFormat:@"%@",[userInfo objectForKey:@"Progress"]]];
     }
 }
 

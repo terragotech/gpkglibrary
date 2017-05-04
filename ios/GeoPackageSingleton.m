@@ -480,9 +480,14 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
             }
         }
         NSArray *tRasterArray = [gpkgParameters objectForKey:@"rasterTiles"];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void)
+                       {
         for (NSString* tileName in tRasterArray) {
             [self importRaster:tileName];
+            NSDictionary* userInfo = @{@"Progress": @(0)};
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"RasterProgress" object:nil userInfo:userInfo];
         }
+                       });
     }
 }
 
