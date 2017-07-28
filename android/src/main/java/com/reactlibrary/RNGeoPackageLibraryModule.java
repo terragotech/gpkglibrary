@@ -254,4 +254,19 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   public void cancelImport(String importGuid){
     isImportCancelled = true;
   }
+
+  @ReactMethod
+  public void processGeoPDFMbtile(){
+    GeoPDFReader gr = new GeoPDFReader();
+    File dwnFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+    String dwPath = dwnFile.getPath();
+    System.out.println(dwPath);
+    String inputFile = dwPath + File.separator + "pdf" + File.separator + "PARAmap1.pdf";
+    String gdalPath = dwPath + File.separator + "gdal-data";
+    String outputFile = dwPath + File.separator + "PARAmap1.mbtiles";
+    String tmpFolder = dwPath + File.separator + "tmp";
+    gr.generateMBTiles(inputFile,outputFile,gdalPath,"113",tmpFolder);
+    gr.destroyGeoPDF();
+    System.out.println("MBTiles Generation [SUCCESS]");
+  }
 }
