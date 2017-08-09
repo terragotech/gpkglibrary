@@ -1,6 +1,8 @@
 package com.reactlibrary;
 
 
+import android.os.Environment;
+
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -17,6 +19,7 @@ import com.reactlibrary.gpkgimport.GpkgImportService;
 import com.reactlibrary.gpkgimport.PDFAttachmentExtractor;
 import com.reactlibrary.utils.FileUtils;
 import com.reactlibrary.utils.Utils;
+import com.terragoedge.geopdf.read.GeoPDFReader;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -256,17 +259,21 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void processGeoPDFMbtile(){
-    GeoPDFReader gr = new GeoPDFReader();
-    File dwnFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-    String dwPath = dwnFile.getPath();
-    System.out.println(dwPath);
-    String inputFile = dwPath + File.separator + "pdf" + File.separator + "PARAmap1.pdf";
-    String gdalPath = dwPath + File.separator + "gdal-data";
-    String outputFile = dwPath + File.separator + "PARAmap1.mbtiles";
-    String tmpFolder = dwPath + File.separator + "tmp";
-    gr.generateMBTiles(inputFile,outputFile,gdalPath,"113",tmpFolder);
-    gr.destroyGeoPDF();
-    System.out.println("MBTiles Generation [SUCCESS]");
+  public void processGeoPDFMbtile(final String pdfFilePath,final String gdalPath,final String mbtilePath,final String tempFolder,final String progressGuid,final Promise promise){
+    new Thread(new Runnable() {
+      @Override
+      public void run() {
+        int result = 0;
+        try {
+          GeoPDFReader gr = new GeoPDFReader();
+          result = gr.generateMBTiles(pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder);
+          gr.destroyGeoPDF();
+          System.out.println("MBTiles Generation [SUCCESS]");
+        }catch (Exception e){
+          e.printStackTrace();
+        }
+        promise.resolve(result);
+      }
+    }).start();
   }
 }
