@@ -259,12 +259,13 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void processGeoPDFMbtile(final String pdfFilePath,final String gdalPath,final String mbtilePath,final String tempFolder,final String progressGuid,final Promise promise){
+  public void processGeoPDFMbtile(final String pdfFilePath, final String mbtilePath,final String tempFolder,final String progressGuid,final Promise promise){
     new Thread(new Runnable() {
       @Override
       public void run() {
         int result = 0;
         try {
+          String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
           GeoPDFReader gr = new GeoPDFReader();
           result = gr.generateMBTiles(pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder);
           gr.destroyGeoPDF();
