@@ -638,6 +638,9 @@ public class GpkgImportService {
             for(String key : featureRows.keySet()){
                 if(key.equals(featureClass.getString("attributeName"))){
                     title = featureRows.get(key);
+                    if(title == null || title.equals("")) {
+                    title = "Forms";
+                    }
                 }
             }
         }
