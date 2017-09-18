@@ -124,7 +124,7 @@ public class GpkgImportService {
         WritableArray writableArray = Arguments.createArray();
         int size = columns.length;
         for(int i=0;i<size;i++){
-            if(i != 0 && i != featureDao.getTable().getGeometryColumnIndex()){
+            if(i != featureDao.getTable().getGeometryColumnIndex()){
                 writableArray.pushString(columns[i]);
             }
         }
