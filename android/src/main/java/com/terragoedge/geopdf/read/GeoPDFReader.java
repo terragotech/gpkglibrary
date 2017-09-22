@@ -5,23 +5,26 @@ package com.terragoedge.geopdf.read;
  */
 
 public class GeoPDFReader {
-      private long ptr;
+    private long ptr;
     static {
         System.loadLibrary("geopdfreader");
     }
 
     private native int createGeoPDFReader();
     private native int destroyGeoPDF(long ptr);
-    private native  int generateMBTiles(long ptr,String inputFile, String mbtilesFile, String gdalPath, String progressID, String tmpFolder );
+    private native  int generateMBTiles(long ptr,String scratchPath,
+                                        String inputFile, String mbtilesFile,
+                                        String gdalPath, String progressID,
+                                        String tmpFolder );
 
     public GeoPDFReader(){
         ptr = createGeoPDFReader();
         System.out.println("Pointer = " + ptr);
     }
-    public int generateMBTiles(String inputFile, String mbtilesFile, String gdalPath, String progressID, String tmpFolder )
+    public int generateMBTiles(String scratchPath, String inputFile, String mbtilesFile, String gdalPath, String progressID, String tmpFolder )
     {
         int nResult = 0;
-        nResult = generateMBTiles(ptr,inputFile, mbtilesFile, gdalPath,progressID,tmpFolder );
+        nResult = generateMBTiles(ptr,scratchPath,inputFile, mbtilesFile, gdalPath,progressID,tmpFolder );
         return nResult;
     }
     public int destroyGeoPDF(){
