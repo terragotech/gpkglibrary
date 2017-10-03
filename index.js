@@ -42,8 +42,8 @@ var RNGeoPackageLibrary = {
     return _initImport(path, callback)
       .catch(_error)
   },
-  processGeoPDFMbtile(pdfFilePath, mbtilePath, tempFolder, progressGuid){
-      return _processGeoPDFMbtile(pdfFilePath, mbtilePath, tempFolder, progressGuid)
+  processGeoPDFMbtile(pdfFilePath, mbtilePath, tempFolder, progressGuid, scratchPath){
+      return _processGeoPDFMbtile(pdfFilePath, mbtilePath, tempFolder, progressGuid, scratchPath)
     },
   getgpkgFileDetails(path){
     return _getgpkgFileDetails(path)
