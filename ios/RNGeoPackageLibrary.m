@@ -75,6 +75,12 @@ RCT_EXPORT_METHOD(cancelImport:(NSString *)importID resolver:(RCTPromiseResolveB
     resolve(@"");
 }
 
+RCT_EXPORT_METHOD(processGeoPDFMbtile:(NSString *)pdfFilePath mbtilePath:(NSString*)mbtilePath tempFolder:(NSString*)tempFolder progressGuid:(NSString*)progressGuid resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)  {
+    [[GeoPackageSingleton getSharedInstanceValue]processPDF:pdfFilePath CreationPath:tempFolder ProgressGuid:progressGuid DestinationPath:mbtilePath];
+    
+    resolve(@"trigger Progress");
+}
+
 -(void)receiveNotification:(NSNotification *)notification{
     if ([[notification name] isEqualToString:@"noteImported"]){
         NSDictionary* userInfo = notification.userInfo;
