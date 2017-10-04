@@ -10,5 +10,5 @@
 #define convtif_h
 
 //int convertPDFToTIFF(char *pdfFileName, char *tifFileName, char *gdalPath);
-int geopdf_generateMBTilesFromGeoPDF(char *ptrScratchFolder,char *ptrFileName,char *ptrMBTileName,char *ptrGdalPath,char *ptrProgressID,char *ptrTMP);
+int geopdf_generateMBTilesFromGeoPDF(char *ptrScratchFolder,char *ptrFileName,char *ptrMBTileName,char *ptrGdalPath,char *ptrProgressID,char *ptrTMP, char *ptrUtid);
 #endif /* convtif_h */

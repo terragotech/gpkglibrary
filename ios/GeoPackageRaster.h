@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "convtif.h"
 
 @interface GeoPackageRaster : NSObject
 
@@ -17,5 +17,7 @@
 -(NSString*)convertMBTiles:(NSString*)tileName;
 -(BOOL)isRasterPackage;
 -(BOOL)isRaster;
+
+-(int)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath;
 
 @end

@@ -128,4 +128,52 @@
 -(BOOL)isRaster{
     return isRasterPackage;
 }
+
+-(int)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath{
+    NSError *err;
+    NSString *tmpPath = [creationPath stringByAppendingString:@"/tmp"];
+    if(![[NSFileManager defaultManager] createDirectoryAtPath:tmpPath withIntermediateDirectories:YES attributes:nil error:&err]) {
+        //Error Handler
+        NSLog(@"Error creating folder");
+    }
+    if(![[NSFileManager defaultManager] createDirectoryAtPath:[tmpPath stringByAppendingString:@"/mbtiles"] withIntermediateDirectories:YES attributes:nil error:&err]) {
+        //Error Handler
+        NSLog(@"Error creating folder");
+    }
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+    [attributes setObject:[NSNumber numberWithInt:511] forKey:NSFilePosixPermissions];
+    [[NSFileManager defaultManager] setAttributes:attributes ofItemAtPath:tmpPath error:&err];
+    [[NSFileManager defaultManager] setAttributes:attributes ofItemAtPath:[tmpPath stringByAppendingString:@"/mbtiles"] error:&err];
+    NSString *scrathPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) objectAtIndex:0] stringByAppendingString:@"/scratch"];
+    if(![[NSFileManager defaultManager] createDirectoryAtPath:scrathPath withIntermediateDirectories:YES attributes:nil error:&err]) {
+        //Error Handler
+        NSLog(@"Error creating folder");
+    }
+    //Generating GDAL_DATA path
+    //    NSString *gdalPath = @"";//[creationPath stringByAppendingString:@"/data"];
+    const char *ptrGdalPath =  [NSBundle mainBundle].bundlePath.UTF8String;
+    const char *ptrFileName = [filePathPdf UTF8String];
+    const char *ptrMBTileName = [destinationPath UTF8String];
+    const char *ptrProgressID = [progressGuid UTF8String];
+    const char *ptrTMP = [tmpPath UTF8String];
+    const char *ptrScratchFolder = [scrathPath UTF8String];
+    NSString* randomID = [NSString stringWithFormat:@"%d",arc4random() % 9000 + 1000];
+    int nPDFResult = geopdf_generateMBTilesFromGeoPDF((char*)ptrScratchFolder,(char*)ptrFileName,(char*)ptrMBTileName,(char*)ptrGdalPath,(char*)ptrProgressID,(char*)ptrTMP, (char*)[randomID UTF8String]);
+    NSLog(@"Error code [%d]",nPDFResult);
+    [self removeAllTempFileswithPID:randomID inPath:[tmpPath stringByAppendingString:@"/mbtiles"]];
+    return nPDFResult;
+}
+
+- (void)removeAllTempFileswithPID:(NSString*)pid inPath:(NSString*)path {
+    NSFileManager  *manager = [NSFileManager defaultManager];
+    NSArray *allFiles = [manager contentsOfDirectoryAtPath:path error:nil];
+    NSString *predicate = [NSString stringWithFormat:@"self BEGINSWITH '%@_'",pid];
+    NSPredicate *fltr = [NSPredicate predicateWithFormat:predicate];
+    NSArray *pidTempFiles = [allFiles filteredArrayUsingPredicate:fltr];
+    for (NSString *tempFile in pidTempFiles) {
+        NSError *error = nil;
+        [manager removeItemAtPath:[path stringByAppendingPathComponent:tempFile] error:&error];
+    }
+}
+
 @end
