@@ -23,7 +23,6 @@
 		CF1BDF4B1F83B90A000EAE11 /* libfxcrt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6B41F83B35100F3F6B7 /* libfxcrt.a */; };
 		CF1BDF4C1F83B90D000EAE11 /* libfxedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6C21F83B39C00F3F6B7 /* libfxedit.a */; };
 		CF1BDF4D1F83B911000EAE11 /* libfxge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6C41F83B3AC00F3F6B7 /* libfxge.a */; };
-		CF1BDF4E1F83B915000EAE11 /* libgdal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6B51F83B38500F3F6B7 /* libgdal.a */; };
 		CF1BDF4F1F83B918000EAE11 /* libGeoPackageRasterReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6B01F83B34B00F3F6B7 /* libGeoPackageRasterReader.a */; };
 		CF1BDF511F83B91F000EAE11 /* libpdfium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6B81F83B38E00F3F6B7 /* libpdfium.a */; };
 		CF1BDF521F83B922000EAE11 /* libpdfstub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6BE1F83B39600F3F6B7 /* libpdfstub.a */; };
@@ -31,6 +30,7 @@
 		CF1BDF541F83B928000EAE11 /* libproj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6BD1F83B39600F3F6B7 /* libproj.a */; };
 		CF1BDF551F83B92A000EAE11 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6C01F83B39A00F3F6B7 /* libsqlite3.a */; };
 		CF1BE0071F84C834000EAE11 /* libgeopdfreader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BE0061F84C825000EAE11 /* libgeopdfreader.a */; };
+		CF1BE00B1F84D3BD000EAE11 /* libgdal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BE00A1F84D3BA000EAE11 /* libgdal.a */; };
 		CF25D6C71F83B65500F3F6B7 /* libbigint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6BA1F83B39000F3F6B7 /* libbigint.a */; };
 		CF5823951E63FEF700FB4950 /* GeoPDFAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */; };
 		CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5823971E6402AC00FB4950 /* CoreGraphics.framework */; };
@@ -220,6 +220,7 @@
 		B3E7B5881CC2AC0600A0062D /* RNGeoPackageLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGeoPackageLibrary.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNGeoPackageLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGeoPackageLibrary.m; sourceTree = "<group>"; };
 		CF1BE0061F84C825000EAE11 /* libgeopdfreader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgeopdfreader.a; sourceTree = "<group>"; };
+		CF1BE00A1F84D3BA000EAE11 /* libgdal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgdal.a; sourceTree = "<group>"; };
 		CF25D6AE1F83B32500F3F6B7 /* libfx_lcms2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfx_lcms2.a; sourceTree = "<group>"; };
 		CF25D6AF1F83B34A00F3F6B7 /* libfpdfapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfpdfapi.a; sourceTree = "<group>"; };
 		CF25D6B01F83B34B00F3F6B7 /* libGeoPackageRasterReader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGeoPackageRasterReader.a; sourceTree = "<group>"; };
@@ -227,7 +228,6 @@
 		CF25D6B21F83B34F00F3F6B7 /* libpdfwindow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpdfwindow.a; sourceTree = "<group>"; };
 		CF25D6B31F83B35000F3F6B7 /* libfpdftext.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfpdftext.a; sourceTree = "<group>"; };
 		CF25D6B41F83B35100F3F6B7 /* libfxcrt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfxcrt.a; sourceTree = "<group>"; };
-		CF25D6B51F83B38500F3F6B7 /* libgdal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgdal.a; sourceTree = "<group>"; };
 		CF25D6B71F83B38900F3F6B7 /* libfpdfdoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfpdfdoc.a; sourceTree = "<group>"; };
 		CF25D6B81F83B38E00F3F6B7 /* libpdfium.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpdfium.a; sourceTree = "<group>"; };
 		CF25D6B91F83B38F00F3F6B7 /* libfx_agg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfx_agg.a; sourceTree = "<group>"; };
@@ -683,8 +683,8 @@
 				CF1BDF521F83B922000EAE11 /* libpdfstub.a in Frameworks */,
 				CF1BDF511F83B91F000EAE11 /* libpdfium.a in Frameworks */,
 				CF1BDF4F1F83B918000EAE11 /* libGeoPackageRasterReader.a in Frameworks */,
-				CF1BDF4E1F83B915000EAE11 /* libgdal.a in Frameworks */,
 				CF1BDF4D1F83B911000EAE11 /* libfxge.a in Frameworks */,
+				CF1BE00B1F84D3BD000EAE11 /* libgdal.a in Frameworks */,
 				CF1BDF4C1F83B90D000EAE11 /* libfxedit.a in Frameworks */,
 				CF1BDF4B1F83B90A000EAE11 /* libfxcrt.a in Frameworks */,
 				CF1BDF4A1F83B906000EAE11 /* libfxcodec.a in Frameworks */,
@@ -1129,8 +1129,8 @@
 				CF25D6C31F83B3A800F3F6B7 /* libfxcodec.a */,
 				CF25D6B41F83B35100F3F6B7 /* libfxcrt.a */,
 				CF25D6C21F83B39C00F3F6B7 /* libfxedit.a */,
+				CF1BE00A1F84D3BA000EAE11 /* libgdal.a */,
 				CF25D6C41F83B3AC00F3F6B7 /* libfxge.a */,
-				CF25D6B51F83B38500F3F6B7 /* libgdal.a */,
 				CF25D6B01F83B34B00F3F6B7 /* libGeoPackageRasterReader.a */,
 				CF25D6B81F83B38E00F3F6B7 /* libpdfium.a */,
 				CF25D6BE1F83B39600F3F6B7 /* libpdfstub.a */,
