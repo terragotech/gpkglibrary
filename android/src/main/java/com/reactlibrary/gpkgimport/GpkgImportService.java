@@ -510,7 +510,7 @@ public class GpkgImportService {
                     int geomFieldIdx = featureRow.getGeometryColumnIndex();
                     HashMap<String,String> featureRows = new HashMap<>();
                     for(int idx=0;idx < fieldCount; idx++){
-                        if((idx != 0) && (idx != geomFieldIdx)){
+                        if(idx != geomFieldIdx){
                             String columnName = featureRow.getColumnName(idx);
                             if(columnName.equals("Resource_Path") || columnName.equals("ResourceRef")){
                                 resourceName = featureCursor.getString(idx);
@@ -659,7 +659,7 @@ public class GpkgImportService {
                     int geomFieldIdx = featureRow.getGeometryColumnIndex();
                     HashMap<String,String> featureRows = new HashMap<>();
                     for(int idx=0;idx < fieldCount; idx++){
-                        if((idx != 0) && (idx != geomFieldIdx)){
+                        if(idx != geomFieldIdx){
                             WritableMap formTemplate = Arguments.createMap();
                             String columnName = featureRow.getColumnName(idx);
                             if(columnName.equals("TGT_Image_Column_") || columnName.equals("TGT_Video_Column_") || columnName.equals("TGT_Audio_Column_") || columnName.equals("TGT_Signature_Column_")){
