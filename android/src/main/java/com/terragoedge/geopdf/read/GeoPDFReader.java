@@ -15,16 +15,16 @@ public class GeoPDFReader {
     private native  int generateMBTiles(long ptr,String scratchPath,
                                         String inputFile, String mbtilesFile,
                                         String gdalPath, String progressID,
-                                        String tmpFolder );
+                                        String tmpFolder, String utid );
 
     public GeoPDFReader(){
         ptr = createGeoPDFReader();
         System.out.println("Pointer = " + ptr);
     }
-    public int generateMBTiles(String scratchPath, String inputFile, String mbtilesFile, String gdalPath, String progressID, String tmpFolder )
+    public int generateMBTiles(String scratchPath, String inputFile, String mbtilesFile, String gdalPath, String progressID, String tmpFolder, String utid )
     {
         int nResult = 0;
-        nResult = generateMBTiles(ptr,scratchPath,inputFile, mbtilesFile, gdalPath,progressID,tmpFolder );
+        nResult = generateMBTiles(ptr,scratchPath,inputFile, mbtilesFile, gdalPath,progressID,tmpFolder,utid );
         return nResult;
     }
     public int destroyGeoPDF(){

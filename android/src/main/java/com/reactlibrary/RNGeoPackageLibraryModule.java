@@ -24,6 +24,7 @@ import com.terragoedge.geopdf.read.GeoPDFReader;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import mil.nga.geopackage.GeoPackage;
 import mil.nga.geopackage.GeoPackageManager;
@@ -264,10 +265,12 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       @Override
       public void run() {
         try {
+          String utid = UUID.randomUUID().toString();
           String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
           GeoPDFReader gr = new GeoPDFReader();
-          gr.generateMBTiles(scratchPath,pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder);
+          gr.generateMBTiles(scratchPath,pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
           gr.destroyGeoPDF();
+          // temp/mbtiles/utid_ remove
           System.out.println("MBTiles Generation [SUCCESS]");
         }catch (Exception e){
           e.printStackTrace();
