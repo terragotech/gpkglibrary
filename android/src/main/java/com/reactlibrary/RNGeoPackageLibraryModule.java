@@ -268,9 +268,14 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
           String utid = UUID.randomUUID().toString();
           String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
           GeoPDFReader gr = new GeoPDFReader();
+          File mbtilesFolder = new File(tempFolder+File.separator+"mbtiles");//create folder for mbtile progress
+          if(!mbtilesFolder.exists()){
+            mbtilesFolder.mkdirs();
+          }
           gr.generateMBTiles(scratchPath,pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
           gr.destroyGeoPDF();
-          // temp/mbtiles/utid_ remove
+          // deleting temp created files once mbtile creation is done(temp/mbtiles/utid_ remove)
+          deleteTempFiles(mbtilesFolder,utid);
           System.out.println("MBTiles Generation [SUCCESS]");
         }catch (Exception e){
           e.printStackTrace();
@@ -278,5 +283,23 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       }
     }).start();
     promise.resolve("trigger Progress");
+  }
+  private void deleteTempFiles(File mbtilesFolder,String utid) {
+    try {
+      String[] tempFileNames = mbtilesFolder.list();
+      if (tempFileNames != null) {
+        for (String tempFileName : tempFileNames) {
+          if (tempFileName.startsWith(utid + "_")) {
+            File tempFile = new File(mbtilesFolder+File.separator+tempFileName);
+            if(tempFile.exists() && tempFile.isFile()) {
+              System.out.println("deleted temp file = " + tempFile.getAbsolutePath());
+              tempFile.delete();
+            }
+          }
+        }
+      }
+    }catch (Exception e){
+      e.printStackTrace();
+    }
   }
 }
