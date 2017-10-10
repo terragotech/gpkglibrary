@@ -292,7 +292,6 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
           if (tempFileName.startsWith(utid + "_")) {
             File tempFile = new File(mbtilesFolder+File.separator+tempFileName);
             if(tempFile.exists() && tempFile.isFile()) {
-              System.out.println("deleted temp file = " + tempFile.getAbsolutePath());
               tempFile.delete();
             }
           }
