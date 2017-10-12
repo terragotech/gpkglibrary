@@ -176,4 +176,15 @@
     }
 }
 
+-(NSDictionary*)getSupportInfo:(NSString*)ptrInputFile {
+    const char *ptrGdalPath =  [NSBundle mainBundle].bundlePath.UTF8String;
+    const char *tbName = [@"" UTF8String];
+    const char *frmtType = [@"PDF" UTF8String];
+    const char *ptrFileName =[ptrInputFile UTF8String];
+    char *ret = getSupportInfo((char *)ptrFileName, (char *)ptrGdalPath, (char *)tbName, (char *)frmtType);
+    NSString *retJson = [NSString stringWithUTF8String:ret];
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:[retJson dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
+    return json;
+}
+
 @end

@@ -31,6 +31,7 @@
 		CF1BDF551F83B92A000EAE11 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6C01F83B39A00F3F6B7 /* libsqlite3.a */; };
 		CF1BE00B1F84D3BD000EAE11 /* libgdal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BE00A1F84D3BA000EAE11 /* libgdal.a */; };
 		CF25D6C71F83B65500F3F6B7 /* libbigint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25D6BA1F83B39000F3F6B7 /* libbigint.a */; };
+		CF4364E71F8F89660094F126 /* libestimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4364E61F8F89610094F126 /* libestimator.a */; };
 		CF5823951E63FEF700FB4950 /* GeoPDFAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */; };
 		CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5823971E6402AC00FB4950 /* CoreGraphics.framework */; };
 		CF8B6C3F1E58B42000D06B39 /* GPKGBaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B6B3F1E58B41F00D06B39 /* GPKGBaseDao.m */; };
@@ -243,6 +244,7 @@
 		CF25D6C41F83B3AC00F3F6B7 /* libfxge.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfxge.a; sourceTree = "<group>"; };
 		CF25D6C51F83B3AD00F3F6B7 /* libfx_libopenjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfx_libopenjpeg.a; sourceTree = "<group>"; };
 		CF25D6C61F83B63F00F3F6B7 /* convtif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = convtif.h; sourceTree = "<group>"; };
+		CF4364E61F8F89610094F126 /* libestimator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libestimator.a; sourceTree = "<group>"; };
 		CF5823931E63FEF700FB4950 /* GeoPDFAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPDFAttachment.h; sourceTree = "<group>"; };
 		CF5823941E63FEF700FB4950 /* GeoPDFAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPDFAttachment.m; sourceTree = "<group>"; };
 		CF5823971E6402AC00FB4950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -677,6 +679,7 @@
 			files = (
 				CF5823981E6402AC00FB4950 /* CoreGraphics.framework in Frameworks */,
 				CFCBD4EA1F8F0F77005A701E /* libgeopdfreader.a in Frameworks */,
+				CF4364E71F8F89660094F126 /* libestimator.a in Frameworks */,
 				CF1BDF551F83B92A000EAE11 /* libsqlite3.a in Frameworks */,
 				CF1BDF541F83B928000EAE11 /* libproj.a in Frameworks */,
 				CF1BDF531F83B925000EAE11 /* libpdfwindow.a in Frameworks */,
@@ -1113,6 +1116,7 @@
 		CFAB75641E6EF9830042A059 /* LibGdal */ = {
 			isa = PBXGroup;
 			children = (
+				CF4364E61F8F89610094F126 /* libestimator.a */,
 				CFCBD4E91F8F0F73005A701E /* libgeopdfreader.a */,
 				CF25D6BA1F83B39000F3F6B7 /* libbigint.a */,
 				CF25D6B11F83B34C00F3F6B7 /* libfdrm.a */,

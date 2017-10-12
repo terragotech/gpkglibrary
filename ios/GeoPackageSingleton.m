@@ -508,4 +508,11 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
                    });
 }
 
+-(NSDictionary*)getSupportInfo:(NSString*)ptrInputFile {
+    if(!self.georaster){
+        self.georaster = [[GeoPackageRaster alloc]init];
+    }
+    return [[self georaster] getSupportInfo:ptrInputFile];
+}
+
 @end

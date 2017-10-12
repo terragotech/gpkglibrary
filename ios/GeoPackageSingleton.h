@@ -65,5 +65,6 @@ typedef enum Goetypes
 
 //PDF
 -(void)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath;
+-(NSDictionary*)getSupportInfo:(NSString*)ptrInputFile;
 
 @end

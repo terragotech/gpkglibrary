@@ -11,4 +11,5 @@
 
 //int convertPDFToTIFF(char *pdfFileName, char *tifFileName, char *gdalPath);
 int geopdf_generateMBTilesFromGeoPDF(char *ptrScratchFolder,char *ptrFileName,char *ptrMBTileName,char *ptrGdalPath,char *ptrProgressID,char *ptrTMP, char *ptrUtid);
+char* getSupportInfo(char *ptrInputFile, char *ptrGDALPath, char *tableName, char *formatType);
 #endif /* convtif_h */
