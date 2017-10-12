@@ -683,53 +683,53 @@ public class GpkgImportService {
 
                                 switch (dataType) {
                                     case "TEXT":
-                                        formTemplate.putString("componentType", FormComponentType.textInput.toString());
+                                        formTemplate.putString("component", FormComponentType.textInput.toString());
                                         value = featureCursor.getString(idx);
                                         break;
                                     case "TINYINT":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                     case "SMALLINT":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                     case "REAL":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Float.toString(featureCursor.getFloat(idx));
                                         break;
                                     case "MEDIUMINT":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                     case "INTEGER":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                     case "INT":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                     case "FLOAT":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Float.toString(featureCursor.getFloat(idx));
                                         break;
                                     case "DOUBLE":
-                                        formTemplate.putString("componentType",FormComponentType.numberInput.toString());
+                                        formTemplate.putString("component",FormComponentType.numberInput.toString());
                                         value = Double.toString(featureCursor.getDouble(idx));
                                         break;
                                     case "DATETIME":
-                                        formTemplate.putString("componentType",FormComponentType.time.toString());
+                                        formTemplate.putString("component",FormComponentType.time.toString());
                                         value = Long.toString(featureCursor.getLong(idx));
                                         break;
                                     case "DATE":
-                                        formTemplate.putString("componentType",FormComponentType.date.toString());
+                                        formTemplate.putString("component",FormComponentType.date.toString());
                                         value = Long.toString(featureCursor.getLong(idx));
                                         break;
                                     case "BOOLEAN":
                                         options.pushString("yes");
                                         options.pushString("no");
-                                        formTemplate.putString("componentType",FormComponentType.radio.toString());
+                                        formTemplate.putString("component",FormComponentType.radio.toString());
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                 }
@@ -762,8 +762,8 @@ public class GpkgImportService {
         formTemplate.putInt("index",idx);
         formTemplate.putString("label",columnName);
         formTemplate.putString("description","");
-        formTemplate.putString("placeHolder","");
-        formTemplate.putBoolean("isRequired",false);
+        formTemplate.putString("placeholder","");
+        formTemplate.putBoolean("required",false);
         formTemplate.putBoolean("isRepeatable",false);
         formTemplate.putString("validation","");
         formTemplate.putString("currency","");
