@@ -64,7 +64,7 @@ typedef enum Goetypes
 -(void)importGeoPackage:(NSMutableDictionary*)gpkgParameters;
 
 //PDF
--(void)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath;
+-(void)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath Scartchpath:(NSString*)scratchPath;
 -(NSDictionary*)getSupportInfo:(NSString*)ptrInputFile;
 
 @end

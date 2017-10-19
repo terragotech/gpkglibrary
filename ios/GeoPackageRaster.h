@@ -18,7 +18,7 @@
 -(BOOL)isRasterPackage;
 -(BOOL)isRaster;
 
--(int)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath;
+-(int)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath ScratchPath:(NSString*)scrathPath;
 -(NSDictionary*)getSupportInfo:(NSString*)ptrInputFile;
 
 @end

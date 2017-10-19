@@ -498,13 +498,13 @@ static GeoPackageSingleton *sharedsingletonGeoPackageValue = nil;
     return stringUUID;
 }
 
--(void)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath{
+-(void)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath Scartchpath:(NSString*)scratchPath{
     if(!self.georaster){
         self.georaster = [[GeoPackageRaster alloc]init];
     }
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void)
                    {
-                       [[self georaster] processPDF:filePathPdf CreationPath:creationPath ProgressGuid:progressGuid DestinationPath:destinationPath];
+                       [[self georaster] processPDF:filePathPdf CreationPath:creationPath ProgressGuid:progressGuid DestinationPath:destinationPath ScratchPath:scratchPath];
                    });
 }
 

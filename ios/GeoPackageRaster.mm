@@ -129,7 +129,7 @@
     return isRasterPackage;
 }
 
--(int)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath{
+-(int)processPDF:(NSString*)filePathPdf CreationPath:(NSString*)creationPath ProgressGuid:(NSString*)progressGuid DestinationPath:(NSString*)destinationPath ScratchPath:(NSString*)scrathPath{
     NSError *err;
     NSString *tmpPath = [creationPath stringByAppendingString:@"/tmp"];
     if(![[NSFileManager defaultManager] createDirectoryAtPath:tmpPath withIntermediateDirectories:YES attributes:nil error:&err]) {
@@ -144,7 +144,6 @@
     [attributes setObject:[NSNumber numberWithInt:511] forKey:NSFilePosixPermissions];
     [[NSFileManager defaultManager] setAttributes:attributes ofItemAtPath:tmpPath error:&err];
     [[NSFileManager defaultManager] setAttributes:attributes ofItemAtPath:[tmpPath stringByAppendingString:@"/mbtiles"] error:&err];
-    NSString *scrathPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) objectAtIndex:0] stringByAppendingString:@"/scratch"];
     if(![[NSFileManager defaultManager] createDirectoryAtPath:scrathPath withIntermediateDirectories:YES attributes:nil error:&err]) {
         //Error Handler
         NSLog(@"Error creating folder");
