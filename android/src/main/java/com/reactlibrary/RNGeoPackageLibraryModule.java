@@ -2,6 +2,7 @@ package com.reactlibrary;
 
 
 import android.os.Environment;
+import android.os.StatFs;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
@@ -13,18 +14,23 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
+import com.google.gson.Gson;
 import com.reactlibrary.enums.NotesType;
 import com.reactlibrary.gpkgexport.GpkgExportService;
 import com.reactlibrary.gpkgimport.GpkgImportService;
 import com.reactlibrary.gpkgimport.PDFAttachmentExtractor;
+import com.reactlibrary.json.Estimation;
 import com.reactlibrary.utils.FileUtils;
 import com.reactlibrary.utils.Utils;
+import com.terragoedge.geopdf.read.GeoPDFEstimate;
 import com.terragoedge.geopdf.read.GeoPDFReader;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import javax.annotation.Signed;
 
 import mil.nga.geopackage.GeoPackage;
 import mil.nga.geopackage.GeoPackageManager;
@@ -48,6 +54,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   public static String importGuid = "";
   public static List<String> pdfGpkgs = new ArrayList<>();
   public static boolean isImportCancelled = false;
+  private Gson gson = new Gson();
 
   public RNGeoPackageLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -261,28 +268,41 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void processGeoPDFMbtile(final String pdfFilePath, final String mbtilePath,final String tempFolder,final String progressGuid,final String scratchPath,final Promise promise){
-    new Thread(new Runnable() {
-      @Override
-      public void run() {
         try {
-          String utid = UUID.randomUUID().toString();
-          String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
-          GeoPDFReader gr = new GeoPDFReader();
-          File mbtilesFolder = new File(tempFolder+File.separator+"mbtiles");//create folder for mbtile progress
-          if(!mbtilesFolder.exists()){
-            mbtilesFolder.mkdirs();
+          final String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
+          GeoPDFEstimate geoPDFEstimate = new GeoPDFEstimate();
+          String estimate = geoPDFEstimate.getSupportInfo(pdfFilePath,gdalPath,"","PDF");
+          Estimation estimation = gson.fromJson(estimate, Estimation.class);
+          if(estimation.getStatus().equals("good")){//checking file quality
+            String estimatedSize = estimation.getEstimate();
+            //android space if estimate in mb < android space in mb
+            if(getAvailableDeviceSpace() > Long.parseLong(estimatedSize)){// checking device available space to process mbtile
+              new Thread(new Runnable() {
+                @Override
+                public void run() {
+                  String utid = UUID.randomUUID().toString();
+                  GeoPDFReader gr = new GeoPDFReader();
+                  File mbtilesFolder = new File(tempFolder + File.separator + "mbtiles");//create folder for mbtile progress
+                  if (!mbtilesFolder.exists()) {
+                    mbtilesFolder.mkdirs();
+                  }
+                  gr.generateMBTiles(scratchPath, pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
+                  gr.destroyGeoPDF();
+                  // deleting temp created files once mbtile creation is done(temp/mbtiles/utid_ remove)
+                  deleteTempFiles(mbtilesFolder, utid);
+                  System.out.println("MBTiles Generation [SUCCESS]");
+                }
+                }).start();
+                promise.resolve("trigger Progress");
+            }else {// no device space available to process
+              promise.resolve("Error: There is no free space to proceed");
+            }
+          }else {// file quality bad
+            promise.resolve("Error: Imported PDF is not valid PDF/No Georegistration found/Unsupported Projection/No Raster found");
           }
-          gr.generateMBTiles(scratchPath,pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
-          gr.destroyGeoPDF();
-          // deleting temp created files once mbtile creation is done(temp/mbtiles/utid_ remove)
-          deleteTempFiles(mbtilesFolder,utid);
-          System.out.println("MBTiles Generation [SUCCESS]");
         }catch (Exception e){
           e.printStackTrace();
         }
-      }
-    }).start();
-    promise.resolve("trigger Progress");
   }
   private void deleteTempFiles(File mbtilesFolder,String utid) {
     try {
@@ -300,5 +320,12 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     }catch (Exception e){
       e.printStackTrace();
     }
+  }
+
+  private long getAvailableDeviceSpace(){
+    StatFs stat = new StatFs(Environment.getExternalStorageDirectory().getPath());
+    long bytesAvailable = (long)stat.getBlockSize() * (long)stat.getAvailableBlocks();
+    long megAvailable = bytesAvailable / (1024 * 1024);
+    return megAvailable;
   }
 }
