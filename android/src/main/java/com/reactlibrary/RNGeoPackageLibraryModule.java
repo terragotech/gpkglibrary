@@ -272,6 +272,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
           final String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
           GeoPDFEstimate geoPDFEstimate = new GeoPDFEstimate();
           String estimate = geoPDFEstimate.getSupportInfo(pdfFilePath,gdalPath,"","PDF");
+          geoPDFEstimate.destroyGeoPDFEstimate();
           Estimation estimation = gson.fromJson(estimate, Estimation.class);
           if(estimation.getStatus().equals("good")){//checking file quality
             String estimatedSize = estimation.getEstimate();
