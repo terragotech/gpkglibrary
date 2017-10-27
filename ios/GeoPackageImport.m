@@ -601,15 +601,19 @@
                     }
                 }
                 [note setObject:[self getGeometry:coordi forType:[note objectForKey:@"geoType"]] forKey:@"geometry"];
-                [note setObject:(NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnTitle] forKey:@"title"];
-                [note setObject:(NSString*)[featureRow getDatabaseValueWithColumnName:FeatureColumnNoteType] forKey:@"noteType"];
+                [note setObject:[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnTitle] ? (NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnTitle] : @"" forKey:@"title"];
+                [note setObject:[featureRow getDatabaseValueWithColumnName:FeatureColumnNoteType]?(NSString*)[featureRow getDatabaseValueWithColumnName:FeatureColumnNoteType]:@"" forKey:@"noteType"];
                 if ([self checkIsResourceNote:note]) {
-                    NSString *src = [NSString stringWithFormat:@"%@/resources/%@",srcPath,[(NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath]lastPathComponent]];
-                    if ([fileManager fileExistsAtPath:src] ) {
-                        NSError *error;
-                        NSString *dest = [NSString stringWithFormat:@"%@/%@",GPKGStoragePath,[(NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath]lastPathComponent]];
-                        [note setObject:dest forKey:@"resourcePath"];
-                        [fileManager copyItemAtPath:src toPath:dest error:&error];
+                    @try {
+                        NSString *src = [NSString stringWithFormat:@"%@/resources/%@",srcPath,[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath] ? [(NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath]lastPathComponent] : @""];
+                        if ([fileManager fileExistsAtPath:src] ) {
+                            NSError *error;
+                            NSString *dest = [NSString stringWithFormat:@"%@/%@",GPKGStoragePath,[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath] ? [(NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath]lastPathComponent] : @""];
+                            [note setObject:dest forKey:@"resourcePath"];
+                            [fileManager copyItemAtPath:src toPath:dest error:&error];
+                        }
+                    }@catch (NSException *exception) {
+                        NSLog(@"%@", exception.reason);
                     }
                 }
                 [retArray addObject:note];
