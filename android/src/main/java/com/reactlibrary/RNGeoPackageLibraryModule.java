@@ -270,14 +270,15 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   public void processGeoPDFMbtile(final String pdfFilePath, final String mbtilePath,final String tempFolder,final String progressGuid,final String scratchPath,final Promise promise){
         try {
           final String gdalPath = getReactApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+Utils.RASTER_SUPPORTED_FILE_PATH;
-          GeoPDFEstimate geoPDFEstimate = new GeoPDFEstimate();
+          /*GeoPDFEstimate geoPDFEstimate = new GeoPDFEstimate();
           String estimate = geoPDFEstimate.getSupportInfo(pdfFilePath,gdalPath,"","PDF");
           geoPDFEstimate.destroyGeoPDFEstimate();
-          Estimation estimation = gson.fromJson(estimate, Estimation.class);
-          if(estimation.getStatus().equals("good")){//checking file quality
-            String estimatedSize = estimation.getEstimate();
+          Estimation estimation = gson.fromJson(estimate, Estimation.class);*/
+          if(true){// estimation.getStatus().equals("good")){//checking file quality
+//            String estimatedSize = estimation.getEstimate();
+
             //android space if estimate in mb < android space in mb
-            if(getAvailableDeviceSpace() > Long.parseLong(estimatedSize)){// checking device available space to process mbtile
+            if(true){// getAvailableDeviceSpace() > Long.parseLong(estimatedSize)){// checking device available space to process mbtile
               new Thread(new Runnable() {
                 @Override
                 public void run() {
