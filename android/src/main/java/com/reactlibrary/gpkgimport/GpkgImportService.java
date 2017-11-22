@@ -500,7 +500,7 @@ public class GpkgImportService {
         gr.closeGeoPackage();
     }
 
-    public void createNonformNote(String geometry, ReadableMap featureClass, String noteType,String notebookGuid){
+    public void createNonformNote(String geometry, ReadableMap featureClass, String noteType,String notebookGuid,int index){
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
             String resourceName = "";
@@ -510,7 +510,7 @@ public class GpkgImportService {
                     int geomFieldIdx = featureRow.getGeometryColumnIndex();
                     HashMap<String,String> featureRows = new HashMap<>();
                     for(int idx=0;idx < fieldCount; idx++){
-                        if((idx != 0) && (idx != geomFieldIdx)){
+                        if(idx != geomFieldIdx){
                             String columnName = featureRow.getColumnName(idx);
                             if(columnName.equals("Resource_Path") || columnName.equals("ResourceRef")){
                                 resourceName = featureCursor.getString(idx);
@@ -563,7 +563,7 @@ public class GpkgImportService {
                         }
 
                     }//end for
-                    WritableMap writableMap = createGeopackageNote(geometry, featureClass, featureRows, noteType,resourceName);//save geopackage note
+                    WritableMap writableMap = createGeopackageNote(geometry, featureClass, featureRows, noteType,resourceName,index);//save geopackage note
                     writableMap.putString("formTemplateGuid",featureClass.getString("guid"));
                     writableMap.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
                     writableMap.putString("notebookGuid",notebookGuid);
@@ -575,10 +575,10 @@ public class GpkgImportService {
             }
         }
     }
-    private WritableMap createGeopackageNote(String geometry,ReadableMap featureClass,HashMap<String,String> featureRows,String noteType,String resourceName){
+    private WritableMap createGeopackageNote(String geometry,ReadableMap featureClass,HashMap<String,String> featureRows,String noteType,String resourceName,int index){
         WritableMap edgeNote = Arguments.createMap();
         edgeNote.putString("geometry",getGeometryDistance(geometry));
-        edgeNote.putString("title",getNoteTitle(featureClass, featureRows));
+        edgeNote.putString("title",getNoteTitle(featureClass, featureRows,index));
         edgeNote.putString("noteType",noteType);
         edgeNote.putString("formGuid",Utils.randomUUID());
         //get resource file from geofiles foler
@@ -628,12 +628,12 @@ public class GpkgImportService {
     private long getFID(){
         return featureRow.getId();
     }
-    private String getNoteTitle(ReadableMap featureClass,HashMap<String,String> featureRows){
+    private String getNoteTitle(ReadableMap featureClass,HashMap<String,String> featureRows,int index){
         String title = "";
         String attributeName = featureClass.hasKey("attributeName") ? featureClass.getString("attributeName") : null;
         String defaultName = featureClass.hasKey("defaultName") ? featureClass.getString("defaultName") : null;
         if(defaultName != null){
-            title = defaultName;
+            title = defaultName + (index == 0 ? "" : ("_"+index));
         }else if(attributeName != null){
             for(String key : featureRows.keySet()){
                 if(key.equals(featureClass.getString("attributeName"))){
@@ -647,7 +647,7 @@ public class GpkgImportService {
         return title;
     }
 
-    public void getCurrentFeatureFields(String tableName, String geometry,ReadableMap featureClass,String notebookGuid){
+    public void getCurrentFeatureFields(String tableName, String geometry,ReadableMap featureClass,String notebookGuid,int index){
         WritableMap edgeNote = Arguments.createMap();
         if(featureRow != null){
             String []fieldNames = featureRow.getColumnNames();
@@ -659,7 +659,7 @@ public class GpkgImportService {
                     int geomFieldIdx = featureRow.getGeometryColumnIndex();
                     HashMap<String,String> featureRows = new HashMap<>();
                     for(int idx=0;idx < fieldCount; idx++){
-                        if((idx != 0) && (idx != geomFieldIdx)){
+                        if(idx != geomFieldIdx){
                             WritableMap formTemplate = Arguments.createMap();
                             String columnName = featureRow.getColumnName(idx);
                             if(columnName.equals("TGT_Image_Column_") || columnName.equals("TGT_Video_Column_") || columnName.equals("TGT_Audio_Column_") || columnName.equals("TGT_Signature_Column_")){
@@ -742,7 +742,7 @@ public class GpkgImportService {
                         }
                     }//end for
                     WritableMap edgeFormTemplate = createEdgeFormTemplate(tableName,formTemplates);
-                    edgeNote = createGeopackageNote(geometry, featureClass, featureRows, NotesType.forms.name(),"");//save geopackage note
+                    edgeNote = createGeopackageNote(geometry, featureClass, featureRows, NotesType.forms.name(),"",index);//save geopackage note
                     edgeNote.putMap("edgeformTemplate",edgeFormTemplate);
                     edgeNote.putArray("formValues",formValues);
                     edgeNote.putString("formTemplateGuid",featureClass.getString("guid"));

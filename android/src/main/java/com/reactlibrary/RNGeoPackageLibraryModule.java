@@ -242,19 +242,19 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         int noteTypeColumnIndex = gpkgImportService.getNoteTypeColumnIndex();
         gpkgImportService.getSelectedLayerDefinition();
         while (gpkgImportService.hasNextFeatureInSelectedLayer()) {
-          currentRow++;
           gpkgImportService.getNextRow();
           String geometry = gpkgImportService.getCurrentFeatureGeom();
           if (noteTypeColumnIndex == -1) {//create form note
-            gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass,notebookGuid);
+            gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass,notebookGuid,currentRow);
           } else {//create form note
             String noteType = gpkgImportService.getNoteType(noteTypeColumnIndex);
             if (noteType.equals(NotesType.forms.name()) || noteType.equals(NotesType.multiupload.name())) {
-              gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass,notebookGuid);
+              gpkgImportService.getCurrentFeatureFields(tableName, geometry, featureClass,notebookGuid,currentRow);
             } else {//create non form notes
-              gpkgImportService.createNonformNote( geometry, featureClass, noteType,notebookGuid);
+              gpkgImportService.createNonformNote( geometry, featureClass, noteType,notebookGuid,currentRow);
             }
           }
+          currentRow++;
       }
     }
     gpkgImportService.closeGeoPkg();
