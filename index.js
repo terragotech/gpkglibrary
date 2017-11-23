@@ -11,6 +11,7 @@ var _createFeatureClass = RNGeoPackageLibraryNATIVE.createFeatureclass;
 var _insertFeatureRecord = RNGeoPackageLibraryNATIVE.insertFeatureclassRecord;
 var _closeGeoPackage = RNGeoPackageLibraryNATIVE.closeGeoPackage;
 var _cancelImport = RNGeoPackageLibraryNATIVE.cancelImport;
+var _processGeoPDFMbtile = RNGeoPackageLibraryNATIVE.processGeoPDFMbtile;
 
 //import
 //var _initImport = RNGeoPackageLibrary.initImportGeoPackageforPath;
@@ -41,6 +42,9 @@ var RNGeoPackageLibrary = {
     return _initImport(path, callback)
       .catch(_error)
   },
+  processGeoPDFMbtile(pdfFilePath, mbtilePath, tempFolder, progressGuid, scratchPath){
+      return _processGeoPDFMbtile(pdfFilePath, mbtilePath, tempFolder, progressGuid, scratchPath)
+    },
   getgpkgFileDetails(path){
     return _getgpkgFileDetails(path)
   },

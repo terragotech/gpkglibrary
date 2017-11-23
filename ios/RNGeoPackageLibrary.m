@@ -75,6 +75,30 @@ RCT_EXPORT_METHOD(cancelImport:(NSString *)importID resolver:(RCTPromiseResolveB
     resolve(@"");
 }
 
+RCT_EXPORT_METHOD(processGeoPDFMbtile:(NSString *)pdfFilePath mbtilePath:(NSString*)mbtilePath tempFolder:(NSString*)tempFolder progressGuid:(NSString*)progressGuid scratchPath:(NSString*)scratchPath resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)  {
+    NSDictionary* check = [[GeoPackageSingleton getSharedInstanceValue]getSupportInfo:pdfFilePath];
+    if ([[check objectForKey:@"status"]isEqualToString:@"good"]) {
+        NSString *tempPath = [NSString stringWithFormat:@"%@", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)objectAtIndex:0]];
+        unsigned long long int totalFreeSpace = 0;
+        NSError *error = nil;
+        NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:tempPath error: &error];
+        if (dictionary) {
+            NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
+            totalFreeSpace = ([freeFileSystemSizeInBytes unsignedLongLongValue]/1024)/1024;
+        }
+        unsigned long long int estimatedSpace = [[[[NSNumberFormatter alloc] init] numberFromString:[check objectForKey:@"estimate"]]unsignedLongLongValue];
+        if (estimatedSpace < totalFreeSpace) {
+             [[GeoPackageSingleton getSharedInstanceValue]processPDF:pdfFilePath CreationPath:tempFolder ProgressGuid:progressGuid DestinationPath:mbtilePath Scartchpath:scratchPath];
+            resolve(@"trigger Progress");
+        } else {
+            resolve(@"Error: There is no free space to proceed");
+        }
+    } else {
+        NSLog(@"Error in PDF2MBTile : %@",[check objectForKey:@"status"]);
+        resolve( @"Error: Imported PDF is not valid PDF/No Georegistration found/Unsupported Projection/No Raster found");
+    }
+}
+
 -(void)receiveNotification:(NSNotification *)notification{
     if ([[notification name] isEqualToString:@"noteImported"]){
         NSDictionary* userInfo = notification.userInfo;
