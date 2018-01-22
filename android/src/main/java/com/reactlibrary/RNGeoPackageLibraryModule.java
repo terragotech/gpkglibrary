@@ -124,7 +124,15 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     try {
       String tableName = readableMap.getString("FeatureName");
       String geometry = readableMap.getString("Location");
-      FeatureDao currentFeatureClassFeatureDAO = gpkgExportService.insertDefaultTableValue(tableName, geometryType,srs);
+      FeatureDao currentFeatureClassFeatureDAO = null;
+      try {
+        currentFeatureClassFeatureDAO = gpkgExportService.insertDefaultTableValue(tableName, geometryType, srs);
+      }catch (Exception e){ //unique constraint error while inserting new value to existing table
+        e.printStackTrace();
+      }
+      if(currentFeatureClassFeatureDAO == null){
+        currentFeatureClassFeatureDAO = geoPackage.getFeatureDao(tableName);
+      }
       FeatureRow featureRow = currentFeatureClassFeatureDAO.newRow();
       gpkgExportService.addGeometryValuefromJson(geometry,featureRow,currentFeatureTable,currentFeatureClassFeatureDAO);
       ReadableArray columnsArray = readableMap.getArray("values");

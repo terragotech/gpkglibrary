@@ -75,13 +75,13 @@ public class GpkgExportService {
 
             currentFeatureClassGeomColums.setColumnName("geom");
             switch (geometryType) {
-                case 0:
+                case 1:
                     currentFeatureClassGeomColums.setGeometryType(GeometryType.POINT);
                     break;
-                case 1:
+                case 2:
                     currentFeatureClassGeomColums.setGeometryType(GeometryType.LINESTRING);
                     break;
-                case 2:
+                case 3:
                     currentFeatureClassGeomColums.setGeometryType(GeometryType.POLYGON);
                     break;
             }
