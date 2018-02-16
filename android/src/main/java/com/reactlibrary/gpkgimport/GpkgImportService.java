@@ -364,6 +364,8 @@ public class GpkgImportService {
                 return NotesType.none.name();
             case "image":
                 return NotesType.image.name();
+            case "photo":
+                return NotesType.image.name();
             case "audio":
                 return NotesType.audio.name();
             case "video":
