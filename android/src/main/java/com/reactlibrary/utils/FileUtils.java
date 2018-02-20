@@ -70,10 +70,11 @@ public class FileUtils {
             while((len=input.read(buf))>0){
                 out.write(buf,0,len);
             }
-            out.close();
-            input.close();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            out.close();
+            input.close();
         }
         return outputFile;
     }
