@@ -660,7 +660,7 @@ public class GpkgImportService {
                                     File file = FileUtils.getFileFromFolder(new File("input resource path"),resourceName);
                                     if(file != null){
                                         try{
-                                            FileUtils.writeFileInputStream(new FileInputStream(file),new File("resuorcepath"));
+                                            FileUtils.writeFileInputStream(new FileInputStream(file),new File("resourcepath"));
                                         }catch (Exception e){
                                             e.printStackTrace();
                                         }
