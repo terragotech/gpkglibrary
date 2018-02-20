@@ -63,8 +63,9 @@ public class FileUtils {
      * @return
      */
     public static File writeFileInputStream(InputStream input, File outputFile){
+        OutputStream out = null;
         try {
-            OutputStream out = new FileOutputStream(outputFile);
+            out = new FileOutputStream(outputFile);
             byte[] buf = new byte[1024];
             int len;
             while((len=input.read(buf))>0){
@@ -73,8 +74,20 @@ public class FileUtils {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            out.close();
-            input.close();
+            if(out != null) {
+                try{
+                    out.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+            if(input != null) {
+                try{
+                    input.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
         }
         return outputFile;
     }
