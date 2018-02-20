@@ -24,24 +24,7 @@ public class GeoPackageRasterReader {
 
     private native String getGeoPackageRasterNameListAsJSON(long ptr);
 
-    private native int initiateGeoPackageToMBTilesConversion(long ptr,
-                                                             String tileSourceName,
-                                                             int zoomLevels,
-                                                             int zlevel,
-                                                             int quality,
-                                                             int imgFormat,
-                                                             String mbtilesName
-    );
-
-    private native int cancelGeoPackageToMBTilesConversion(long ptr);
-
-    private native double getGeoPackageToMBTileConversionStatus(long ptr);
-
-    private native int getGeoPackageRasterReaderState(long ptr);
-
     private native int closeGeoPackage(long ptr);
-
-    private native int destroyGeoPackageRasterReader(long ptr);
 
     public GeoPackageRasterReader() {
         System.out.println("Creating new Object");
@@ -67,44 +50,9 @@ public class GeoPackageRasterReader {
         return getGeoPackageRasterNameListAsJSON(ptr);
     }
 
-    //Invoke the GeoPkg to MBTiles conversion, with
-    //the option for creating MBTiles in different tile formats
-    public int initiateGeoPackageToMBTilesConversion(
-            String tileSourceName,
-            int zoomLevels,
-            int zlevel,
-            int quality,
-            int imgFormat,
-            String mbtilesName) {
-        return initiateGeoPackageToMBTilesConversion(
-                ptr, tileSourceName,
-                zoomLevels, zlevel, quality, imgFormat, mbtilesName);
-    }
-
-    //Cancel the on going creation process
-    public int cancelGeoPackageToMBTilesConversion() {
-        return cancelGeoPackageToMBTilesConversion(ptr);
-    }
-
-    //Call to get the MBTiles conversion status
-    public double getGeoPackageToMBTileConversionStatus() {
-        return getGeoPackageToMBTileConversionStatus(ptr);
-    }
-
-    //Call to get the status of the GeoPackageRasterReader
-    public int getGeoPackageRasterReaderState() {
-        return getGeoPackageRasterReaderState(ptr);
-    }
-
     //Close the Geopackage file resourse
     public int closeGeoPackage() {
-        System.out.println("closing object");
-
         return closeGeoPackage(ptr);
     }
 
-    //Call this to destroyGeoPackage reference
-    public int destroyGeoPackageRasterReader() {
-        return destroyGeoPackageRasterReader(ptr);
-    }
 }

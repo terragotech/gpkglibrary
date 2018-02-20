@@ -22,7 +22,6 @@ import com.reactlibrary.gpkgimport.PDFAttachmentExtractor;
 import com.reactlibrary.json.Estimation;
 import com.reactlibrary.utils.FileUtils;
 import com.reactlibrary.utils.Utils;
-import com.terragoedge.geopdf.read.GeoPDFEstimate;
 import com.terragoedge.geopdf.read.GeoPDFReader;
 
 import java.io.File;

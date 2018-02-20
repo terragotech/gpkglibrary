@@ -397,7 +397,6 @@ public class GpkgImportService {
         final String convertedPath = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)+File.separator+"rasterOutput";
         final File file = new File(convertedPath);
         file.mkdirs();
-        System.out.println("terrago check"+file.canWrite());
         File[] files = file.listFiles(filenameFilter);
         final int size = files.length;
         int idx = inputGeoPackageFile.lastIndexOf(".");
@@ -409,10 +408,8 @@ public class GpkgImportService {
             }
         }catch(Exception e)
         {
-            System.out.println("terrago progress file error");
             e.printStackTrace();
         }
-        System.out.println("terrago progress file created");
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -427,7 +424,6 @@ public class GpkgImportService {
                             BufferedReader br = new BufferedReader(new FileReader(f1));
                             while((str=br.readLine())!=null && str.length()!=0)
                             {
-                                System.out.println("raster progress file reading"+str);
                                 int idx = str.indexOf("-");
                                 String status = str.substring(0,idx);
                                 if(status.equals("PROGRESS"))
@@ -435,12 +431,10 @@ public class GpkgImportService {
                                     int sidx = idx + 1;
                                     int eidx = str.lastIndexOf("#");
                                     String status1 = str.substring(sidx, eidx);
-                                    //System.out.println(status1);
                                     double dstatus = Double.parseDouble(status1) * 100;
                                     ///////////////////////////////////////////////////////////////////////////////////////
                                     if(dstatus >= 100.0)
                                     {
-                                        System.out.println("terrago successs raster file");
                                         WritableMap writableMap1 = Arguments.createMap();
                                         writableMap1.putString("notebookGuid",notebookGuid);
                                         writableMap1.putString("importGuid",RNGeoPackageLibraryModule.importGuid);
@@ -468,12 +462,10 @@ public class GpkgImportService {
                             try {
                                 Thread.sleep(5000);
                             }catch (Exception e){
-                                System.out.println("terrago progress file error while getting progress");
                                 e.printStackTrace();
                             }
                         }catch (Exception e)
                         {
-                            System.out.println("terrago progress file error interrupt");
                             e.printStackTrace();
                             blnStopFlag = true;
                         }
@@ -491,12 +483,9 @@ public class GpkgImportService {
             }
         });
         thread.start();
-        System.out.println("Input file :" + inputGeoPackageFile1);
         try {
-            System.out.println("terrago raster file conversion started");
             gr.convertGeoPackage(inputGeoPackageFile1,convertedPath+File.separator+fileName+"_"+size+".mbtiles", selectedLayer, tmpPath );
         }catch (Exception e){
-            System.out.println("terrago raster file creattion error");
             e.printStackTrace();
         }
         gr.closeGeoPackage();
@@ -735,8 +724,6 @@ public class GpkgImportService {
                                         value = Integer.toString(featureCursor.getInt(idx));
                                         break;
                                 }
-                                System.out.println("form value" + value);
-                                System.out.println("form components"+ formTemplates);
                                 createGeopackageFormTemplate(formTemplate, idx, options, formTemplates, columnName);//save geopackage form template
                                 createGeoFormValues(idx, columnName, value, formValues);
                                 featureRows.put(columnName, value);
