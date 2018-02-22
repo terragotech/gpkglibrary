@@ -68,7 +68,7 @@
         
         NSMutableArray *formEleArray = [[NSMutableArray alloc]init];
         GPKGFeatureDao * featureDao = [geoPackage getFeatureDaoWithTableName:featureName];
-       
+        
         NSString *pkName = [[[featureDao getFeatureTable]getPkColumn]name];
         
         int index = 0;
@@ -85,10 +85,14 @@
             if ([clmn isGeometry] || [[clmn name]isEqualToString:pkName]) {
                 continue;
             }
+            if([[clmn name]isEqualToString:@"Pictures_of_Damage"]){
+                NSLog(@"dfffff") ;
+            }
             NSMutableDictionary *fe = [self formElementforDatatype:[clmn dataType]];
             if (!fe) {
                 continue;
             }
+            
             NSString *strCmnName = [clmn name];
             if ([strCmnName containsString:FormFeatureAudioColumn]) {
                 strCmnName = [strCmnName stringByReplacingOccurrencesOfString:FormFeatureAudioColumn withString:@""];
@@ -117,7 +121,7 @@
 }
 
 -(NSMutableArray*)importFeaturesforFeatureTemplate:(NSMutableDictionary*)featureTemplate forFeatureClass:(NSString*)featureName{
-     NSMutableArray *retArray = [[NSMutableArray alloc]init];
+    NSMutableArray *retArray = [[NSMutableArray alloc]init];
     if (imported) {
         GPKGFeatureDao * featureDao = [geoPackage getFeatureDaoWithTableName:featureName];
         
@@ -166,7 +170,7 @@
                     NSString *strCmnName = [[featureRow getPkColumn]name];
                     if ([strCmnName containsString:FormFeatureAudioColumn]) {
                         strCmnName = [strCmnName stringByReplacingOccurrencesOfString:FormFeatureAudioColumn withString:@""];
-                         [fc setObject:[NSNumber numberWithBool:true] forKey:@"isAttachment"];
+                        [fc setObject:[NSNumber numberWithBool:true] forKey:@"isAttachment"];
                         [self copyResourceforFormNote:val];
                     }else if ([strCmnName containsString:FormFeatureVideoColumn]) {
                         strCmnName = [strCmnName stringByReplacingOccurrencesOfString:FormFeatureVideoColumn withString:@""];
@@ -190,6 +194,15 @@
                 }
                 
                 NSMutableDictionary *note = [[NSMutableDictionary alloc]init];
+                for (NSString *cName in [featureRow getColumnNames]) {
+                    @try{
+                        if([featureRow getValueWithColumnName:cName]){
+                            [note setObject:[featureRow getValueWithColumnName:cName] forKey:cName];
+                        }
+                    }@catch (NSException *exception) {
+                        NSLog(@"%@", exception.reason);
+                    }
+                }
                 [note setObject:@"forms" forKey:@"noteType"];
                 NSMutableArray *coordi = [[NSMutableArray alloc]init];
                 GPKGGeometryData * geometryData = [featureRow getGeometry];
@@ -251,7 +264,7 @@
                 [note setObject:frmCaptArr forKey:@"formValues"];
                 [note setObject:featureTemplate forKey:@"edgeformTemplate"];
                 [retArray addObject:note];
-
+                
             }
         }@finally {
             [featureResults close];
@@ -268,7 +281,7 @@
         if ([fileManager fileExistsAtPath:src] ) {
             NSError *error;
             NSString *dest = [NSString stringWithFormat:@"%@/%@",GPKGStoragePath,[path lastPathComponent]];
-//            [note setResourceRef:dest];
+            //            [note setResourceRef:dest];
             [fileManager copyItemAtPath:src toPath:dest error:&error];
             
         }
@@ -339,6 +352,9 @@
                         }
                     }
                     NSString *strCmnName = [featColm name];
+                    if([strCmnName isEqualToString:@"Pictures_of_Damage"]){
+                        NSLog(@"dfffff") ;
+                    }
                     if ([strCmnName containsString:FormFeatureAudioColumn]) {
                         strCmnName = [strCmnName stringByReplacingOccurrencesOfString:FormFeatureAudioColumn withString:@""];
                         [fc setObject:[NSNumber numberWithBool:TRUE] forKey:@"isAttachment"];
@@ -357,12 +373,25 @@
                         [self copyResourceforFormNote:val];
                     }
                     [fc setObject:strCmnName forKey:@"label"];
-                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",[featColm name],repeatableLabelDelimiter,val] forKey:@"value"];
+                    if( [fc objectForKey:@"isAttachment"]){
+                        [fc setObject:[NSString stringWithFormat:@"%@",val] forKey:@"value"];
+                    }else{
+                        [fc setObject:[NSString stringWithFormat:@"%@%@%@",strCmnName,repeatableLabelDelimiter,val] forKey:@"value"];
+                    }
                     [frmCaptArr addObject:fc];
                     index++;
                     
                 }
                 NSMutableDictionary *note = [[NSMutableDictionary alloc]init];
+                for (NSString *cName in [featureRow getColumnNames]) {
+                    @try{
+                        if([featureRow getValueWithColumnName:cName]){
+                            [note setObject:[featureRow getValueWithColumnName:cName] forKey:cName];
+                        }
+                    }@catch (NSException *exception) {
+                        NSLog(@"%@", exception.reason);
+                    }
+                }
                 [note setObject:@"forms" forKey:@"noteType"];
                 [note setObject:noteTitle forKey:@"title"];
                 NSMutableArray *coordi = [[NSMutableArray alloc]init];
@@ -435,11 +464,11 @@
 }
 
 -(void)geoPackageImportforFeatureClass:(NSString*)featureName{
-
+    
     if (imported) {
-
+        
         GPKGFeatureDao * featureDao = [geoPackage getFeatureDaoWithTableName:featureName];
-       
+        
         GPKGMapShapeConverter * converter = [[GPKGMapShapeConverter alloc] initWithProjection:featureDao.projection];
         GPKGResultSet * featureResults = [featureDao queryForAll];
         @try {
@@ -509,6 +538,7 @@
     return ret;
 }
 -(BOOL)isFormFeatureclass:(NSString*)featureClassName{
+    BOOL isRet = false;
     GPKGFeatureDao *featureDao = [geoPackage getFeatureDaoWithTableName:featureClassName];
     for (NSString *columnName in [featureDao columns]) {
         if ([columnName isEqualToString:FeatureColumnNoteType]) {
@@ -518,20 +548,21 @@
                 while([featureResults moveToNext]){
                     GPKGFeatureRow * featureRow = [featureDao getFeatureRow:featureResults];
                     NSString *noteType = (NSString*)[featureRow getDatabaseValueWithColumnName:FeatureColumnNoteType];
-                    if ([noteType isEqualToString:@"forms"]||[noteType isEqualToString:@"multi"]) {
-                        return TRUE;
+                    if ([noteType isEqualToString:@"form"] || [noteType isEqualToString:@"forms"]||[noteType isEqualToString:@"multi"]) {
+                        isRet= TRUE;
+                        break;
                     }
                 }
             }@catch(NSException *exception){
                 
             }@finally{
                 [featureResults close];
-                return FALSE;
+                return isRet;
             }
-            return FALSE;
+            return isRet;
         }
     }
-    return TRUE;
+    return isRet;
 }
 
 -(NSMutableArray*)importFeaturesforNonFormNotesFeatureClass:(NSString*)featureName{
@@ -546,6 +577,15 @@
                 GPKGFeatureRow * featureRow = [featureDao getFeatureRow:featureResults];
                 
                 NSMutableDictionary *note = [[NSMutableDictionary alloc]init];
+                for (NSString *cName in [featureRow getColumnNames]) {
+                    @try{
+                        if([featureRow getValueWithColumnName:cName]){
+                            [note setObject:[featureRow getValueWithColumnName:cName] forKey:cName];
+                        }
+                    }@catch (NSException *exception) {
+                        NSLog(@"%@", exception.reason);
+                    }
+                }
                 [note setObject:@"forms" forKey:@"noteType"];
                 NSMutableArray *coordi = [[NSMutableArray alloc]init];
                 GPKGGeometryData * geometryData = [featureRow getGeometry];
@@ -577,7 +617,7 @@
                                 CLLocation *loc = [[CLLocation alloc]initWithLatitude:routeCoordinates[c].latitude longitude:routeCoordinates[c].longitude];
                                 [coordi addObject:loc];
                             }
-                             [note setObject:@"Polygon" forKey:@"geoType"];
+                            [note setObject:@"Polygon" forKey:@"geoType"];
                         }
                     }
                 }
@@ -603,6 +643,7 @@
                 [note setObject:[self getGeometry:coordi forType:[note objectForKey:@"geoType"]] forKey:@"geometry"];
                 [note setObject:[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnTitle] ? (NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnTitle] : @"" forKey:@"title"];
                 [note setObject:[featureRow getDatabaseValueWithColumnName:FeatureColumnNoteType]?(NSString*)[featureRow getDatabaseValueWithColumnName:FeatureColumnNoteType]:@"" forKey:@"noteType"];
+                
                 if ([self checkIsResourceNote:note]) {
                     @try {
                         NSString *src = [NSString stringWithFormat:@"%@/resources/%@",srcPath,[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath] ? [(NSString*)[featureRow getDatabaseValueWithColumnName:NonFormFeatureColumnResourcePath]lastPathComponent] : @""];
@@ -686,7 +727,7 @@
         [mainDict setObject:secDict forKey:@"geometry"];
         
         NSMutableDictionary *thirDict = [[NSMutableDictionary alloc]init];
-//        [thirDict setObject:locationDescription forKey:@"name"];
+        //        [thirDict setObject:locationDescription forKey:@"name"];
         if ([geoType isEqualToString:@"LineString"] || [geoType isEqualToString:@"Polygon"]) {
             if ([coordinates count]>1) {
                 int count = (int)[coordinates count];
@@ -718,3 +759,4 @@
     return geometry;
 }
 @end
+
