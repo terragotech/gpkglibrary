@@ -570,6 +570,9 @@ public class GpkgImportService {
         WritableMap edgeNote = Arguments.createMap();
         edgeNote.putString("geometry",getGeometryDistance(geometry));
         edgeNote.putString("title",getNoteTitle(featureClass, featureRows,index));
+        for ( String key : featureRows.keySet() ) {
+            edgeNote.putString(key, featureRows.get(key));
+        }
         edgeNote.putString("noteType",noteType);
         edgeNote.putString("formGuid",Utils.randomUUID());
         //get resource file from geofiles foler
