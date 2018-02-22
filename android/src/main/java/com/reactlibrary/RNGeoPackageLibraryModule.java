@@ -76,8 +76,12 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       dbFolder.mkdirs();
       GeoPackageManager geoPackageManager = GeoPackageFactory.getManager(reactContext);
       File dbFile = new File(dbPath+File.separator+dbName+".gpkg");
+      File dbFile1 = new File(dbPath+File.separator+dbName+".zip.gpkg");
       if(dbFile.exists()){// delete db if already exist
         dbFile.delete();
+      }
+      if(dbFile1.exists()){// delete db if already exist
+        dbFile1.delete();
       }
       boolean isDbCreated = geoPackageManager.createAtPath(dbName,dbFolder);// create db
       System.out.println("terrago import db created ="+isDbCreated);

@@ -375,6 +375,7 @@ public class GpkgImportService {
             case "file":
                 return NotesType.file.name();
             case "forms":
+            case "form":
                 return NotesType.forms.name();
             case "multiupload":
                 return NotesType.multiupload.name();
@@ -656,7 +657,8 @@ public class GpkgImportService {
                         if(idx != geomFieldIdx){
                             WritableMap formTemplate = Arguments.createMap();
                             String columnName = featureRow.getColumnName(idx);
-                            if(columnName.equals("TGT_Image_Column_") || columnName.equals("TGT_Video_Column_") || columnName.equals("TGT_Audio_Column_") || columnName.equals("TGT_Signature_Column_")){
+                            if(columnName.startsWith("TGT_Image_Column_") || columnName.startsWith("TGT_Video_Column_") || columnName.startsWith("TGT_Audio_Column_") || columnName.startsWith("TGT_Signature_Column_")){
+                                WritableArray options  = Arguments.createArray();
                                 String resourceValue = featureCursor.getString(idx);
                                 String[] resourceNames = resourceValue.split(",");
                                 for(String resourceName : resourceNames){
@@ -669,7 +671,11 @@ public class GpkgImportService {
                                         }
                                     }
                                 }
-
+                                formTemplate.putString("component",columnName.startsWith("TGT_Image_Column_") ? FormComponentType.imageupload.toString() : columnName.startsWith("TGT_Video_Column_") ? FormComponentType.videoupload.toString() : columnName.startsWith("TGT_Audio_Column_") ? FormComponentType.audioupload.toString() : columnName.startsWith("TGT_Signature_Column_") ? FormComponentType.signature
+                                        .toString() : FormComponentType.imageupload.toString());
+                                createGeopackageFormTemplate(formTemplate, idx, options, formTemplates, columnName);//save geopackage form template
+                                createGeoFormValues(idx, columnName, resourceValue, formValues, true);
+                                featureRows.put(columnName, resourceValue);
                             }else{
                                 String value = null;
                                 WritableArray options  = Arguments.createArray();
@@ -728,7 +734,7 @@ public class GpkgImportService {
                                         break;
                                 }
                                 createGeopackageFormTemplate(formTemplate, idx, options, formTemplates, columnName);//save geopackage form template
-                                createGeoFormValues(idx, columnName, value, formValues);
+                                createGeoFormValues(idx, columnName, value, formValues, false);
                                 featureRows.put(columnName, value);
                             }
                         }
@@ -766,13 +772,13 @@ public class GpkgImportService {
         formTemplate.putMap("occurences",occurences);
         formTemplates.pushMap(formTemplate);
     }
-    private void createGeoFormValues(int idx,String columnName,String value,WritableArray formValues){
+    private void createGeoFormValues(int idx,String columnName,String value,WritableArray formValues, boolean isAttachment){
         WritableMap formValue = Arguments.createMap();
         formValue.putInt("id",idx);
         formValue.putInt("index",idx);
         formValue.putString("label",columnName);
-        formValue.putBoolean("isAttachment",false);
-        formValue.putString("value",formValue.getString("label") + "#" + value);
+        formValue.putBoolean("isAttachment",isAttachment);
+        formValue.putString("value",isAttachment ? value : formValue.getString("label") + "#" + value);
         formValues.pushMap(formValue);
     }
 
