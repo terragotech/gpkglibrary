@@ -544,10 +544,11 @@
 }
 -(BOOL)isFormFeatureclass:(NSString*)featureClassName{
     BOOL isRet = false;
+    BOOL canFound = false;
     GPKGFeatureDao *featureDao = [geoPackage getFeatureDaoWithTableName:featureClassName];
     for (NSString *columnName in [featureDao columns]) {
         if ([columnName isEqualToString:FeatureColumnNoteType]) {
-            
+            canFound = true;
             GPKGResultSet * featureResults = [featureDao queryForAll];
             @try {
                 while([featureResults moveToNext]){
@@ -566,6 +567,9 @@
             }
             return isRet;
         }
+    }
+    if (!canFound) {
+        isRet = TRUE;
     }
     return isRet;
 }
