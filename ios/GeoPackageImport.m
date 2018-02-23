@@ -167,7 +167,7 @@
                     if ([[[featureRow getPkColumn]name]containsString:@"PicturesofDamage"]) {
                         
                     }
-                    NSString *strCmnName = [[featureRow getPkColumn]name];
+                    NSString *strCmnName =  [featColm name];;
                     if ([strCmnName containsString:FormFeatureAudioColumn]) {
                         strCmnName = [strCmnName stringByReplacingOccurrencesOfString:FormFeatureAudioColumn withString:@""];
                         [fc setObject:[NSNumber numberWithBool:true] forKey:@"isAttachment"];
@@ -186,7 +186,12 @@
                         [self copyResourceforFormNote:val];
                     }
                     [fc setObject:strCmnName forKey:@"label"];
-                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",strCmnName,repeatableLabelDelimiter,val] forKey:@"value"];
+                    if( [fc objectForKey:@"isAttachment"]){
+                        [fc setObject:[NSString stringWithFormat:@"%@",val] forKey:@"value"];
+                    }else{
+                        [fc setObject:[NSString stringWithFormat:@"%@%@%@",strCmnName,repeatableLabelDelimiter,val] forKey:@"value"];
+                    }
+                    //                    [fc setObject:[NSString stringWithFormat:@"%@%@%@",strCmnName,repeatableLabelDelimiter,val] forKey:@"value"];
                     
                     [frmCaptArr addObject:fc];
                     index++;
