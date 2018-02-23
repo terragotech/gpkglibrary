@@ -14,6 +14,7 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
+import java.util.HashMap;
 import com.google.gson.Gson;
 import com.reactlibrary.enums.NotesType;
 import com.reactlibrary.gpkgexport.GpkgExportService;
@@ -54,6 +55,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   public static List<String> pdfGpkgs = new ArrayList<>();
   public static boolean isImportCancelled = false;
   private Gson gson = new Gson();
+  private HashMap<String, FeatureTable> featureTableList = new HashMap<>();
 
   public RNGeoPackageLibraryModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -70,6 +72,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void initGeoPackageatPath(String dbPath,String dbName,Promise promise){
     try {
+      featureTableList = new HashMap<>();
       srs = new SpatialReferenceSystem();
       srs.setId(4326);
       File dbFolder = new File(dbPath);
@@ -83,6 +86,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       if(dbFile1.exists()){// delete db if already exist
         dbFile1.delete();
       }
+      geoPackageManager.delete(dbName);
       boolean isDbCreated = geoPackageManager.createAtPath(dbName,dbFolder);// create db
       System.out.println("terrago import db created ="+isDbCreated);
       geoPackage = geoPackageManager.open(dbName);
@@ -117,6 +121,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
       }
       currentFeatureTable = new FeatureTable(tableName, lstFeatureColumns);
       geoPackage.createFeatureTable(currentFeatureTable);
+      featureTableList.put(tableName,currentFeatureTable);
     }
     promise.resolve("true");
   }
@@ -126,6 +131,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     System.out.println("insertFeatureclassRecord"+readableMap);
     try {
       String tableName = readableMap.getString("FeatureName");
+      currentFeatureTable = featureTableList.get(tableName);
       String geometry = readableMap.getString("Location");
       FeatureDao currentFeatureClassFeatureDAO = null;
       try {
@@ -144,7 +150,10 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
         for(int i=0;i<size;i++){
           ReadableMap readableMap1 = columnsArray.getMap(i);
           String fieldName = readableMap1.getString("columnName");
-          String fieldValue = readableMap1.getString("columnValue");
+          String fieldValue = "";
+          if(readableMap1.hasKey("columnValue")) {
+            fieldValue = readableMap1.getString("columnValue");
+          }
           gpkgExportService.insertValue(fieldName, fieldValue,featureRow,currentFeatureTable);
         }
       }
@@ -160,6 +169,7 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
     if(geoPackage != null){
       geoPackage.close();
     }
+    featureTableList = new HashMap<>();
     promise.resolve("true");
   }
 
