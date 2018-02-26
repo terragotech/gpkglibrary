@@ -10,6 +10,8 @@
 #define GPKGConstant_h
 
 #define GPKGStoragePath [NSString stringWithFormat:@"%@/Data", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)objectAtIndex:0]]
+#define GPKGResourcePath [NSString stringWithFormat:@"%@/resources", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]]
+
 
 #define repeatableDelimiter @"*|#*"
 #define repeatableLabelDelimiter @"#"

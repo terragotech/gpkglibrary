@@ -285,7 +285,8 @@
         NSString *src = [NSString stringWithFormat:@"%@/resources/%@",srcPath,[path lastPathComponent]];
         if ([fileManager fileExistsAtPath:src] ) {
             NSError *error;
-            NSString *dest = [NSString stringWithFormat:@"%@/%@",GPKGStoragePath,[path lastPathComponent]];
+//            NSString *dest = [NSString stringWithFormat:@"%@/%@",GPKGStoragePath,[path lastPathComponent]];
+            NSString *dest = [NSString stringWithFormat:@"%@/%@",GPKGResourcePath,[path lastPathComponent]];
             //            [note setResourceRef:dest];
             [fileManager copyItemAtPath:src toPath:dest error:&error];
             
