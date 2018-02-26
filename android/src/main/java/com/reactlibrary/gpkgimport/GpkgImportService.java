@@ -660,6 +660,9 @@ public class GpkgImportService {
                             if(columnName.startsWith("TGT_Image_Column_") || columnName.startsWith("TGT_Video_Column_") || columnName.startsWith("TGT_Audio_Column_") || columnName.startsWith("TGT_Signature_Column_")){
                                 WritableArray options  = Arguments.createArray();
                                 String resourceValue = featureCursor.getString(idx);
+                                if(resourceValue == null){
+                                    resourceValue = "";
+                                }
                                 String[] resourceNames = resourceValue.split(",");
                                 for(String resourceName : resourceNames){
                                     File file = FileUtils.getFileFromFolder(new File("input resource path"),resourceName);
