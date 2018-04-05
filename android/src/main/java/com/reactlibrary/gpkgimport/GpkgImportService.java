@@ -420,9 +420,10 @@ public class GpkgImportService {
                 {
                     if(f1.exists())
                     {
+                        BufferedReader br = null;
                         try {
                             String str ="";
-                            BufferedReader br = new BufferedReader(new FileReader(f1));
+                            br = new BufferedReader(new FileReader(f1));
                             while((str=br.readLine())!=null && str.length()!=0)
                             {
                                 int idx = str.indexOf("-");
@@ -456,19 +457,22 @@ public class GpkgImportService {
                                     //TODO: need to send error
                                 }
                             }
-                            if(br != null)
-                            {
-                                br.close();
-                            }
                             try {
                                 Thread.sleep(5000);
                             }catch (Exception e){
                                 e.printStackTrace();
                             }
-                        }catch (Exception e)
-                        {
+                        }catch (Exception e) {
                             e.printStackTrace();
                             blnStopFlag = true;
+                        } finally {
+                            if (br != null) {
+                                try {
+                                    br.close();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
                         }
 
                     }
