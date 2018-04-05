@@ -49,11 +49,27 @@ public class PDFAttachmentExtractor {
                         while (it.hasNext()) {
                             PdfName pdfname = it.next();
                             System.out.println("terrago pdf name"+pdfname);
-                            FileOutputStream fos = new FileOutputStream(
-                                    targetpath + File.separator + fs.getAsString(pdfname).toString());
-                            fos.write(PdfReader.getStreamBytes((PRStream) refs.getAsStream(pdfname)));
-                            fos.flush();
-                            fos.close();
+                            FileOutputStream fos = null;
+                            try {
+                                fos = new FileOutputStream(
+                                        targetpath + File.separator + fs.getAsString(pdfname).toString());
+                                fos.write(PdfReader.getStreamBytes((PRStream) refs.getAsStream(pdfname)));
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            } finally {
+                                if (fos != null) {
+                                    try {
+                                        fos.flush();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                    try {
+                                        fos.close();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
                             String geoPackageName = fs.getAsString(pdfname).toString();
                             System.out.println("terrago pdf exteractor"+geoPackageName);
                             lstAttachedFiles.add(targetpath + File.separator + fs.getAsString(pdfname).toString());
@@ -83,7 +99,6 @@ public class PDFAttachmentExtractor {
                     PdfArray filespecs = embeddedfiles.getAsArray(PdfName.NAMES);
                     PdfDictionary filespec;
                     PdfDictionary refs;
-                    FileOutputStream fos;
                     PRStream stream;
                     System.out.println("terrago embeddedfiles"+filespecs);
                     for (int i = 0; i < filespecs.size(); ) {
@@ -95,13 +110,28 @@ public class PDFAttachmentExtractor {
                         while (it.hasNext()) {
                             PdfName key = it.next();
                             System.out.println("terrago pdf name"+key);
-                            fos = new FileOutputStream(targetpath + File.separator + filespec.getAsString(key).toString());
-
-                            stream = (PRStream) PdfReader.getPdfObject(
-                                    refs.getAsIndirectObject(key));
-                            fos.write(PdfReader.getStreamBytes(stream));
-                            fos.flush();
-                            fos.close();
+                            FileOutputStream fos = null;
+                            try {
+                                fos = new FileOutputStream(targetpath + File.separator + filespec.getAsString(key).toString());
+                                stream = (PRStream) PdfReader.getPdfObject(
+                                        refs.getAsIndirectObject(key));
+                                fos.write(PdfReader.getStreamBytes(stream));
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            } finally {
+                                if (fos != null) {
+                                    try {
+                                        fos.flush();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                    try {
+                                        fos.close();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
                             System.out.println("terrago pdf embedded"+filespec.getAsString(key).toString());
                             lstEmbeddedFiles.add(targetpath + File.separator + filespec.getAsString(key).toString());
                         }
