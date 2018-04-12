@@ -1,5 +1,6 @@
 /* port/cpl_config.h.  Generated from cpl_config.h.in by configure.  */
 /* port/cpl_config.h.in.  Generated from configure.in by autoheader.  */
+/* $Id: cpl_config.h.in 38508 2017-05-20 09:35:37Z rouault $ */
 
 /* Define if you want to use pthreads based multiprocessing support */
 #define CPL_MULTIPROC_PTHREAD 1
@@ -17,7 +18,7 @@
 #define HAVE_5ARGS_MREMAP 1
 
 /* --prefix directory for GDAL install */
-#define GDAL_PREFIX "/Users/knetworks/w321/install//arm64/iphoneos8.3.sdk"
+#define GDAL_PREFIX "/usr/local"
 
 /* Define to 1 if you have the <assert.h> header file. */
 #define HAVE_ASSERT_H 1
@@ -72,6 +73,9 @@
 /* Define to 1 if the system has the type `int8'. */
 /* #undef HAVE_INT8 */
 
+/* Define to 1 if the system has the type `__uint128_t'. */
+/* #undef HAVE_UINT128_T */
+
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
@@ -97,7 +101,10 @@
 #define HAVE_LOCALE_H 1
 
 /* Define to 1, if your compiler supports long long data type */
-/* #undef HAVE_LONG_LONG */
+#define HAVE_LONG_LONG 1
+
+/* Define to 1, if your compiler supports uintptr_t data type */
+#define HAVE_UINTPTR_T 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -147,6 +154,9 @@
 /* Define to 1 if you have the `posix_spawnp' function. */
 #define HAVE_POSIX_SPAWNP 1
 
+/* Define to 1 if you have the `posix_memalign' function. */
+#define HAVE_POSIX_MEMALIGN 1
+
 /* Define to 1 if you have the `vfork' function. */
 #define HAVE_VFORK 1
 
@@ -155,6 +165,9 @@
 
 /* Define to 1 if you have the statvfs' function. */
 #define HAVE_STATVFS 1
+
+/* Define to 1 if you have the `statvfs64' function. */
+/* #undef HAVE_STATVFS64 */
 
 /* Define to 1 if you have the `lstat' function. */
 #define HAVE_LSTAT 1
@@ -167,6 +180,9 @@
 
 /* For .cpp files, define as const if the declaration of iconv() needs const. */
 #define ICONV_CPP_CONST 
+
+/* Define to 1 if libjvm.so should be dlopen'd */
+/* #undef JVM_LIB_DLOPEN */
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
@@ -182,10 +198,10 @@
 /* #undef SIZEOF_LONG */
 
 /* The size of `unsigned long', as computed by sizeof. */
-#define SIZEOF_UNSIGNED_LONG 8
+#define SIZEOF_UNSIGNED_LONG 4
 
 /* The size of `void*', as computed by sizeof. */
-#define SIZEOF_VOIDP 8
+#define SIZEOF_VOIDP 4
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
@@ -198,6 +214,9 @@
 
 /* Define to 1 if GCC atomic builtins are available */
 #define HAVE_GCC_ATOMIC_BUILTINS 1
+
+/* Define to 1 if GCC bswap builtins are available */
+/* #undef HAVE_GCC_BSWAP */
 
 /* Define to name of 64bit fopen function */
 /* #undef VSI_FOPEN64 */
@@ -240,3 +259,6 @@
 
 /* Define to 1 if you have the `uselocale' function. */
 /* #undef HAVE_USELOCALE */
+
+/* Define to 1 if you have the `std::isnan' function. */
+#define HAVE_STD_IS_NAN 1
