@@ -1,5 +1,5 @@
 package com.terragoedge.geopkg.read;
-
+import java.lang.IllegalArgumentException;
 /**
  * Created by Ganesan on 06/07/16.
  */
@@ -38,21 +38,57 @@ public class GeoPackageRasterReader {
     }*/
     //Open a GeoPackage File from the specified location
     public int openGeoPackage(String fileName, String gdalPath) {
-        return openGeoPackage(ptr, fileName, gdalPath);
+		int result = -1;
+		if((ptr != 0) && (fileName != null) && (gdalPath != null))
+		{
+			result = openGeoPackage(ptr, fileName, gdalPath);
+		}
+		else
+		{
+			throw new IllegalArgumentException("Bad parameters passed to native call");
+		}
+        return result;
     }
 
     public int convertGeoPackage(String fileName, String mbtileName, String tableName, String tmpPath) {
-        return convertGeoPackage(ptr, fileName, mbtileName, tableName, tmpPath);
+		int result = -1;
+		if((ptr != 0) && (fileName != null) && (mbtileName != null) && (tableName != null) && (tmpPath != null) )
+		{
+			result = convertGeoPackage(ptr, fileName, mbtileName, tableName, tmpPath);
+		}
+		else
+		{
+			throw new IllegalArgumentException("Bad parameters passed to native call");
+		}
+        return result;
     }
 
     //Get a list of Raster name in a JSON format
     public String getGeoPackageRasterNameListAsJSON() {
-        return getGeoPackageRasterNameListAsJSON(ptr);
+		String result = null;
+		if(ptr != 0)
+		{
+			result = getGeoPackageRasterNameListAsJSON(ptr);
+		}
+		else
+		{
+			throw new IllegalArgumentException("Bad parameters passed to native call");
+		}
+        return result;
     }
 
     //Close the Geopackage file resourse
     public int closeGeoPackage() {
-        return closeGeoPackage(ptr);
+		int result = -1;
+		if(ptr != 0)
+		{
+			result = closeGeoPackage(ptr);
+		}
+		else
+		{
+			throw new IllegalArgumentException("Bad parameters passed to native call");
+		}
+        return result;
     }
 
 }
