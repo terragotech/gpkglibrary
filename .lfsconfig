@@ -1,0 +1,2 @@
+[remote "origin"]
+    lfsurl = ssh://git@github.com/terragotech/gpkglibrary.git
