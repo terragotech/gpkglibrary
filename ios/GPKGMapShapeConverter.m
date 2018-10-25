@@ -94,7 +94,7 @@
 
 -(MKPolyline *) toMapPolylineWithLineString: (WKBLineString *) lineString{
     
-    int numPoints = [[lineString numPoints] intValue];
+    unsigned int numPoints = [[lineString numPoints] unsignedIntValue];
     MKMapPoint mapPoints[numPoints];
     
     for(int i = 0; i < numPoints; i++){
@@ -170,7 +170,7 @@
         
         // Create the polygon points
         WKBLineString * polygonLineString = (WKBLineString *)[rings objectAtIndex:0];
-        int numPoints = [[polygonLineString numPoints] intValue];
+        unsigned int numPoints = [[polygonLineString numPoints] unsignedIntValue];
         MKMapPoint polygonPoints[numPoints];
         for(int i = 0; i < numPoints; i++){
             WKBPoint * point = (WKBPoint *)[polygonLineString.points objectAtIndex:i];
@@ -183,7 +183,7 @@
         NSMutableArray * holes = [[NSMutableArray alloc] initWithCapacity:ringCount-1];
         for(int i = 1; i < ringCount; i++){
             WKBLineString * hole = (WKBLineString *)[rings objectAtIndex:i];
-            int numHolePoints = [[hole numPoints] intValue];
+            unsigned int numHolePoints = [[hole numPoints] unsignedIntValue];
             MKMapPoint holePoints[numHolePoints];
             for(int j = 0; j < numHolePoints; j++){
                 WKBPoint * point = (WKBPoint *)[hole.points objectAtIndex:j];

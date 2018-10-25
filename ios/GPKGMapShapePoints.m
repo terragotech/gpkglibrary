@@ -101,7 +101,7 @@
     
     CLLocationCoordinate2D position = point.coordinate;
     CLLocation * location = [[CLLocation alloc] initWithLatitude:position.latitude longitude:position.longitude];
-    int pointCount = (int)[points count];
+    unsigned int pointCount = (unsigned int)[points count];
     int insertLocation = pointCount;
     if(pointCount > 2){
         double distances[pointCount];
@@ -129,7 +129,7 @@
     
     CLLocationCoordinate2D position = point.coordinate;
     CLLocation * location = [[CLLocation alloc] initWithLatitude:position.latitude longitude:position.longitude];
-    int pointCount = (int)[points count];
+    unsigned int pointCount = (unsigned int)[points count];
     int insertLocation = pointCount;
     if(pointCount > 1){
         double distances[pointCount];

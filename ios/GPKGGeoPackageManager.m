@@ -737,7 +737,7 @@
     @try {
         is = [NSInputStream inputStreamWithFileAtPath:databaseFile];
         [is open];
-        NSInteger bufferSize = 16;
+        unsigned int bufferSize = 16;
         uint8_t buffer[bufferSize];
         if([is read:buffer maxLength:bufferSize] == bufferSize){
             NSData * data = [[NSData alloc] initWithBytes:buffer length:bufferSize];

@@ -147,7 +147,7 @@
 }
 
 +(void) copyInputStream: (NSInputStream *) copyFrom toOutputStream: (NSOutputStream *) copyTo withProgress: (NSObject<GPKGProgress> *) progress{
-    NSInteger bufferSize = 1024;
+    unsigned int bufferSize = 1024;
     NSInteger length;
     uint8_t buffer[bufferSize];
     while((progress == nil || [progress isActive])
