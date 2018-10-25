@@ -23,9 +23,12 @@
 -(int) createTable: (NSString *) tableName{
     
     NSString * tablesProperties = [GPKGIOUtils getPropertyListPathWithName:GPKG_GEO_PACKAGE_RESOURCES_TABLES];
-    
-    NSDictionary *tables = [NSDictionary dictionaryWithContentsOfFile:tablesProperties];
-    NSArray *statements = [tables objectForKey:tableName];
+    NSDictionary *tables;
+    NSArray *statements = nil;
+    if (tablesProperties != nil) {
+     tables = [NSDictionary dictionaryWithContentsOfFile:tablesProperties];
+     statements = [tables objectForKey:tableName];
+    }
     if(statements == nil){
         [NSException raise:@"Table Creation" format:@"Failed to find table creation statements for table: %@, in resource: %@", tableName, GPKG_GEO_PACKAGE_RESOURCES_TABLES];
     }
