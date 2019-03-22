@@ -1,11 +1,11 @@
 
 #import "RNGeoPackageLibrary.h"
-
+/*
 #if __has_include("RCTBridge.h")
 #import "RCTEventDispatcher.h"
 #else
 #import <React/RCTEventDispatcher.h>
-#endif
+#endif*/
 
 @implementation RNGeoPackageLibrary
 
