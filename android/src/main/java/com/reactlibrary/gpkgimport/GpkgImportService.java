@@ -40,11 +40,11 @@ import mil.nga.geopackage.features.user.FeatureDao;
 import mil.nga.geopackage.features.user.FeatureRow;
 import mil.nga.geopackage.features.user.FeatureTable;
 import mil.nga.geopackage.geom.GeoPackageGeometryData;
-import mil.nga.geopackage.projection.Projection;
-import mil.nga.geopackage.projection.ProjectionConstants;
-import mil.nga.geopackage.projection.ProjectionFactory;
-import mil.nga.geopackage.projection.ProjectionTransform;
-import mil.nga.wkb.geom.Geometry;
+import mil.nga.sf.Geometry;
+import mil.nga.sf.proj.Projection;
+import mil.nga.sf.proj.ProjectionConstants;
+import mil.nga.sf.proj.ProjectionFactory;
+import mil.nga.sf.proj.ProjectionTransform;
 
 public class GpkgImportService {
     private Context context = null;
