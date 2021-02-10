@@ -3,19 +3,19 @@ package com.reactlibrary.utils;
 import java.util.List;
 
 import mil.nga.geopackage.features.user.FeatureDao;
-import mil.nga.geopackage.projection.Projection;
-import mil.nga.geopackage.projection.ProjectionConstants;
-import mil.nga.geopackage.projection.ProjectionFactory;
-import mil.nga.geopackage.projection.ProjectionTransform;
-import mil.nga.wkb.geom.Geometry;
-import mil.nga.wkb.geom.GeometryType;
-import mil.nga.wkb.geom.LineString;
-import mil.nga.wkb.geom.MultiLineString;
-import mil.nga.wkb.geom.MultiPolygon;
-import mil.nga.wkb.geom.Point;
-import mil.nga.wkb.geom.Polygon;
+import mil.nga.sf.Geometry;
+import mil.nga.sf.GeometryType;
+import mil.nga.sf.LineString;
+import mil.nga.sf.MultiLineString;
+import mil.nga.sf.MultiPolygon;
+import mil.nga.sf.Point;
+import mil.nga.sf.Polygon;
+import mil.nga.sf.proj.Projection;
+import mil.nga.sf.proj.ProjectionConstants;
+import mil.nga.sf.proj.ProjectionFactory;
+import mil.nga.sf.proj.ProjectionTransform;
 
- public class GeoPackageUtil {
+public class GeoPackageUtil {
 
 	private final static int GEOM_TYPE_UNSUPPORTED = 0;
 	private final static int GEOM_TYPE_NONE = 1;
@@ -180,7 +180,7 @@ import mil.nga.wkb.geom.Polygon;
 		if(featureDao != null){
 			Projection projection = featureDao.getProjection();
 			if(projection != null){
-					if(projection.getEpsg() == 4326){
+					if(projection.getTransformation(4326) != null ){
 						projStatus = GeoPackageUtil.PROJ_STATUS_WGS_84;
 					}
 					else
