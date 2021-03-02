@@ -52,7 +52,13 @@ public class GeoPackageRasterReader {
 
     //Close the Geopackage file resourse
     public int closeGeoPackage() {
-        return closeGeoPackage(ptr);
+//        return closeGeoPackage(ptr);
+        return 0;
     }
 
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        closeGeoPackage(ptr);
+    }
 }

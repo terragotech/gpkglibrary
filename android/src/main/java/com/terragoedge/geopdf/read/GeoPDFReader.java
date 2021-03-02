@@ -28,6 +28,13 @@ public class GeoPDFReader {
         return nResult;
     }
     public int destroyGeoPDF(){
-        return destroyGeoPDF(ptr);
+//        return destroyGeoPDF(ptr);
+        return 0;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        destroyGeoPDF(ptr);
     }
 }
