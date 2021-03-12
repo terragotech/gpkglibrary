@@ -1,1 +1,0 @@
-libgdal.a filter=lfs diff=lfs merge=lfs -text
