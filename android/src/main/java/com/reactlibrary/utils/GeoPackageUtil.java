@@ -180,7 +180,7 @@ public class GeoPackageUtil {
 		if(featureDao != null){
 			Projection projection = featureDao.getProjection();
 			if(projection != null){
-					if(projection.getTransformation(4326) != null ){
+					if(projection.getCode() == "4326" ){
 						projStatus = GeoPackageUtil.PROJ_STATUS_WGS_84;
 					}
 					else
