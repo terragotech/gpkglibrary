@@ -24,6 +24,7 @@ import com.reactlibrary.json.Estimation;
 import com.reactlibrary.utils.FileUtils;
 import com.reactlibrary.utils.Utils;
 import com.terragoedge.geopdf.read.GeoPDFReader;
+import com.terragoedge.geopdf.read.GeoPDFReader64;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -304,13 +305,19 @@ public class RNGeoPackageLibraryModule extends ReactContextBaseJavaModule {
                 @Override
                 public void run() {
                   String utid = UUID.randomUUID().toString();
-                  GeoPDFReader gr = new GeoPDFReader();
+                  String arch = System.getProperty("os.arch");
                   File mbtilesFolder = new File(tempFolder + File.separator + "mbtiles");//create folder for mbtile progress
                   if (!mbtilesFolder.exists()) {
                     mbtilesFolder.mkdirs();
                   }
-                  gr.generateMBTiles(scratchPath, pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
-                  gr.destroyGeoPDF();
+                  if(arch.equals("aarch64")) {
+                    GeoPDFReader64 geoPDFReader64 = new GeoPDFReader64();
+                    geoPDFReader64.generateMBTilesW(scratchPath, pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
+                  } else {
+                    GeoPDFReader gr = new GeoPDFReader();
+                    gr.generateMBTiles(scratchPath, pdfFilePath, mbtilePath, gdalPath, progressGuid, tempFolder, utid);
+                    gr.destroyGeoPDF();
+                  }
                   // deleting temp created files once mbtile creation is done(temp/mbtiles/utid_ remove)
                   deleteTempFiles(mbtilesFolder, utid);
                   System.out.println("MBTiles Generation [SUCCESS]");
