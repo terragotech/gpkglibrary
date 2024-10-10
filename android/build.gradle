@@ -1,11 +1,12 @@
 buildscript {
     repositories {
+        google()
         jcenter()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 apply plugin: 'com.android.library'
@@ -27,6 +28,7 @@ android {
        warning 'InvalidPackage'
     }
     repositories {
+        google()
         jcenter()
         mavenCentral()
     }
@@ -35,10 +37,10 @@ android {
 dependencies {
      implementation "com.facebook.react:react-native:+"
     //compile 'com.facebook.react:react-native:0.20.1'
-    compile "mil.nga.geopackage:geopackage-android:3.3.0"
+    implementation "mil.nga.geopackage:geopackage-android:3.3.0"
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
-    compile files('src/main/libs/itext-4.2.1.jar')
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    implementation files('src/main/libs/itext-4.2.1.jar')
 
 
 }
